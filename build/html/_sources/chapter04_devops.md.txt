@@ -2088,6 +2088,21 @@ ps -ef | grep nginx
 
 ```
 
+### 其他问题
+
+我们可以通过log文件快速定位错误，常见的错误，有用户权限问题，例如我们通过命令，可以查看启动nginx的用户
+```bash
+# 查看启动进程
+ps -ef | grep nginx
+
+```
+如果出现用户不是root，需要我们手动在conf文件中添加
+```bash
+vim /usr/local/webserver/nginx/conf/nginx.conf
+
+user root;
+```
+此外，我们server位置设定的命令，是有针对性的，root设置根目录，index设置主页文件，等等。
 
 ## centos安装oracle12c
 

@@ -19,7 +19,7 @@ from recommonmark.parser import CommonMarkParser
 
 # -- Project information -----------------------------------------------------
 
-project = '吕阳阳想记点东西'
+project = '吕阳阳的日志小屋'
 copyright = '2019@young'
 author = 'young'
 

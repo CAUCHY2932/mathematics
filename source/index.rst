@@ -8,7 +8,7 @@
 
 .. toctree::
    :maxdepth: 4
-   :caption: 内容:
+   :caption: Content:
 
    chapter00_preface.md
    chapter01_web.md

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>运维和测试 &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  <title>运维和测试 &mdash; 吕阳阳的日志小屋 1.0 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> 吕阳阳想记点东西
+            <a href="index.html" class="icon icon-home"> 吕阳阳的日志小屋
           
 
           
@@ -90,7 +90,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter01_web.html">python-web</a></li>
@@ -175,17 +175,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#id32">启动 Nginx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id33">访问站点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id34">Nginx 其他命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">其他问题</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#centosoracle12c">centos安装oracle12c</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id35">准备工作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">准备工作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#xming-windows-linux">Xming —— 从 Windows 系统管理图像化的 Linux 应用程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">注意点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">注意点</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#npm">安装npm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id37">文件最后添加</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id38">保存退出后执行更新命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">文件最后添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">保存退出后执行更新命令</a></li>
 </ul>
 </li>
 </ul>
@@ -212,7 +213,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">吕阳阳想记点东西</a>
+          <a href="index.html">吕阳阳的日志小屋</a>
         
       </nav>
 
@@ -2246,14 +2247,29 @@ http
 </pre></div>
 </div>
 </div>
+<div class="section" id="id35">
+<h3>其他问题<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<p>我们可以通过log文件快速定位错误，常见的错误，有用户权限问题，例如我们通过命令，可以查看启动nginx的用户</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 查看启动进程</span>
+ps -ef <span class="p">|</span> grep nginx
+</pre></div>
+</div>
+<p>如果出现用户不是root，需要我们手动在conf文件中添加</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim /usr/local/webserver/nginx/conf/nginx.conf
+
+user root<span class="p">;</span>
+</pre></div>
+</div>
+<p>此外，我们server位置设定的命令，是有针对性的，root设置根目录，index设置主页文件，等等。</p>
+</div>
 </div>
 <div class="section" id="centosoracle12c">
 <h2>centos安装oracle12c<a class="headerlink" href="#centosoracle12c" title="Permalink to this headline">¶</a></h2>
 <p>参考链接
 https://wiki.centos.org/zh/HowTos/Oracle12onCentos7
 https://docs.centos.org/en-US/docs/</p>
-<div class="section" id="id35">
-<h3>准备工作<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h3>准备工作<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <p>提前下载oracle 12c
 r1 版本有两个文件，r2有两个文件</p>
 <ol class="simple">
@@ -2507,8 +2523,8 @@ http://sourceforge.net/projects/xming/files/latest/download</p>
 3.$sqlplus / as sysdba 以 DBA 身份进入 sqlplus</p>
 <p>4.SQL&gt;SHUTDOWN IMMEDIATE 关闭 db</p>
 </div>
-<div class="section" id="id36">
-<h3>注意点<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id37">
+<h3>注意点<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
 <p>1.在检查先决条件时，选择忽略全部
 2.在安装时需要一台有图形界面的linux
 3.默认登录到root用户更好使用
@@ -2524,16 +2540,16 @@ mv node-v8.1.4-linux-x64 node
 vim /etc/profile
 </pre></div>
 </div>
-<div class="section" id="id37">
-<h3>文件最后添加<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h3>文件最后添加<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#set for nodejs  
 export NODE_HOME=/usr/local/node  
 export PATH=$NODE_HOME/bin:$PATH
 </pre></div>
 </div>
 </div>
-<div class="section" id="id38">
-<h3>保存退出后执行更新命令<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id39">
+<h3>保存退出后执行更新命令<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span>
 </pre></div>
 </div>
