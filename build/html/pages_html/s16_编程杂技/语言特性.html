@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>不要纠结于工具，语言特性远远比这个重要 &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>不要纠结于工具，语言特性远远比这个重要</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s16_编程杂技/语言特性.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>不要纠结于工具，语言特性远远比这个重要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>这个其实很好理解，要想尽快学习一门编程语言，最好的方法是不断的练习，实现某个项目，掌握其语言特性，而非花费大量时间在ide的学习上，除非这种ide是唯一的，或是不可替代的。</p>
+</div>
+<div class="section" id="id2">
+<h1>做比较，找异性和共性<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>对于编程语言来讲，我们学习的过程是不断深化认识语言特性的过程，虽然不应该把大量时间放到语言特性的学习上。</p>
+<p>实际上，语言特性的重要性远远小于数据结构和算法。但是我不应该忽略的是，语言特性本身是和数据结构以及算法结合产生的，后者的抽象层次较高，一味的学习高层次的知识不符合我们的认知规律。</p>
+<p>对于学习多种语言时，最好的途径应该是做比较。共性大多是高层次的，例如对某个数据结构的实现是大致相同的，异性是低层次的，例如对具体的语法和语义，不同语言采用不同的符号实现。这就表明，同样的逻辑，实现不同，在共性中深化数据结构的认识</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

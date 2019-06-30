@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>python-web &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="数据科学" href="chapter02_data_science.html" />
+    <link rel="prev" title="写在前面" href="chapter00_preface.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">python-web</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#flask">flask（李辉）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">单元测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">flask（七月）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">flask（狗书）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">flask（董伟明）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#django">django(胡阳)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>python-web</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chapter01_web.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-web">
+<h1>python-web<a class="headerlink" href="#python-web" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="flask">
+<h2>flask（李辉）<a class="headerlink" href="#flask" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>单元测试<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># python单元测试</span>
+
+<span class="c1"># https://read.helloflask.com/c9-test</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">module_foo</span> <span class="kn">import</span> <span class="n">sayhello</span>
+
+
+<span class="k">class</span> <span class="nc">SayHelloTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>  <span class="c1"># 测试用例</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 测试固件</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 测试固件</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">test_sayhello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 第 1 个测试</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">sayhello</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="s1">&#39;Hello!&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_sayhello_to_somebody</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># 第 2 个测试</span>
+        <span class="n">rv</span> <span class="o">=</span> <span class="n">sayhello</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s1">&#39;Grey&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">rv</span><span class="p">,</span> <span class="s1">&#39;Hello, Grey!&#39;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>测试方法</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## 测试方法</span>
+<span class="c1">#在测试方法里，我们使用断言方法来判断程序功能是否正常。以第一个测试方法为例，我们先把 sayhello() 函数调用的返回值保存为 rv 变量（return value），然后使用 self.assertEqual(rv, &#39;Hello!&#39;) 来判断返回值内容是否符合预期。如果断言方法出错，就表示该测试方法未通过。</span>
+<span class="c1"># 下面是一些常用的断言方法：</span>
+<span class="n">assertEqual</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="n">assertNotEqual</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="n">assertTrue</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">assertFalse</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">assertIs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="n">assertIsNot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="n">assertIsNone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">assertIsNotNone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+<span class="n">assertIn</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="n">assertNotIn</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> 
+<span class="c1"># 这些方法的作用从方法名称上基本可以得知。</span>
+</pre></div>
+</div>
+<p>测试固件</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## 测试固件</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">Movie</span><span class="p">,</span> <span class="n">User</span>
+
+
+<span class="k">class</span> <span class="nc">WatchlistTestCase</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># 更新配置</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+            <span class="n">TESTING</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">SQLALCHEMY_DATABASE_URI</span><span class="o">=</span><span class="s1">&#39;sqlite:///:memory:&#39;</span>
+        <span class="p">)</span>
+        <span class="c1"># 创建数据库和表</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="c1"># 创建测试数据，一个用户，一个电影条目</span>
+        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Test&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
+        <span class="n">movie</span> <span class="o">=</span> <span class="n">Movie</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Test Movie Title&#39;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="s1">&#39;2019&#39;</span><span class="p">)</span>
+        <span class="c1"># 使用 add_all() 方法一次添加多个模型类实例，传入列表</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add_all</span><span class="p">([</span><span class="n">user</span><span class="p">,</span> <span class="n">movie</span><span class="p">])</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span>  <span class="c1"># 创建测试客户端</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">runner</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_cli_runner</span><span class="p">()</span>  <span class="c1"># 创建测试命令运行器</span>
+
+    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>  <span class="c1"># 清除数据库会话</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">drop_all</span><span class="p">()</span>  <span class="c1"># 删除数据库表</span>
+
+    <span class="c1"># 测试程序实例是否存在</span>
+    <span class="k">def</span> <span class="nf">test_app_exist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIsNotNone</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+    <span class="c1"># 测试程序是否处于测试模式</span>
+    <span class="k">def</span> <span class="nf">test_app_is_testing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;TESTING&#39;</span><span class="p">])</span>
+        
+    <span class="c1"># 测试主页</span>
+    <span class="k">def</span> <span class="nf">test_index_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">as_text</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s1">&#39;Test</span><span class="se">\&#39;</span><span class="s1">s Watchlist&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s1">&#39;Test Movie Title&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>运行测试</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 运行测试</span>
+<span class="c1"># 在程序结尾增加以下代码</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>使用下面的命令执行测试：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python test_watchlist.py
+...............
+----------------------------------------------------------------------
+Ran <span class="m">15</span> tests in <span class="m">2</span>.942s
+
+
+OK
+</pre></div>
+</div>
+<p>如果测试出错，你会看到详细的错误信息，进而可以有针对性的修复对应的程序代码，或是调整测试方法。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 测试覆盖率</span>
+<span class="c1"># 为了让让程序更加强壮，你可以添加更多、更完善的测试。那么，如何才能知道程序里有哪些代码还没有被测试？整体的测试覆盖率情况如何？我们可以使用 [Coverage.py]# (https://coverage.readthedocs.io/en/v4.5.x/)来检查测试覆盖率，首先安装它（添加 `--dev`参数将它作为开发依赖安装）：</span>
+
+$ pipenv install coverage --dev
+
+<span class="c1">#使用下面的命令执行测试并检查测试覆盖率：</span>
+
+$ coverage run --source<span class="o">=</span>app test_watchlist.py
+
+
+<span class="c1"># 因为我们只需要检查程序脚本 app.py 的测试覆盖率，所以使用 `--source`选项来指定要检查的模块或包。</span>
+
+<span class="c1"># 最后使用下面的命令查看覆盖率报告：</span>
+
+$ coverage report
+Name     Stmts   Miss  Cover
+----------------------------
+app.py     <span class="m">146</span>      <span class="m">5</span>    <span class="m">97</span>%
+</pre></div>
+</div>
+<p>生成覆盖率文件</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>同时在 .gitignore 文件后追加下面两行，忽略掉生成的覆盖率报告文件：
+
+
+htmlcov/
+.coverage
+</pre></div>
+</div>
+<p>通过测试后，我们就可以准备上线程序了。结束前，让我们提交代码：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 代码提交</span>
+$ git add .
+$ git commit -m <span class="s2">&quot;Add unit test with unittest&quot;</span>
+$ git push
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>flask（七月）<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>flask高级编程</p>
+<p>flask restful api</p>
+</div>
+<div class="section" id="id3">
+<h2>flask（狗书）<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>flask（董伟明）<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="django">
+<h2>django(胡阳)<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter02_data_science.html" class="btn btn-neutral float-right" title="数据科学" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chapter00_preface.html" class="btn btn-neutral float-left" title="写在前面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

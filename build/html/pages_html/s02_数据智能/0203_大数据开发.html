@@ -1,0 +1,460 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hadoop大数据平台架构与实践课程简介 &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Hadoop大数据平台架构与实践课程简介</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s02_数据智能/0203_大数据开发.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hadoop">
+<h1>Hadoop大数据平台架构与实践课程简介<a class="headerlink" href="#hadoop" title="Permalink to this headline">¶</a></h1>
+<p>https://www.imooc.com/video/7642</p>
+<p>大数据技术的相关概念
+Hadoop的架构和运行机制</p>
+<p>实战Hadoop的安装和配置
+Hadoop开发</p>
+</div>
+<div class="section" id="id1">
+<h1>预备基础知识<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Linux基础知识</span>
+<span class="n">Java编程基础</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h1>推荐书籍<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hadoop权威指南</span>
+<span class="n">Hadoop技术详解</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>解决大数据技术的难点<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>google大数据技术
+MapReduce、BigTable、GFS
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h1>Hadoop生态<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hive">
+<h2>hive<a class="headerlink" href="#hive" title="Permalink to this headline">¶</a></h2>
+<p>sql语句转化为Hadoop任务</p>
+</div>
+<div class="section" id="hbase">
+<h2>hbase<a class="headerlink" href="#hbase" title="Permalink to this headline">¶</a></h2>
+<p>和传统关系型数据库的区别是hbase放弃了事务特性，追求更高的扩展。</p>
+<p>和hdfs的区别是提供数据的随机读写和实时访问，实现对表数据的读写功能</p>
+</div>
+<div class="section" id="zookeeper">
+<h2>zookeeper<a class="headerlink" href="#zookeeper" title="Permalink to this headline">¶</a></h2>
+<p>维护结点</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>版本选择<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>1.2更稳定
+2.x版本变动较大
+暂时选择1.2版本进行学习</p>
+</div>
+<div class="section" id="id6">
+<h1>安装Hadoop<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="linux">
+<h2>获取一个Linux系统<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<p>租用云主机
+阿里云
+腾讯云
+unitedstack</p>
+</div>
+<div class="section" id="jdk">
+<h2>安装jdk<a class="headerlink" href="#jdk" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>安装Hadoop<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id8">
+<h1>开发语言与生态<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<p>| 技术框架 | 开发语言 |
+| ——– | :——- |
+| hadoop   | java     |
+| hive     | java     |
+| storm    | clojure  |
+| kafka    | scala    |
+| spark    | scala    |
+| flink    | scala    |</p>
+</div>
+<div class="section" id="id9">
+<h1>学习地址<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>https://www.imooc.com/video/16284</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h1>Hadoop平台<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id11">
+<h2>课程简介<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>理论知识<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">大数据的相关概念及行业生态</span>
+<span class="n">Hadoop的基础原理及其架构</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3>应用知识<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>实战：hdfs实际操作
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h1>企业级大数据框架<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id15">
+<h2>数据收集<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id16">
+<h1>企业级大数据技术体系的概述<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h1>
+<p>数据收集层</p>
+<p>数据存储层</p>
+<p>资源管理与服务协调层</p>
+<p>计算引擎层</p>
+<p>数据分析层</p>
+<p>数据可视化层</p>
+</div>
+<div class="section" id="id17">
+<h1>关系数据的收集<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h1>
+<p>sqoop
+可以记忆为sql+hadoop
+解决关系型数据库与Hadoop之间的数据传输问题</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">数据迁移</span>
+<span class="n">可视化分析结果</span>
+<span class="n">数据增量导入</span>
+</pre></div>
+</div>
+<p>sqoop2使用方式</p>
+<p>1)connector</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">generic</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="n">connector</span>
+<span class="n">hdfs</span><span class="o">-</span><span class="n">connector</span>
+<span class="n">kafka</span><span class="o">-</span><span class="n">connector</span>
+<span class="n">kite</span><span class="o">-</span><span class="n">connector</span>
+</pre></div>
+</div>
+<p>2)link
+3)job</p>
+<p>cdc增量数据收集</p>
+<p>canal阿里巴巴旗下利用Java开发的一款数据库增量日志解析系统</p>
+<p>otter阿里巴巴给予canal开发的一款解决多机房同步数据问题的系统</p>
+<hr class="docutils" />
+<div class="section" id="id18">
+<h2>非关系型数据的收集<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>1）flume设计动机
+日志</p>
+<p>数据源种类繁多</p>
+<p>数据源是物理分布的</p>
+<p>流式的，不间断产生的</p>
+<p>对可靠性有一定要求</p>
+<p>2）flume基本思想及特点</p>
+<p>良好的扩展性</p>
+<p>高度定制化</p>
+<p>声明式动态化配置</p>
+<p>语意路由</p>
+<p>flume NG</p>
+<p>基本架构
+flume传递的数据称之为event</p>
+<p>source
+channel</p>
+<p>flume NG高级组件</p>
+<p>interceptor</p>
+<p>sink processor</p>
+<p>flume NG数据流拓扑构建方法
+1）如何构建数据流拓扑
+流式数据获取方式
+远程过程调用
+tcp或是udp
+执行命令</p>
+<p>常见的拓扑结构</p>
+<p>多路合并和多路复用</p>
+<p>agent配置方式</p>
+<p>数据流拓扑实例剖析</p>
+</div>
+<div class="section" id="kafka">
+<h2>分布式消息队列kafka<a class="headerlink" href="#kafka" title="Permalink to this headline">¶</a></h2>
+<p>kafka设计动机</p>
+<p>每一条业务都是一条数据流水线</p>
+<p>数据生产者和消费者耦合度过高，当需要增加一种新的消费者时，所有数据生产者均需要被改动
+使得整个数据流水线扩展性非常差</p>
+<p>生产者和消费者数据处理速率不对等</p>
+<p>大量并发的网络连接对后端消费者不够友好</p>
+<p>消息中间件</p>
+<p>消息队列</p>
+<p>kafka特点</p>
+<p>高性能</p>
+<p>良好对扩展性</p>
+<p>数据持久性</p>
+<p>kafka设计架构</p>
+<p>producer</p>
+<p>broker</p>
+<p>consumer</p>
+<p>kafka关键技术点</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>可控的可靠性级别
+数据多副本
+高效的持久化机制
+数据传输优化，批处理与zero-copy技术
+可控的消息传递语义
+</pre></div>
+</div>
+<p>kafka程序设计</p>
+<p>producer程序设计</p>
+<p>kafka典型应用场景</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">消息队列</span>
+<span class="n">流式计算框架的数据源</span>
+<span class="n">分布式日志收集系统中的source或sink</span>
+<span class="k">lambda</span> <span class="n">architecture中的source</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>数据存储<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id20">
+<h3>数据序列化与文件存储格式<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">数据序列化</span>
+<span class="n">文件存储格式</span>
+<span class="n">存储系统</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h3>数据序列化的意义<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>阶段1:不考虑任何复杂的序列化方案，直接将数据转化成字符串，以文本形式保存或传输</p>
+<p>但是难以嵌套数据，无法表达二进制数据，难以应对数据模式变化</p>
+<p>阶段2:采用编程语言的序列化机制，比如Java serialization，python pickle</p>
+<p>很难做到跨语言数据的写入和输出</p>
+<p>阶段3:json和xml</p>
+<p>严重的性能问题，解析速度慢，数据存储冗余较大，比如json会重复存储每个属性的名称</p>
+<p>阶段4:期望出现一种带有schema描述的数据表示格式，通过统一化的schema描述，可约束每个字段的类型，进而为存储和解析数据带来优化的可能，此外，统一schema的引入，可减少属性名称重复存储带来的开销，同时，也有利于数据共享</p>
+<p>序列化框架
+thrift，protocol，buffers和avro</p>
+<p>idl接口描述语言</p>
+</div>
+<div class="section" id="id22">
+<h3>数据序列化方案<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>序列化框架thrift</p>
+<p>序列化框架protobuf</p>
+<p>序列化框架avro</p>
+<p>序列化框架对比</p>
+<p>性能方面</p>
+<p>非功能方面</p>
+<p>文件存储格式解析</p>
+<p>行存储与列存储</p>
+<p>行存储</p>
+<p>列存储</p>
+<p>orc文件</p>
+<p>支持复杂数据类型</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

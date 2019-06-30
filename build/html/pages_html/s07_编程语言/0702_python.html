@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>python cookbook &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>python cookbook</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s07_编程语言/0702_python.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-cookbook">
+<h1>python cookbook<a class="headerlink" href="#python-cookbook" title="Permalink to this headline">¶</a></h1>
+<p>1 数据结构和算法</p>
+<p>1.1 将序列分解为单独的变量</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">data</span>
+</pre></div>
+</div>
+<blockquote>
+<div>记住的是，元素一定要匹配</div></blockquote>
+<p>函数编程</p>
+<p>魔术方法</p>
+</div>
+<div class="section" id="id1">
+<h1>基础编程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id2">
+<h1>系统编程<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id3">
+<h1>正则<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id4">
+<h1>网络<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id5">
+<h1>面向对象<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="class">
+<h2>class 后面加不加括号<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h2>
+<p>对于python3和python2而言，是有区别的，涉及到新式类和旧式类，一般的，我们统一不加括号。
+但是有以下情况，我们需要加：
+1.需要显示声明我们是新式类，这时候，我们需要在括号里加上object
+2.继承。当我们需要继承一个基类时，我们必须带上括号</p>
+</div>
+<div class="section" id="id6">
+<h2>类方法<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>对于一个类，我们定义方法时，可以在上面加一个装饰器，当我们加上classmethod时，就定义了一个类方法，这让我们使用类时，无需进行初始化，即可直接调用类方法。与此同时，我们需要在方法内部加一个cls，类似于self</p>
+</div>
+<div class="section" id="id7">
+<h2>静态方法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>静态方法，使得我们无需进行生命</p>
+</div>
+<div class="section" id="property">
+<h2>属性property<a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="self">
+<h2>普通的self<a class="headerlink" href="#self" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id8">
+<h2>类属性和初始化<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id9">
+<h1>标准库<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="os">
+<h2>os模块<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>os.getcwd()获取当前文件目录</li>
+<li>os.walk()在目录树种游走输出在目录中的文件名，向上或者向下</li>
+<li>os.chmod()更改权限</li>
+<li>os.chown()更改文件所有者</li>
+<li>os.chdir()更改当前工作目录</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

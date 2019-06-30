@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mysql &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>mysql</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s02_数据智能/0207_数据库.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <blockquote>
+<div>https://www.jianshu.com/p/9e91aa8782da</div></blockquote>
+<div class="section" id="mysql">
+<h1>mysql<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="oracle">
+<h1>oracle<a class="headerlink" href="#oracle" title="Permalink to this headline">¶</a></h1>
+<p>umber 数据类型</p>
+<p>number (precision,scale)</p>
+<p>a)    precision表示数字中的有效位，如果没有指定precision的话，oracle将使用38作为精度；</p>
+<p>b)    如果scale大于零，表示数字精度到小数点右边的位数；scale默认设置为0；如果scale小于零，oracle将把该数字取舍到小数点左边的指定位数。</p>
+<p>c)    Precision 的取值范围是[1-38];scale的取值范围是[-84-127].</p>
+<p>d)    Number整数部分允许的长度为(precision –scale),无论scale是正数还是负数。</p>
+<p>e)    如果precision小于scale，表示存储的是没有正数的小数。</p>
+<p>f)     Precision表示有效位数，有效数位：从左边第一个不为0的数算起，小数点和负号不计入有效位数；scale表示精确到多少位，指精确到小数点左边还是右边多少位（由+-决定）。</p>
+<p>a)    关于precision，scale也可以做如下表述：</p>
+<p>定点数的精度(p)和刻度(s)遵循以下规则：</p>
+<p>1） 当一个数的整数部分长度 &gt;p-s时，oracle就会报错；</p>
+<p>2） 当一个数的小数部分的长度 &gt;s时，oracle就会舍入；</p>
+<p>3） 当s(scale)为负数时，oracle就会对小数点左边的s进行舍入；</p>
+<p>4） 当s &gt; p 时, p表示小数点后第s位向左最多可以有多少位数字，如果大于p则Oracle报错，小数点后s位向右的数字被舍入。</p>
+<p>Number类型的子类：</p>
+<p>a)    Oracle本来就没有int类型，为了与别的数据库兼容，新增了Int类型作为number类型的子集；</p>
+<p>b)    Int类型只能存储整数，number可以存储浮点数，也可以存整数。</p>
+<p>c)    在oracle数据库建表的时候，decimal，numeric不带精度，oralce会自动把它处理成integer；带精度，oracle会自动把它处理成number。</p>
+<p>d)    Oracle只用number(m,n)就可以表示任何复杂的数字数据。</p>
+<p>Decimal，numeric，int等都为sql,db2等数据库的数据类型，Oracle为了兼容才将其引入；但实际上在oracle内部还是以number的形式将其存入的。s</p>
+<div class="section" id="id1">
+<h2>参考链接<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>https://wiki.centos.org/zh/HowTos?highlight=%28%28zh%7CHowTos%7COracle12onCentos7%29%29</div></blockquote>
+</div>
+</div>
+<div class="section" id="mongodb">
+<h1>mongodb<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="redis">
+<h1>redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="postgresql">
+<h1>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>https://www.postgresql.org/docs/11/tutorial-createdb.html</div></blockquote>
+<div class="section" id="id2">
+<h2>PostgreSQL<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>是以加州大学伯克利分校计算机系开发的 POSTGRES，现在已经更名为PostgreSQL，版本 4.2为基础的<strong>对象关系型数据库管理系统</strong>（ORDBMS）。PostgreSQL支持大部分 SQL标准并且提供了许多其他现代特性：复杂查询、外键、触发器、视图、事务完整性、MVCC。同样，PostgreSQL 可以用许多方法扩展，比如， 通过增加新的数据类型、函数、操作符、聚集函数、索引。免费使用、修改、和分发 PostgreSQL，不管是私用、商用、还是学术研究使用。</p>
+<div class="section" id="psql">
+<h3>psql<a class="headerlink" href="#psql" title="Permalink to this headline">¶</a></h3>
+<p>是PostgreSQL数据库的命令行交互工具。</p>
+</div>
+<div class="section" id="pgadmin">
+<h3>pgAdmin<a class="headerlink" href="#pgadmin" title="Permalink to this headline">¶</a></h3>
+<p>是PostgreSQL数据库的图形化管理工具。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>PostgreSQL安装与卸载<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>官网安装<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>在官网上下载安装包或者使用官网提供的<code class="docutils literal notranslate"><span class="pre">Postgres.app</span></code>，这里就不详细介绍了，因为我们这里使用<code class="docutils literal notranslate"><span class="pre">homebrew</span></code>来安装。</p>
+</div>
+<div class="section" id="homebrew">
+<h3>homebrew安装<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">postgresql</span>
+</pre></div>
+</div>
+<p>初始化：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">initdb</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">postgres</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>创建数据库和账户<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>创建数据库和账户<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>mac安装PostgreSQL后不会创建用户名数据库，执行命令：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createdb</span>
+</pre></div>
+</div>
+<p>然后登录PostgreSQL控制台：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">psql</span></code>连接数据库默认选用的是当前的系统用户</p>
+<p>使用\l命令列出所有的数据库，看到已存在用户同名数据库、postgres数据库，但是postgres数据库的所有者是当前用户，没有postgres用户。</p>
+<p>然后我们来完成以下几件事：</p>
+<p>一、创建postgres用户</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">USER</span> <span class="n">postgres</span> <span class="n">WITH</span> <span class="n">PASSWORD</span> <span class="s1">&#39;XXXXXX&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>二、删除默认生成的postgres数据库</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DROP</span> <span class="n">DATABASE</span> <span class="n">postgres</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>三、创建属于postgres用户的postgres数据库</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CREATE</span> <span class="n">DATABASE</span> <span class="n">postgres</span> <span class="n">OWNER</span> <span class="n">postgres</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>四、将数据库所有权限赋予postgres用户</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GRANT</span> <span class="n">ALL</span> <span class="n">PRIVILEGES</span> <span class="n">ON</span> <span class="n">DATABASE</span> <span class="n">postgres</span> <span class="n">to</span> <span class="n">postgres</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>五、给postgres用户添加创建数据库的属性</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">ROLE</span> <span class="n">postgres</span> <span class="n">CREATEDB</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>这样就可以使用postgres作为数据库的登录用户了，并可以使用该用户管理数据库</p>
+<div class="section" id="id7">
+<h4>登陆控制台指令<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">-</span><span class="n">d</span> <span class="p">[</span><span class="n">database</span><span class="p">]</span> <span class="o">-</span><span class="n">h</span> <span class="p">[</span><span class="n">host</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">port</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>-U指定用户，-d指定数据库，-h指定服务器，-p指定端口
+完整的登录命令，比如使用postgres用户登录</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">postgres</span>
+</pre></div>
+</div>
+<p>之前我们直接使用psql登录控制台，实际上使用的是缺省数据</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>user：当前mac用户
+database：用户同名数据库
+主机：localhost
+端口号：5432，postgresql的默认端口是5432
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h4>常用控制台指令<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\password：设置当前登录用户的密码
+\h：查看SQL命令的解释，比如\h select。
+\?：查看psql命令列表。
+\l：列出所有数据库。
+\c [database_name]：连接其他数据库。
+\d：列出当前数据库的所有表格。
+\d [table_name]：列出某一张表格的结构。
+\du：列出所有用户。
+\e：打开文本编辑器。
+\conninfo：列出当前数据库和连接的信息。
+\password [user]: 修改用户密码
+\q：退出
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>使用PostgreSQL<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>现在来简单的学习一下使用PostgreSQL，以下命令都在postgres=# 环境下
+修改用户密码
+之前我们用命令CREATE USER postgres WITH PASSWORD ‘XXXXXX’;创建了postgres用户，现在我们来修改该用户的密码：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ALTER</span> <span class="n">USER</span> <span class="n">postgres</span> <span class="n">WITH</span> <span class="n">PASSWORD</span> <span class="s1">&#39;XXXXXX&#39;</span>
+</pre></div>
+</div>
+<p>出现ALTER ROLE, 代表修改角色成功</p>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>创建和删除数据库用户<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>创建user1用户：<code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span> <span class="pre">user1</span> <span class="pre">WITH</span> <span class="pre">PASSWORD</span> <span class="pre">'XXXX'</span></code></p>
+<p>查看数据库用户列表：<code class="docutils literal notranslate"><span class="pre">\du</span></code></p>
+<p>删除数据库用户：<code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">user</span> <span class="pre">user1;</span></code></p>
+</div>
+<div class="section" id="id11">
+<h3>创建和删除数据库<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>创建数据库：<code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">database</span> <span class="pre">testdb;</span></code></p>
+<p>查看数据库列表：<code class="docutils literal notranslate"><span class="pre">\l</span></code></p>
+<p>删除数据库：<code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">database</span> <span class="pre">db1;</span></code></p>
+</div>
+<div class="section" id="id12">
+<h3>创建和删除数据表<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>选择数据库：<code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">DatabaseName</span></code>，比如<code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">testdb</span></code></p>
+<p>创建数据库表：<code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span> <span class="pre">COMPANY(</span> <span class="pre">ID</span> <span class="pre">INT</span> <span class="pre">PRIMARY</span> <span class="pre">KEY</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">NAME</span> <span class="pre">TEXT</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">AGE</span> <span class="pre">INT</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">ADDRESS</span> <span class="pre">CHAR(50),</span> <span class="pre">SALARY</span> <span class="pre">REAL);</span></code></p>
+<p>删除数据库表： <code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">table</span> <span class="pre">company;</span></code></p>
+<p>查看数据库信息：<code class="docutils literal notranslate"><span class="pre">\d</span></code></p>
+<p>查询数据：<code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">company</span></code></p>
+</div>
+<div class="section" id="id13">
+<h3>关于第三方连接本地数据库的问题<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>如何设置PostgreSQL允许被远程访问</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">postgres</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>修改postgresql.conf
+编辑或添加下面一行，使PostgreSQL可以接受来自任意IP的连接请求。</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">listen_addresses</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li>修改pg_hba.conf
+pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地址连接PostgreSQL，但是这在pg中还不够，我们还需在pg_hba.conf中配置服务端允许的认证方式。任意编辑器打开该文件，编辑或添加下面一行。</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># TYPE  DATABASE  USER  CIDR-ADDRESS  METHOD</span>
+<span class="n">host</span>  <span class="nb">all</span>  <span class="nb">all</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="o">/</span><span class="mi">0</span> <span class="n">md5</span>
+</pre></div>
+</div>
+<p>默认pg只允许本机通过密码认证登录，修改为上面内容后即可以对任意IP访问进行密码验证。对照上面的注释可以很容易搞明白每列的含义，具体的支持项可以查阅文末参考引用。</p>
+<p>完成上两项配置后执行<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">service</span> <span class="pre">postgresql</span> <span class="pre">restart</span></code>重启PostgreSQL服务后，允许外网访问的配置就算生效了。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+## 使用emr
+
+> https://amazonaws-china.com/cn/solutions/case-studies/euclid/
+
+> https://amazonaws-china.com/cn/emr/features/spark/?nc=sn&loc=3&dn=2
+
+> https://docs.aws.amazon.com/index.html?nc2=h_ql_doc
+

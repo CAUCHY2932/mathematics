@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>superset二次开发 &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>superset二次开发</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s16_编程杂技/集成echarts.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="superset">
+<h1>superset二次开发<a class="headerlink" href="#superset" title="Permalink to this headline">¶</a></h1>
+<p>作者：</p>
+<p>林余</p>
+<p>链接：https://zhuanlan.zhihu.com/p/46993011</p>
+<p>来源：知乎</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>最近接到好几个需要用地图展示数据的需求，还有一个有下钻的要求，但是我是一个前端小白呀，怎么办呢？于是又研究了一番Echarts相关的文章，下面大家跟着我一起来踩坑吧~</p>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2><strong>中国地图相关地图测绘文件</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li>Echarts官方网站由于地图测绘数据不符合国家法律的原因，已经只剩下一个告知页面了，不过不用担心，用npm安装echarts包之后，打开包所在文件夹（一般在安装路径下的node_modules文件夹中），进入echarts文件夹后能够看到里面有一个map文件夹，里面就是我们想要的地图相关测绘文件啦~</li>
+<li>但是这里的地图只到省级地图和市级地图，有童鞋需要到区县的怎么办呢？我在网上找了一圈终于找到了一个完整的资源，需要的童鞋可以私信我~</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2><strong>Superset相关设置</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li>上一篇文章已经详细说明了Superset新增图表需要改的四个文件，其中visTypes.js和index.js比较简单这里不赘述，下面说明图表配置js文件如何写</li>
+<li>由于地图相关的js文件有几十个，所以需要批量实现批量引用，这里查找了比较多的资料，找到了一个好方法
+比如我们现在要引用 echarts\map\js\province\ 文件夹下的所有省份地图相关文件，正常思路是在文件头部一行行import，但是很明显三十几个文件这样做有点傻，如果在区县级几百个文件就更不可能了 所以我们需要在待引用的文件夹下新建一个名为index.js的文件，export * from ‘./anhui.js’ 对每一个省份都export，然后在echarts_map.js文件中只需要引用这个index.js文件就可以啦 具体引用如下</li>
+</ol>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import echarts from &#39;echarts&#39;;
+import china from &#39;echarts/map/js/china&#39;
+import * as v from &#39;echarts/map/js/province/index&#39;
+</pre></div>
+</div>
+<p>3.接下来是funtion部分，主要是完成点击下钻和双击返回最上级的功能</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>function echartsChinaMapVis(slice, payload) {
+    const div = d3.select(slice.selector);
+    const sliceId = &#39;echarts_slice_&#39; + slice.formData.slice_id;
+    const html = &#39;&lt;div id=&#39; + sliceId + &#39; style=&quot;width:&#39; + slice.width() + &#39;px;height:&#39; + slice.height() + &#39;px;&quot;&gt;&lt;/div&gt;&#39;;
+    div.html(html); // reset
+
+    const myChart = echarts.init(document.getElementById(sliceId));
+
+    // 获取后端传来的数据
+    const get_data = payload.data;
+    const data_value = get_data[0];
+    const data_name = get_data[1];
+    const max_data = get_data[2];
+    const min_data = get_data[3];
+
+
+
+    const option = {
+        title : {
+        //用subtitle编写地图钻取使用说明
+            subtext:&#39;点击进入下一级，双击返回中国地图&#39;,
+            x:&#39;center&#39;,
+            bottom:&#39;5%&#39;
+        },
+        tooltip : {
+            trigger: &#39;item&#39;,
+            formatter:  &quot;{c}&quot;
+        },
+        visualMap: {
+            type: &#39;continuous&#39;,
+        //将后端处理好最小值和最大值传进来，用来区分颜色
+            min: min_data,
+            max: max_data,
+        //将颜色区间bar放到界面外，可以调整成正数就可以调回来
+            right:&#39;-15%&#39;,
+            inRange:{
+                color: [&#39;#d0f4fc&#39;,
+                    &#39;#a9dbf6&#39;,
+                    &#39;#9cd3f4&#39;,
+                    &#39;#93cdf3&#39;,
+                    &#39;#83c2f0&#39;,
+                    &#39;#6eb5ed&#39;,
+                    &#39;#51a2e9&#39;]
+            }
+        },
+        series : [
+            {
+                type : &#39;map&#39;,
+                map: &#39;china&#39;,
+                selectedMode: &#39;single&#39;,
+                roam: &#39;scale&#39;,
+                data : data_value,
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle:{color:&quot;#b6a38a&quot;}
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle:{color:&quot;#ff6347&quot;}
+                    }
+                },
+                itemStyle: {
+                    emphasis: {
+                        areaColor:&quot;#2e4783&quot;,
+                        borderWidth: 0
+                    }
+                }
+            }
+        ]
+    };
+  // 使用刚指定的配置项和数据显示图表。
+   myChart.setOption(option);
+  //设定鼠标放上去的时候能够显示数值
+   myChart.on(&#39;mouseover&#39;, function (params) {
+       var dataIndex = params.dataIndex;
+       console.log(dataIndex);
+   });
+  //用点击事件来切换地图实现下钻功能，该省份有值时才可以下钻
+   myChart.on(&#39;click&#39;, function (chinaParam) {
+       if (chinaParam.name == chinaParam.name
+           &amp;&amp;data_name.indexOf(chinaParam.name)&gt;-1) {
+           var option = myChart.getOption();
+           option.series[0].map = chinaParam.name;
+           myChart.setOption(option);
+       }
+   });
+  //用双击事件来返回最上层的中国地图，当不在中国地图时生效
+   myChart.on(&#39;dblclick&#39;, function (chinaParam) {
+       if (myChart.getOption().series[0].map != &#39;china&#39;) {
+           var option = myChart.getOption();
+           option.series[0].map = &#39;china&#39;;
+           myChart.setOption(option);
+       }
+   });
+}
+
+module.exports = echartsChinaMapVis;
+</pre></div>
+</div>
+<p>4.最后是后端viz.py中数据接口的处理</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>class echartsMap(BaseViz):
+
+    &quot;&quot;&quot; echarts map viz &quot;&quot;&quot;
+
+    viz_type = &#39;echarts_map&#39; # 对应前端名字
+    verbose_name = _(&#39;echarts_map&#39;)
+    is_timeseries = False
+
+    def get_data(self, df):
+        form_data = self.form_data
+        df.sort_values(by=df.columns[0], inplace=True)
+        print(df.values.tolist())
+        ori_data = df.values.tolist()
+        data = [{&#39;name&#39; : ori_data[i][0], &#39;value&#39; : ori_data[i][1]} for i in range(len(ori_data))]
+        data_name = [ori_data[i][0] for i in range(len(ori_data))]
+        max_data = max([ori_data[i][1] for i in range(len(ori_data))])
+        min_data = min([ori_data[i][1] for i in range(len(ori_data))])
+       #这里回传了四个参数，分别是省份和对应数值、省份列表用来判断是否在可点击范围、最大和最小值用来限定颜色
+        return [data, data_name, max_data, min_data]
+</pre></div>
+</div>
+<p>总结一下难点主要是在批量引用所有地图文件上，在这个点卡了比较久，而且在H5没有还没有找到好方法只能一个个引用
+然后点击切换地图的思路确实很巧妙哦~感觉在前端学习之路上有进步了小小的一点，大家也一起来试试吧</p>
+</div>
+<div class="section" id="id3">
+<h2>文件夹映射<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">8087</span>:8088 -v d:/data:/usr/local/lib amancevice/superset
+</pre></div>
+</div>
+</div>
+<div class="section" id="echart">
+<h2>单独的echart<a class="headerlink" href="#echart" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 地图文件被分成了三个 Python 包，分别为：</span>
+<span class="c1"># 全球国家地图: echarts-countries-pypkg (1.9MB)</span>
+<span class="c1"># 中国省级地图: echarts-china-provinces-pypkg (730KB)</span>
+<span class="c1"># 中国市级地图: echarts-china-cities-pypkg (3.8MB)</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pyecharts</span><span class="o">==</span><span class="mf">0.5</span><span class="o">.</span><span class="mi">5</span> <span class="n">echarts</span><span class="o">-</span><span class="n">countries</span><span class="o">-</span><span class="n">pypkg</span> <span class="n">echarts</span><span class="o">-</span><span class="n">china</span><span class="o">-</span><span class="n">provinces</span><span class="o">-</span><span class="n">pypkg</span> <span class="n">echarts</span><span class="o">-</span><span class="n">china</span><span class="o">-</span><span class="n">cities</span><span class="o">-</span><span class="n">pypkg</span>
+<span class="c1"># 该版本较为稳定</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pyecharts">
+<h2>新版本的pyecharts<a class="headerlink" href="#pyecharts" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>https://pyecharts.org/#/zh-cn/intro</p>
+<p>https://github.com/pyecharts/pyecharts</p>
+</div></blockquote>
+<p>v0.5.x 和 V1 间不兼容，V1 是一个全新的版本，详见 <a class="reference external" href="https://github.com/pyecharts/pyecharts/issues/892">ISSUE#892</a>，<a class="reference external" href="https://github.com/pyecharts/pyecharts/issues/1033">ISSUE#1033</a>。</p>
+<div class="section" id="v0-5-x">
+<h3>V0.5.x<a class="headerlink" href="#v0-5-x" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>支持 Python2.7，3.4+</div></blockquote>
+<p>经开发团队决定，0.5.x 版本将不再进行维护，0.5.x 版本代码位于 <em>05x</em> 分支，文档位于 <a class="reference external" href="http://05x-docs.pyecharts.org/">05x-docs.pyecharts.org</a>。</p>
+</div>
+<div class="section" id="v1">
+<h3>V1<a class="headerlink" href="#v1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>仅支持 Python3.6+</div></blockquote>
+<p>新版本系列将从 v1.0.0 开始，文档位于 <a class="reference external" href="https://pyecharts.org/">pyecharts.org</a>。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

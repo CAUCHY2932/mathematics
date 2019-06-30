@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>理解开发流程 &#8212; new_test 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="这是第一章节" href="新/新章节1.html" />
+    <link rel="prev" title="第三章" href="chapter3.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>理解开发流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><img alt="https://dn-coding-net-production-pp.codehub.cn/2778bdc2-9827-4f10-8abd-da4d71c3ab4e.png" src="https://dn-coding-net-production-pp.codehub.cn/2778bdc2-9827-4f10-8abd-da4d71c3ab4e.png" />图片</p>
+<p>腾讯云开发者平台的开发流程是基于 Git 分支的。通过 Git 分支，多个开发者可以同时进行各自的任务开发，互不干扰。等开发完成再通过我们的合并请求（MR）及其评审机制，将代码合并至主线，不断迭代。</p>
+<p>通过下面的文字，我们一起了解一下这个流程是怎样的，以及为什么要这么做。</p>
+<div class="section" id="id2">
+<h2>代码仓库<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>我们的每个项目有一个代码仓库，即远程仓库，每个开发者都有一个自己的本地仓库。所有的本地仓库通过推送和拉取代码的方式保持和远程仓库同步。在最开始我们需要初始化远程仓库，有以下三种方式：</p>
+<ul class="simple">
+<li>创建项目时初始化仓库</li>
+<li>在本地创建一个新仓库并推送至远程仓库</li>
+<li>从本地推送已有仓库至远程仓库</li>
+</ul>
+<p>具体可查看<a class="reference external" href="https://dev.tencent.com/help/git-base">帮助文档</a>,其他更多关于 Git 的使用问题可以查看 <a class="reference external" href="https://git-scm.com/book/zh/v2">Git 文档</a>。</p>
+</div>
+<div class="section" id="id3">
+<h2>创建分支<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>每个代码仓库都有一个默认分支，但接到新任务时我们一般不在这个默认分支上改动，而是新建一个分支。这样做的好处是，当有新的任务中断当前任务时，我们能够随时切换，从而保证每条任务线的代码都是互不干扰的。</p>
+</div>
+<div class="section" id="id4">
+<h2>代码提交<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>进入新分支之后，我们就可以进行开发了。一般我们会在完成一个小功能点时进行代码跟踪 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> 和提交 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> ，如果你想在提交代码时关联某个任务，可以 commit 信息中写上 <code class="docutils literal notranslate"><span class="pre">#id</span></code> （任务引用 ID ）：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>  git commit -m <span class="s2">&quot;关联任务 #100&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>合并请求<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>当我们在新分支上完成任务时，就可以创建一个合并请求（MR），请求合并到默认分支。与此同时，我们可以邀请其他成员来进行代码评审。这里有一个技巧，当你按如下格式提交分支至线上时，会自动创建 MR 。</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>  git push 主机名 本地分支名:mr/线上目标分支名/本地分支名
+</pre></div>
+</div>
+<p>在代码评审时，如果对代码有疑问可以直接评论。</p>
+<p><img alt="https://dn-coding-net-production-pp.codehub.cn/bd3fc453-47d4-4784-9603-514a27a6b17a.png" src="https://dn-coding-net-production-pp.codehub.cn/bd3fc453-47d4-4784-9603-514a27a6b17a.png" />图片</p>
+<p>如果评审者觉得没有问题，就可以点击“允许合并”（对这个 MR 进行 +1 ）。等所有评审者都允许合并之后，MR 发起者就可以合并分支了。</p>
+<p><img alt="https://dn-coding-net-production-pp.codehub.cn/908adeb8-9126-45d8-84e9-a150f7641af7.png" src="https://dn-coding-net-production-pp.codehub.cn/908adeb8-9126-45d8-84e9-a150f7641af7.png" />图片</p>
+</div>
+<div class="section" id="id6">
+<h2>版本发布<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>当完成一个里程碑的所有任务开发之后，我们可以在某个节点将此时的默认分支标记为一个版本，并发布这个版本。</p>
+<p><img alt="https://dn-coding-net-production-pp.codehub.cn/cf537bab-0a88-4960-9e91-8afdfc41e4fa.png" src="https://dn-coding-net-production-pp.codehub.cn/cf537bab-0a88-4960-9e91-8afdfc41e4fa.png" />图片</p>
+</div>
+<div class="section" id="id7">
+<h2>体验一下整个流程<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>为了让你更深刻地理解这个流程，假设你现在接到了一个新的任务。你创建了一个新分支 <code class="docutils literal notranslate"><span class="pre">new-feature</span></code> ，准备在这个分支进行开发。</p>
+<p>点击<a class="reference external" href="/u/dtid_9e65f14616561408/p/dev-demo/git/branches">这里</a>前往查看 <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">feature</span></code> 分支。</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">new_test</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">大标题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">第二张内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">第三章</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">理解开发流程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">代码仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">创建分支</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">代码提交</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">合并请求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">版本发布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">体验一下整个流程</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="新/新章节1.html">这是第一章节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="新/新章节2.html">这是第二章节</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="chapter3.html" title="previous chapter">第三章</a></li>
+      <li>Next: <a href="新/新章节1.html" title="next chapter">这是第一章节</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, young.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/开发流程.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

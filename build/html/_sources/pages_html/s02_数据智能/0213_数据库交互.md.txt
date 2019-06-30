@@ -1,0 +1,148 @@
+
+
+## sqlalchemy文档
+
+
+
+> https://docs.sqlalchemy.org/en/13/
+> https://www.cnblogs.com/zknublx/p/8710110.html
+> https://sqlalchemy-redshift.readthedocs.io/en/latest/
+> https://www.jianshu.com/p/a759058cfe66
+
+## sqlalchemy orm
+
+### 简介
+
+sqlalchemy是python下的一款orm框架，该框架建立在数据库api之上，使用对象关系映射进行数据库操作。即，将对象转换成sql，然后使用数据api执行sql并获取执行结果。
+
+![orm图片](images/orm.png)
+
+### 数据api操作
+
+dialect用于和数据api进行交流，根据配置文件的不同调用不同的数据库api，从而实现对数据库的操作。
+
+```python
+MySQL-Python
+    mysql+mysqldb://<user>:<password>@<host>[:<port>]/<dbname>
+  
+pymysql
+    mysql+pymysql://<username>:<password>@<host>/<dbname>[?<options>]
+  
+MySQL-Connector
+    mysql+mysqlconnector://<user>:<password>@<host>[:<port>]/<dbname>
+  
+cx_Oracle
+    oracle+cx_oracle://user:pass@host:port/dbname[?key=value&key=value...]
+```
+
+- 使用 Engine/ConnectionPooling/Dialect 进行数据库操作，Engine使用ConnectionPooling连接数据库，然后再通过Dialect执行SQL语句。
+
+```python
+from sqlalchemy import create_engine
+import pymysql
+
+engine = create_engine("mysql+pymysql://root@127.0.0.1:3306/test",max_overflow=5)
+
+engine.execute(
+        "INSERT INTO hosts (hostname,ip_addr,port,group_id) VALUES ('web4','4.4.4.4',22,3)"
+)
+
+result = engine.execute("select * from hosts")
+
+result.fetchall()
+```
+
+- 使用 Schema Type/SQL Expression Language/Engine/ConnectionPooling/Dialect 
+  进行数据库操作。Engine使用Schema Type创建一个特定的结构对象，之后通过SQL Expression 
+  Language将该对象转换成SQL语句，然后通过 ConnectionPooling 连接数据库，再然后通过 Dialect 
+  执行SQL，并获取结果。
+
+```pyhton
+from sqlalchemy import  create_engine, Table, Column, Integer, String, MetaData, ForeignKey, select
+import pymysql
+
+#生成metadata类
+metadata = MetaData()
+
+#创建user表，继承metadata类
+#Engine使用Schama Type创建一个特定的结构对象
+user = Table("user", metadata,
+             Column("id", Integer, primary_key=True),
+             Column("name", String(20)))
+
+color = Table("color", metadata,
+              Column("id", Integer, primary_key=True),
+              Column("name", String(20)))
+
+#通过ConnectionPooling 连接数据库
+engine = create_engine("mysql+pymysql://root@127.0.0.1:3306/test", max_overflow=5,echo=True)
+#通过Dialect执行SQL
+#metadata.create_all(engine) #创建表结构
+```
+
+**注：SQLAlchemy无法修改表结构，如果需要可以使用SQLAlchemy开发者开源的另外一个软件Alembic来完成.**
+
+- 使用 ORM/Schema Type/SQL Expression Language/Engine/ConnectionPooling/Dialect 所有组件对数据进行操作。根据类创建对象，对象转换成SQL，执行SQL。
+
+```python
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+import pymysql
+
+engine = create_engine("mysql+pymysql://root@127.0.0.1:3306/test", max_overflow=5, echo=True) #echo显示sql语句创建过程
+
+Base = declarative_base() #生成一个SQLORM基类
+
+#创建表
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True)
+    name = Column(String(50))
+    def __repr__(self):
+        return "<User(id='%s',name='%s')>" % (self.id,self.name)
+
+# 寻找Base的所有子类，按照子类的结构在数据库中生成对应的数据表信息
+#Base.metadata.create_all(engine)
+
+if __name__ == "__main__":
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    #增
+    #sql1 = User(id=1,name="haha")
+    #sql2 = User(id=2,name="hehe")
+    #session.add(sql1)
+    #session.add_all([sql1, sql2])
+    #session.commit()
+
+    #改
+    #session.query(User).filter(User.id >1).update({"name":"xixi"})
+    #session.commit()
+
+    #删
+    #session.query(User).filter(User.id == 1).delete()
+    #session.commit()
+
+    #查
+    r1 = session.query(User).filter_by(name="xixi").first()
+
+    r2 = session.query(User).filter_by(name="xixi").all()
+
+    r3 = session.query(User).filter(User.name.in_(["haha", "hehe", "xixi"])).all()
+
+    r4 = session.query(User.name.label("name_label")).all()
+    #SELECT users.name AS name_label FROM users
+
+
+    r5 = session.query(User).order_by(User.id).all()
+    #SELECT users.id AS users_id, users.name AS users_name FROM users ORDER BY users.id
+
+    r6 = session.query(User).order_by(User.id)[1:2]
+    #SELECT users.id AS users_id, users.name AS users_name FROM users ORDER BY users.id LIMIT 1,2
+
+
+    print(r1, r2, r3, r4, r5, r6)
+    session.commit()
+```
+

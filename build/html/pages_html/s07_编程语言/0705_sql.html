@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>基础语法 &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>基础语法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s07_编程语言/0705_sql.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>基础语法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>概念<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>sql，结构化查询语言</p>
+<p>主要学习关系型数据库</p>
+</div>
+<div class="section" id="sql-dml-ddl">
+<h2>SQL DML 和 DDL<a class="headerlink" href="#sql-dml-ddl" title="Permalink to this headline">¶</a></h2>
+<p>可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。</p>
+<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
+<ul class="simple">
+<li><em>SELECT</em> - 从数据库表中获取数据</li>
+<li><em>UPDATE</em> - 更新数据库表中的数据</li>
+<li><em>DELETE</em> - 从数据库表中删除数据</li>
+<li><em>INSERT INTO</em> - 向数据库表中插入数据</li>
+</ul>
+<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<p>SQL 中最重要的 DDL 语句:</p>
+<ul class="simple">
+<li><em>CREATE DATABASE</em> - 创建新数据库</li>
+<li><em>ALTER DATABASE</em> - 修改数据库</li>
+<li><em>CREATE TABLE</em> - 创建新表</li>
+<li><em>ALTER TABLE</em> - 变更（改变）数据库表</li>
+<li><em>DROP TABLE</em> - 删除表</li>
+<li><em>CREATE INDEX</em> - 创建索引（搜索键）</li>
+<li><em>DROP INDEX</em> - 删除索引</li>
+</ul>
+<p>###数据库操作</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">create</span> <span class="k">database</span> <span class="n">db_name</span><span class="p">;</span> <span class="c1">--创建数据库</span>
+<span class="k">drop</span> <span class="k">database</span> <span class="n">db_name</span><span class="p">;</span> <span class="c1">--删除数据库</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>表操作<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">create</span> <span class="k">table</span> <span class="k">table_name</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">addr</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span> <span class="c1">--创建表</span>
+
+
+<span class="k">drop</span> <span class="k">table</span> <span class="k">table_name</span><span class="p">;</span> <span class="c1">--删除表</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>记录操作<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">insert</span> <span class="k">into</span> <span class="k">table_name</span> <span class="k">values</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">...);</span> <span class="c1">--插入</span>
+<span class="k">update</span> <span class="k">table_name</span> <span class="k">set</span> <span class="n">column_i</span> <span class="o">=</span><span class="s1">&#39;xxx&#39;</span> <span class="k">where</span> <span class="n">column_j</span> <span class="o">=</span> <span class="s1">&#39;jjj&#39;</span><span class="p">;</span> <span class="c1">--更新</span>
+<span class="k">delete</span> <span class="k">from</span> <span class="k">table_name</span> <span class="k">where</span> <span class="k">column</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span> <span class="c1">--删除</span>
+<span class="k">select</span> <span class="k">column</span> <span class="k">from</span> <span class="k">table_name</span><span class="p">;</span> <span class="c1">--查询</span>
+</pre></div>
+</div>
+<div class="section" id="where">
+<h3>where<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="distinct">
+<h3>distinct<a class="headerlink" href="#distinct" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="and-or">
+<h3>and or<a class="headerlink" href="#and-or" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>进阶<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id6">
+<h2>约束<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="not-null">
+<h3>not null<a class="headerlink" href="#not-null" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unique">
+<h3>unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="k">UNIQUE</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span> <span class="o">--</span><span class="n">mysql</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="primary-key">
+<h3>primary key<a class="headerlink" href="#primary-key" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="foreign-key">
+<h3>foreign key<a class="headerlink" href="#foreign-key" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Orders</span>
+<span class="p">(</span>
+<span class="n">Id_O</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">OrderNo</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">Id_P</span> <span class="kt">int</span><span class="p">,</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_O</span><span class="p">),</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nf">Persons</span><span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check">
+<h3>check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="default">
+<h3>default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>连接<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -15,12 +15,12 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
+from recommonmark.parser import CommonMarkParser
 
 # -- Project information -----------------------------------------------------
 
-project = 'new_test'
-copyright = '2019, young'
+project = '吕阳阳想记点东西'
+copyright = '2019@young'
 author = 'young'
 
 # The short X.Y version
@@ -56,8 +56,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md', '.MD']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -197,3 +197,9 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+source_parsers = {
+    '.md': CommonMarkParser,
+    '.MD': CommonMarkParser,
+
+}

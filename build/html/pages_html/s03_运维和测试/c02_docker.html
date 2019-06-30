@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docker &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>docker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s03_运维和测试/c02_docker.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="docker">
+<h1>docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="daocloud">
+<h1>daocloud<a class="headerlink" href="#daocloud" title="Permalink to this headline">¶</a></h1>
+<p>https://hub.daocloud.io/repos?type=featured</p>
+<p>https://www.daocloud.io/mirror</p>
+<div class="section" id="id1">
+<h2>常用可选参数<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>常用可选参数说明：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-i <span class="c1"># 表示以“交互模式”运行容器</span>
+-t <span class="c1"># 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span>
+--name <span class="c1"># 为创建的容器命名</span>
+-v <span class="c1"># 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个-v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span>
+-d <span class="c1"># 在run后面加上-d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加-i -t 两个参数，创建后就会自动进去容器)。</span>
+-p <span class="c1"># 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个-p 做多个端口映射</span>
+-e <span class="c1"># 为容器设置环境变量</span>
+--network<span class="o">=</span>host <span class="c1"># 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span>
+<span class="c1">###########</span>
+docker ps -a <span class="c1"># docker 列举容器</span>
+docker stop container id <span class="c1"># docker 关闭容器</span>
+docker start container id <span class="c1"># docker 启动容器</span>
+docker cp sourcepath containerId:targetpath <span class="c1"># 复制文件</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>镜像加速器<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Linux系统目前存在的三种系统启动方式所对应的配置文件目录分别为：</p>
+<ul class="simple">
+<li>SysVinit：/etc/init.d目录；</li>
+<li>UpStart： /usr/share/upstart目录；</li>
+<li>Systemd：/usr/lib/systemd目录；</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ubuntu 16+, debian 8+, centos7</span>
+<span class="c1"># 使用systemd系统，在/etc/docker/daemon.json写入内容</span>
+<span class="o">{</span><span class="s2">&quot;registry-mirrors&quot;</span>:<span class="o">[</span>
+	<span class="s2">&quot;https://registry.docker-cn.com&quot;</span>
+	<span class="o">]</span>
+<span class="o">}</span>
+<span class="c1"># 重启服务</span>
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+<span class="c1"># win10</span>
+<span class="c1"># 在系统托盘选择settings，在配置窗口左侧导航栏选择daemon，在register mirros填写</span>
+<span class="c1"># https://register.docker-cn.com</span>
+
+<span class="c1"># macos</span>
+<span class="c1"># 在任务栏中点击docker for mac daemon register mirrors，docker重启并应用配置的镜像地址</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>docker镜像操作<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 我们对镜像操作时，可以使用短id，只需取前3个字符，只要足够区分于别的镜像就可以了。</span>
+docker search xxx <span class="c1"># docker 搜索镜像</span>
+docker pull xxx <span class="c1"># docker 拉取镜像</span>
+docker image ls <span class="c1"># docker 列举镜像</span>
+docker image ls -a <span class="c1"># docker 列举所有镜像</span>
+
+
+docker image rm xxx# docker 删除镜像
+
+docker image rm <span class="k">$(</span>docker image ls -q redis<span class="k">)</span> <span class="c1"># 删除所有仓库名为redis的镜像</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>docker容器操作<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run xxx <span class="c1"># docker新建并启动</span>
+<span class="c1"># -t 非配一个终端， -i让容器的标准输入并保持打开</span>
+<span class="c1"># -d后台运行</span>
+docker container ls <span class="c1"># docker查看容器，-a查看所有（包括终止的）</span>
+docker container stop <span class="c1"># 终止运行的容器</span>
+
+<span class="c1"># 在使用 -d参数后，容器启动后悔进入后台</span>
+docker <span class="nb">exec</span> xxx <span class="c1"># 进入容器进行操作, -i -t分配终端</span>
+<span class="c1"># 如下所示</span>
+docker run -itd ubuntu
+docker container ls
+docker <span class="nb">exec</span> -i xxx bash
+<span class="c1"># 或者</span>
+docker <span class="nb">exec</span> -it xxx bash
+
+docker <span class="nb">export</span> xx &gt; ubuntu.tar <span class="c1"># 导出容器</span>
+cat ubuntu.tar <span class="p">|</span> docker import - test/ubuntu:v1.0 <span class="c1"># 导入容器</span>
+
+docker container rm xxx <span class="c1"># 删除一个容器，添加-f参数，删除一个运行中的容器</span>
+docker container prune <span class="c1"># 清理所有处于终止状态的容器</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

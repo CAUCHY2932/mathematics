@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s16_编程杂技/5-js访问某个url.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>如何使用js向指定一个网站发送一个带参数的post请求</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">* 1 创建XMLHttpRequest对象 */</span>
+<span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="nx">ajaxFunction</span><span class="p">();</span>
+<span class="cm">/*</span>
+<span class="cm">* 2 服务器向浏览器响应请求</span>
+<span class="cm">*</span>
+<span class="cm">* readyState 属性表示Ajax请求的当前状态。它的值用数字代表。</span>
+<span class="cm">0 代表未初始化。 还没有调用 open 方法</span>
+<span class="cm">1 代表正在加载。 open 方法已被调用，但 send 方法还没有被调用</span>
+<span class="cm">2 代表已加载完毕。send 已被调用。请求已经开始</span>
+<span class="cm">3 代表交互中。服务器正在发送响应</span>
+<span class="cm">4 代表完成。响应发送完毕</span>
+
+<span class="cm">常用状态码及其含义：</span>
+<span class="cm">404 没找到页面(not found)</span>
+<span class="cm">403 禁止访问(forbidden)</span>
+<span class="cm">500 内部服务器出错(internal service error)</span>
+<span class="cm">200 一切正常(ok)</span>
+<span class="cm">304 没有被修改(not modified)(服务器返回304状态，表示源文件没有被修改 ) */</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="p">);</span> <span class="c1">//alert(xhr.status);</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="o">==</span><span class="mi">4</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mi">200</span><span class="o">||</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mi">304</span><span class="p">){</span>
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="cm">/*</span>
+<span class="cm">* 3 浏览器与服务器建立连接</span>
+<span class="cm">*</span>
+<span class="cm">* xhr.open(method, url, asynch);</span>
+<span class="cm">* * 与服务器建立连接使用</span>
+<span class="cm">* * method：请求类型，类似 “GET”或”POST”的字符串。</span>
+<span class="cm">* * url：路径字符串，指向你所请求的服务器上的那个文件。请求路径</span>
+<span class="cm">* * asynch：表示请求是否要异步传输，默认值为true(异步)。 */</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span><span class="s2">&quot;../testServlet?timeStamp=&quot;</span><span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;&amp;c=18&quot;</span><span class="p">,</span><span class="kc">true</span><span class="p">);</span>
+<span class="c1">//如果是POST请求方式，设置请求首部信息</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">&quot;Content-type&quot;</span><span class="p">,</span><span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">* 4 浏览器向服务器发送请求</span>
+<span class="cm">*</span>
+<span class="cm">* send()方法：</span>
+<span class="cm">* * 如果浏览器请求的类型为GET类型时，通过send()方法发送请求数据，服务器接收不到</span>
+<span class="cm">* * 如果浏览器请求的类型为POST类型时，通过send()方法发送请求数据，服务器可以接收 */</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">&quot;a=6&amp;b=9&quot;</span><span class="p">);</span> <span class="c1">//xhr.send(null); </span>
+</pre></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; 吕阳阳想记点东西 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../../',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 吕阳阳想记点东西
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter01_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter03_spider.html">爬虫</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter04_devops.html">运维和测试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter06_think_way.html">思维方式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chapter12_big_data.html">大数据</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">吕阳阳想记点东西</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/pages_html/s03_运维和测试/规范部署流程.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>规范测试流程
+不知道大家有没有同感，当项目团队较小，比如由10个以内的开发人员组成的时候，因为系统不是很大，覆盖
+的功能不是很多，需要考虑的问题相对就会较少。这时，测试不用那么规范化，由开发人员口述功能或者提个
+用户需求，测试人员多交叉覆盖几遍功能点也行。但随着项目的扩展，如果继续上述模式，你做不到每次都能
+将每个功能点都测试到，也不可能每次都能覆盖到所有的场景，而且需要回归测试的常用功能点越来越多，慢
+慢的你会发现越来越力不从心，这时，就需要一个规范的测试流程了。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>一个规范的测试流程有助于将需求条理化，将测试工作模块化。俗话说好记性不如烂笔头，一切有条不紊的
+</pre></div>
+</div>
+<p>跟着计划走总比靠脑袋想着走要好，特别是脑袋有时候容易乱成一锅粥。虽然找BUG这个东西有时候很需要一
+拍脑袋的灵感，但对于整个系统测试来说是这种灵感要建立在功能测试覆盖全面的基础上才有锦上添花的作用，
+否则容易本末倒置。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>一个规范的测试流程贯彻于整个软件的生命周期，包括：制定测试策略 、做好测试计划、编写测试用例、形
+</pre></div>
+</div>
+<p>成测试报告、维护测试库直到最后销毁。这样说可能有点抽象，下面我结合实际大概的把整个工作贯穿起来，
+整个流程就清晰了。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>首先是测试策略，用户/业务提出需求文档后，测试就应该开始和开发一起做需求分析，分析功能的可行性，
+</pre></div>
+</div>
+<p>一般需求分析完成并审核通过后开发都会开始做系统设计，这时我们也会对整个被测系统就有了一个大概的了
+解。比如：该系统之后测试的范围应该包含哪些（比如说除了基本的功能，性能外，是否有做安全，兼容，用
+户体验等测试的需要），一般明确范围之后，就知道大概需要用到哪些测试工具，用到哪些测试方法（比如是否需要自动化）。此时只是对系统有个了解，所以不用想得太细，随着项目的推进，下一步就要计划一下该怎
+么有条不紊的在规定的时间内完成测试了。
+一般计划的时候，符合5W原则，刚开始觉得整这种词太书面化了，但随着测试的加深，慢慢的觉得的确是这
+样的。
+1、了解为什么要做该测试（WHY），其实测试一是为了保证软件质量，减少发布后的维护成本，二是只有经
+过充分测试的软件才能说服自己，乃至说服客户。
+2、要明确测些什么（WHAT），要计划好此次测试包含哪些方面的功能，功能的细节，性能上需要达到什么样
+的指标，是否有必要做安全测试，兼容性上要满足什么样的指标，是否需要做一个用户体验感测试报告等。
+3、要计划好测试的开始和结束时间（WHEN），计划好不同阶段测试的起止时间，一般要留出一段时间的缓冲
+期以便进一步查缺补漏，应对突发情况（如需求变更等），完善测试用例等。
+4、然后，要计划好此次测试的人员分配情况（WHO），哪些人负责哪些模块，要用到哪些工具，功能性测试
+的时候如果有条件，同一功能最好能安排两个测试人员来交叉测试，以便发现更多的BUG，毕竟人力有时穷，
+每个人对一个功能或一个系统测试多了也会产生定式思维。
+5、再次就是要做好各种文档，测试用例库等重要文件的保存和备份，存放在哪里（WHERE），防止突发情况
+造成整个测试工作的瘫痪。
+最后、还要做好风险分析，比如计划突然变更时怎么办，这个除了计划时就要留出时间应对突发情况外，还有
+就是需要平时跟开发，客户有良好的沟通，计划有变时才能更好的商讨解决方案；其次就是要考虑测试人员或
+者测试设备突然掉链子了怎么办，这时候就需要有后备的资源了，最好所有测试人员+后备人员都能参与前期
+的需求分析和评审工作，测试人员之间相互之间要了解对方的测试内容，出现这种状况时才能相互调用，更
+好的应对。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>接下来就是测试的主体了，怎么测试，当然是编写测试用例。编写测试用例时首先注意界面模块测试，如界
+</pre></div>
+</div>
+<p>面包含哪些控件，这些控件是否能正常使用；其次根据功能的不同来设计；然后可根据场景的不同来设计（不
+同的业务场景，数据场景等）；最后还应对每个场景做正向和逆向异常测试。测试完成后将结果反馈给开发和
+PM，将发行的BUG提报并实时跟踪，修复后继续做冒烟测试，继续这个循环，最后做好系统测试，回归测试等
+直到可以发布。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>测试用例执行后，编写测试报告，报告包括：用例数，通过数，通过率，用例信息，所用时间，错误概述，
+</pre></div>
+</div>
+<p>错误详细，测试步骤详细信息，预期结果，测试结果信息等。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>好了，各位读完有没有一种跟着跑了遍测试流程的感觉，而且就算脑袋成浆糊的时候也能跟着计划理清楚。
+</pre></div>
+</div>
+<p>当然了，大神勿喷，多多指点。</p>
+<p>流程性的东西，基本每个单位都有，万变不离其中，都是软件工程的那几个阶段和阶段产物，重要的各个阶段产物的质量，产物质量就是个精益求精的过程了，只能持续改进
+测试阶段主要是测试方案、测试场景、测试大纲、测试用例、测试数据、测试记录和测试报告，一环套着一环的走，一个项目一个项目的总结和改进</p>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
