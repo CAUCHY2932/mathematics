@@ -2,8 +2,6 @@
 
 包含linux和一些常用的命令
 
-
-
 ## ubuntu
 
 
@@ -25,7 +23,7 @@ sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sour
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add
 sudo apt update
 sudo apt install google-chrome-stable
-# 3.2输入法
+
 # 1.1 安装命令（ppa源）
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
@@ -128,24 +126,12 @@ sudo passwd root
 
 
 
-
-
 ## vim 
 
 ```bash
-# vim settings
-
-> author:young
-
-## change dir to current usr profile
-
-
-$ cd ~
-
 ## edit the vimrc file
 
 $ vim ~/.vimrc
-
 ## set the file
 
 set ts=4
@@ -153,22 +139,14 @@ set expandtab
 set autoindent
 set number
 
-
-
-
 # 另外，Python编程是靠缩进来规定语法的，当你使用vim写python时，要注意tab与空格的区别。一般我们写Python都是以4个空格表缩进标准的，所以在代码中不要把空格与tab混用（两者ASCII码是不同的），要不一直用空格，要不就一直用tab，不然会导致程序报错。推荐把vim的tab变为4个空格，增加编程效率。
 
 # 设置Tab键的宽度[等同的空格个数]
-
- set tabstop=4
-
+set tabstop=4
 # 每一次缩进对应的空格数
-
- set shiftwidth=4
-
+set shiftwidth=4
 # 按退格键时可以一次删掉4个空格
-
- set softtabstop=4
+set softtabstop=4
 # 在root用户家目录下的.vimrc中设置，对所有用户生效
 
 # 如何与外界剪贴板进行交互
@@ -584,23 +562,15 @@ github地址：[apache/incubator-superset](https://link.zhihu.com/?target=https%
 ## python
 
 
-### python方向和工具
-
-| 方向     |      工具       |           包 | 包管理方式 |
-| -------- | :-------------: | -----------: | ---------- |
-| 数据分析 | pycharm，vscode | numpy,pandas | pip,conda  |
-| 运维     |     pycharm     |          etc | pip, conda |
-| 爬虫     |     pycharm     |       scrapy | pip,conda  |
-| web      |     pycharm     |        flask | pip,conda  |
 
 ### 服务器部署常用镜像源
 
-| 名字    | 源                                    |
-| ------- | ------------------------------------- |
-| Alibaba | https://opsx.alibaba.com/mirror       |
-| 清华    | https://mirrors.tuna.tsinghua.edu.cn/ |
-| 中科大  | https://mirrors.ustc.edu.cn/          |
-| 豆瓣    | http://pypi.doubanio.com/simple/      |
+
+
+- 阿里巴巴 https://opsx.alibaba.com/mirror 
+- 清华 https://mirrors.tuna.tsinghua.edu.cn/ 
+- 中科大 https://mirrors.ustc.edu.cn/
+- 豆瓣 http://pypi.doubanio.com/simple/
 
 
 ### python运维相关内容
@@ -628,8 +598,9 @@ pip install -r requirement.txt # 可以安装所有指定的包
 ```
 
 #### conda配置数据分析环境
+
 ```bash
-conda create -n xxx python=3.6.8
+conda create -n data python=3.6.8
 conda install numpy=1.16.2
 conda install pandas=0.24.2
 conda install matplotlib=3.0.3
@@ -654,9 +625,7 @@ pip install -i https://pypi.doubanio.com/simple wget==3.2
 pip install -i https://pypi.doubanio.com/simple BeautifulSoup4==4.7.1
 conda install scrapy
 conda install requests
-conda install xxx
 conda install bs4
-
 ```
 
 #### web开发
@@ -665,14 +634,10 @@ conda install flask
 conda install django
 conda install pymysql
 conda install pymongo
-
-### 运维
-
-
 ```
 
 #### gui开发
-```
+```bash
 ## python gui开发
 
 pycharm和pyqt5
@@ -1025,6 +990,8 @@ M 根据内存使用量来排序
 kill
 kill [-signal] pid
 
+kill -9 pid
+
 ### 关机重启
 
 reboot 重新启动操作系统
@@ -1069,7 +1036,6 @@ wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-L
 sudo sh ./Miniconda3....
 conda create -n jupyter
 conda activate jupyter
-
 ```
 
 
@@ -1097,13 +1063,8 @@ trusted-host = mirrors.aliyun.com
 
 ```bash
 pip install jupyterlab
-
 Consider using the `--user` option or check the permissions
-
 pip install --user jupyterlab
-
-
-
 jupyter notebook --generate-config
 
 打开ipython
@@ -1129,6 +1090,16 @@ c.ContentsManager.root_dir = '/data/jupyter/root'
 
 c.NotebookApp.allow_remote_access = True
 
+
+# 启动jupyter notebook：
+
+nohup jupyter lab --allow-root &
+
+登录jupyter lab
+
+http://服务器ip地址:8888/lab
+
+10.10.10.100:8888/lab
 ```
 
 ### 在centos7上安装mongodb
@@ -1160,12 +1131,6 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
 
 太慢可以使用清华rpm安装
 
-
-
-
-
-
-
 法二
 
 https://mirrors.tuna.tsinghua.edu.cn/help/mongodb/
@@ -1177,20 +1142,13 @@ mongodb安装镜像帮助
 [mongodb-org]
 name=MongoDB Repository
 baseurl=https://mirrors.tuna.tsinghua.edu.cn/mongodb/yum/el$releasever/
-
-
-
 ```
 
-### repo
+### repo源
 
 /etc/yum.repos.d/
 目录下是常用的repo文件
 如sublime-text.repo
-
-
-
-
 
 ### centos7 设置samba
 
@@ -1248,14 +1206,6 @@ guest ok = yes　　　　　　　　　　　　　　　　//是yes/否no公�
  printcap name = cups
  load printers = yes
  cups options = raw
-
-
-
-
-
-
-
-
 
 security = user
 说明：设置用户访问Samba Server的验证方式，一共有四种验证方式。
@@ -1388,22 +1338,13 @@ firewall-cmd --zone=public --query-port=80/tcp
 删除
 firewall-cmd --zone=public --remove-port=80/tcp --permanent
 
-
 # 防火墙开放8888端口
 
 firewall-cmd --zone=public --add-port=8888/tcp --permanent
 systemctl restart firewalld.service
 iptables -L -n
 
-启动jupyter notebook：
 
-nohup jupyter lab --allow-root &
-
-登录jupyter lab
-
-http://服务器ip地址:8888/lab
-
-10.10.10.100:8888/lab
 
 
 2、安装firewalld
@@ -1684,7 +1625,7 @@ yum -y install python-pip
 
 
 ### centos7安装mysql5.7
-```
+```bash
 https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/
 
 ### 1.配置yum源
@@ -1731,13 +1672,9 @@ centos7中常用
 
 sudo systemctl status mysqld.service
 sudo service mysqld status
-
-
 ### 4.开机启动
-
 systemctl enable mysqld
 systemctl daemon-reload
-
 ### 5、修改root本地登录密码
 
 mysql安装完成之后，在/var/log/mysqld.log文件中给root生成了一个默认密码。通过下面的方式找到root默认密码，然后登录mysql进行修改：
@@ -1852,12 +1789,6 @@ source  /etc/profile
 使修改生效。
 
 其中/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64是你的jdk的默认安装路径。
---------------------- 
-作者：yzh_1346983557 
-来源：CSDN 
-原文：https://blog.csdn.net/yzh_1346983557/article/details/81509329 
-版权声明：本文为博主原创文章，转载请附上博文链接！
-
 ```
 
 ## 安装nginx

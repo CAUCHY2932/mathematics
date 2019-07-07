@@ -96,9 +96,10 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">爬虫</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">第一次爬虫</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">爬虫示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bs4">爬虫示例-使用bs4</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">爬虫的路线</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">运维和测试</a></li>
@@ -179,54 +180,62 @@
 <h1>爬虫<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>第一次爬虫<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>数据库
-SQL NoSQL MongoDB MySQL Redis
-课程推荐</p>
-<p>Linux运维
-Linux Shell 网络 Nginx Ansible Git</p>
-<div class="section" id="id3">
-<h3>爬虫示例<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#coding:utf-8</span>
+<div class="section" id="bs4">
+<h3>爬虫示例-使用bs4<a class="headerlink" href="#bs4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding:utf-8</span>
 <span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">urllib</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">RequestException</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
-<span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://auth.alipay.com/login/index.htm&#39;</span>
-<span class="n">response</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
-<span class="n">rr</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="k">def</span> <span class="nf">get_page_source</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="c1"># 获取源码</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">apparent_encoding</span> 
+            <span class="k">return</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">except</span> <span class="n">RequestException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;error:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
 
-<span class="n">html</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span><span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
 
-<span class="c1">#创建css选择器</span>
-<span class="n">items</span><span class="o">=</span><span class="n">html</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;script[type=&quot;text/javascript&quot;]&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
-    <span class="k">if</span> <span class="s2">&quot;https://qr.alipay.com&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">parse_with_bs4</span><span class="p">(</span><span class="n">html_source</span><span class="p">):</span>
+    <span class="c1"># 解析源码</span>
+    <span class="n">html</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_source</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+    <span class="c1"># 创建css选择器</span>
+    <span class="n">items</span><span class="o">=</span><span class="n">html</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;script[type=&quot;text/javascript&quot;]&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;https://qr.alipay.com&quot;</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 
-<span class="c1"># print(items)</span>
 
-<span class="c1"># s = etree.HTML(rr)</span>
+<span class="k">def</span> <span class="nf">parse_with_xpath</span><span class="p">(</span><span class="n">html_source</span><span class="p">):</span>
+    <span class="c1"># 解析源码</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_source</span><span class="p">)</span>
 
-<span class="c1"># print(rr)</span>
+    <span class="n">dictobj</span><span class="o">=</span><span class="n">s</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;J-barcode-container&quot;]/canvas&#39;</span><span class="p">)</span>
 
-<span class="c1"># if &#39;https://qr.alipay.com&#39; in rr:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;news.json&quot;</span><span class="p">,</span> <span class="s2">&quot;a+&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">dictobj</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="c1"># print(&#39;find&#39;)</span>
 
-<span class="c1"># dictobj=s.xpath(&#39;//*[@id=&quot;J-barcode-container&quot;]/canvas&#39;)</span>
+<span class="k">def</span> <span class="nf">go</span><span class="p">():</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<span class="c1">#</span>
 
-<span class="c1"># with open(&quot;news.json&quot;, &quot;a+&quot;, encoding=&#39;utf-8&#39;) as f:</span>
-
-<span class="c1"># f.write(json.dumps(dictobj, ensure_ascii=False) + &#39;\n&#39;)</span>
-
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="id3">
+<h2>爬虫的路线<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>对于爬虫，我个人的体会是，先从根网站开始解析。网站本身的建设结构就是树状的，里面隐含了很多内容。</p>
 </div>
 </div>
 

@@ -2,53 +2,62 @@
 
 ## 第一次爬虫
 
-数据库
-SQL NoSQL MongoDB MySQL Redis
-课程推荐
 
-Linux运维
-Linux Shell 网络 Nginx Ansible Git
-### 爬虫示例
+
+### 爬虫示例-使用bs4
 
 ```python
-#coding:utf-8
+# coding:utf-8
 import requests
-import urllib
 from bs4 import BeautifulSoup
 from lxml import etree
+from requests import RequestException
 import json
 
-url='http://auth.alipay.com/login/index.htm'
-response=requests.get(url)
 
-rr = response.text
+def get_page_source(url):
+    # 获取源码
+    try:
+        resp = requests.get(url)
+        if resp.status_code == 200:
+            resp.encoding = resp.apparent_encoding 
+            return resp.text
+        return ''
+    except RequestException as e:
+        print('error:', e)
+        return ''
 
-html=BeautifulSoup(rr,'lxml')
 
-#创建css选择器
-items=html.select('script[type="text/javascript"]')
-for item in items:
-    if "https://qr.alipay.com" in item.text:
-        print(item)
+def parse_with_bs4(html_source):
+    # 解析源码
+    html=BeautifulSoup(html_source, 'lxml')
+    # 创建css选择器
+    items=html.select('script[type="text/javascript"]')
+    for item in items:
+        if "https://qr.alipay.com" in item.text:
+            print(item)
 
-# print(items)
 
-# s = etree.HTML(rr)
+def parse_with_xpath(html_source):
+    # 解析源码
+    s = etree.HTML(html_source)
 
-# print(rr)
+    dictobj=s.xpath('//*[@id="J-barcode-container"]/canvas')
 
-# if 'https://qr.alipay.com' in rr:
+    with open("news.json", "a+", encoding='utf-8') as f:
+        f.write(json.dumps(dictobj, ensure_ascii=False) + '\n')
 
-# print('find')
 
-# dictobj=s.xpath('//*[@id="J-barcode-container"]/canvas')
+def go():
+    url = ''
 
-#
 
-# with open("news.json", "a+", encoding='utf-8') as f:
-
-# f.write(json.dumps(dictobj, ensure_ascii=False) + '\n')
-
+if __name__ == "__main__":
+    go()
 
 ```
+
+## 爬虫的路线
+
+对于爬虫，我个人的体会是，先从根网站开始解析。网站本身的建设结构就是树状的，里面隐含了很多内容。
 
