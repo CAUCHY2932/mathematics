@@ -175,6 +175,55 @@ flask高级编程
 
 flask restful api
 
+### restapi项目
+
+#### 概述
+
+该项目用于生产系统后台建立报表和常规的管理，但是相比往常的系统，有以下特点：
+- 无权限控制
+- 无删除、更新、创建等修改性操作
+- 数据库查询复杂多样，而且对数据一致性要求高
+- 数据来源多样，可能来源于多个数据系统
+- 跨域，前后端分离
+
+#### 工程创建
+
+目录结构大致如下
+```
+.
+├── README.md
+├── api_single
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── libs
+│   │   ├── __init__.py
+│   │   ├── error.py
+│   │   ├── error_code.py
+│   │   └── time_helper.py
+│   ├── require.txt
+│   ├── secure.py
+│   └── v1
+│       ├── __init__.py
+│       ├── fake.py
+│       ├── fake_helper.py
+│       ├── forms.py
+│       ├── func_helper.py
+│       ├── main.py
+│       ├── model.py
+│       ├── raw_sql_op.py
+│       ├── time_test.py
+│       └── view_model.py
+└── raw_sql.sql
+```
+app.py 项目入口文件
+config.py 项目配置文件
+secure.py 安全信息文件
+require.txt 需求文件
+v1 版本内容文件夹，包含视图函数、模型文件、私有帮助函数库文件
+libs 自定义帮助函数库文件夹
+
+
 
 
 ## flask（狗书）
