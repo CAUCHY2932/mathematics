@@ -11,6 +11,7 @@
    :caption: Content:
 
    chapter00_preface.md
+   chapter01_philosophy.md
    chapter02_data_science.md
    chapter03_spider.md
    chapter04_devops.md

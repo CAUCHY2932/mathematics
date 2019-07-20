@@ -225,6 +225,72 @@ libs 自定义帮助函数库文件夹
 
 
 
+### restapi重构篇
+
+```
+.
+├── app
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── statement.py
+│   ├── libs
+│   │   ├── error.py
+│   │   └── tools.py
+│   ├── models
+│   │   ├── base.py
+│   │   └── statement.py
+│   └── service
+│       └── statement.py
+├── gunicorn_config.py
+├── requirements.txt
+├── settings.py
+├── statement.py
+└── unit_test
+
+```
+
+#### 入口文件
+
+statement.py
+
+
+
+#### 视图文件
+
+app/api/statement.py
+
+
+
+#### 帮助文件
+
+app/service/statement.py
+
+
+
+#### 需求文件
+
+requirement.py
+
+
+
+#### 错误处理
+
+
+
+#### 视图
+
+
+
+#### 数据库查询
+
+
+
+#### 返回格式封装
+
+
+
+
+
 
 ## flask（狗书）
 

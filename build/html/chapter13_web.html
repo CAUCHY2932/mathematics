@@ -92,6 +92,7 @@
               <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter01_philosophy.html">哲学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter03_spider.html">爬虫</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">运维和测试</a></li>
@@ -108,9 +109,27 @@
 <li class="toctree-l3"><a class="reference internal" href="#id1">单元测试</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">flask（七月）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">flask（狗书）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">flask（董伟明）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">flask（七月）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#restapi">restapi项目</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">工程创建</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">restapi重构篇</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">入口文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">视图文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">帮助文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">需求文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">错误处理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">数据库查询</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">返回格式封装</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">flask（狗书）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">flask（董伟明）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#django">django(胡阳)</a></li>
 </ul>
 </li>
@@ -338,12 +357,114 @@ $ git push
 <h2>flask（七月）<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>flask高级编程</p>
 <p>flask restful api</p>
-</div>
+<div class="section" id="restapi">
+<h3>restapi项目<a class="headerlink" href="#restapi" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id3">
-<h2>flask（狗书）<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h4>概述<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>该项目用于生产系统后台建立报表和常规的管理，但是相比往常的系统，有以下特点：</p>
+<ul class="simple">
+<li>无权限控制</li>
+<li>无删除、更新、创建等修改性操作</li>
+<li>数据库查询复杂多样，而且对数据一致性要求高</li>
+<li>数据来源多样，可能来源于多个数据系统</li>
+<li>跨域，前后端分离</li>
+</ul>
 </div>
 <div class="section" id="id4">
-<h2>flask（董伟明）<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h4>工程创建<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>目录结构大致如下</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── README.md
+├── api_single
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── libs
+│   │   ├── __init__.py
+│   │   ├── error.py
+│   │   ├── error_code.py
+│   │   └── time_helper.py
+│   ├── require.txt
+│   ├── secure.py
+│   └── v1
+│       ├── __init__.py
+│       ├── fake.py
+│       ├── fake_helper.py
+│       ├── forms.py
+│       ├── func_helper.py
+│       ├── main.py
+│       ├── model.py
+│       ├── raw_sql_op.py
+│       ├── time_test.py
+│       └── view_model.py
+└── raw_sql.sql
+</pre></div>
+</div>
+<p>app.py 项目入口文件
+config.py 项目配置文件
+secure.py 安全信息文件
+require.txt 需求文件
+v1 版本内容文件夹，包含视图函数、模型文件、私有帮助函数库文件
+libs 自定义帮助函数库文件夹</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>restapi重构篇<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── app
+│   ├── api
+│   │   ├── __init__.py
+│   │   └── statement.py
+│   ├── libs
+│   │   ├── error.py
+│   │   └── tools.py
+│   ├── models
+│   │   ├── base.py
+│   │   └── statement.py
+│   └── service
+│       └── statement.py
+├── gunicorn_config.py
+├── requirements.txt
+├── settings.py
+├── statement.py
+└── unit_test
+</pre></div>
+</div>
+<div class="section" id="id6">
+<h4>入口文件<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p>statement.py</p>
+</div>
+<div class="section" id="id7">
+<h4>视图文件<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>app/api/statement.py</p>
+</div>
+<div class="section" id="id8">
+<h4>帮助文件<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>app/service/statement.py</p>
+</div>
+<div class="section" id="id9">
+<h4>需求文件<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>requirement.py</p>
+</div>
+<div class="section" id="id10">
+<h4>错误处理<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id11">
+<h4>视图<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id12">
+<h4>数据库查询<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id13">
+<h4>返回格式封装<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>flask（狗书）<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id15">
+<h2>flask（董伟明）<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="django">
 <h2>django(胡阳)<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
