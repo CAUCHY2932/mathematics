@@ -55,11 +55,6 @@ nav:
 location /blog/ {
         alias /home/xiaoming/xiaomingblog/site/;
 	}当然，不用nginx也是可以的，随便用什么吧。要是无所谓的话，直接mkdocs serve -a 0.0.0.0:8000就ok，简单粗暴。反正性能安全神马的，那都是后话了。
-
-作者：Sigma
-链接：https://zhuanlan.zhihu.com/p/53025806
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ```
 
 #### MkDocs material
