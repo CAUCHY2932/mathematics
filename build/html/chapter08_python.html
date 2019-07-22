@@ -127,37 +127,48 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id14">python面向对象</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id15">类变量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">类方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">实例方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id18">静态方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">实例变量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id20">上下文管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">基本概念</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">类变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">类方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">实例化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">实例方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">静态方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">实例变量</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">上下文管理器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#json">正则表达式和json</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id21">正则表达式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#jsonxml">json和xml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">正则表达式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">json</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">json格式化</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id22">python高级用法</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id23"></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xml">xml</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">python高级用法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">枚举</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">一切皆是对象</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pythonic">pythonic</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#swtich">字典代替swtich</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id24">数据用法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id25">函数用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id30">数据用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">函数用法</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id26">表驱动法</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id27">数据用法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id28">函数用法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">表驱动法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id33">数据用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">函数用法</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id29">列表推导式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id30">元组推导式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id31">字典推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">列表推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">元组推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">字典推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#none">None类型</a></li>
 </ul>
 </li>
 </ul>
@@ -287,37 +298,119 @@
 <div class="section" id="id14">
 <h2>python面向对象<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id15">
-<h3>类变量<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
-</div>
+<h3>基本概念<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id16">
-<h3>类方法<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<h4>类<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>类名首字母大写，且不使用下划线，应该使用形如：StudentAddress之类的驼峰命名法</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id17">
-<h3>实例方法<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<h4>类变量<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id18">
-<h3>静态方法<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<h4>类方法<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">print_info</span><span class="p">():</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id19">
-<h3>实例变量<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<h4>实例化<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span>
+    
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id20">
-<h3>上下文管理器<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<h4>实例方法<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">print_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">stu</span> <span class="o">=</span> <span class="n">Student</span><span class="p">()</span>
+
+<span class="n">stu</span><span class="o">.</span><span class="n">print_info</span><span class="p">(</span><span class="s1">&#39;nihao&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h4>静态方法<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id22">
+<h4>实例变量<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id23">
+<h3>上下文管理器<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="json">
 <h2>正则表达式和json<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id21">
-<h3>正则表达式<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h3>正则表达式<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="jsonxml">
-<h3>json和xml<a class="headerlink" href="#jsonxml" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id25">
+<h3>json<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h4>json格式化<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<p>python自带json模块</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+
+<span class="c1"># loads方法，将字符串转换成python形式</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">{</span>
+<span class="s2">    &quot;name&quot;: &quot;john&quot;,</span>
+<span class="s2">    &quot;addr&quot;: &quot;china chengdu&quot;,</span>
+<span class="s2">    &quot;gender&quot;: &quot;male&quot;</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1"># 生成的是dict对象</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;type is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># 相反，dumps将python对象转换成json对象(字符串)</span>
+
+<span class="n">asjson</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;asjson type is {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">asjson</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">asjson</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>所以，json模块就是在字符串和python对象之间进行转换，loads生成python对象，dumps生成字符串。</p>
+<p>json.load()用来对文件对象进行转换</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.json&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">db</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="id22">
-<h2>python高级用法<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id23">
-<h3><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="xml">
+<h3>xml<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>python高级用法<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h3>枚举<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id29">
+<h3>一切皆是对象<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="pythonic">
@@ -340,8 +433,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="section" id="id24">
-<h4>数据用法<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id30">
+<h4>数据用法<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">switcher</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Sunday&#39;</span><span class="p">,</span>
@@ -357,12 +450,9 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id25">
-<h4>函数用法<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 实现key之后的代码段</span>
-<span class="c1"># 利用函数</span>
-
-<span class="k">def</span> <span class="nf">get_sunday</span><span class="p">():</span>
+<div class="section" id="id31">
+<h4>函数用法<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_sunday</span><span class="p">():</span>
     <span class="k">return</span> <span class="s1">&#39;Sunday&#39;</span>
 <span class="k">def</span> <span class="nf">get_monday</span><span class="p">():</span>
     <span class="k">return</span> <span class="s1">&#39;Sunday&#39;</span>
@@ -382,23 +472,90 @@
 </div>
 </div>
 </div>
-<div class="section" id="id26">
-<h3>表驱动法<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id27">
-<h4>数据用法<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id32">
+<h3>表驱动法<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h4>数据用法<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id28">
-<h4>函数用法<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id34">
+<h4>函数用法<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
-<div class="section" id="id29">
-<h3>列表推导式<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id35">
+<h3>列表推导式<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># map和filter也可以，但首推，列表推导</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="id30">
-<h3>元组推导式<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id31">
-<h3>字典推导式<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h3>元组推导式<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 元组推导(生成器)，可迭代</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id37">
+<h3>字典推导式<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 字典推导</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">23</span><span class="p">))}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">demo_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+<span class="n">e</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">demo_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="none">
+<h3>None类型<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
+<p>None是python的’空’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 空字符串，空列表 0 False 都不是None</span>
+<span class="c1"># 值比较==， 类型比较is，</span>
+<span class="k">print</span><span class="p">([]</span><span class="o">==</span><span class="bp">None</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">==</span><span class="bp">None</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">0</span><span class="o">==</span><span class="bp">None</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">([]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>qita</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span> <span class="nf">judge</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">a</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+
+<span class="n">judge</span><span class="p">([])</span>
+
+<span class="n">judge</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+<span class="c1"># a 或是not a判空</span>
+<span class="c1"># is None 判断布尔值</span>
+<span class="c1"># None 不存在</span>
+<span class="c1"># False 假</span>
+
+<span class="c1"># if None</span>
+<span class="c1"># if False</span>
+
+
+<span class="c1"># python里</span>
+<span class="c1"># if &#39;&#39; [] 对应None 对应False</span>
+<span class="c1"># 判空和True False对应</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
