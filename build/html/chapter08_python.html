@@ -112,14 +112,54 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id8">python函数式编程</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id9">python函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id10">匿名函数、高阶函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">装饰器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">闭包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">匿名函数、高阶函数</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lambda">lambda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map">map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reduce">reduce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter">filter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">python面向对象</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#json">正则表达式和json</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id13">python高级用法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pythonic">pythonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">装饰器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">带参装饰器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">python面向对象</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">类变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">类方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">实例方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">静态方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">实例变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">上下文管理器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#json">正则表达式和json</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id21">正则表达式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jsonxml">json和xml</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">python高级用法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23"></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pythonic">pythonic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#swtich">字典代替swtich</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id24">数据用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">函数用法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">表驱动法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id27">数据用法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">函数用法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">列表推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">元组推导式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">字典推导式</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
@@ -220,23 +260,146 @@
 <h3>python函数<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="id10">
-<h3>匿名函数、高阶函数<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<h3>闭包<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="id11">
-<h3>装饰器<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h3>匿名函数、高阶函数<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="lambda">
+<h4>lambda<a class="headerlink" href="#lambda" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="map">
+<h4>map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="reduce">
+<h4>reduce<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="filter">
+<h4>filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 <div class="section" id="id12">
-<h2>python面向对象<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<h3>装饰器<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h4>带参装饰器<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>python面向对象<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>类变量<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id16">
+<h3>类方法<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id17">
+<h3>实例方法<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id18">
+<h3>静态方法<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id19">
+<h3>实例变量<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id20">
+<h3>上下文管理器<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="json">
 <h2>正则表达式和json<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id21">
+<h3>正则表达式<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id13">
-<h2>python高级用法<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="jsonxml">
+<h3>json和xml<a class="headerlink" href="#jsonxml" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>python高级用法<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3><a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="pythonic">
 <h2>pythonic<a class="headerlink" href="#pythonic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="swtich">
+<h3>字典代替swtich<a class="headerlink" href="#swtich" title="Permalink to this headline">¶</a></h3>
+<p>官方推荐if-else</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">switch</span> <span class="p">(</span><span class="n">day</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="n">dayName</span> <span class="o">=</span> <span class="s">&quot;sunday&quot;</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">dayName</span> <span class="o">=</span> <span class="s">&quot;Monday&quot;</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">default</span> <span class="o">:</span>
+        <span class="n">dayName</span> <span class="o">=</span> <span class="s">&quot;Unknown&quot;</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id24">
+<h4>数据用法<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">switcher</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Sunday&#39;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Monday&#39;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Tuesday&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="c1"># 字典映射</span>
+<span class="c1"># 没有实现default</span>
+<span class="n">day_name</span> <span class="o">=</span> <span class="n">switcher</span><span class="p">[</span><span class="n">day</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">day_name</span><span class="p">)</span>
+<span class="n">day_name_2</span> <span class="o">=</span> <span class="n">switcher</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">day_name_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h4>函数用法<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 实现key之后的代码段</span>
+<span class="c1"># 利用函数</span>
+
+<span class="k">def</span> <span class="nf">get_sunday</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Sunday&#39;</span>
+<span class="k">def</span> <span class="nf">get_monday</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Sunday&#39;</span>
+<span class="k">def</span> <span class="nf">get_tuesday</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Sunday&#39;</span>
+<span class="k">def</span> <span class="nf">get_default</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Unknown&#39;</span>
+
+<span class="n">switcher</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="n">get_sunday</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="n">get_monday</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="n">get_tuesday</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">day</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">day_name</span> <span class="o">=</span> <span class="n">switcher</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">get_default</span><span class="p">)()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h3>表驱动法<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h4>数据用法<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id28">
+<h4>函数用法<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id29">
+<h3>列表推导式<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id30">
+<h3>元组推导式<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id31">
+<h3>字典推导式<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 
