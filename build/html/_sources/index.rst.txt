@@ -11,9 +11,9 @@
    :caption: Content:
 
    chapter00_preface.md
-   chapter01_philosophy.md
+   chapter01_strategy.md
    chapter02_data_science.md
-   chapter03_spider.md
+   chapter03_java.md
    chapter04_devops.md
    chapter05_cs_base.md
    chapter06_think_way.md
@@ -24,6 +24,7 @@
    chapter11_随便聊聊.md
    chapter12_big_data.md
    chapter13_web.md
+   chapter14_concept.md
 
 
 Indices and tables

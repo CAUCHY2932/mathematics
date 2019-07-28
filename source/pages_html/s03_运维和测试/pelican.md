@@ -1,1 +1,0 @@
-http://docs.getpelican.com/en/stable/quickstart.html

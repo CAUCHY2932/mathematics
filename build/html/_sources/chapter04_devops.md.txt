@@ -1,10 +1,18 @@
-# 运维和测试
+# 环境
 
 包含linux和一些常用的命令
 
+## encoding
+
+unzip 解压含有中文的目录时乱码
+可以采用如下解决方案
+unzip -O CP936 xxx.zip
+
+### 在windows上CSV文件可读，但是在linux下编码会出现错误
+
+我们可以采取更改编码的方式进行交换
+
 ## ubuntu
-
-
 
 ### 基本操作
 
@@ -2421,3 +2429,430 @@ export PATH=$NODE_HOME/bin:$PATH
 source /etc/profile
 
 ```
+
+## tuna服务
+
+一键设置清华大学源
+
+https://tuna.moe/oh-my-tuna/
+
+## Scala安装
+
+### 安装之前
+
+首先，保证已经安装了jdk
+
+### 安装idea
+
+去官网下载即可
+
+### 安装Scala-idea插件
+
+下载Scala插件
+
+```
+http://plugins.jetbrains.com/plugin/1347-scala
+```
+
+或者在idea的插件库里选择安装
+
+### 安装过程
+
+#### 1.下载
+
+```
+https://www.scala-lang.org/download/
+```
+
+```bash
+下载后进入安装包所在目录进行解压操作(我下载的是：scala-2.11.8.tgz)
+
+    tar -zxvf scala-2.11.8.tgz
+
+可以选择手动解压
+
+然后迁移文件到指定文件夹下
+如：
+
+    解压，将文件夹移动到/usr/local/share
+    
+    $ mv download/your scala path /usr/local/share
+```
+
+
+
+#### 2.配置环境变量
+
+```bash
+Mac修改 .bash_profile 文件，此文件是mac 当前用户的环境配置文件。
+
+/etc/profile 是当前系统的环境配置文件（Linux，系统可修改这个）
+
+.bash_profile 文件的路径是在当前用户下。
+
+    vi .bash_profile
+    //添加如下信息
+    export SCALA_HOME=你Scala的路径/scala
+    export PATH=$PATH:$SCALA_HOME/bin
+
+实例结果：
+
+    export PATH=${PATH}:/usr/local/share/scala-2.11.7/bin
+刷新设置：  
+
+    source ~/.bash_profile 刷新设置
+```
+
+#### 3.检验结果
+
+```bash
+在终端输入scala 命令，进入scala解释器，然后输入1＋2，查看计算结果。
+使用
+
+    :q
+退出程序
+
+```
+
+### 建立教程：
+
+```
+https://docs.scala-lang.org/getting-started-intellij-track/getting-started-with-scala-in-intellij.html
+```
+
+## docker
+
+### daocloud
+
+https://hub.daocloud.io/repos?type=featured
+
+https://www.daocloud.io/mirror
+
+
+
+### 常用可选参数
+
+常用可选参数说明：
+
+```bash
+-i # 表示以“交互模式”运行容器
+-t # 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。
+--name # 为创建的容器命名
+-v # 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个-v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。
+-d # 在run后面加上-d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加-i -t 两个参数，创建后就会自动进去容器)。
+-p # 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个-p 做多个端口映射
+-e # 为容器设置环境变量
+--network=host # 表示将主机的网络环境映射到容器中，容器的网络与主机相同
+###########
+docker ps -a # docker 列举容器
+docker stop container id # docker 关闭容器
+docker start container id # docker 启动容器
+docker cp sourcepath containerId:targetpath # 复制文件
+
+```
+
+### 镜像加速器
+
+Linux系统目前存在的三种系统启动方式所对应的配置文件目录分别为：
+
+- SysVinit：/etc/init.d目录；
+- UpStart： /usr/share/upstart目录；
+- Systemd：/usr/lib/systemd目录；
+
+```bash
+# ubuntu 16+, debian 8+, centos7
+# 使用systemd系统，在/etc/docker/daemon.json写入内容
+{"registry-mirrors":[
+	"https://registry.docker-cn.com"
+	]
+}
+# 重启服务
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+# win10
+# 在系统托盘选择settings，在配置窗口左侧导航栏选择daemon，在register mirros填写
+# https://register.docker-cn.com
+
+# macos
+# 在任务栏中点击docker for mac daemon register mirrors，docker重启并应用配置的镜像地址
+
+```
+
+### docker镜像操作
+
+```bash
+# 我们对镜像操作时，可以使用短id，只需取前3个字符，只要足够区分于别的镜像就可以了。
+docker search xxx # docker 搜索镜像
+docker pull xxx # docker 拉取镜像
+docker image ls # docker 列举镜像
+docker image ls -a # docker 列举所有镜像
+
+
+docker image rm xxx# docker 删除镜像
+
+docker image rm $(docker image ls -q redis) # 删除所有仓库名为redis的镜像
+
+```
+
+### docker容器操作
+
+```bash
+docker run xxx # docker新建并启动
+# -t 非配一个终端， -i让容器的标准输入并保持打开
+# -d后台运行
+docker container ls # docker查看容器，-a查看所有（包括终止的）
+docker container stop # 终止运行的容器
+
+# 在使用 -d参数后，容器启动后悔进入后台
+docker exec xxx # 进入容器进行操作, -i -t分配终端
+# 如下所示
+docker run -itd ubuntu
+docker container ls
+docker exec -i xxx bash
+# 或者
+docker exec -it xxx bash
+
+docker export xx > ubuntu.tar # 导出容器
+cat ubuntu.tar | docker import - test/ubuntu:v1.0 # 导入容器
+
+docker container rm xxx # 删除一个容器，添加-f参数，删除一个运行中的容器
+docker container prune # 清理所有处于终止状态的容器
+
+```
+
+
+
+
+
+## zsh
+
+```bash
+## check you have zsh
+
+cat /etc/shells
+
+# if you have not, I suggest you have a try
+
+## install the zsh
+
+### centos install
+sudo yum -y install zsh
+
+### ubuntu install
+
+sudo apt-get -y install zsh
+
+
+# and you can check you have zsh when you have execute above
+
+
+## change your default shell to zsh
+
+chsh -s /bin/zsh
+
+## install enhance setting - oh my zsh!
+
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
+## index back
+
+# if you have install miniconda or conda and so on (like some setting in ~/.bashrc), it can be not work, you should copy this setting to ~/.zshrc, and use the script
+
+source ~/.zshrc
+```
+
+## hexo
+
+
+
+https://hexo.io/zh-cn/
+
+- npm install hexo-cli -g
+- hexo init blog
+- cd blog
+- npm install
+- hexo server
+
+## jupyter生成目录
+
+
+
+https://www.jianshu.com/p/f314e9868cae
+
+https://blog.csdn.net/weixin_42150990/article/details/81081889
+
+
+
+
+
+```
+conda install -c conda-forge jupyter_contrib_nbextensions
+```
+
+运行Jupyter Notebook, 在打开的Notebook界面里, 你会发现多了一个Nbextensions,点击这个tab, 会有如下界面
+
+
+
+勾选Table of Contents (有的版本是toc2). 然后创建或者打开一个Jupter Notebook
+
+第四步, 生成目录
+
+在Notebook上面选项中,多了一个生成目录图标, 如下图中最右边的图标.
+
+jupyter nbconvert --to markdown "3.11-matplotlib 基础.ipynb"
+
+
+
+
+
+## mac配置
+
+
+### iterm2
+
+command + [
+
+command + ]
+
+左右切屏
+
+command + d 垂直分屏
+
+command +shift + d 水平分屏
+
+command + w 标签
+
+### mac破解navicat
+
+#### 1.保存公钥和私钥到笔记本
+
+-----BEGIN PUBLIC KEY-----
+MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB8vXG0ImYhLHvHhpi5FS3g
+d2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJX
+HtQVLXMRms+chomsQCwkDi2jbgUa4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEF
+h0N89FV4yGLyDLr+TLqpRecg9pkPnOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZS
+I69sPD9xZRt+EciXVQfybI/2SYeAdXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd
++03NU3wvEmLBvGOmNGudocWIF/y3VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/p
+AgMBAAE=
+-----END PUBLIC KEY-----
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQB8vXG0ImYhLHvHhpi5FS3gd2QhxSQiU6dQ04F1OHB0yRRQ3NXF
+5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJXHtQVLXMRms+chomsQCwkDi2jbgUa
+4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEFh0N89FV4yGLyDLr+TLqpRecg9pkP
+nOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZSI69sPD9xZRt+EciXVQfybI/2SYeA
+dXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd+03NU3wvEmLBvGOmNGudocWIF/y3
+VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/pAgMBAAECggEAK5qZbYt8wenn1uZg
+6onRwJ5bfUaJjApL+YAFx/ETtm83z9ByVbx4WWT7CNC7fK1nINy20/mJrOTZkgIx
+x6otiNC4+DIsACJqol+RLoo8I9pk77Ucybn65ZteOz7hVZIU+8j6LzW0KDt6yowX
+e75r7G/NEpfibNc3Zz81+oDd2x+bHyGbzc9QcePIVuEzkof6jgpbWrQZU14itx9l
+VxEgj/fbMccvBx8brR/l9ClmDZd9Y6TWsF1rfJpF3+DPeqFkKCiD7PGz3bs4O/Zd
+ZrfV21ZNVusBW49G6bU63gQVKsOf1qGo3efbAW1HVxgTQ/lExVdcMvdenZm+ADKp
+L4/wUQKBgQDOfBjn3OC2IerUFu18EgCS7pSjTSibXw+TeX3D5zwszLC091G2rGlT
+5DihBUhMfesNdpoZynrs4YB6Sz9C3wSGAB8AM/tNvPhtSVtbMHmrdT2DEEKCvLkO
+RNBnt+8aTu2hGRanw9aL1189gzwrmXK5ZuuURfgLrB9ihrvjo4VznQKBgQCapx13
+dEA1MwapBiIa3k8hVBCoGPsEPWqM33RBdUqUsP33f9/PCx00j/akwmjgQNnBlAJo
+Y7LOqPCyiwOkEf40T4IlHdzYntWQQvHhfBwqSgdkTE9tKj43Ddr7JVFRL6yMSbW3
+9qAp5UX/+VzOLGAlfzJ8CBnkXwGrnKPCVbnZvQKBgQCd+iof80jlcCu3GteVrjxM
+LkcAbb8cqG1FWpVTNe4/JFgqDHKzPVPUgG6nG2CGTWxxv4UFKHpGE/11E28SHYjb
+cOpHAH5LqsGy84X2za649JkcVmtclUFMXm/Ietxvl2WNdKF1t4rFMQFIEckOXnd8
+y/Z/Wcz+OTFF82l7L5ehrQKBgFXl9m7v6e3ijpN5LZ5A1jDL0Yicf2fmePUP9DGb
+ZTZbbGR46SXFpY4ZXEQ9GyVbv9dOT1wN7DXvDeoNXpNVzxzdAIt/H7hN2I8NL+4v
+EjHG9n4WCJO4v9+yWWvfWWA/m5Y8JqusV1+N0iiQJ6T4btrE4JSVp1P6FSJtmWOK
+W/T9AoGAcMhPMCL+N+AvWcYt4Y4mhelvDG8e/Jj4U+lwS3g7YmuQuYx7h5tjrS33
+w4o20g/3XudPMJHhA3z+d8b3GaVM3ZtcRM3+Rvk+zSOcGSwn3yDy4NYlv9bdUj/4
+H+aU1Qu1ZYojFM1Gmbe4HeYDOzRsJ5BhNrrV12h27JWkiRJ4F/Q=
+-----END RSA PRIVATE KEY-----
+
+#### 2. 安装navicat
+
+#### 3.替换公钥
+
+在finder中，右键navicat ,打开目录 /Contents/Resources，编辑rpk文件，用第一步的公钥替换并保存。
+
+#### 4.断网
+
+#### 5.输入注册码
+
+打开navicat, 根据navicat输入以下序列号：
+
+中文版64位密钥序列号： NAVH-T4PX-WT8W-QBL5
+
+英文版64位密钥序列号： NAVG-UJ8Z-EVAP-JAUW
+
+如果出现，下面的两行文字，和右边的 对号，那么恭喜你，可以继续往下进行了。如果右边是黑色的叉号,那么请从第一步再来一遍。
+
+#### 6.手动激活
+
+断网之后，需要点击手动激活
+
+#### 7.结合请求码解密
+
+打开网络，复制请求码，登录这个网址   http://tool.chacuo.net/cryptrsaprikey  ， 填上第一步的私钥，填上请求码，点击RSA私钥解密。
+请注意：如果没出现请求码明文可能是  1：网络问题，请多试几次
+2：请检查第三部rpk文件是否替换成功！
+
+#### 8.加密
+
+将请求码明文中的 K和DI的值替换到下面对应的地方，
+
+{"K":"NAVHT4PXWT8WQBL5", "N":"52pojie", "O":"52pojie.cn", "DI":"ODQ2Yjg2ZDBjMTEzMjhh", "T":1516939200}
+
+再登录  https://unixtime.51240.com/
+调整到现在的时间，并把Unix时间戳替换到上面的T后面
+将替换好的文本，放入第二个框中，点击RSA加密，得到加密后的文本
+
+#### 9.激活
+
+将上一步加密的文本放置到激活码中，点击激活即可
+
+
+
+### 安装oh my zsh(待整理)
+
+```bash
+### check you have zsh
+
+cat /etc/shells
+
+# if you have not, I suggest you have a try
+
+### install the zsh
+
+### centos install
+sudo yum -y install zsh
+
+### ubuntu install
+
+sudo apt-get -y install zsh
+
+
+# and you can check you have zsh when you have execute above
+
+
+## change your default shell to zsh
+
+chsh -s /bin/zsh
+
+## install enhance setting - oh my zsh!
+
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
+## index back
+
+# if you have install miniconda or conda and so on (like some setting in ~/.bashrc), it can be not work, you should copy this setting to ~/.zshrc, and use the script
+
+source ~/.zshrc
+```
+
+
+
+
+
+### homebrew
+
+
+

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>运维和测试 &mdash; 吕阳阳的日志小屋 1.0 documentation</title>
+  <title>环境 &mdash; 吕阳阳的日志小屋 1.0 documentation</title>
   
 
   
@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="计算机科学基础" href="chapter05_cs_base.html" />
-    <link rel="prev" title="爬虫" href="chapter03_spider.html" /> 
+    <link rel="prev" title="java" href="chapter03_java.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,10 +93,14 @@
               <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter01_philosophy.html">哲学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter01_strategy.html">哲学与谋略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter03_spider.html">爬虫</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">运维和测试</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="chapter03_java.html">java</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">环境</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#encoding">encoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windowscsv-linux">在windows上CSV文件可读，但是在linux下编码会出现错误</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu">ubuntu</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">基本操作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">中科大源</a></li>
@@ -188,10 +192,52 @@
 <li class="toctree-l3"><a class="reference internal" href="#id38">保存退出后执行更新命令</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#tuna">tuna服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scala">Scala安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">安装之前</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#idea">安装idea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scala-idea">安装Scala-idea插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">安装过程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id41">1.下载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id42">2.配置环境变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id43">3.检验结果</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">建立教程：</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id45">docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daocloud">daocloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">常用可选参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">镜像加速器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">docker镜像操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">docker容器操作</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#zsh">zsh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hexo">hexo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter">jupyter生成目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac">mac配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#iterm2">iterm2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macnavicat">mac破解navicat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id50">1.保存公钥和私钥到笔记本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navicat">2. 安装navicat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">3.替换公钥</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">4.断网</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">5.输入注册码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">6.手动激活</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55">7.结合请求码解密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">8.加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57">9.激活</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#oh-my-zsh">安装oh my zsh(待整理)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#homebrew">homebrew</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter05_cs_base.html">计算机科学基础</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter06_think_way.html">思维方式</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter08_python.html">python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
@@ -199,6 +245,11 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter11_随便聊聊.html">随便聊聊</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_big_data.html">大数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_web.html">python-web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html">微服务是什么？十分钟了解微服务架构</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id2">新概念</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id3">数据库设计</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id4">数据仓库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#redshift-as-data-warehouse">Redshift as data warehouse</a></li>
 </ul>
 
             
@@ -244,7 +295,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>运维和测试</li>
+      <li>环境</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -264,8 +315,18 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>运维和测试<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>环境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>包含linux和一些常用的命令</p>
+<div class="section" id="encoding">
+<h2>encoding<a class="headerlink" href="#encoding" title="Permalink to this headline">¶</a></h2>
+<p>unzip 解压含有中文的目录时乱码
+可以采用如下解决方案
+unzip -O CP936 xxx.zip</p>
+<div class="section" id="windowscsv-linux">
+<h3>在windows上CSV文件可读，但是在linux下编码会出现错误<a class="headerlink" href="#windowscsv-linux" title="Permalink to this headline">¶</a></h3>
+<p>我们可以采取更改编码的方式进行交换</p>
+</div>
+</div>
 <div class="section" id="ubuntu">
 <h2>ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id2">
@@ -2497,6 +2558,381 @@ export PATH=$NODE_HOME/bin:$PATH
 </div>
 </div>
 </div>
+<div class="section" id="tuna">
+<h2>tuna服务<a class="headerlink" href="#tuna" title="Permalink to this headline">¶</a></h2>
+<p>一键设置清华大学源</p>
+<p>https://tuna.moe/oh-my-tuna/</p>
+</div>
+<div class="section" id="scala">
+<h2>Scala安装<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id39">
+<h3>安装之前<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<p>首先，保证已经安装了jdk</p>
+</div>
+<div class="section" id="idea">
+<h3>安装idea<a class="headerlink" href="#idea" title="Permalink to this headline">¶</a></h3>
+<p>去官网下载即可</p>
+</div>
+<div class="section" id="scala-idea">
+<h3>安装Scala-idea插件<a class="headerlink" href="#scala-idea" title="Permalink to this headline">¶</a></h3>
+<p>下载Scala插件</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plugins</span><span class="o">.</span><span class="n">jetbrains</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">plugin</span><span class="o">/</span><span class="mi">1347</span><span class="o">-</span><span class="n">scala</span>
+</pre></div>
+</div>
+<p>或者在idea的插件库里选择安装</p>
+</div>
+<div class="section" id="id40">
+<h3>安装过程<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id41">
+<h4>1.下载<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scala</span><span class="o">-</span><span class="n">lang</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span><span class="o">/</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>下载后进入安装包所在目录进行解压操作<span class="o">(</span>我下载的是：scala-2.11.8.tgz<span class="o">)</span>
+
+    tar -zxvf scala-2.11.8.tgz
+
+可以选择手动解压
+
+然后迁移文件到指定文件夹下
+如：
+
+    解压，将文件夹移动到/usr/local/share
+    
+    $ mv download/your scala path /usr/local/share
+</pre></div>
+</div>
+</div>
+<div class="section" id="id42">
+<h4>2.配置环境变量<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Mac修改 .bash_profile 文件，此文件是mac 当前用户的环境配置文件。
+
+/etc/profile 是当前系统的环境配置文件（Linux，系统可修改这个）
+
+.bash_profile 文件的路径是在当前用户下。
+
+    vi .bash_profile
+    //添加如下信息
+    <span class="nb">export</span> <span class="nv">SCALA_HOME</span><span class="o">=</span>你Scala的路径/scala
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SCALA_HOME</span>/bin
+
+实例结果：
+
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/share/scala-2.11.7/bin
+刷新设置：  
+
+    <span class="nb">source</span> ~/.bash_profile 刷新设置
+</pre></div>
+</div>
+</div>
+<div class="section" id="id43">
+<h4>3.检验结果<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>在终端输入scala 命令，进入scala解释器，然后输入1＋2，查看计算结果。
+使用
+
+    :q
+退出程序
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id44">
+<h3>建立教程：<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">scala</span><span class="o">-</span><span class="n">lang</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span><span class="o">-</span><span class="n">intellij</span><span class="o">-</span><span class="n">track</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">scala</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">intellij</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>docker<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="daocloud">
+<h3>daocloud<a class="headerlink" href="#daocloud" title="Permalink to this headline">¶</a></h3>
+<p>https://hub.daocloud.io/repos?type=featured</p>
+<p>https://www.daocloud.io/mirror</p>
+</div>
+<div class="section" id="id46">
+<h3>常用可选参数<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<p>常用可选参数说明：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-i <span class="c1"># 表示以“交互模式”运行容器</span>
+-t <span class="c1"># 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span>
+--name <span class="c1"># 为创建的容器命名</span>
+-v <span class="c1"># 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个-v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span>
+-d <span class="c1"># 在run后面加上-d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加-i -t 两个参数，创建后就会自动进去容器)。</span>
+-p <span class="c1"># 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个-p 做多个端口映射</span>
+-e <span class="c1"># 为容器设置环境变量</span>
+--network<span class="o">=</span>host <span class="c1"># 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span>
+<span class="c1">###########</span>
+docker ps -a <span class="c1"># docker 列举容器</span>
+docker stop container id <span class="c1"># docker 关闭容器</span>
+docker start container id <span class="c1"># docker 启动容器</span>
+docker cp sourcepath containerId:targetpath <span class="c1"># 复制文件</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id47">
+<h3>镜像加速器<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<p>Linux系统目前存在的三种系统启动方式所对应的配置文件目录分别为：</p>
+<ul class="simple">
+<li>SysVinit：/etc/init.d目录；</li>
+<li>UpStart： /usr/share/upstart目录；</li>
+<li>Systemd：/usr/lib/systemd目录；</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ubuntu 16+, debian 8+, centos7</span>
+<span class="c1"># 使用systemd系统，在/etc/docker/daemon.json写入内容</span>
+<span class="o">{</span><span class="s2">&quot;registry-mirrors&quot;</span>:<span class="o">[</span>
+	<span class="s2">&quot;https://registry.docker-cn.com&quot;</span>
+	<span class="o">]</span>
+<span class="o">}</span>
+<span class="c1"># 重启服务</span>
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+<span class="c1"># win10</span>
+<span class="c1"># 在系统托盘选择settings，在配置窗口左侧导航栏选择daemon，在register mirros填写</span>
+<span class="c1"># https://register.docker-cn.com</span>
+
+<span class="c1"># macos</span>
+<span class="c1"># 在任务栏中点击docker for mac daemon register mirrors，docker重启并应用配置的镜像地址</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id48">
+<h3>docker镜像操作<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 我们对镜像操作时，可以使用短id，只需取前3个字符，只要足够区分于别的镜像就可以了。</span>
+docker search xxx <span class="c1"># docker 搜索镜像</span>
+docker pull xxx <span class="c1"># docker 拉取镜像</span>
+docker image ls <span class="c1"># docker 列举镜像</span>
+docker image ls -a <span class="c1"># docker 列举所有镜像</span>
+
+
+docker image rm xxx# docker 删除镜像
+
+docker image rm <span class="k">$(</span>docker image ls -q redis<span class="k">)</span> <span class="c1"># 删除所有仓库名为redis的镜像</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id49">
+<h3>docker容器操作<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run xxx <span class="c1"># docker新建并启动</span>
+<span class="c1"># -t 非配一个终端， -i让容器的标准输入并保持打开</span>
+<span class="c1"># -d后台运行</span>
+docker container ls <span class="c1"># docker查看容器，-a查看所有（包括终止的）</span>
+docker container stop <span class="c1"># 终止运行的容器</span>
+
+<span class="c1"># 在使用 -d参数后，容器启动后悔进入后台</span>
+docker <span class="nb">exec</span> xxx <span class="c1"># 进入容器进行操作, -i -t分配终端</span>
+<span class="c1"># 如下所示</span>
+docker run -itd ubuntu
+docker container ls
+docker <span class="nb">exec</span> -i xxx bash
+<span class="c1"># 或者</span>
+docker <span class="nb">exec</span> -it xxx bash
+
+docker <span class="nb">export</span> xx &gt; ubuntu.tar <span class="c1"># 导出容器</span>
+cat ubuntu.tar <span class="p">|</span> docker import - test/ubuntu:v1.0 <span class="c1"># 导入容器</span>
+
+docker container rm xxx <span class="c1"># 删除一个容器，添加-f参数，删除一个运行中的容器</span>
+docker container prune <span class="c1"># 清理所有处于终止状态的容器</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="zsh">
+<h2>zsh<a class="headerlink" href="#zsh" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## check you have zsh</span>
+
+cat /etc/shells
+
+<span class="c1"># if you have not, I suggest you have a try</span>
+
+<span class="c1">## install the zsh</span>
+
+<span class="c1">### centos install</span>
+sudo yum -y install zsh
+
+<span class="c1">### ubuntu install</span>
+
+sudo apt-get -y install zsh
+
+
+<span class="c1"># and you can check you have zsh when you have execute above</span>
+
+
+<span class="c1">## change your default shell to zsh</span>
+
+chsh -s /bin/zsh
+
+<span class="c1">## install enhance setting - oh my zsh!</span>
+
+sh -c <span class="s2">&quot;</span><span class="k">$(</span>wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -<span class="k">)</span><span class="s2">&quot;</span>
+
+
+<span class="c1">## index back</span>
+
+<span class="c1"># if you have install miniconda or conda and so on (like some setting in ~/.bashrc), it can be not work, you should copy this setting to ~/.zshrc, and use the script</span>
+
+<span class="nb">source</span> ~/.zshrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="hexo">
+<h2>hexo<a class="headerlink" href="#hexo" title="Permalink to this headline">¶</a></h2>
+<p>https://hexo.io/zh-cn/</p>
+<ul class="simple">
+<li>npm install hexo-cli -g</li>
+<li>hexo init blog</li>
+<li>cd blog</li>
+<li>npm install</li>
+<li>hexo server</li>
+</ul>
+</div>
+<div class="section" id="jupyter">
+<h2>jupyter生成目录<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h2>
+<p>https://www.jianshu.com/p/f314e9868cae</p>
+<p>https://blog.csdn.net/weixin_42150990/article/details/81081889</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyter_contrib_nbextensions</span>
+</pre></div>
+</div>
+<p>运行Jupyter Notebook, 在打开的Notebook界面里, 你会发现多了一个Nbextensions,点击这个tab, 会有如下界面</p>
+<p>勾选Table of Contents (有的版本是toc2). 然后创建或者打开一个Jupter Notebook</p>
+<p>第四步, 生成目录</p>
+<p>在Notebook上面选项中,多了一个生成目录图标, 如下图中最右边的图标.</p>
+<p>jupyter nbconvert –to markdown “3.11-matplotlib 基础.ipynb”</p>
+</div>
+<div class="section" id="mac">
+<h2>mac配置<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="iterm2">
+<h3>iterm2<a class="headerlink" href="#iterm2" title="Permalink to this headline">¶</a></h3>
+<p>command + [</p>
+<p>command + ]</p>
+<p>左右切屏</p>
+<p>command + d 垂直分屏</p>
+<p>command +shift + d 水平分屏</p>
+<p>command + w 标签</p>
+</div>
+<div class="section" id="macnavicat">
+<h3>mac破解navicat<a class="headerlink" href="#macnavicat" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h4>1.保存公钥和私钥到笔记本<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<p>—–BEGIN PUBLIC KEY—–
+MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB8vXG0ImYhLHvHhpi5FS3g
+d2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJX
+HtQVLXMRms+chomsQCwkDi2jbgUa4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEF
+h0N89FV4yGLyDLr+TLqpRecg9pkPnOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZS
+I69sPD9xZRt+EciXVQfybI/2SYeAdXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd
++03NU3wvEmLBvGOmNGudocWIF/y3VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/p
+AgMBAAE=
+—–END PUBLIC KEY—–</p>
+<p>—–BEGIN RSA PRIVATE KEY—–
+MIIEogIBAAKCAQB8vXG0ImYhLHvHhpi5FS3gd2QhxSQiU6dQ04F1OHB0yRRQ3NXF
+5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJXHtQVLXMRms+chomsQCwkDi2jbgUa
+4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEFh0N89FV4yGLyDLr+TLqpRecg9pkP
+nOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZSI69sPD9xZRt+EciXVQfybI/2SYeA
+dXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd+03NU3wvEmLBvGOmNGudocWIF/y3
+VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/pAgMBAAECggEAK5qZbYt8wenn1uZg
+6onRwJ5bfUaJjApL+YAFx/ETtm83z9ByVbx4WWT7CNC7fK1nINy20/mJrOTZkgIx
+x6otiNC4+DIsACJqol+RLoo8I9pk77Ucybn65ZteOz7hVZIU+8j6LzW0KDt6yowX
+e75r7G/NEpfibNc3Zz81+oDd2x+bHyGbzc9QcePIVuEzkof6jgpbWrQZU14itx9l
+VxEgj/fbMccvBx8brR/l9ClmDZd9Y6TWsF1rfJpF3+DPeqFkKCiD7PGz3bs4O/Zd
+ZrfV21ZNVusBW49G6bU63gQVKsOf1qGo3efbAW1HVxgTQ/lExVdcMvdenZm+ADKp
+L4/wUQKBgQDOfBjn3OC2IerUFu18EgCS7pSjTSibXw+TeX3D5zwszLC091G2rGlT
+5DihBUhMfesNdpoZynrs4YB6Sz9C3wSGAB8AM/tNvPhtSVtbMHmrdT2DEEKCvLkO
+RNBnt+8aTu2hGRanw9aL1189gzwrmXK5ZuuURfgLrB9ihrvjo4VznQKBgQCapx13
+dEA1MwapBiIa3k8hVBCoGPsEPWqM33RBdUqUsP33f9/PCx00j/akwmjgQNnBlAJo
+Y7LOqPCyiwOkEf40T4IlHdzYntWQQvHhfBwqSgdkTE9tKj43Ddr7JVFRL6yMSbW3
+9qAp5UX/+VzOLGAlfzJ8CBnkXwGrnKPCVbnZvQKBgQCd+iof80jlcCu3GteVrjxM
+LkcAbb8cqG1FWpVTNe4/JFgqDHKzPVPUgG6nG2CGTWxxv4UFKHpGE/11E28SHYjb
+cOpHAH5LqsGy84X2za649JkcVmtclUFMXm/Ietxvl2WNdKF1t4rFMQFIEckOXnd8
+y/Z/Wcz+OTFF82l7L5ehrQKBgFXl9m7v6e3ijpN5LZ5A1jDL0Yicf2fmePUP9DGb
+ZTZbbGR46SXFpY4ZXEQ9GyVbv9dOT1wN7DXvDeoNXpNVzxzdAIt/H7hN2I8NL+4v
+EjHG9n4WCJO4v9+yWWvfWWA/m5Y8JqusV1+N0iiQJ6T4btrE4JSVp1P6FSJtmWOK
+W/T9AoGAcMhPMCL+N+AvWcYt4Y4mhelvDG8e/Jj4U+lwS3g7YmuQuYx7h5tjrS33
+w4o20g/3XudPMJHhA3z+d8b3GaVM3ZtcRM3+Rvk+zSOcGSwn3yDy4NYlv9bdUj/4
+H+aU1Qu1ZYojFM1Gmbe4HeYDOzRsJ5BhNrrV12h27JWkiRJ4F/Q=
+—–END RSA PRIVATE KEY—–</p>
+</div>
+<div class="section" id="navicat">
+<h4>2. 安装navicat<a class="headerlink" href="#navicat" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id51">
+<h4>3.替换公钥<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<p>在finder中，右键navicat ,打开目录 /Contents/Resources，编辑rpk文件，用第一步的公钥替换并保存。</p>
+</div>
+<div class="section" id="id52">
+<h4>4.断网<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id53">
+<h4>5.输入注册码<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+<p>打开navicat, 根据navicat输入以下序列号：</p>
+<p>中文版64位密钥序列号： NAVH-T4PX-WT8W-QBL5</p>
+<p>英文版64位密钥序列号： NAVG-UJ8Z-EVAP-JAUW</p>
+<p>如果出现，下面的两行文字，和右边的 对号，那么恭喜你，可以继续往下进行了。如果右边是黑色的叉号,那么请从第一步再来一遍。</p>
+</div>
+<div class="section" id="id54">
+<h4>6.手动激活<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+<p>断网之后，需要点击手动激活</p>
+</div>
+<div class="section" id="id55">
+<h4>7.结合请求码解密<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h4>
+<p>打开网络，复制请求码，登录这个网址   http://tool.chacuo.net/cryptrsaprikey  ， 填上第一步的私钥，填上请求码，点击RSA私钥解密。
+请注意：如果没出现请求码明文可能是  1：网络问题，请多试几次
+2：请检查第三部rpk文件是否替换成功！</p>
+</div>
+<div class="section" id="id56">
+<h4>8.加密<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<p>将请求码明文中的 K和DI的值替换到下面对应的地方，</p>
+<p>{“K”:”NAVHT4PXWT8WQBL5”, “N”:”52pojie”, “O”:”52pojie.cn”, “DI”:”ODQ2Yjg2ZDBjMTEzMjhh”, “T”:1516939200}</p>
+<p>再登录  https://unixtime.51240.com/
+调整到现在的时间，并把Unix时间戳替换到上面的T后面
+将替换好的文本，放入第二个框中，点击RSA加密，得到加密后的文本</p>
+</div>
+<div class="section" id="id57">
+<h4>9.激活<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
+<p>将上一步加密的文本放置到激活码中，点击激活即可</p>
+</div>
+</div>
+<div class="section" id="oh-my-zsh">
+<h3>安装oh my zsh(待整理)<a class="headerlink" href="#oh-my-zsh" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">### check you have zsh</span>
+
+cat /etc/shells
+
+<span class="c1"># if you have not, I suggest you have a try</span>
+
+<span class="c1">### install the zsh</span>
+
+<span class="c1">### centos install</span>
+sudo yum -y install zsh
+
+<span class="c1">### ubuntu install</span>
+
+sudo apt-get -y install zsh
+
+
+<span class="c1"># and you can check you have zsh when you have execute above</span>
+
+
+<span class="c1">## change your default shell to zsh</span>
+
+chsh -s /bin/zsh
+
+<span class="c1">## install enhance setting - oh my zsh!</span>
+
+sh -c <span class="s2">&quot;</span><span class="k">$(</span>wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -<span class="k">)</span><span class="s2">&quot;</span>
+
+
+<span class="c1">## index back</span>
+
+<span class="c1"># if you have install miniconda or conda and so on (like some setting in ~/.bashrc), it can be not work, you should copy this setting to ~/.zshrc, and use the script</span>
+
+<span class="nb">source</span> ~/.zshrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="homebrew">
+<h3>homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
 
@@ -2510,7 +2946,7 @@ export PATH=$NODE_HOME/bin:$PATH
         <a href="chapter05_cs_base.html" class="btn btn-neutral float-right" title="计算机科学基础" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chapter03_spider.html" class="btn btn-neutral float-left" title="爬虫" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="chapter03_java.html" class="btn btn-neutral float-left" title="java" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
