@@ -45,8 +45,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="java" href="chapter03_java.html" />
-    <link rel="prev" title="哲学与谋略" href="chapter01_strategy.html" /> 
+    <link rel="next" title="bi" href="chapter03_bi.html" />
+    <link rel="prev" title="python" href="chapter01_python.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,59 +93,85 @@
               <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter01_strategy.html">哲学与谋略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">数据科学</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">数理基础</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sql">数据库之sql</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">sql基础语法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">基础语法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sql-dml-ddl">SQL DML 和 DDL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">表操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">记录操作</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#where">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distinct">distinct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#and-or">and or</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">进阶</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">约束</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#not-null">not null</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unique">unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#primary-key">primary key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#foreign-key">foreign key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check">check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default">default</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">连接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mysql">mysql</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#oracle">oracle</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">参考链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">参考链接</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#mongodb">mongodb</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#redis">redis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#postgresql">PostgreSQL</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id4">PostgreSQL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">PostgreSQL</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">PostgreSQL安装与卸载</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id6">官网安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">PostgreSQL安装与卸载</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">官网安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#homebrew">homebrew安装</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">创建数据库和账户</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id8">创建数据库和账户</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id12">创建和删除数据库用户</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id13">创建和删除数据库</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id14">创建和删除数据表</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id15">关于第三方连接本地数据库的问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">创建数据库和账户</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">创建数据库和账户</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">创建和删除数据库用户</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">创建和删除数据库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">创建和删除数据表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">关于第三方连接本地数据库的问题</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#python">利用python进行数据分析</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id16">python读取文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">python读取文件</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#excel">excel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id17">特征处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id18">机器学习</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id25">特征处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">机器学习</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#baggingboosting">bagging和boosting的区别</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">集成学习法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">集成学习法</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id20">深度学习</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id21">可视化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">深度学习</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">可视化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dw-bi">DW/BI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id22">数据仓库</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id23">生命周期导论</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id24">生命周期的历史</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">数据仓库</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id31">生命周期导论</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id32">生命周期的历史</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">星型模型和雪花模型</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id26">一、概述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id27"><strong>二、使用选择</strong></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id28">三、建模四步走</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">星型模型和雪花模型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id34">一、概述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id35"><strong>二、使用选择</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id36">三、建模四步走</a></li>
 </ul>
 </li>
 </ul>
@@ -157,43 +183,43 @@
 <li class="toctree-l3"><a class="reference internal" href="#xff">0xFF 总结</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id29">维度建模</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id30">数据中心建设之路</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id31">集成和独立，该选择哪个？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id32">如果一次性创建数据仓库过于困难，需要将整个目标划分为若干独立小块予以实现，那么应该做哪些工作？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id33">价值链的意义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id34">通用矩阵常见问题</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id35">坚持使用一致性维度</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">维度深入</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id37">日期和时间</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id38">退化维</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id39">缓慢变化维</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id40">杂项维</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id41">雪花型和支架</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id42">桥接表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">维度建模</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">数据中心建设之路</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">集成和独立，该选择哪个？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">如果一次性创建数据仓库过于困难，需要将整个目标划分为若干独立小块予以实现，那么应该做哪些工作？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">价值链的意义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">通用矩阵常见问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">坚持使用一致性维度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">维度深入</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id45">日期和时间</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46">退化维</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id47">缓慢变化维</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id48">杂项维</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id49">雪花型和支架</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50">桥接表</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id43">爬虫</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id44">第一次爬虫</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id51">爬虫</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id52">第一次爬虫</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bs4">爬虫示例-使用bs4</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id45">爬虫的路线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">爬虫的路线</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id46">探索性数据分析</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id47">主题定义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id48">特征工程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id49">数学建模</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id50">1.1运筹学模型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id51">1.2概率论与数理统计模型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id52">1.2.2假设检验模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id54">探索性数据分析</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id55">主题定义</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">特征工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">数学建模</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id58">1.1运筹学模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id59">1.2概率论与数理统计模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id60">1.2.2假设检验模型</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id53">数据可视化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id54">报告输出</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id61">数据可视化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id62">报告输出</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#jupyter">jupyter 输出文档</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#html">生成html</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pdf">生成pdf</a></li>
@@ -203,21 +229,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="chapter03_java.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter05_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter05_java.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter06_cs_base.html">计算机科学基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter08_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter08_big_data.html">大数据</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter10_开发流程.html">理解开发流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter11_随便聊聊.html">随便聊聊</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter12_big_data.html">大数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter13_web.html">python-web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html">微服务是什么？十分钟了解微服务架构</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id2">新概念</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id3">数据库设计</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#id4">数据仓库</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter14_concept.html#redshift-as-data-warehouse">Redshift as data warehouse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 </ul>
 
             
@@ -289,8 +310,147 @@
 </div>
 <div class="section" id="sql">
 <h2>数据库之sql<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>sql基础语法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>基础语法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>概念<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>sql，结构化查询语言</p>
+<p>主要学习关系型数据库</p>
+</div>
+<div class="section" id="sql-dml-ddl">
+<h3>SQL DML 和 DDL<a class="headerlink" href="#sql-dml-ddl" title="Permalink to this headline">¶</a></h3>
+<p>可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。</p>
+<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
+<ul class="simple">
+<li><em>SELECT</em> - 从数据库表中获取数据</li>
+<li><em>UPDATE</em> - 更新数据库表中的数据</li>
+<li><em>DELETE</em> - 从数据库表中删除数据</li>
+<li><em>INSERT INTO</em> - 向数据库表中插入数据</li>
+</ul>
+<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<p>SQL 中最重要的 DDL 语句:</p>
+<ul class="simple">
+<li><em>CREATE DATABASE</em> - 创建新数据库</li>
+<li><em>ALTER DATABASE</em> - 修改数据库</li>
+<li><em>CREATE TABLE</em> - 创建新表</li>
+<li><em>ALTER TABLE</em> - 变更（改变）数据库表</li>
+<li><em>DROP TABLE</em> - 删除表</li>
+<li><em>CREATE INDEX</em> - 创建索引（搜索键）</li>
+<li><em>DROP INDEX</em> - 删除索引</li>
+</ul>
+<p>###数据库操作</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">create</span> <span class="k">database</span> <span class="n">db_name</span><span class="p">;</span> <span class="c1">--创建数据库</span>
+<span class="k">drop</span> <span class="k">database</span> <span class="n">db_name</span><span class="p">;</span> <span class="c1">--删除数据库</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>表操作<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">create</span> <span class="k">table</span> <span class="k">table_name</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+    <span class="n">addr</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span> <span class="c1">--创建表</span>
+
+
+<span class="k">drop</span> <span class="k">table</span> <span class="k">table_name</span><span class="p">;</span> <span class="c1">--删除表</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>记录操作<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">insert</span> <span class="k">into</span> <span class="k">table_name</span> <span class="k">values</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">...);</span> <span class="c1">--插入</span>
+<span class="k">update</span> <span class="k">table_name</span> <span class="k">set</span> <span class="n">column_i</span> <span class="o">=</span><span class="s1">&#39;xxx&#39;</span> <span class="k">where</span> <span class="n">column_j</span> <span class="o">=</span> <span class="s1">&#39;jjj&#39;</span><span class="p">;</span> <span class="c1">--更新</span>
+<span class="k">delete</span> <span class="k">from</span> <span class="k">table_name</span> <span class="k">where</span> <span class="k">column</span> <span class="o">=</span> <span class="s1">&#39;xxx&#39;</span><span class="p">;</span> <span class="c1">--删除</span>
+<span class="k">select</span> <span class="k">column</span> <span class="k">from</span> <span class="k">table_name</span><span class="p">;</span> <span class="c1">--查询</span>
+</pre></div>
+</div>
+<div class="section" id="where">
+<h4>where<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="distinct">
+<h4>distinct<a class="headerlink" href="#distinct" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="and-or">
+<h4>and or<a class="headerlink" href="#and-or" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>进阶<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>约束<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="not-null">
+<h4>not null<a class="headerlink" href="#not-null" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="nb">int</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unique">
+<h4>unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="k">UNIQUE</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span> <span class="o">--</span><span class="n">mysql</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="primary-key">
+<h4>primary key<a class="headerlink" href="#primary-key" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Persons</span>
+<span class="p">(</span>
+<span class="n">Id_P</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">LastName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">FirstName</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">Address</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="n">City</span> <span class="kt">varchar</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="foreign-key">
+<h4>foreign key<a class="headerlink" href="#foreign-key" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-mysql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Orders</span>
+<span class="p">(</span>
+<span class="n">Id_O</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">OrderNo</span> <span class="kt">int</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+<span class="n">Id_P</span> <span class="kt">int</span><span class="p">,</span>
+<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_O</span><span class="p">),</span>
+<span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">Id_P</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nf">Persons</span><span class="p">(</span><span class="n">Id_P</span><span class="p">)</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check">
+<h4>check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="default">
+<h4>default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>连接<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>https://www.jianshu.com/p/9e91aa8782da</div></blockquote>
+</div>
 <div class="section" id="mysql">
 <h3>mysql<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h3>
 </div>
@@ -316,8 +476,8 @@
 <p>c)    在oracle数据库建表的时候，decimal，numeric不带精度，oralce会自动把它处理成integer；带精度，oracle会自动把它处理成number。</p>
 <p>d)    Oracle只用number(m,n)就可以表示任何复杂的数字数据。</p>
 <p>Decimal，numeric，int等都为sql,db2等数据库的数据类型，Oracle为了兼容才将其引入；但实际上在oracle内部还是以number的形式将其存入的。s</p>
-<div class="section" id="id3">
-<h4>参考链接<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id11">
+<h4>参考链接<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div>https://wiki.centos.org/zh/HowTos?highlight=%28%28zh%7CHowTos%7COracle12onCentos7%29%29</div></blockquote>
 </div>
@@ -332,8 +492,8 @@
 <h3>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>https://www.postgresql.org/docs/11/tutorial-createdb.html</div></blockquote>
-<div class="section" id="id4">
-<h4>PostgreSQL<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id12">
+<h4>PostgreSQL<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">PostgreSQL</span></code>是以加州大学伯克利分校计算机系开发的 POSTGRES，现在已经更名为PostgreSQL，版本 4.2为基础的<strong>对象关系型数据库管理系统</strong>（ORDBMS）。PostgreSQL支持大部分 SQL标准并且提供了许多其他现代特性：复杂查询、外键、触发器、视图、事务完整性、MVCC。同样，PostgreSQL 可以用许多方法扩展，比如， 通过增加新的数据类型、函数、操作符、聚集函数、索引。免费使用、修改、和分发 PostgreSQL，不管是私用、商用、还是学术研究使用。</p>
 <div class="section" id="psql">
 <h5>psql<a class="headerlink" href="#psql" title="Permalink to this headline">¶</a></h5>
@@ -345,10 +505,10 @@
 </div>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>PostgreSQL安装与卸载<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id6">
-<h4>官网安装<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id13">
+<h3>PostgreSQL安装与卸载<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h4>官网安装<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <p>在官网上下载安装包或者使用官网提供的<code class="docutils literal notranslate"><span class="pre">Postgres.app</span></code>，这里就不详细介绍了，因为我们这里使用<code class="docutils literal notranslate"><span class="pre">homebrew</span></code>来安装。</p>
 </div>
 <div class="section" id="homebrew">
@@ -362,10 +522,10 @@
 </div>
 </div>
 </div>
-<div class="section" id="id7">
-<h3>创建数据库和账户<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id8">
-<h4>创建数据库和账户<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id15">
+<h3>创建数据库和账户<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h4>创建数据库和账户<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <p>mac安装PostgreSQL后不会创建用户名数据库，执行命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">createdb</span>
 </pre></div>
@@ -398,8 +558,8 @@
 </pre></div>
 </div>
 <p>这样就可以使用postgres作为数据库的登录用户了，并可以使用该用户管理数据库</p>
-<div class="section" id="id9">
-<h5>登陆控制台指令<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id17">
+<h5>登陆控制台指令<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="p">[</span><span class="n">user</span><span class="p">]</span> <span class="o">-</span><span class="n">d</span> <span class="p">[</span><span class="n">database</span><span class="p">]</span> <span class="o">-</span><span class="n">h</span> <span class="p">[</span><span class="n">host</span><span class="p">]</span> <span class="o">-</span><span class="n">p</span> <span class="p">[</span><span class="n">port</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -416,8 +576,8 @@ database：用户同名数据库
 </pre></div>
 </div>
 </div>
-<div class="section" id="id10">
-<h5>常用控制台指令<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id18">
+<h5>常用控制台指令<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\password：设置当前登录用户的密码
 \h：查看SQL命令的解释，比如\h select。
 \?：查看psql命令列表。
@@ -433,8 +593,8 @@ database：用户同名数据库
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h5>使用PostgreSQL<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id19">
+<h5>使用PostgreSQL<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h5>
 <p>现在来简单的学习一下使用PostgreSQL，以下命令都在postgres=# 环境下
 修改用户密码
 之前我们用命令CREATE USER postgres WITH PASSWORD ‘XXXXXX’;创建了postgres用户，现在我们来修改该用户的密码：</p>
@@ -444,28 +604,28 @@ database：用户同名数据库
 <p>出现ALTER ROLE, 代表修改角色成功</p>
 </div>
 </div>
-<div class="section" id="id12">
-<h4>创建和删除数据库用户<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id20">
+<h4>创建和删除数据库用户<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <p>创建user1用户：<code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span> <span class="pre">user1</span> <span class="pre">WITH</span> <span class="pre">PASSWORD</span> <span class="pre">'XXXX'</span></code></p>
 <p>查看数据库用户列表：<code class="docutils literal notranslate"><span class="pre">\du</span></code></p>
 <p>删除数据库用户：<code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">user</span> <span class="pre">user1;</span></code></p>
 </div>
-<div class="section" id="id13">
-<h4>创建和删除数据库<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id21">
+<h4>创建和删除数据库<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <p>创建数据库：<code class="docutils literal notranslate"><span class="pre">create</span> <span class="pre">database</span> <span class="pre">testdb;</span></code></p>
 <p>查看数据库列表：<code class="docutils literal notranslate"><span class="pre">\l</span></code></p>
 <p>删除数据库：<code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">database</span> <span class="pre">db1;</span></code></p>
 </div>
-<div class="section" id="id14">
-<h4>创建和删除数据表<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id22">
+<h4>创建和删除数据表<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <p>选择数据库：<code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">DatabaseName</span></code>，比如<code class="docutils literal notranslate"><span class="pre">\c</span> <span class="pre">testdb</span></code></p>
 <p>创建数据库表：<code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">TABLE</span> <span class="pre">COMPANY(</span> <span class="pre">ID</span> <span class="pre">INT</span> <span class="pre">PRIMARY</span> <span class="pre">KEY</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">NAME</span> <span class="pre">TEXT</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">AGE</span> <span class="pre">INT</span> <span class="pre">NOT</span> <span class="pre">NULL,</span> <span class="pre">ADDRESS</span> <span class="pre">CHAR(50),</span> <span class="pre">SALARY</span> <span class="pre">REAL);</span></code></p>
 <p>删除数据库表： <code class="docutils literal notranslate"><span class="pre">drop</span> <span class="pre">table</span> <span class="pre">company;</span></code></p>
 <p>查看数据库信息：<code class="docutils literal notranslate"><span class="pre">\d</span></code></p>
 <p>查询数据：<code class="docutils literal notranslate"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">company</span></code></p>
 </div>
-<div class="section" id="id15">
-<h4>关于第三方连接本地数据库的问题<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id23">
+<h4>关于第三方连接本地数据库的问题<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
 <p>如何设置PostgreSQL允许被远程访问</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">postgres</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
@@ -494,8 +654,8 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <h2>利用python进行数据分析<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>利用python进行数据分析，包含了基本的数据清洗、聚合、可视化部分的内容，需要多学习几遍</div></blockquote>
-<div class="section" id="id16">
-<h3>python读取文件<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h3>python读取文件<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding:utf-8</span>
 
 
@@ -520,11 +680,11 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <div class="section" id="excel">
 <h2>excel<a class="headerlink" href="#excel" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id17">
-<h2>特征处理<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h2>特征处理<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id18">
-<h2>机器学习<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id26">
+<h2>机器学习<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="baggingboosting">
 <h3>bagging和boosting的区别<a class="headerlink" href="#baggingboosting" title="Permalink to this headline">¶</a></h3>
 <p>Bagging和Boosting都是将已有的分类或回归算法通过一定方式组合起来，形成一个性能更加强大的分类器，更准确的说这是一种分类算法的组装方法。即将弱分类器组装成强分类器的方法。</p>
@@ -563,8 +723,8 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>2）AdaBoost + 决策树 = 提升树</p>
 <p>3）Gradient Boosting + 决策树 = GBDT</p>
 </div>
-<div class="section" id="id19">
-<h3>集成学习法<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h3>集成学习法<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>https://www.cnblogs.com/zongfa/p/9304353.html</div></blockquote>
 <p>弱分类器组成强分类器</p>
@@ -639,21 +799,21 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>【5】简单易学的机器学习算法——集成方法(Ensemble Method) https://blog.csdn.net/google19890102/article/details/46507387</p>
 </div>
 </div>
-<div class="section" id="id20">
-<h2>深度学习<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h2>深度学习<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id21">
-<h2>可视化<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id29">
+<h2>可视化<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="dw-bi">
 <h2>DW/BI<a class="headerlink" href="#dw-bi" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="id22">
-<h2>数据仓库<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id23">
-<h3>生命周期导论<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id24">
-<h4>生命周期的历史<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id30">
+<h2>数据仓库<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h3>生命周期导论<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h4>生命周期的历史<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h4>
 <p>方法总结：业务维生命周期（business dimension lifecycle）。能否成功使用数据仓库技术管理数据取决于以下三个基本原则：</p>
 <ul class="simple">
 <li>将关注点放在业务层。</li>
@@ -663,10 +823,10 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>引入事实表、维度表和缓慢维度变换等概念之后，正式采用’kimball 生命周期’作为这一方法的统称。’技术源于实践，结论来自验证’</p>
 </div>
 </div>
-<div class="section" id="id25">
-<h3>星型模型和雪花模型<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id26">
-<h4>一、概述<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id33">
+<h3>星型模型和雪花模型<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id34">
+<h4>一、概述<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h4>
 <p>在多维分析的商业智能解决方案中，**根据事实表和维度表的关系，又可将常见的模型分为星型模型和雪花型模型。**在设计逻辑型数据的模型的时候，就应考虑数据是按照星型模型还是雪花型模型进行组织。</p>
 <p>当所有维表都<strong>直接</strong>连接到“ 事实表”上时，整个图解就像星星一样，故将该模型称为星型模型，</p>
 <p></p>
@@ -679,8 +839,8 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>它的优点是 : <strong>通过最大限度地减少数据存储量以及联合较小的维表来改善查询性能。雪花型结构去除了数据冗余。</strong></p>
 <p><strong>此在冗余可以接受的前提下，实际运用中星型模型使用更多，也更有效率（空间换易用与效率）。</strong></p>
 </div>
-<div class="section" id="id27">
-<h4><strong>二、使用选择</strong><a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id35">
+<h4><strong>二、使用选择</strong><a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
 <p><strong>1.数据优化</strong></p>
 <p>雪花模型使用的是规范化数据，也就是说数据在数据库内部是组织好的，以便消除冗余，因此它能够有效地减少数据量。通过引用完整性，其业务层级和维度都将存储在数据模型之中。</p>
 <p>▲图1 雪花模型</p>
@@ -699,8 +859,8 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>通过上面的对比，我们可以发现数据仓库大多数时候是比较适合使用星型模型构建底层数据Hive表，通过大量的冗余来提升查询效率，星型模型对OLAP的分析引擎支持比较友好，这一点在Kylin中比较能体现。而雪花模型在关系型数据库中如MySQL，Oracle中非常常见，尤其像电商的数据库表。在数据仓库中雪花模型的应用场景比较少，但也不是没有，所以在具体设计的时候，可以考虑是不是能结合两者的优点参与设计，以此达到设计的最优化目的。</p>
 <p><strong>参考链接</strong>：<a class="reference external" href="http://blog.csdn.net/u010454030/article/details/74589791">http://blog.csdn.net/u010454030/article/details/74589791</a></p>
 </div>
-<div class="section" id="id28">
-<h4>三、建模四步走<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id36">
+<h4>三、建模四步走<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h4>
 <p><strong>1.选取要建模的业务处理流程</strong></p>
 <p>关注业务处理流程，而不是业务部门！</p>
 <p><strong>2.定义业务处理的粒度</strong></p>
@@ -761,8 +921,8 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="id29">
-<h2>维度建模<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id37">
+<h2>维度建模<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
 <p>遵循这些原则进行维度建模可以保证数据粒度合理，模型灵活，能够适应未来的信息资源，违反这些原则你将会把用户弄糊涂，并且会遇到数据仓库障碍。</p>
 <p><strong>原则一</strong>: 载入详细的原子数据到维度结构中</p>
 <blockquote>
@@ -795,10 +955,10 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <blockquote>
 <div>维度建模需要不断在用户需求和数据源事实之间进行平衡，才能够提交可执行性好的设计，更重要的是，要符合业务的需要，需求和事实之间的平衡是DW/BI从业人员必须面对的事实，无论是你集中在维度建模，还是项目策略:  技术/ETL/BI架构或开发/维护规划都要面对这一事实</div></blockquote>
 </div>
-<div class="section" id="id30">
-<h2>数据中心建设之路<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id31">
-<h3>集成和独立，该选择哪个？<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h2>数据中心建设之路<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id39">
+<h3>集成和独立，该选择哪个？<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <p>​	对DW/BI整体环境的构建进行规划是一项极为重要的活动，从历史的角度来看，争议的热点主要在于应该从建立一个集中式的、规划好的架构的角度为整个企业建立数据仓库，还是为每个具体的业务单位建立小型的独立解决方案。当然，这两种方式都不怎么有效。</p>
 <p>​	建立集中式大型数据仓库的方法需要很长一段时间的开发工作才能体现出其业务价值，因此业务用户常常会对其失去兴趣，并且最终使开发过程陷入步履艰难的境地。而另一方面，尽管建立独立的部门系统见效很快，但是由于这种方法不断地增加数据烟囱，因此很快也会出现问题。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>面向部门的独立解决方案常常被称作数据集市，当我们在20世纪90年代使用这一术语时，我们使用它描述以过程为中心的复杂数据库，它描述的是企业整体数据架构的一个子集，和那种独立的解决方案大不相同，后来这个术语被抢去指代独立的，非体系化的部门数据库，鉴于对数据集市这一术语的定义差异很大，而且理解也不一致，我们将数据集市这一术语去掉了。
@@ -807,21 +967,21 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <p>​	设计企业DW/BI数据架构的任务令人望而生畏，大型企业中刚任命的DW/BI项目群经理往往面临两个巨大的、看起来并不相关的挑战。一方面，项目经理必须去了解企业最复杂的资产-源数据的有关内容，包括一些遗留框架、ERP、web服务器、应用服务器和其他工作系统的内容。必须知道所有数据元素，并对数据元素进行清洗和更正。</p>
 <p>​	但是我们必须要建设一个框架将那些独立的系统集成起来形成一个耦合的整体。无法有效地将孤立的、单独的数据烟囱式的解决方案集成到一起已经成为DW/BI系统的致命伤，这比错失进行数据分析的时机要严重得多。独立的烟囱系统是没有出路的，只能继续使用和企业不兼容的视图。烟囱式的解决方案给出的报表无法相互进行比较，正是其自身的原因使他们变成了遗留系统。烟囱式解决方案的存在严重阻碍了集成式的企业数据仓库的开发进程。</p>
 </div>
-<div class="section" id="id32">
-<h3>如果一次性创建数据仓库过于困难，需要将整个目标划分为若干独立小块予以实现，那么应该做哪些工作？<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id40">
+<h3>如果一次性创建数据仓库过于困难，需要将整个目标划分为若干独立小块予以实现，那么应该做哪些工作？<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <p>​	要解决这样一个两难问题，首先要迅速而简洁地定义整个企业DW/BI系统的数据架构。在初期的项目群层需求收集过程中，最终生成一个企业数据仓库总线矩阵。矩阵的每一行都对应机构中的一个业务过程，每一列都和一个业务维度相对应。</p>
 <p><img alt="pages_html/s02_%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD/images/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%80%BB%E7%BA%BF.jpg" src="pages_html/s02_%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD/images/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%80%BB%E7%BA%BF.jpg" />数据仓库总线</p>
 <p>​	企业数据仓库总线矩阵是DW/BI系统的一个总体数据架构。矩阵给出了系统全貌的透视图，并不考虑数据库和技术参数，但是合理地识别了易于管理的开发工作。每个业务过程的实现都对整个架构进行了增量扩展。</p>
 <p>​	通过总线矩阵开发数据架构是一种理性的方法，可以将企业数据仓库设计过程中那些令人生畏的工作分解开来。总线矩阵确立了一个架构框架，指导总体设计，在此基础上可以将整个问题分割为很多便于实现的小块。应该迭代地建立一个集成的企业数据仓库，一个业务过程一个业务过程地进行，并使用一组共享的一致性维度来确保实现系统的综合集成。这些一致性维度在整个企业范围内有统一的解释。最后，整个企业数据仓库就呈现出：一个强大的基于一致性维度的架构将一组业务过程紧密联系到一起就形成了企业数据仓库。</p>
 <p>​	一致性维度是企业数据仓库的总线，通过为DW/BI环境提供一个标准的总线接口，可以将新的业务过程引入数据仓库，该业务过程从总线获得动力，并且和其他已经存在的业务过程和谐共存。</p>
 </div>
-<div class="section" id="id33">
-<h3>价值链的意义<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id41">
+<h3>价值链的意义<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
 <p>​	很多业务都通过一系列业务过程步骤来监督内部活动逻辑流程。每个业务过程产生一个或多个事实表，因为业务过程中每个步骤都是一个唯一的度量事件。</p>
 <p>​	在制造业中，一个产品的流动过程是从获取原材料到加工成成品，最终交付给客户的整个过程。从原始起点到消费终点的整个流程的管理常常被称作”供应链管理”。</p>
 </div>
-<div class="section" id="id34">
-<h3>通用矩阵常见问题<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id42">
+<h3>通用矩阵常见问题<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
 <p>矩阵行问题</p>
 <ul class="simple">
 <li>涉及整个部门的行和包含内容过多的行</li>
@@ -833,14 +993,14 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <li>为层次结构图中的每一个层次都分配单独的列</li>
 </ul>
 </div>
-<div class="section" id="id35">
-<h3>坚持使用一致性维度<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id43">
+<h3>坚持使用一致性维度<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
 <p>如果DW/BI团队成功为企业确立了一组主一致性维度，那么开发团队能否真正使用这些维度就成为非常重要的问题了。</p>
 </div>
-<div class="section" id="id36">
-<h3>维度深入<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id37">
-<h4>日期和时间<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id44">
+<h3>维度深入<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id45">
+<h4>日期和时间<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h4>
 <p>在每个数据仓库中日期维都占有特殊的地位，这是因为几乎每个事实表都是一个观测值的时间序列，事实表总是有一个或者多个日期维。</p>
 <p>必须将假期，工作日，结账期，作为标记的每月最后一天和其他分组或者过滤条件都植入维中。记住使用详细日期表的主要原因是为了将有关日程的所有信息彻底从BI应用程序中去除掉。日程导航应当通过日期维度表来驱动，而不是通过硬编码的应用程序逻辑来驱动。</p>
 <ul class="simple">
@@ -850,27 +1010,27 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <li>多时区的情形</li>
 </ul>
 </div>
-<div class="section" id="id38">
-<h4>退化维<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id46">
+<h4>退化维<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id39">
-<h4>缓慢变化维<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id47">
+<h4>缓慢变化维<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id40">
-<h4>杂项维<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id48">
+<h4>杂项维<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id41">
-<h4>雪花型和支架<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id49">
+<h4>雪花型和支架<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id42">
-<h4>桥接表<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id50">
+<h4>桥接表<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
 </div>
 </div>
 </div>
-<div class="section" id="id43">
-<h2>爬虫<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id44">
-<h3>第一次爬虫<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id51">
+<h2>爬虫<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id52">
+<h3>第一次爬虫<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="bs4">
 <h4>爬虫示例-使用bs4<a class="headerlink" href="#bs4" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding:utf-8</span>
@@ -924,15 +1084,15 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 </div>
 </div>
 </div>
-<div class="section" id="id45">
-<h3>爬虫的路线<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id53">
+<h3>爬虫的路线<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
 <p>对于爬虫，我个人的体会是，先从根网站开始解析。网站本身的建设结构就是树状的，里面隐含了很多内容。</p>
 </div>
 </div>
-<div class="section" id="id46">
-<h2>探索性数据分析<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id47">
-<h3>主题定义<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id54">
+<h2>探索性数据分析<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id55">
+<h3>主题定义<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h3>
 <p>探索性数据分析（Exploratory Data Analysis，简称EDA），摘抄网上的一个中文解释，是指对已有的数据（特别是调查或观察得来的原始数据）在尽量少的先验假定下进行探索，通过作图、制表、方程拟合、计算特征量等手段探索数据的结构和规律的一种数据分析方法。特别是党我们对面对大数据时代到来的时候，各种杂乱的“脏数据”，往往不知所措，不知道从哪里开始了解目前拿到手上的数据时候，探索性数据分析就非常有效。探索性数据分析是上世纪六十年代提出，其方法有美国统计学家John Tukey提出的。</p>
 <p>维基百科的英语解释：
 In statistics, exploratory data analysis(EDA) is an approach to analyzing data sets to summarize their maincharacteristics, often with visual methods. A statistical model can be used ornot, but primarily EDA is for seeing what the data can tell us beyond theformal modeling or hypothesis testing task. Exploratory data analysis waspromoted by John Tukey to encourage statisticians to explore the data, andpossibly formulate hypotheses that could lead to new data collection andexperiments. EDA is different from initial data analysis (IDA), which focusesmore narrowly on checking assumptions required for model fitting and hypothesistesting, and handling missing values and making transformations of variables asneeded. EDA encompasses IDA.</p>
@@ -951,14 +1111,14 @@ In statistics, exploratory data analysis(EDA) is an approach to analyzing data s
 <blockquote>
 <div>参考链接:https://www.jianshu.com/p/9325c9f88ee6</div></blockquote>
 </div>
-<div class="section" id="id48">
-<h3>特征工程<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id56">
+<h3>特征工程<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id49">
-<h3>数学建模<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id57">
+<h3>数学建模<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h3>
 <p>1.数学常用模型</p>
-<div class="section" id="id50">
-<h4>1.1运筹学模型<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id58">
+<h4>1.1运筹学模型<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>数学规划模型</li>
 <li>图论模型</li>
@@ -968,8 +1128,8 @@ In statistics, exploratory data analysis(EDA) is an approach to analyzing data s
 <li>可靠性理论模型</li>
 </ul>
 </div>
-<div class="section" id="id51">
-<h4>1.2概率论与数理统计模型<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id59">
+<h4>1.2概率论与数理统计模型<a class="headerlink" href="#id59" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>1.2.1多元分析模型</li>
 <li>聚类分析</li>
@@ -981,8 +1141,8 @@ In statistics, exploratory data analysis(EDA) is an approach to analyzing data s
 <li>多维标度法</li>
 </ul>
 </div>
-<div class="section" id="id52">
-<h4>1.2.2假设检验模型<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id60">
+<h4>1.2.2假设检验模型<a class="headerlink" href="#id60" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>1.2.3相关分析</li>
 <li>1.2.4回归分析</li>
@@ -1006,11 +1166,11 @@ In statistics, exploratory data analysis(EDA) is an approach to analyzing data s
 <p>综合评价与决策方法</p>
 </div>
 </div>
-<div class="section" id="id53">
-<h3>数据可视化<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id61">
+<h3>数据可视化<a class="headerlink" href="#id61" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id54">
-<h3>报告输出<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id62">
+<h3>报告输出<a class="headerlink" href="#id62" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="jupyter">
 <h4>jupyter 输出文档<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h4>
 <p>安装tex工具</p>
@@ -1039,10 +1199,10 @@ xelatex 1-Redcard-Dataset.tex</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="chapter03_java.html" class="btn btn-neutral float-right" title="java" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="chapter03_bi.html" class="btn btn-neutral float-right" title="bi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chapter01_strategy.html" class="btn btn-neutral float-left" title="哲学与谋略" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="chapter01_python.html" class="btn btn-neutral float-left" title="python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

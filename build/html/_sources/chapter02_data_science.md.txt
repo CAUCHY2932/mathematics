@@ -3,6 +3,163 @@
 ## 数理基础
 ## 数据库之sql
 
+### sql基础语法
+## 基础语法
+
+### 概念
+
+sql，结构化查询语言
+
+主要学习关系型数据库
+
+### SQL DML 和 DDL
+
+可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。
+
+
+
+SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。
+
+查询和更新指令构成了 SQL 的 DML 部分：
+
+- *SELECT* - 从数据库表中获取数据
+- *UPDATE* - 更新数据库表中的数据
+- *DELETE* - 从数据库表中删除数据
+- *INSERT INTO* - 向数据库表中插入数据
+
+SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。
+
+SQL 中最重要的 DDL 语句: 
+
+- *CREATE DATABASE* - 创建新数据库
+- *ALTER DATABASE* - 修改数据库
+- *CREATE TABLE* - 创建新表
+- *ALTER TABLE* - 变更（改变）数据库表
+- *DROP TABLE* - 删除表
+- *CREATE INDEX* - 创建索引（搜索键）
+- *DROP INDEX* - 删除索引
+
+###数据库操作
+
+```sql
+create database db_name; --创建数据库
+drop database db_name; --删除数据库
+```
+
+### 表操作
+
+```sql
+create table table_name (
+    id int,
+    name varchar(255),
+    addr varchar(255)
+); --创建表
+
+
+drop table table_name; --删除表
+```
+
+### 记录操作
+
+```sql
+insert into table_name values(value1, value2...); --插入
+update table_name set column_i ='xxx' where column_j = 'jjj'; --更新
+delete from table_name where column = 'xxx'; --删除
+select column from table_name; --查询
+```
+
+#### where
+
+
+
+#### distinct
+
+
+
+#### and or
+
+## 进阶
+
+
+
+### 约束
+
+#### not null
+
+```sql
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+```
+
+
+
+#### unique
+
+```mysql
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+UNIQUE (Id_P)
+); --mysql
+```
+
+
+
+#### primary key
+
+```mysql
+CREATE TABLE Persons
+(
+Id_P int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+PRIMARY KEY (Id_P)
+);
+```
+
+
+
+#### foreign key
+
+```mysql
+CREATE TABLE Orders
+(
+Id_O int NOT NULL,
+OrderNo int NOT NULL,
+Id_P int,
+PRIMARY KEY (Id_O),
+FOREIGN KEY (Id_P) REFERENCES Persons(Id_P)
+);
+```
+
+
+
+#### check
+
+
+
+#### default
+
+
+
+### 连接
+
+
+
+
+
 
 > https://www.jianshu.com/p/9e91aa8782da
 

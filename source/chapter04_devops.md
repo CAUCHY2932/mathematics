@@ -2,6 +2,15 @@
 
 包含linux和一些常用的命令
 
+
+
+## pipenv的使用
+
+
+
+pipenv install --dev --pypi-mirror https://mirrors.aliyun.com/pypi/simple
+
+
 ## encoding
 
 unzip 解压含有中文的目录时乱码

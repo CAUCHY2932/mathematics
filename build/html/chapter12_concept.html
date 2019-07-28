@@ -1,0 +1,1082 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>概念 &mdash; 吕阳阳的日志小屋 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="随便聊聊" href="chapter11_随便聊聊.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 吕阳阳的日志小屋
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Content:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter05_java.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter06_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter08_big_data.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter11_随便聊聊.html">随便聊聊</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">概念</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">命名规范</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">一、匈牙利命名法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">二、驼峰式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">小驼峰法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">大驼峰法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">三、 帕斯卡命名法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">四、 下划线命名法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">艾宾浩斯</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">1.根据这种规律，可以制定复习计划</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.记忆</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">2.1技巧</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">2.2空间</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">3.曲线</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">3.1差异</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">3.2个性化</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">4.定量性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">艾宾浩斯</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">运用</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id20">复习点的确定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id21">背诵方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id22">复习过程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id23">复习点的确定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">注意事项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id25">时间表（左边序号表示第几天，*号之后表示复习内容）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">存储过程和视图的区别</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id27">存储过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">视图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">微服务是什么？十分钟了解微服务架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">新概念</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id31">数据库设计</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pdman">pdman</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">数据仓库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#redshift-as-data-warehouse">Redshift as data warehouse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#columnar-storage">Columnar storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scalability">Scalability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#price">Price</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#table-design">Table design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distkey-sortkey">distkey &amp; sortkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance-optimize">Performance optimize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workload-management">Workload Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot">Slot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vacuum">Vacuum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-data-into-cluster">Loading data into cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#some-limit">Some limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deadlock">DeadLock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#next">Next</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emr">使用emr</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#superset">superset详解</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">权限分类</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">菜单类</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id35">基本权限</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">superset二次开发</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id37"><strong>中国地图相关地图测绘文件</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38"><strong>Superset相关设置</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">文件夹映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#echart">单独的echart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyecharts">新版本的pyecharts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#v0-5-x">V0.5.x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#v1">V1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">吕阳阳的日志小屋</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>概念</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chapter12_concept.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>概念<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>命名规范<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>一、匈牙利命名法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>在变量名之前加上相应的小写字母的符号标识作为前缀，标识出变量的作用域、类型等。
+这些符号可以多个同时使用，顺序是先成员变量，再指针，再简单数据类型，再其他，例如：m_lpszStr，表示指向一个以0字符结尾的字符串的长指针成员变量
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>前缀              类型
+ a              数组 (Array)
+ b              布尔值 (Boolean)
+ by             字节 (Byte)
+ c              有符号字符 (Char)
+ cb             无符号字符 (Char Byte，没有多少人用)
+ cr             颜色参考值 (ColorRef)
+ cx,cy          坐标差（长度 ShortInt）
+ dw             Double Word
+ fn             函数
+ h              Handle（句柄）
+ i              整型
+ l              长整型 (Long Int)
+ lp             Long Pointer
+ m_             类的成员
+ n              短整型 (Short Int)
+ np             Near Pointer
+ p              Pointer
+ s              字符串型
+ sz             以null做结尾的字符串型 (String with Zero End)
+ w              Word
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>二、驼峰式<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>驼峰式命名法就是当变量名或函式名是由一个或多个单词连结在一起，而构成的唯一识别字时，第一个单词以小写字母开始；第二个单词的首字母大写或每一个单词的首字母都采用大写字母，例如：myFirstName、myLastName，这样的变量名看上去就像驼峰峰一样此起彼伏，故得名。 
+驼峰式命名法（Camel-Case）一词来自 Perl 语言中普遍使用的大小写混合格式，而 Larry Wall 等人所著的畅销书《Programming Perl》（O’Reilly 出版）的封面图片正是一匹骆驼。 
+驼峰式命名法的命名规则可视为一种惯例，并无绝对与强制，为的是增加识别和可读性。 
+</pre></div>
+</div>
+<div class="section" id="id5">
+<h4>小驼峰法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>变量一般用小驼峰法标识。驼峰法的意思是：除第一个单词之外，其他单词首字母大写。譬如 
+int myStudentCount; 
+变量myStudentCount第一个单词是全部小写，后面的单词首字母大写。 
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h4>大驼峰法<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>相比小驼峰法，大驼峰法把第一个单词的首字母也大写了。常用于类名，函数名，属性，命名空间。譬如 
+public class DataBaseUser; 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>三、 帕斯卡命名法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>帕斯卡命名法其实就是目前说的大驼峰命名法，常用于类名，函数名，属性，命名空间。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>四、 下划线命名法<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>对于历史悠久的下划线命名法（my_variable）和驼峰命名法（myVariable）我们认为选择哪种并不重要，只要你坚持在项目中贯彻它。
+
+在本书中，我们将采用驼峰命名法，因为它是 JavaScript 中的惯例（毕竟它叫 JavaScript 而不是 java_script 呀！）。
+
+对此唯一的例外是，对文件的命名，我们将采用下划线命名法（my_file.js）。对于 CSS 类，我们将使用连字号（.my-class）。这样做的原因是在文件系统中，下划线命名法最常见，而
+ CSS 语法本身就使用连字号作为连接（比如 font-family，text-align等）。
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>艾宾浩斯<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>1.根据这种规律，可以制定复习计划<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>遗忘曲线由德国心理学家艾宾浩斯(H.Ebbinghaus)研究发现，描述了人类大脑对新事物遗忘的规律。人体大脑对新事物遗忘的循序渐进的直观描述，人们可以从遗忘曲线中掌握遗忘规律并加以利用，从而提升自我记忆能力。该曲线对人类记忆认知研究产生了重大影响。</p>
+</div>
+<div class="section" id="id11">
+<h3>2.记忆<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h4>2.1技巧<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>人的大脑是一个记忆的宝库，人脑经历过的事物，思考过的问题，体验过的情感和情绪，练习过的动作，都可以成为人们记忆的内容。例如英文的学习中单词、短语和句子，甚至文章的内容都是通过记忆完成的。从”记”到”忆”是有个过程的，这其中包括了识记、保持、再认和回忆。有很多人在学习英语的过程中，只注重了学习当时的记忆效果，孰不知，要想做好学习的记忆工作，是要下一番工夫的，单纯的注重当时的记忆效果，而忽视了后期的保持和再认，同样是达不到良好的效果的。</p>
+</div>
+<div class="section" id="id13">
+<h4>2.2空间<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>在信息的处理上，记忆是对输入信息的编码、贮存和提取的过程，从信息处理的角度上，英文的第一次学习和背诵只是一个输入编码的过程。人的记忆的能力从生理上讲是十分惊人的，它可以存贮10的15次方比特(二进制数字中的位，信息量的度量单位，是由英文BIT音译而来，为信息量的最小单位）的信息，理论上可以将全世界图书馆的所有图书信息记住。这是因为，有些人只关注了记忆的当时效果，却忽视了记忆中的更大的问题–即记忆的牢固度问题，那就牵涉到心理学中常说的关于记忆遗忘的规律。</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>3.曲线<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>根据我们所知道的，记忆的保持在时间上是不同的，有短时的记忆和长时的记忆两种。
+输入的信息在经过人的注意过程的学习后，便成为了人的短时的记忆，但是如果不经过及时的复习，这些记住过的东西就会遗忘，而经过了及时的复习，这些短时的记忆就会成为了人的一种长时的记忆，从而在大脑中保存着很长的时间。他得出一些关于记忆的结论。</p>
+<p>艾宾浩斯遗忘曲线，图中竖轴表示记忆程度（用来表示机械记忆的保持程度），横轴表示时间（天数），曲线表示机械学习实验的结果。</p>
+<p>这条曲线告诉人们在学习中的遗忘是有规律的，遗忘的进程不是均衡的，不是固定的一天丢掉几个，转天又丢几个的，而是在记忆的最初阶段遗忘的速度很快，后来就逐渐减慢了，到了相当长的时候后，几乎就不再遗忘了，这就是遗忘的发展规律，即”先快后慢”的原则。观察这条遗忘曲线，你会发现，学得的知识在一天后，如不抓紧复习，就只剩下原来的25%。随着时间的推移，遗忘的速度减慢，遗忘的数量也就减少。有人做过一个实验，两组学生学习一段课文，甲组在学习后不久进行一次复习，乙组不予复习，一天后甲组保持98%，乙组保持56%；一周后甲组保持83%，乙组保持33%。乙组的遗忘平均值比甲组高。 [1]</p>
+<div class="section" id="id15">
+<h4>3.1差异<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<p>而且，艾宾浩斯还在关于记忆的实验中发现，记住12个无意义音节，平均需要重复16.5次；为了记住36个无意义章节，需重复54次；而记忆六首诗中的480个音节，平均只需要重复8次！这个实验告诉我们，凡是理解了的知识，就能记得迅速、全面而牢固。不然，愣是死记硬背，那也是费力不讨好的。因此，比较容易记忆的是那些有意义的材料，而那些无意义的材料在记忆的时候比较费力气，在以后回忆起来的时候也很不轻松。因此，艾宾浩斯遗忘曲线是关于遗忘的一种曲线，而且是对无意义的音节而言，对于与其他材料的对比，艾宾浩斯又得出了不同性质材料的不同遗忘曲线，不过他们大体上都是一致的。
+因此，艾宾浩斯的实验向我们充分证实了一个道理，学习要勤于复习，而且记忆的理解效果越好，遗忘的也越慢。 [3]</p>
+</div>
+<div class="section" id="id16">
+<h4>3.2个性化<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>上述的艾宾浩斯记忆曲线是艾宾浩斯在实验室中经过了大量测试后，产生了不同的记忆数据，从而生成的一种曲线，是一个具有共性的群体规律。此记忆曲线并不考虑接受试验个人的个性特点，而是寻求一种处于平衡点的记忆规律。
+但是记忆规律可以具体到我们每个人，因为我们的生理特点、生活经历不同，可能导致我们有不同的记忆习惯、记忆方式、记忆特点。规律对于自然人改造世界的行为，只能起一个催化的作用，如果与每个人的记忆特点相吻合，那么就如顺水扬帆，一日千里；如果与个人记忆特点相悖，记忆效果则会大打折扣。因此，我们要根据每个人的不同特点，寻找到属于自己的艾宾浩斯记忆遗忘曲线。</p>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>4.定量性<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>在美国1999年世界记忆学大会上公布了一个成果，是“关于艾宾浩斯记忆曲线的定量性研究”研究成果表明在人类大脑记忆过程中，在某一时间内，会形成三种记忆，即感觉记忆、短时记忆和联想记忆，如图所示：
+这个是一个记忆事件，我们以一个记单词事件为例，当记单词事件发生后，你在几秒钟之内会产生一个“感觉记忆”，这个感觉记忆转瞬即失，每个人各不相同，但基本上都在3、4秒之内，这个在记单词时不会感觉太深，在什么时候感觉深呢？感觉记忆之后还会有一个“短时记忆”，也叫“工作记忆”。这个记忆的延续时间也各不相同，大概在4~16个小时之间，不同的人相差四倍，这个在什么时候用到呢？比如：老师在课间给学生说：下节课要听写昨天学的单词，你特别着急，下课后赶紧背，管不管用，管用！但是放学回家吃顿饭或玩了一下，就什么也记不起来了，这是短时记忆，也是记完后马上会消失掉。在这两个记忆消失的过程中，会产生一个长时记忆痕迹，这是我们最关心的东西，也是最有用的东西，你真正的记忆，学习一个单词，学习任何东西，都会用到长时记忆痕迹，它是一个抛物线，就会有个最顶点，是个最高点，这是你这次记忆单词的记忆最强点，这个点能产生一个记忆强度，在这，还能产生一个记忆时间T，在某个时间段，你对这次记忆单词会产生一个这次的一个最强点，那么，我们简单的来说，如果有谁能找到这点，这个时间段T，在这进行第二次的拉高复习，这是最有效的，我们翻书，我们看小纸片，其实是在模拟这个T，这个重复时间，即记忆黄金序列是由每个遗忘点排列而成。
+科学家们评价说如果说内燃机的发明把人类从繁重的体力劳动中解放出来，记忆核系统将把人类从学习过程中繁重的脑力劳动中解放出来。这场人类脑力的革命，将让大脑突破其生理极限运转，大大超越人类现有的学习速度，从根本上改变人类传统学习方式。</p>
+</div>
+<div class="section" id="id18">
+<h3>艾宾浩斯<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>德国心理学家艾宾浩斯（Hermann Ebbinghaus）对遗忘现象做了系统的研究，他用无意义的音节作为记忆的材料，把实验数据绘制成一条曲线，称为艾宾浩斯遗忘曲线。
+这条曲线一般称为艾宾浩斯遗忘曲线，也称艾宾浩斯保持曲线，它的纵坐标代表保持量。曲线表明了遗忘发展的一条规律：遗忘进程是不均衡的，在识记的最初遗忘很快，以后逐渐缓慢，到了相当的时间，几乎就不再遗忘了，也就是遗忘的发展是“先快后慢”。
+遗忘的进程不仅受时间因素的制约，也受其他因素的制约。学生最先遗忘的是没有重要意义的、不感兴趣、不需要的材料。不熟悉的比熟悉的遗忘的要早。
+人们对无意义的音节的遗忘速度快于对散文的遗忘，而对散文的遗忘速度又快于有韵律诗。
+在学习过程中，对一种材料达到一次完全正确地背诵后仍然继续学习，叫做过度学习。适当的过度学习可以使学习的材料保持得更好。研究结果表明，适当限度的过度学习比刚能背诵的效果好，但如果超过这个限度，其保持效果不再增加。如学习四遍后恰能背诵，则再学习两遍效果最好，但再学习效果则适得其反，对人的身心造成危害。
+一般记住后，在5分钟后重复一遍，20分钟后再重复一遍，1小时后，12小时后，1天后，2天后，5天后，8天后，14天后就会记得很牢。</p>
+</div>
+<div class="section" id="id19">
+<h3>运用<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h4>复习点的确定<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1． 第一个记忆周期：5分钟
+2． 第二个记忆周期：30分钟
+3． 第三个记忆周期：12小时
+4． 第四个记忆周期：1天
+5． 第五个记忆周期：2天
+6． 第六个记忆周期：4天
+7． 第七个记忆周期：7天
+8． 第八个记忆周期：15天
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h4>背诵方法<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>1． 初记单词时需要记忆的内容：<ul>
+<li>a）单词外观，</li>
+<li>b） 单词的中文释义，</li>
+<li>c） 单词的记忆法</li>
+</ul>
+</li>
+<li>2． 每个list的具体背诵过程（每个list按12页，每页10个单词计）：<ul>
+<li>a) 背完一页（大约5分钟），立即返回该页第一个单词开始复习（大约几十秒）</li>
+<li>b) 按上面方法背完1～6页（大约在30分钟），回到第1页开始复习（两三分钟）</li>
+<li>c) 按上面同样方法背完7～12页，一个list结束</li>
+<li>d) 相当于每个list被分为12个小的单元，每个小的单元自成一个复习系统；每6个小单元组成一个大单元，2个大单元各自成为一个复习系统。背一个list总共需要一小时左右的时间。</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h4>复习过程<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+<p>a) 复习方法：遮住中文释义，尽力回忆该单词的意思，几遍下来都记不住的单词可以做记号重点记忆。
+b) 复习一个list所需的时间为20分钟以内
+c) 当天的list最好在中午之前背完，大约12小时之后（最好睡觉前）复习当天所背的list
+d) 在其后的1，2，4，7，15天后分别复习当日所背的list
+e）复习的原则
+时间间隔：30秒 1分钟 5分钟 30分钟 1小时 8小时 1天 2天 6天 31天
+重学节省诵读时间百分数：58.2 44.2 35.8 33.7 27.8 25.4 21.1</p>
+</div>
+<div class="section" id="id23">
+<h4>复习点的确定<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<p>人的记忆周期分为短期记忆和长期记忆两种。
+第一个记忆周期是 5分钟
+第二个记忆周期是30分钟
+第三个记忆周期是12小时
+这三个记忆周期属于短期记忆的范畴。
+下面是几个比较重要的周期。
+第四个记忆周期是 1天
+第五个记忆周期是 2天
+第六个记忆周期是 4天
+第七个记忆周期是 7天
+第八个记忆周期是15天
+以上的8个周期应用于背词法，作为一个大的背词的循环的8个复习点，可以最大程度的提高背单词的效率
+背单词就找个小本子窄窄的那种，每页中间对折左边英文右边中文，每天背100个，分5组每组20个，每一个看过留下读音和拼写的印象，基本上5～8分钟一组，全部5组大概看30分钟，最好不要超过40分钟，然后再从第一组再看，每天一百个新的，看过的按记忆周期在第2、4、7、15天重新复习，基本每天进行的300～400个单词记忆。</p>
+</div>
+<div class="section" id="id24">
+<h4>注意事项<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>a) 每天连续背诵2个list，并完成复习任务；</li>
+<li>b) 复习永远比记新词重要，要反复高频率的复习，复习，再复习；</li>
+<li>c) 一天都不能间断，坚持挺过这15天，之后每天都要花大约1小时复习；</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h4>时间表（左边序号表示第几天，*号之后表示复习内容）<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>第1天 list1→2 *list1→2
+第2天 *list1→2 list3→4 *list3→4
+第3天 *list3→4 list5→6 *list5→6
+第4天 *list1→2 *list5→6 list7→8 *list7→8
+第5天 *list3→4 *list7→8 list9→10 *list9→10
+第6天 *list5→6 *list9→10 list11→12 *list11→12
+第7天 *list1→2 *list7→8 *list11→12 list13→14 *list13→14
+第8天 *list3→4 *list9→10 *list13→14 list15→16 *list15→16
+第9天 *list5→6 *list11→12 *list15→16 list17→18 *list17→18
+第10天 *list7→8 *list13→14 *list17→18 list19→20 *list19→20
+第11天 *list9→10 *list15→16 *list19→20 list21→22 *list21→22
+第12天 *list11→12 *list17→18 *list21→22 list23→24 *list23→24
+第13天 *list13→14 *list19→20 *list23→24
+第14天 *list15→16 *list21→22
+第15天 *list1→2 *list17→18 *list23→24
+第16天 *list3→4 *list19→20
+第17天 *list5→6 *list21→22
+第18天 *list7→8 *list23→24
+第19天 *list9→10
+第24天 *list19→20
+第25天 *list21→22
+第26天 *list23→24
+第27天
+第28天
+第29天
+第30天 *list1→2
+第31天 *list3→4
+第32天 *list5→6
+第33天 *list7→8
+第34天 *list9→10
+第35天 *list11→12
+第36天 *list13→14
+第37天 *list15→16
+第38天 *list17→18
+第39天 *list19→20
+第40天 *list21→22
+第41天 *list23→24
+起始(单元或页码)编号为1
+截止(单元或页码)编号为24
+总共需要复习的编号数为24
+每天需要复习的编号数为2
+你需要41天时间完成任务 [4]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>存储过程和视图的区别<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id27">
+<h3>存储过程<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<p>就是事先存储好的SQL语句，放在数据库端，需要使用时直接调用存储过程就可以执行相应的SQL语句。存储过程可带参数，也可返回结果。</p>
+<p>存储过程有啥优势呢？</p>
+<p>执行速度更快；允许模块化设计；提高系统安全性；减少网络流量。</p>
+<p>传统SQL语句与存储过程执行效率的对比：</p>
+<p>跟视图有啥区别呢？</p>
+<p>视图仅仅用来查询，而存储过程可以用来增删查改；视图是数据库的一张虚拟表，可以像表一样使用，而存储过程本质来说还是在执行SQL语句。</p>
+</div>
+<div class="section" id="id28">
+<h3>视图<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<p>要把视图看做是一张表，包含了一张表的部分数据或者多个表的综合数据，视图的使用和普通表一样；</p>
+<p>视图建立并存储在服务器，有效减少网络数据流量，提高安全性；</p>
+<p>视图中不存放数据，数据依然存放在视图引用的原始数据表中；</p>
+<p>可以根据需求来提前创建不同的视图。</p>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>微服务是什么？十分钟了解微服务架构<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<p>程序员百科</p>
+<p>18-05-1321:17</p>
+<p>过去几年来，“微服务架构”这个术语出现了，它描述了一种将软件应用程序设计为可独立部署的服务套件的特定方式。尽管这种架构风格没有确切的定义，但围绕业务能力，自动化部署，端点智能以及语言和数据的分散控制等方面存在着某些共同特征。</p>
+<p>“微 服务” -  在软件架构拥挤的街道上又一个新名词。尽管我们的自然倾向是以轻蔑的眼光来传递这样的东西，但这些术语描述了一种我们发现越来越吸引人的软件系统风格。我 们已经看到许多项目在过去几年中都采用了这种风格，迄今为止的结果是积极的，因此对于我们的许多同事来说，这正成为构建企业应用程序的默认风格。可悲的 是，没有太多的信息概述了微服务的风格以及如何去做。</p>
+<p>简而言之，微服务架构是一种 将单应用程序作为一套小型服务开发的方法，每种应用程序都在其自己的进程中运行，并与轻量级机制（通常是HTTP资源的API）进行通信。这些服务是围绕 业务功能构建的，可以通过全自动部署机制进行独立部署。这些服务的集中化管理已经是最少的，它们可以用不同的编程语言编写，并使用不同的数据存储技术。</p>
+<p>在 开始介绍微服务风格（microservice style）前，比较一下整体风格（monolithic  style）是很有帮助的：一个完整应用程序（monolithic  application）构建成一个单独的单元。企业应用程序通常建立在三个主要部分中：一个客户端用户界面（由用户计算机上的浏览器中运行的HTML页 面和JavaScript组成）数据库（包括插入常见的通常是关系数据库管理的多个表系统）和一个服务器端应用程序。服务器端应用程序将处理HTTP请 求，执行特定领域逻辑，通过数据库进行检索和更新数据，选择并填充要发送到浏览器的HTML视图。这个服务器端应用程序是一个庞然大物 -  一个逻辑可执行文件[2]。系统的任何更改都涉及构建和部署新版本的服务器端应用程序。</p>
+<p>这 样的整体服务（monolithic  server）是一种构建系统很自然的方式。处理请求的所有逻辑都在一个进程中运行，允许您使用语言的基本功能将应用程序划分为类，函数和名称空间。谨慎 操作时，您可以在开发人员的笔记本电脑上运行和测试应用程序，并使用部署通道来确保更改经过适当测试并部署到生产环境中。您可以通过在负载平衡器后面运行 多个实例来横向缩放整体。</p>
+<p>单体式应用程序可以取得成功，但越来越多的人会感到失望  - 尤其是随着更多应用程序被部署到云中。变更周期是连在一起的 -  对应用程序的一小部分进行更改，需要重建和部署整个程序。随着时间的推移，它通常很难保持良好的模块化结构，使得难以保持应该：模块内的一个改动仅影响该 模块本身中。自适应需要自适应整个应用程序，而不是它的一部分，这样做需要更多资源。</p>
+<p>图1: 单体式和微服务</p>
+<p>这些挫折引出了微服务架构风格：将应用程序构建为服务套件。除了服务是可独立部署和可伸缩的事实之外，每个服务还提供了一个严格的模块边界，甚至允许用不同的编程语言编写不同的服务。它们也可以由不同的团队来管理。</p>
+<p>我们并不是说微服务风格是新颖的或创新的，它的根源至少可以追溯到Unix的设计原则。但我们确实认为，没有足够多的人考虑使用微服务架构，如果他们使用了，那么许多软件开发将会更好。</p>
+<p>微服务体系结构的特征</p>
+<p>我 们不能说对微服务架构风格有一个正式的定义，但是我们可以尝试描述我们所看到的与“微服务”标签相符的架构的共同特征。与任何概述共同特征的定义一样，并 不是所有的微服务架构都具有所有的特征，但是我们确实期望大多数微服务架构具有大多数特征。虽然我们的作者一直是这个相当松散的社区的活跃成员，但我们的 目的是尝试描述我们在自己的工作中看到的东西，以及我们所知道的团队的类似努力。特别地，我们并没有给出一些符合要求的定义。</p>
+<p>通过服务（Sevice）实现组件化</p>
+<p>只要我们参与过软件行业，这就存在一种期盼：通过将组件整合在一起来构建系统，这与我们在现实世界中看待事物的方式非常相似。在过去的几十年中，我们已经见证了大部分语言平台中常见库的大量摘要所取得的巨大进步。在谈及组件时，我们遇到了对组件构成定义的难题。我们的定义是，组件是可独立更换和升级的软件单元。</p>
+<p>微服务架构一样会用到各种库，但这种架构会把软件给拆分成各种不同的服务来实现组件化。这里我们定义两个重要的概念：库(library) 指的是链接到程序的组件，通过本地函数调用来使用库提供的功能；而服务 (service) 是进程外的组件，通过网络服务请求 (web service request) 或者远程函数调用之类的机制来使用里面的功能。注意这和很多面向对象程序里服务对象的机制是不同的 [3]。</p>
+<p>之 所以在组件化的软件里用服务，而不是库，一个主要原因就是各个服务是可以独立部署的。比如说，如果在同一个软件 [4]  里用了多个库，那么就算只是修改了其中一个，都会导致整个软件要被重新部署；相反，如果用的是服务，那只需要重新部署修改过的就可以。然而，有个问题是， 当修改服务时，可能会把服务接口也给修改了，这样一来，服务的调用者和开发者就得自己私下协调了。好的微服务架构，就应该尽量避免这种问题；非要修改服务 契约的话，也得循序渐进，让调用者有迹可循，不用私下协调。</p>
+<p>使用服务作为组件的另一个后果是更显式的组件接口。大多数语言都没有很好的机制来定义显式发布的接口。通常，只有文档和规程可以防止客户机破坏组件的封装，从而导致组件之间的紧密耦合。通过使用显式的远程调用机制，服务可以更容易地避免这种情况。使用这样的服务确实有缺点。远程调用比进程内调用更昂贵，因此远程api需要粗粒度，这通常更难以使用。如果您需要更改组件之间的职责分配，那么当您跨越流程边界时，这种行为的移动就更加困难了。</p>
+<p>我们可以观察到服务映射到运行时进程，但这只是第一次近似。服务可能包括多个进程，这些进程将始终会一起开发和部署，例如应用进程和服务所用到的数据库。</p>
+<p>根据服务能力进行管理</p>
+<p>当 将大型应用程序拆分为不同组件时，通常的管理侧重于技术层，由技术层引领UI团队、服务器端逻辑团队和数据库团队的工作。当团队的这种生产线被隔离时，即 使是简单的改变也会引起跨团队的项目耗时耗力。聪明的团队将围绕这一点进行优化——仅把逻辑强加到他们所能触及的任何方式中。换句话说，逻辑无处不在。这 是Conway定律[5]的一个例子。</p>
+<p>任何如设计系统（广义定义）的组织，必将创造出一个设计，其设计结构是组织的通信结构的副本。– Melvyn Conway, 1967</p>
+<p>图2: 实际中的Conway法则</p>
+<p>在划分层面，微服务方法是不同的，分解成围绕业务能力所组织的服务。这些服务需要对该业务领域的软件进行广泛的实施，包括用户界面、持久性存储和任何外部协作。因此，团队是跨职能的，包括开发所需的全部技能：用户体验、数据库和项目管理。</p>
+<p>图3: 由团队边界所加强的服务边界</p>
+<p>微服务有多大?</p>
+<p>虽 然“微服务”已成为这种架构风格的流行名词，但它的名称确实导致了对服务规模的不当关注，以及关于什么构建“微”的争论。在我们与微服务从业者的对话中， 我们看到了一系列规模的服务。据报道最大的规模遵循Amazon提出的Two  Pizza团队理念（即整个团队可以由两个比萨饼喂饱），这意味着不超过十几个人。在规模较小的规模上，我们已经看到过如此的配置：一个六人团队将支撑六 种服务。这就导致了这样一个问题：在这个大小范围内是否存在足够大的差异，即每六人所负责的服务数目和每人负责的服务数目不应该被集中在一个微服务标签下。目前我们认为将它们组合在一起会更好，但在我们进一步探索这种风格时，我们肯定会改变想法的。</p>
+<p>有一家公司是这样组织的www.comparethemarket.com。跨职能团队负责构建和操作每个产品，并将每个产品分成多个单独的服务，通过消息总线进行通信。大 型单块应用程序也可以围绕业务功能进行模块化，尽管这不是常见的情况。当然，我们会敦促一个庞大的团队构建一个单一的应用程序，以将自己与业务线分开。我 们在这里看到的主要问题是，他们倾向于在太多的背景下组织。如果这个庞然大物跨越了许多模块化的边界，那么团队的单个成员就很难将它们融入到他们的短期记 忆中。此外，我们发现模块化的代码行需要大量的规程来执行。服务组件所要求的更加明确的分离使得保持团队界限变得更加容易。</p>
+<p>产品不是项目</p>
+<p>大多我们看到的应用开发都使用一个项目模型：目标就是将那些马上就要完成的软件的一部分交付出去。在软件的完成时将它交付给一个后期运维组织，然后开发它的软件项目组就被解散了。微 服务倡导尽量避免这种模型，反而更倾向于另一个理念：一个团队应该在一个产品的整个生命周期都拥有它。与之相同的灵感来自于亚马逊的“你创造它，你运维 它”的理念，在那里一个开发团队对产品中的软件是完全负责的。这给开发者们带来了日常联系，让他们知道他们的软件在产品中表现如何，同时由于他们必须要承 担一些支持负担，也增加了他们与用户的联系。</p>
+<p>产品心态，与业务能力挂钩。与其将软件看作是一组要完成的功能，还存在一种持续的关系，其中的问题是软件如何帮助其用户提高业务能力。我们没有理由不使用单一的应用程序，但是服务的粒度越小，就越容易创建服务开发人员和用户之间的个人关系。</p>
+<p>智能端点和哑管道。</p>
+<p>在 构建不同流程之间的通信结构时，我们已经看到了许多产品和方法，它们强调将大量的智慧投入到通信机制本身中。一个很好的例子是企业服务总线 (Enterprise Service Bus, ESB)， ESB产品通常包括用于消息路由、编排、转换和应用业务规则的复杂设施。</p>
+<p>微服务和SOA</p>
+<p>当 我们已经讨论了微服务之后，一个常见问题为：它是不是就是我们在十年前见到的面向服务的体系架构（SOA，Service Oriented  Architecture）。因为微服务风格与SOA所支持的一些主张非常像，这一点是有价值的。然而问题就是SOA意味着太多不同的东西，而且一般因为 对ESB在用于集成大型应用时的关注，当大多我们遇到名为“SOA”的东西的时候，它与我们在本文所描述的风格完全不同。尤其我们已经看到了很多面向服务的拙劣的实践——从在ESB[6]中总是将复杂隐藏起来的趋势，到失败的花费数百万而没有价值的多年计划，再到总是抑制变化的集中管理模式，导致有时很难看到过去的这些问题。</p>
+<p>当 然，微服务社区中许多在用的技术都是由大型组织开发者的集成服务经验发展而来。读者容错模式就是其中的一个例子。web的使用已经为此做出了贡献，使用简 单协议是另一种方法，它就是由这些经验衍生出来的——一种远离中心标准的反应，这些标准已经达到了它如今所具有的一种复杂度，直白的说，相当壮观。（当你 需要一个实体来管理你的众多实体的时候，你就知道你遇到大麻烦了。）与SOA的共同表现形式已经让微服务主张彻底拒绝被打上SOA的标签，尽管其他人认为微服务就是SOA的一种形式[7]，也许在面向服务方面是没有错的。无论哪种方式，SOA都意味着不同的东西，这意味着使用一个术语来更加简明的定义这种架构风格是有必要的。</p>
+<p>微 服务社区相对更倾向于另一种方法：智能终端和无声管道。使用微服务搭建的应用旨在尽可能的分解和凝聚——他们拥有他们自己的业务逻辑，而且更像一个传统 Unix印象中的过滤器——接收请求，应用合适的逻辑，并产生响应。它们使用简单REST协议而非复杂协议，就像WS-Choreography或者 BPEL或者使用中央工具配置。</p>
+<p>这两种协议使用的比较多的是使用源API和轻量级消息的HTTP请求-响应[8]。第一个最好的表达是</p>
+<p>属于web，而不落后于web       –Ian Robinson</p>
+<p>微服务团队使用万维网(以及很大程度上，Unix)构建的原则和协议。开发者或操作人员可以通过较少的努力来缓存经常使用的资源。</p>
+<p>第二种常用方法是通过轻量级总线传递消息。选择的基础设施素来愚蠢（愚蠢是因为仅作为消息路由器）——像RabbitMQ或ZeroMQ一样不仅仅是提供可靠的异步架构来简单实现——智能仍然存在于生产和消费信息的终点上；在服务中。</p>
+<p>在整体结构中，正在执行中的组件通过方法调用或函数调用进行通信。将一个巨大的框架改成一个微服务框架时遇到的最大的问题在于改变通信方式。从内存的方法调用到RPC的简单转换会使通信性能变差。相反，你需要用粗粒度方法来替换细粒度的通信。</p>
+<p>分散治理</p>
+<p>集中化治理的后果之一是在单一技术平台上进行标准化的趋势。经验表明，这种方法是压缩的——不是每个问题都是钉子，不是每个解决方案都是锤子。我们更喜欢使用合适的工具来做这个工作，而单一的应用程序可以在一定程度上利用不同的语言，这并不常见。将monolith的组件拆分为服务，我们在构建它们的时候有一个选择。要使用节点。js到standup一个简单的报告页面?就去做吧。一个特别接近实时的组件的c++ ?很好。您想要换一种不同的数据库风格，以便更好地适应一个组件的读取行为?我们有技术来重建他。</p>
+<p>当然，仅仅因为你可以做点什么，并不意味着你应该这样做 - 但是用这种方式划分你的系统意味着你有可选项。构 建微服务的团队也更喜欢采用不同的标准方法。相对于使用一套写在纸上定义好的标准，他们更偏向于这种想法：生产有用的工具，而其他开发人员可以用此工具来 解决他们所面临的类似问题。这些工具通常是从实施中获得的，并在更广泛的群体中共享，有时但不完全使用内部开源模型。既然git和github已经成为了 可选的事实上的版本控制系统，开源实践正变得越来越普遍。</p>
+<p>Netflix组织就是 遵循这一理念的一个很好的例子。  贡献出不仅实用，更重要的是经过实践检验的代码来作为库，来激励其他开发者以类似的方式解决类似的问题。如果需要，还留以余地去选择应用不同的方法。  共享库倾向于关注常见的问题，包括数据存储，进程间通信以及我们将进一步讨论的架构自动化。</p>
+<p>对 于微服务社区来说，虚耗并不是特别受人关注。但这并不意味着社区不重视服务契约。恰恰相反，往往有更多的人在关注。只不过他们在寻求不同的方式来管理这些 契约。例如Tolerant Reader(容错读取)和Consumer-Driven  Contracts（消费驱动契约）模式就通常应用于微服务。这些都会帮助服务契约去独立演进。应用消费驱动契约作为你构建的一部分会提升信心，并对你的 服务是否正常运行提供快速反馈。事实上据我们所知，澳大利亚的一支团队正在推动以消费驱动契约为导向来搭建新服务。他们使用简单的能够允许他们自己定义服 务契约的工具。在新服务代码被创建之前，这就变成了自动构建的一部分。这样构建出来的服务恰好满足了契约 –  这是一种在创建新软件时避免“YAGNI”[9]难题的很得当方法。这些围绕着它们发展而来的技术和工具会通过减少服务之间的时间耦合，以此来限制对中央 契约管理的需要。</p>
+<p>多语言，多选项</p>
+<p>JVM 作为平台的发展仅仅是一个最新的在通用平台上实现多语言的例子。数十年来，为了利用更高层次抽象的优势，更高级的语言已经被普遍采用。正如在更底层的水平 上，降低到硬件层面去编写性能敏感的代码一样。然而，许多大型系统并不需要这个层面的性能优化，也不需要DSL和更高层面的抽象（这让我们感到非常沮 丧）。相反，大型系统通常是单一语言，并且倾向于限制使用的技术数量[10]。</p>
+<p>也 许去中心化管理的最高境界就是被Amazon普及推广的构建/运行精神。团队的职责是构建软件的各个方面，包括7*24全天候运维。虽然这种水平的责任要 求转变绝对不是规范，但我们看到越来越多的公司将责任交给开发团队。  Netflix是另一家采用这种风格的组织[11]。每天凌晨3点被传呼机吵醒无疑是一种强大的动力，逼迫你在编写代码时更加注重代码质量。这些创意点都 与传统的集中化管理模式渐行渐远。</p>
+<p>去中心化的数据管理</p>
+<p>数 据管理的去中心化有许多不同的方式。在最抽象的层次上，这意味着世界的概念模型将在系统之间有所不同。在跨大型企业集成时，这是一个常见问题，客户的销售 视图与支持视图不同。在销售视图中，一些被称为客户的东西可能根本不会出现在支持视图中。那些有可能具有不同属性和(更糟糕)的共同属性，其语义略有不 同。</p>
+<p>经过战斗考验和执行的标准</p>
+<p>微服务团队倾向于避开企业架构组所制定的严格执行标准，但他们乐于使用，甚至推广使用开放标准，如 HTTP、ATOM 和其他微格式，这是一个两分法。</p>
+<p>The  key difference is how the standards are developed and how they are  enforced. Standards managed by groups such as the IETF only becomestandards  when there are several live implementations of them in the wider world  and which often grow from successful open-source projects.</p>
+<p>These  standards are a world apart from many in a corporate world, which are  often developed by groups that have little recent programming experience  or overly influenced by vendors.</p>
+<p>This issue is common between applications, but can also occur withinapplications,  particular when that application is divided into separate components. A  useful way of thinking about this is the Domain-Driven Design notion of  Bounded Context. DDD divides a complex domain up into multiple bounded  contexts and maps out the relationships between them. This process is  useful for both monolithic and microservice architectures, but there is a  natural correlation between service and context boundaries that helps  clarify, and as we describe in the section on business capabilities,  reinforce the separations.</p>
+<p>除了关于概念模型的去中心 化决策之外，微服务还分散了数据存储的决策。尽管单体式应用程序在存储持久性数据时更偏向单一的逻辑数据库，但企业通常更倾向于在各种应用程序中使用单一 数据库 ——  这些决策中的很多都是由供应商的与许可授权相关的商业模式进行驱动的。微服务更偏向于让每个服务管理自己的数据库，或是相同数据库技术的不同实例，或是完 全不同的数据库系统 —— 一种叫做 Polyglot Persistence 的方法。你可以在单体应用中使用 polyglot  persistence，但在微服务中它使用得更频繁。</p>
+<p>在微服务中对数据责任去中心化对于管理更新有一定影响。处理更新的通用方法是在更新多个资源时使用事务来保证一致性。这种方法经常在单体式应用中使用。</p>
+<p>使用像这样的事务有助于保持一致性，但是会增加显着的时间耦合，这是在多个服务中都有问题的。分布式事务非常难以实现，因此微服务架构强调服务之间的无事务性协调，并明确认识到：一致性可能只是最终的一致性，而问题则通过补充操作来处理。选择以这种方式来管理不一致性对于许多开发团队来说是一个新的挑战，但它往往符合业务惯例。通常业务容忍一定程度的不一致性，以便快速响应需求，同时采取某种逆过程来处理错误。只要修正错误的成本低于业务失败所带来的损失，这种折中是值得的。</p>
+<p>基础设施自动化</p>
+<p>基础设施自动化技术在过去几年中发生了巨大变化 - 特别是云和AWS的发展降低了构建、部署和运行微服务的操作复杂性。由微服务构建的许多产品或系统都是由具有持续交付及其先驱（持续集成）方面有丰富经验的团队所构建的。以这种方式构建软件的团队广泛使用基础设施自动化技术。这在下面所展示的构建管道中进行了说明。</p>
+<p>图5: 基本构建管道</p>
+<p>鉴于这不是一篇关于持续交付的文章，我们将仅在此提请注意几个关键功能。我们希望尽可能多的信心使我们的软件能够工作，所以我们进行了大量的自动化测试。推动可工作的软件“上”流水线意味着我们可以自动部署到每个新环境中。</p>
+<p>轻松做正确的事情</p>
+<p>我 们发现由持续交付和部署而导致自动化程度提高的一个副作用是创建有用的工具来帮助开发人员和操作人员。用于创建工件、管理代码库、创建简单服务或添加标准 监测和日志记录的工具现在很常见。网络上最好的例子可能是Netflix的Netflix开源工具系列，但也有其他的包括我们广泛使用的 Dropwizard。</p>
+<p>一个单体式应用程序将通过这些环境非常愉快地构建、测试、 推动。事实证明，一旦你对单体式应用的生产路径做了投入，那么部署更多的应用程序似乎不再那么可怕。请记住，CD  的目标之一就是让部署变得枯燥，所以无论它是一个还是多个应用程序，只要它仍然枯燥，那就是并不重要的[12]。</p>
+<p>我们看到团队频繁使用的基础设施自动化的另一个领域是管理生产环境中的微服务。与我们之前的断言相反，只要部署是很枯燥的，单体式和微服务之间没有太大的区别，每个部门的运营环境可能会有惊人的不同。</p>
+<p>图 6：模块部分通常有区别</p>
+<p>为失败而设计</p>
+<p>使 用服务作为组件的结果是，应用程序需要被设计，以便它们能够容忍服务的失败。任何服务调用都可能由于供应商的无法使用而失败，必须尽可能为客户优雅地响 应。与单块设计相比，这是一个缺点，因为它引入了额外的复杂性来处理它。其结果是，微服务团队不断地反思服务失败如何影响用户体验。Netflix的 Simian Army在工作日中引入了服务的失败，甚至是数据中心，以测试应用程序的弹性和监控。</p>
+<p>断路器及生存环境预备码</p>
+<p>断路器在 释放(Release It!，备注书名）一书中与其他如Bulkhead和Timeout等模式一起用于构建通讯软件是至关重要。这点Netflix博客 文章做了大量的解释。</p>
+<p>这种在生产中的自动化测试将足以让大多数运营团队不寒而栗。这并不是说单一架构不具备复杂的监控设置—— 只是经验中并不常见。</p>
+<p>由 于服务可能随时发生故障，因此能够快速检测故障并在可能的情况下自动恢复服务很重要。  微服务应用程序非常重视应用程序的实时监控，检查架构元素（数据库每秒获得多少请求）和业务相关指标（例如每分钟收到多少订单）。  语义监控可以提供一个预警系统，从而引导开发团队进行跟踪和调查。</p>
+<p>这对微服务架构尤其重要，因为微服务对编排和事件协作的偏好会导致出现紧急行为。 尽管许多权威人士称赞偶然事件出现的价值，但事实是，紧急行为有时可能是一件坏事。 监控对迅速发现不良紧急行为至关重要，只有发现才可能进行修复。</p>
+<p>同步调用是有害的</p>
+<p>每 当您在服务之间有多个同步调用时，您就会遇到停机的乘法效应。简单地说，就是当您系统停机时间成为单个组件的停机时间时。您面临一个选择，使您的调用变成 异步或管理停机时间。在www.guardian.co.uk上，他们已经在新平台上实现了一个简单的规则——每个用户在Netflix上的一个同步呼 叫，他们的平台重新设计的API已经在API结构中建立了异步性。我们可以构建一个像微服务一样透明的单体——事实上，它们应该是这样的。不同之处在于，您绝对需要知道在不同进程中运行的服务何时断开。在同一过程中使用库，这种透明性就不太可能有用了。</p>
+<p>微服务团队希望看到针对每个服务的精密的监控和日志记录设置，例如面板显示增加/停止状态以及各种与运营和业务相关的指标。有关线路断路器的状态、当前吞吐量和延迟的详细信息是我们经常遇到的其他示例。</p>
+<p>Evolutionary Design 演进式设计</p>
+<p>微服务从业者通常拥有进化设计背景，并将服务分解视为下一步的工具，以使应用程序开发人员能够控制其应用程序中的更改，并且不会降低变更速度。变更控制并不一定意味着变更减少 - 通过正确的态度和工具，你可以对软件进行频繁、快速且控制良好的变更。</p>
+<p>无 论您何时试图将软件系统分解为组件，您都面临着如何分割这些组件的决定 -  我们决定切割应用程序的原则是什么？组件的关键属性是独立替换和可升级性的概念[13] -  这意味着我们可以寻找重写组件而不影响其协作者的点。事实上许多微服务群都明确预计许多服务将被废弃，而不是长远发展。</p>
+<p>卫 报网站就是一个很好的例子，它是作为一个整体设计和构建的应用程序，但它一直在微服务方面发展。网站的核心仍然是个庞然大物，但他们更喜欢通过构建使用庞 然大物的 API  的微服务来添加新功能。这种方法对于固有临时性的功能特别有用，例如，专门处理体育赛事的页面。使用快速开发语言可以将网站的这一部分快速组合起来，并在 活动结束后将其移除。我们在一家金融机构看到了类似的方法，即在市场中存在机会的时候添加新服务并在几个月甚至几周后丢弃它们。</p>
+<p>强调可替换性是模块化设计中的一般原则的特别情况，其原则是为了在整个模式变化中驱动模块化 [14]。你可以在相同模块并且相同时间内做修改。系统修改的那部分应很少出现在不同且相互依赖的服务中。如总是两个服务一并修改，那说明你需要要合并服务了。</p>
+<p>将 组件并于服务使得发布计划具有更大的颗粒度。单一服务下，任何修改都需重新发布整个应用，而微服务架构的情况下，只需要重新发布修改的服务，所以微服务能 简化并加快发布流程。但缺点是需要担心修改某个服务使得其消费者中断。传统整合的方案是尽量使用版本来解决这个问题，但微服务偏好使用只是将版本作为下 策。将服务设计得尽可能适应修改，也可以避免许多版本。</p>
+<p>微服务未来？</p>
+<p>我们写这篇文章的主要目的是解释微服务的主要思想和原则。通过花这么多时间，我们清楚的认为，微服务架构风格是一个重要的思想——一个为企业应用认真思考的思想。我们最近使用这个风格构建了几个系统，并认识了其他一些使用和支持这种风格的人。</p>
+<p>我 们知道有人在某种程度上开创了这种架构风格，包括亚马逊、Netflix、卫报、英国政府数字服务、realestate.com.au、 Forwardh和comparethemarket.com。2013年的巡回会议上充斥着公司的例子，这些公司正在转向微服务类型——包括 Travis  CI。此外，有很多组织长期以来一直在做我们所说的微服务，但没有使用这个名字。（通常标记为SOA——尽管如此，SOA有许多矛盾的形式。[15]）</p>
+<p>尽管有这些积极的体验，但我们并不认为我们可以确信微服务是软件架构的未来方向。虽然迄今为止，相对于单体式应用程序，我们的体验是积极的，但我们意识到一个事实：要做出充分的判断所过去的时间并不是很充足。</p>
+<p>我们的同事Sam Newman在2014年的大部分时间里写了一本关于构建微服务并记录我们体验的书。如果你想深入探讨这个话题，这应该是你的下一个目标。</p>
+<p>通 常你做的架构决策只会在几年之后才真正显现出效果。我们看到过一个项目，项目拥有一个好的团队，并强烈渴望模块化，但构建出来的巨大架构，在这些年已经衰 败了。一些人相信微服务不会出现这种衰败现象，因为服务界限是明确的并且很难修复。然而，直到我们看到了足够多足够老的系统，我们仍无法正确的评价微服务 框架怎样算成熟。</p>
+<p>有人期望微服务的成熟度不佳是有原因的。在组件化的任何努力中， 成功需要依赖软件如何很好的适应组件。很难确切的指出组件的边界在哪。进化设计意识到获取正确的边界是困难的，因此能轻易的重构他们是重要的。但是，当你 的组件通过远程通信来服务时，重构起来比在进程中的库更困难。通过服务边界移动代码是困难的，参与者之间需要协调每一个接口变化，需要添加向后兼容层，并 且测试会变得更加复杂。</p>
+<p>如果组件不能干净编排那将引起其他问题，这时你所做的所有事情就是转移复杂度，将组件内部的连接转移到组件之间。这不仅仅是移动复杂度，转移的地方将更不清晰，且更难控制。当你查看一个简单的小组件内部时，你会很容易想到事情是好的，而忽略了服务之间的混乱连接。最 后，还有团队技能的因素。新技术往往会被更熟练的团队所采用。但是对于一个更熟练的团队来说，一种更有效的技术不一定对那些不太熟练的团队起作用。我们已 看到很多不太熟练的团队构建混乱的单一架构的案例，但是，当这种情况发生在微服务中时，需要时间来看看会发生什么。糟糕的团队总会创建一个差劲的系统—— 但很难判断微服务是否能减少了这种情况下的混乱或是否能使情况变得更糟。</p>
+<p>我们听到的一个合理的论点是你不应该从微服务架构开始，而应从单一（庞大）的项目开始，一旦这一项目遇到问题，就拆分模块，划分不同的微服务。（虽然这个建议并不理想，因为一个好的进程接口通常不是一个好的服务接口。）所以我谨慎乐观地写下了这篇文章。到目前为止，我们已看到足够多文章认为微服务是一条值得走的路。我不能确定最终如何，但这是软件开发的一个挑战——只能根据你目前必须掌握的不完美的信息做出决定。</p>
+</div>
+<div class="section" id="id30">
+<h2>新概念<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>无服务架构</li>
+<li>devops</li>
+<li>olap和oltp</li>
+<li>elk和Apache kylin</li>
+<li>impala</li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h2>数据库设计<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pdman">
+<h3>pdman<a class="headerlink" href="#pdman" title="Permalink to this headline">¶</a></h3>
+<p>https://gitee.com/robergroup/pdman/attach_files</p>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>数据仓库<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>sdlc 软件生命周期</li>
+</ul>
+</div>
+<div class="section" id="redshift-as-data-warehouse">
+<h2>Redshift as data warehouse<a class="headerlink" href="#redshift-as-data-warehouse" title="Permalink to this headline">¶</a></h2>
+<p>​                 24 February 2016</p>
+<p>Glow 的 server infrastructure 全部搭建在 AWS 上，一般要选择一些基础服务的时候，总是先看 AWS, 只要功能和成本符合要求，不会特意选择开源方案。</p>
+<p>数据仓库我们选择了 AWS 的 Redshift.</p>
+<p>在一年多的使用过程中 Redshift 的性能和稳定性都不错, 当然也有一些坑, 这里整理下在使用 redshift 的过程中的一些经验和遇到的问题.</p>
+<div class="section" id="columnar-storage">
+<h3>Columnar storage<a class="headerlink" href="#columnar-storage" title="Permalink to this headline">¶</a></h3>
+<p>就是常说的列式存储, 这里只谈应用场景, 理论详情可以看: <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/dg/c_columnar_storage_disk_mem_mgmnt.html">http://docs.aws.amazon.com/redshift/latest/dg/c_columnar_storage_disk_mem_mgmnt.html</a></p>
+<p>常用的开源数据库 MySQL 和 PostgreSQL 都是传统的行式数据库, 和 columnar storage 在使用场景下都有什么区别呢?</p>
+<p>SQL 查询语句一般会分成两种:</p>
+<ul class="simple">
+<li>OLTP (On-line Transaction Processing)</li>
+<li>OLAP (On-line Analytical Processing)</li>
+</ul>
+<p>通常线上业务逻辑就是是常说的 CRUD 都是 OLTP 型 SQL, 对访问速度和并发量的要求很高, 但是 SQL 本身都不会很复杂. 一般也会利用索引来快速定位目标行.</p>
+<p>而用来做数据挖掘和 BI 分析的 SQL 一般都是 OLAP 的. 逻辑很复杂, 大量使用 aggregate function 和  window function, 几乎都是查询操作, 要对某一条精确记录进行修改删除的情况很少. 结果需要扫过大量的数据集后进行运算得到.</p>
+<p>Columnar storage 适合 OLAP 的场景. 做分析的时候我们只对特定的列感兴趣(这也和我们的表设计有关, 下面会提到), 数据库只会 scan 在 SQL 中指定过的列.</p>
+<p>Columnar storage 带来的另一个优势是高压缩比, 可以为每个字段指定不同的压缩算法,  它也提供了方法从当前数据中自动分析出最合适的压缩算法. AWS 在文档中提到他们的客户普遍的压缩比在1: 3 左右, 实际的使用过程中,  我们的数字要高于这个, 最开始使用的时候在1: 7, 最近的的压缩比也在1: 4.8 左右.</p>
+<p>一般文件系统的 block size 是 4KB, 而一些用来处理大数据的文件系统会将 block 设置得比较大, 比如 HDFS 是64MB, 而 redshift 是1MB, 在一个 block 中只会存储一个column 的数据, 这样相同类型的数据可以在一个 block 中得到很高的压缩比.</p>
+</div>
+<div class="section" id="scalability">
+<h3>Scalability<a class="headerlink" href="#scalability" title="Permalink to this headline">¶</a></h3>
+<p>Redshift 可以从一个最小 160 GB 的 SSD node 起步,一路扩展到上百 TB. 需要做的也就是在 console 上点几下.</p>
+<p>Cluster 会在扩容开始和结束的时候各重启一次, 这时候所有的 DB Connection 会断开. 在扩容过程中 cluster 是 readonly 状态.</p>
+<p>但是扩容过程很慢,上次从7节点扩到9节点花了13个小时.</p>
+</div>
+<div class="section" id="price">
+<h3>Price<a class="headerlink" href="#price" title="Permalink to this headline">¶</a></h3>
+<p>Redshift 现在有四种类型:</p>
+<p><img alt="https://tech.glowing.com/cn/content/images/2016/02/price.png" src="https://tech.glowing.com/cn/content/images/2016/02/price.png" />price</p>
+<p>使用 reserved instance 的话, 价格可以更省, 详细的价格对比可以看 <a class="reference external" href="https://aws.amazon.com/redshift/pricing/">https://aws.amazon.com/redshift/pricing/</a> , 三年期的合约折扣有75%, 一年期有42%</p>
+<p>顺便提下, 使用下面的 SQL 可以查看系统实际的磁盘空间:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">select</span> <span class="n">owner</span> <span class="k">as</span> <span class="n">node</span><span class="p">,</span> <span class="n">diskno</span><span class="p">,</span> <span class="n">used</span><span class="p">,</span> <span class="n">capacity</span>
+    <span class="kn">from</span> <span class="nn">stv_partitions</span>
+<span class="n">order</span> <span class="n">by</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>在 2TB node上的输出:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">node</span> <span class="o">|</span> <span class="n">diskno</span> <span class="o">|</span> <span class="n">used</span>  <span class="o">|</span> <span class="n">capacity</span>
+  <span class="o">------+--------+-------+----------</span>
+      <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">0</span>   <span class="o">|</span> <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">1906185</span>
+      <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">1</span>   <span class="o">|</span> <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">1906185</span>
+      <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">2</span>   <span class="o">|</span> <span class="mi">0</span>  <span class="o">|</span>  <span class="mi">1906185</span>
+</pre></div>
+</div>
+<p>2TB 的 HDD node 实际有3块 1861GB 的磁盘, 共 5584.5GB</p>
+<p>160GB 的 SSD node 实际给的是两块186GB 的磁盘, 共 372GB</p>
+<p>多出来的空间用户不可用,  应该是用来做 replication 的.</p>
+</div>
+<div class="section" id="table-design">
+<h3>Table design<a class="headerlink" href="#table-design" title="Permalink to this headline">¶</a></h3>
+<p>用来做分析的 metrics 数据曾经是存在 MySQL 里的,  分 DB 做了 horizon sharding, 并按天做了  vertical sharding, 使用起来比较麻烦, 只能调用一些固定的 python 函数, 不能直接写 SQL, 更复杂 的分析只能另外写代码, 也没办法和其他的业务表做 join. 并且数据增长非常快, RDS 和 EBS 成本增长很快,  而现在一个月的数据量比迁移前一整年的量都多. 一个 比较复杂的4周 retention 分析, 曾经在 MySQL 上要花半小时(没法直接做, 需要 pull 数据出来再用 python  进行运算), 相同的逻辑现在用纯 SQL 实现,只需要 20s 左右, 这个过程中大概会处理6亿行 左右的数据.</p>
+<p>我们以事件的方式定义数据, 比如一个用户注册的事件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USER_SIGNUP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
+    <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>这个事件就有三个字段 source, status, time, 而整个系统中已定义的事件目前接近2000种, 总共有近400个不同的字段定义, 怎么存?</p>
+<p>曾经在 MySQL 里的做法是, 只在 table 里定义通用的 str<em>1, str</em>2, int<em>1, int</em>2 这样的字段,然后再定义各个事件的时候把每个 字段的 mapping 也写上, 比如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USER_SIGNUP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">str_1</span><span class="p">:</span> <span class="n">source</span><span class="p">,</span>
+    <span class="n">str_2</span><span class="p">:</span> <span class="n">status</span><span class="p">,</span>
+    <span class="n">int_1</span><span class="p">:</span> <span class="n">time</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>问题有:</p>
+<ul class="simple">
+<li>容易写错, 每个事件的 mapping 是由开发人员各自定义的, 常会出现把 int 写到 string 里去的情况</li>
+<li>添加新字段麻烦, 是按天分表的, 有的事件字段特别多,会导致总字段数变多, 但大部分又是空着的, 浪费空间.</li>
+<li>数据库中数据不直观,必须用代码做一次 translate 才能查询.</li>
+</ul>
+<p>在 redshift 中的做法很简单粗暴, 把400个字段都放一张表里, 然后按月做sharding.</p>
+<p>为了对使用者屏蔽 sharding 细节, 会再创建 union view:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">view</span> <span class="n">log_latest_two_month_view</span> <span class="k">as</span>
+    <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">logs_2015_01</span>
+<span class="n">union</span> <span class="nb">all</span>
+    <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">logs_2015_02</span>
+</pre></div>
+</div>
+<p>会创建最近2个月,3个月…等等常用时间范围的 view, 使用者可以像在操作一张表一样操作 view, 如果使用者很清楚时间范围,也可以去查特定的表. 这些 view 用 cronjob 在每月的月初刷新.</p>
+<p>添加字段的方式, 我现在的做法是将代码中定义的所有字段抽出来, 再从 redshift 的系统表中查出所有的当前字段, 找出两者的 delta, 然后生成相应的 Alter SQL 语句, 批量 patch 到所有的表上去.</p>
+</div>
+<div class="section" id="distkey-sortkey">
+<h3>distkey &amp; sortkey<a class="headerlink" href="#distkey-sortkey" title="Permalink to this headline">¶</a></h3>
+<p>设计表的时候 distkey 和 sortkey 需要在一开始就想好, 无法在创建表后更改.</p>
+<p>由于 redshift 是一个分布式数据库, 所有的数据自动 distribute 在所有的 nodes 上, 它有三种分布方式, 详见文档: <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/dg/c_choosing_dist_sort.html">http://docs.aws.amazon.com/redshift/latest/dg/c_choosing_dist_sort.html</a></p>
+<p>我们使用的是按 key 做分布, 所以需要选择一个 distkey, 一般选择最有可能要和其他 table 做 join 的字段, 比如 user_id,  如果同一个用户的数据全部在一个 node 上, 查询过程中就不需要重分发数据, 否则 redshift 会自动迁移数据到一个节点上, 带来额外的网络开销 (用 explain 可以查出 SQL 执行过程中是否发生了数据重分发: <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/dg/t_explain_plan_example.html">http://docs.aws.amazon.com/redshift/latest/dg/t_explain_plan_example.html</a>)</p>
+<p>一般数据库中索引的原理都是将需要索引的字段复制一份构建一个 B tree 或 B+ tree, 而 redshift 不支持索引, 使用 sortkey 的概念.</p>
+<p>sortkey 定义了在导入数据的时候按什么顺序给数据排序, 前面说过1个 block 只存一个 column 的数据, 指定过 sortkey 的话,在 block 的 metadata 中就会存数据的 min 和 max 值,
+当把 SQL 中把 sortkey 加入 where 条件时, redshift 可以把查询条件和 min,max 值做比较, 决定能不能快速跳过这个 block.</p>
+<p>一张表可以设置多个 sortkey, 目前 sortkey 有两种 <code class="docutils literal notranslate"><span class="pre">compound</span> <span class="pre">sortkey</span></code> 和 <code class="docutils literal notranslate"><span class="pre">interleaved</span> <span class="pre">sortkey</span></code>. 刚开始 setup 的时候, interleaved sortkey 这个特性还没有发布, 所以一直用得都是 compound sortkey, 有点类似 MySQL 的 secondary index, 遵循 LeftMost 的规则.</p>
+<p>interleaved sortkey 在官方的这篇博客中有比较详细的解释: <a class="reference external" href="https://aws.amazon.com/blogs/aws/quickly-filter-data-in-amazon-redshift-using-interleaved-sorting/">https://aws.amazon.com/blogs/aws/quickly-filter-data-in-amazon-redshift-using-interleaved-sorting/</a></p>
+<p>按我的理解, compound sortkey 如果在只使用 leading key 的情况下, 性能比 interleaved sortkey 好, 但如果做一些 ad hoc 查询, filter 条件通常不固定, 可能是很多字段的排列组合, 这时候使用 interleaved sortkey 可以取得比较好的平均速度.</p>
+<p>一张表可以有多个 sortkey, 但不能同时使用 compound sortkey 和 interleaved sortkey.</p>
+</div>
+<div class="section" id="performance-optimize">
+<h3>Performance optimize<a class="headerlink" href="#performance-optimize" title="Permalink to this headline">¶</a></h3>
+<p>Redshift 中性能的关键是选择合适的 distkey 和 sortkey, 通过 explain 看是否发生 redistribute 来确定 distkey 的选择是不是合适,
+skip 的 block 够不够多来确定 sortkey 的选择合不合适, 但也有其他的 feature 来进一步调优.</p>
+</div>
+<div class="section" id="workload-management">
+<h3>Workload Management<a class="headerlink" href="#workload-management" title="Permalink to this headline">¶</a></h3>
+<p>redshift 中有 query queue 的概念, query queue 控制了并发上限, 默认只有一个 query queue, 并发度是5, 所以默认情况下你只能同时 run 5个 query.</p>
+<p>通过给不同类型的 query 创建不同的 queue, 可以提高系统的并发性能, 比如将耗时长的 query 和短的 query 放到不同的 queue 中去, 再给两个 queue 分配不同 的内存比, 这些都能在 WLM 中设置.</p>
+<p>一些限制:</p>
+<ul class="simple">
+<li>整个 cluster 的并发总上限只能50.</li>
+<li>用户总共能定义8个 query queue</li>
+<li>官方推荐单个 query queue 的并发设置在15以下, 过大的并发数会增加资源竞争限制总体的吞吐量.</li>
+</ul>
+</div>
+<div class="section" id="slot">
+<h3>Slot<a class="headerlink" href="#slot" title="Permalink to this headline">¶</a></h3>
+<p>slot是memory和cpu的资源的单位，通过增加query使用的slot数目，可以增大query的可使用的内存和 cpu 资源.</p>
+<p>简单得说一个 query 能使用的 slot 数目越多, 速度越快, 临时改变 slot 数目的方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">set</span> <span class="n">wlm_query_slot_count</span> <span class="n">to</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">select</span> <span class="o">....</span><span class="p">;</span>
+    <span class="nb">set</span> <span class="n">wlm_query_slot_count</span> <span class="n">to</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vacuum">
+<h3>Vacuum<a class="headerlink" href="#vacuum" title="Permalink to this headline">¶</a></h3>
+<p>vacuum 命令有两个作用: 排序和空间回收.</p>
+<p>在导入数据的时候, 如果数据不是按照 sortkey 导入的, 可用 vacuum 来对数据进行重排序, 这样可以大大优化查询速度, 但是有个问题导致我们现在并没法使用 vacuum 做优化,后面会提.</p>
+<p>如果用 delete 删除了数据, redshift 中的空间并不会释放, 需要做一次 <code class="docutils literal notranslate"><span class="pre">vacuum</span> <span class="pre">delete</span> <span class="pre">only</span></code> 来回收, 如果要清空一张表的数据不要用 delete,  用 <code class="docutils literal notranslate"><span class="pre">truncate</span> <span class="pre">table</span></code> 或 drop 重建.</p>
+</div>
+<div class="section" id="loading-data-into-cluster">
+<h3>Loading data into cluster<a class="headerlink" href="#loading-data-into-cluster" title="Permalink to this headline">¶</a></h3>
+<p>Redshift 使用 <code class="docutils literal notranslate"><span class="pre">COPY</span></code> 命令来导入数据, 数据源可以是 s3, dynamodb, ssh host, 格式可以是 csv, avro, json, 源数据也可以用 bzip2,gzip,lzop 的方式进行压缩.</p>
+<p>但是如果目标 table 指定了 sortkey, 那 redshift 会在导入过程中对数据进行排序, 排序过程会占用额外的磁盘空间. 而官方并没有给出一个明确的公式来让你提前确定需要预留的空间, 这个问题多次给他们提过 ticket, 但都没有很明确的回复.</p>
+<p>只看过一个说法是要预留 raw data 2.5倍以上的空间, 实际使用中, 需要的空间比这个数字只高不低, 而且两者并不是线性相关的.</p>
+<p>解决方法: 要么提前 resize 一个比较大的 cluster, 导完再 resize 回去, 要么将数据分批进行导入.</p>
+<p>PS: 用 <code class="docutils literal notranslate"><span class="pre">vacuum</span></code> 命令进行重排序的时候也会碰到这个问题导致磁盘剩余空间爆掉.</p>
+</div>
+<div class="section" id="some-limit">
+<h3>Some limit<a class="headerlink" href="#some-limit" title="Permalink to this headline">¶</a></h3>
+<p>Redshift 也有一些硬性限制, 需要在采用之前就清楚是否适合自己的应用场景.</p>
+<p>在 workload management 中提到过 cluster 的最高并发只有50, 这种数据仓库服务的直接使用者一般都是公司内部的分析人员, 线上业务不应该直接在 redshift 中运行 SQL, 要使用一般 也会通过 cronjob 或队列服务来异步得获取数据.</p>
+<p>column 数目限制, 由于我们的做法是将所有的事件的字段全部定义在一张表中, 所以受限于总字段数, 单张表的字段上限是 1600.</p>
+<p>char 类型只接受单字节的字符，上限是127（即ascii字符集），varchar类型可以接受多字节的UTF-8字符，最多4字节，用copy导入数据时，如果不符合此规则会失败，可以给copy加上ACCEPTINVCHARS, 来跳过有问题的字段.</p>
+</div>
+<div class="section" id="deadlock">
+<h3>DeadLock<a class="headerlink" href="#deadlock" title="Permalink to this headline">¶</a></h3>
+<p>对某表做查询的时候hang住了， 但是在stl_locks中没有看到记录，可以通过以下步骤debug：</p>
+<ul class="simple">
+<li>select oid from pg_class where relname=’tablename’   获取表的oid</li>
+<li>select * from pg_locks where relation=’{oid}’  获取锁的详细信息,其中包含产生锁的pid(相当于用户session), 和xid(事务id)</li>
+<li>select * from svl_statementtext where pid=’{pid}’ or xid=’{xid}’  获取导致锁表的详细 SQL 语句.</li>
+</ul>
+</div>
+<div class="section" id="next">
+<h3>Next<a class="headerlink" href="#next" title="Permalink to this headline">¶</a></h3>
+<p>目前线上使用的都是 dc1.large node, 使用中, 实际每天做最多的产品数据分析一般只需要用到最近3,4个月的数据, 只有 data team 做一些历史分析的时候才会需要用到全部的数据.</p>
+<p>所以下一步可能会将老数据迁移到 ds2.xlarge 节点上, 在 dc1.large 中只保留最近4个月的数据, 这样可以节约不少成本.</p>
+</div>
+<div class="section" id="emr">
+<h3>使用emr<a class="headerlink" href="#emr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>https://amazonaws-china.com/cn/solutions/case-studies/euclid/</div></blockquote>
+<blockquote>
+<div>https://amazonaws-china.com/cn/emr/features/spark/?nc=sn&amp;loc=3&amp;dn=2</div></blockquote>
+<blockquote>
+<div>https://docs.aws.amazon.com/index.html?nc2=h_ql_doc</div></blockquote>
+</div>
+</div>
+<div class="section" id="superset">
+<h2>superset详解<a class="headerlink" href="#superset" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>https://me.csdn.net/python_tty</div></blockquote>
+<div class="section" id="id33">
+<h3>权限分类<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<p>superset的权限基本上可以分为3类，菜单类，基本权限，资源类。superset在为角色添加权限的时候，添加的不是基本的权限而是权限和视图的组合。比如我想访问报表功能，视图是slicemodelview,权限是menu_access,需要把它们的组合 menu access on slicemodelview添加到我的角色当中</p>
+</div>
+<div class="section" id="id34">
+<h3>菜单类<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<p>flask appbuilder自己定义的控制菜单权限
+menu_access</p>
+<div class="section" id="id35">
+<h4>基本权限<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h4>
+<p>基本权限有很多，类中的所有的加了&#64;has_access|&#64;has_access_api装饰器的方法都会生成基本权限</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">can_list</span> <span class="n">can_add</span> <span class="n">can_csv</span>
+
+<span class="n">PERMISSION_PREFIX</span> <span class="o">=</span> <span class="s1">&#39;can&#39;</span>
+
+
+<span class="k">def</span> <span class="nf">has_access</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+	<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="s2">&quot;_permission_name&quot;</span><span class="p">):</span>
+		<span class="n">permission_st</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">_permission_name</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">permission_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="vm">__name__</span>
+	<span class="k">def</span> <span class="nf">wraps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+		<span class="n">permission_str</span> <span class="o">=</span> <span class="n">PERMISSION_PREFIX</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>superset二次开发<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<p>作者：</p>
+<p>林余</p>
+<p>链接：https://zhuanlan.zhihu.com/p/46993011</p>
+<p>来源：知乎</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>最近接到好几个需要用地图展示数据的需求，还有一个有下钻的要求，但是我是一个前端小白呀，怎么办呢？于是又研究了一番Echarts相关的文章，下面大家跟着我一起来踩坑吧~</p>
+<hr class="docutils" />
+<div class="section" id="id37">
+<h3><strong>中国地图相关地图测绘文件</strong><a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Echarts官方网站由于地图测绘数据不符合国家法律的原因，已经只剩下一个告知页面了，不过不用担心，用npm安装echarts包之后，打开包所在文件夹（一般在安装路径下的node_modules文件夹中），进入echarts文件夹后能够看到里面有一个map文件夹，里面就是我们想要的地图相关测绘文件啦~</li>
+<li>但是这里的地图只到省级地图和市级地图，有童鞋需要到区县的怎么办呢？我在网上找了一圈终于找到了一个完整的资源，需要的童鞋可以私信我~</li>
+</ol>
+</div>
+<div class="section" id="id38">
+<h3><strong>Superset相关设置</strong><a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>上一篇文章已经详细说明了Superset新增图表需要改的四个文件，其中visTypes.js和index.js比较简单这里不赘述，下面说明图表配置js文件如何写</li>
+<li>由于地图相关的js文件有几十个，所以需要批量实现批量引用，这里查找了比较多的资料，找到了一个好方法
+比如我们现在要引用 echarts\map\js\province\ 文件夹下的所有省份地图相关文件，正常思路是在文件头部一行行import，但是很明显三十几个文件这样做有点傻，如果在区县级几百个文件就更不可能了 所以我们需要在待引用的文件夹下新建一个名为index.js的文件，export * from ‘./anhui.js’ 对每一个省份都export，然后在echarts_map.js文件中只需要引用这个index.js文件就可以啦 具体引用如下</li>
+</ol>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>import echarts from &#39;echarts&#39;;
+import china from &#39;echarts/map/js/china&#39;
+import * as v from &#39;echarts/map/js/province/index&#39;
+</pre></div>
+</div>
+<p>3.接下来是funtion部分，主要是完成点击下钻和双击返回最上级的功能</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>function echartsChinaMapVis(slice, payload) {
+    const div = d3.select(slice.selector);
+    const sliceId = &#39;echarts_slice_&#39; + slice.formData.slice_id;
+    const html = &#39;&lt;div id=&#39; + sliceId + &#39; style=&quot;width:&#39; + slice.width() + &#39;px;height:&#39; + slice.height() + &#39;px;&quot;&gt;&lt;/div&gt;&#39;;
+    div.html(html); // reset
+
+    const myChart = echarts.init(document.getElementById(sliceId));
+
+    // 获取后端传来的数据
+    const get_data = payload.data;
+    const data_value = get_data[0];
+    const data_name = get_data[1];
+    const max_data = get_data[2];
+    const min_data = get_data[3];
+
+
+
+    const option = {
+        title : {
+        //用subtitle编写地图钻取使用说明
+            subtext:&#39;点击进入下一级，双击返回中国地图&#39;,
+            x:&#39;center&#39;,
+            bottom:&#39;5%&#39;
+        },
+        tooltip : {
+            trigger: &#39;item&#39;,
+            formatter:  &quot;{c}&quot;
+        },
+        visualMap: {
+            type: &#39;continuous&#39;,
+        //将后端处理好最小值和最大值传进来，用来区分颜色
+            min: min_data,
+            max: max_data,
+        //将颜色区间bar放到界面外，可以调整成正数就可以调回来
+            right:&#39;-15%&#39;,
+            inRange:{
+                color: [&#39;#d0f4fc&#39;,
+                    &#39;#a9dbf6&#39;,
+                    &#39;#9cd3f4&#39;,
+                    &#39;#93cdf3&#39;,
+                    &#39;#83c2f0&#39;,
+                    &#39;#6eb5ed&#39;,
+                    &#39;#51a2e9&#39;]
+            }
+        },
+        series : [
+            {
+                type : &#39;map&#39;,
+                map: &#39;china&#39;,
+                selectedMode: &#39;single&#39;,
+                roam: &#39;scale&#39;,
+                data : data_value,
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle:{color:&quot;#b6a38a&quot;}
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle:{color:&quot;#ff6347&quot;}
+                    }
+                },
+                itemStyle: {
+                    emphasis: {
+                        areaColor:&quot;#2e4783&quot;,
+                        borderWidth: 0
+                    }
+                }
+            }
+        ]
+    };
+  // 使用刚指定的配置项和数据显示图表。
+   myChart.setOption(option);
+  //设定鼠标放上去的时候能够显示数值
+   myChart.on(&#39;mouseover&#39;, function (params) {
+       var dataIndex = params.dataIndex;
+       console.log(dataIndex);
+   });
+  //用点击事件来切换地图实现下钻功能，该省份有值时才可以下钻
+   myChart.on(&#39;click&#39;, function (chinaParam) {
+       if (chinaParam.name == chinaParam.name
+           &amp;&amp;data_name.indexOf(chinaParam.name)&gt;-1) {
+           var option = myChart.getOption();
+           option.series[0].map = chinaParam.name;
+           myChart.setOption(option);
+       }
+   });
+  //用双击事件来返回最上层的中国地图，当不在中国地图时生效
+   myChart.on(&#39;dblclick&#39;, function (chinaParam) {
+       if (myChart.getOption().series[0].map != &#39;china&#39;) {
+           var option = myChart.getOption();
+           option.series[0].map = &#39;china&#39;;
+           myChart.setOption(option);
+       }
+   });
+}
+
+module.exports = echartsChinaMapVis;
+</pre></div>
+</div>
+<p>4.最后是后端viz.py中数据接口的处理</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>class echartsMap(BaseViz):
+
+    &quot;&quot;&quot; echarts map viz &quot;&quot;&quot;
+
+    viz_type = &#39;echarts_map&#39; # 对应前端名字
+    verbose_name = _(&#39;echarts_map&#39;)
+    is_timeseries = False
+
+    def get_data(self, df):
+        form_data = self.form_data
+        df.sort_values(by=df.columns[0], inplace=True)
+        print(df.values.tolist())
+        ori_data = df.values.tolist()
+        data = [{&#39;name&#39; : ori_data[i][0], &#39;value&#39; : ori_data[i][1]} for i in range(len(ori_data))]
+        data_name = [ori_data[i][0] for i in range(len(ori_data))]
+        max_data = max([ori_data[i][1] for i in range(len(ori_data))])
+        min_data = min([ori_data[i][1] for i in range(len(ori_data))])
+       #这里回传了四个参数，分别是省份和对应数值、省份列表用来判断是否在可点击范围、最大和最小值用来限定颜色
+        return [data, data_name, max_data, min_data]
+</pre></div>
+</div>
+<p>总结一下难点主要是在批量引用所有地图文件上，在这个点卡了比较久，而且在H5没有还没有找到好方法只能一个个引用
+然后点击切换地图的思路确实很巧妙哦~感觉在前端学习之路上有进步了小小的一点，大家也一起来试试吧</p>
+</div>
+<div class="section" id="id39">
+<h3>文件夹映射<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">8087</span>:8088 -v d:/data:/usr/local/lib amancevice/superset
+</pre></div>
+</div>
+</div>
+<div class="section" id="echart">
+<h3>单独的echart<a class="headerlink" href="#echart" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 地图文件被分成了三个 Python 包，分别为：</span>
+<span class="c1"># 全球国家地图: echarts-countries-pypkg (1.9MB)</span>
+<span class="c1"># 中国省级地图: echarts-china-provinces-pypkg (730KB)</span>
+<span class="c1"># 中国市级地图: echarts-china-cities-pypkg (3.8MB)</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pyecharts</span><span class="o">==</span><span class="mf">0.5</span><span class="o">.</span><span class="mi">5</span> <span class="n">echarts</span><span class="o">-</span><span class="n">countries</span><span class="o">-</span><span class="n">pypkg</span> <span class="n">echarts</span><span class="o">-</span><span class="n">china</span><span class="o">-</span><span class="n">provinces</span><span class="o">-</span><span class="n">pypkg</span> <span class="n">echarts</span><span class="o">-</span><span class="n">china</span><span class="o">-</span><span class="n">cities</span><span class="o">-</span><span class="n">pypkg</span>
+<span class="c1"># 该版本较为稳定</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pyecharts">
+<h3>新版本的pyecharts<a class="headerlink" href="#pyecharts" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>https://pyecharts.org/#/zh-cn/intro</p>
+<p>https://github.com/pyecharts/pyecharts</p>
+</div></blockquote>
+<p>v0.5.x 和 V1 间不兼容，V1 是一个全新的版本，详见 <a class="reference external" href="https://github.com/pyecharts/pyecharts/issues/892">ISSUE#892</a>，<a class="reference external" href="https://github.com/pyecharts/pyecharts/issues/1033">ISSUE#1033</a>。</p>
+<div class="section" id="v0-5-x">
+<h4>V0.5.x<a class="headerlink" href="#v0-5-x" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div>支持 Python2.7，3.4+</div></blockquote>
+<p>经开发团队决定，0.5.x 版本将不再进行维护，0.5.x 版本代码位于 <em>05x</em> 分支，文档位于 <a class="reference external" href="http://05x-docs.pyecharts.org/">05x-docs.pyecharts.org</a>。</p>
+</div>
+<div class="section" id="v1">
+<h4>V1<a class="headerlink" href="#v1" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div>仅支持 Python3.6+</div></blockquote>
+<p>新版本系列将从 v1.0.0 开始，文档位于 <a class="reference external" href="https://pyecharts.org/">pyecharts.org</a>。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="chapter11_随便聊聊.html" class="btn btn-neutral float-left" title="随便聊聊" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
