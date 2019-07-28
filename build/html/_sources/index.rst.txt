@@ -21,7 +21,7 @@
    chapter08_big_data.md
    chapter09_other.md
    chapter10_strategy.md
-   chapter11_随便聊聊.md
+   chapter11_chat.md
    chapter12_concept.md
 
 
