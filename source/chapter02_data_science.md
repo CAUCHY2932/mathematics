@@ -427,6 +427,30 @@ host  all  all 0.0.0.0/0 md5
 
 > 利用python进行数据分析，包含了基本的数据清洗、聚合、可视化部分的内容，需要多学习几遍
 
+### numpy
+
+```python
+import numpy as np
+```
+
+
+
+
+
+
+
+
+
+### pandas
+
+```python
+import pandas as pd
+```
+
+
+
+
+
 
 
 ### python读取文件
