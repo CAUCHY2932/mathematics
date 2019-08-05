@@ -1010,3 +1010,76 @@ v0.5.x 和 V1 间不兼容，V1 是一个全新的版本，详见 [ISSUE#892](ht
 > 仅支持 Python3.6+
 
 新版本系列将从 v1.0.0 开始，文档位于 [pyecharts.org](https://pyecharts.org/)。
+
+
+
+
+
+
+
+## flask-sqlalchemy指定postgres不同模式
+
+1.现在我的postgresql中有多个schema
+现在使用sqlalchemy中URI
+postgresql://postgres:111111@127.0.0.1:5432/db
+连接上的数据库中默认是在public这个schema下的，
+我怎么使用stage这个schema呢？
+
+1.手工定义模型
+
+```python
+class Test(db.Model):
+    __tablename__ = 'test'
+    __table_args__ = {
+        'schema': 'other_schema'
+    }
+    id = db.Column('test_id', db.String(12), primary_key=True, )
+    name = db.Column('test_name', db.String(10))
+
+```
+
+
+
+2： 反射schema中的一个表到Model中
+
+我用的是工厂函数生成Flask实例的。
+
+工厂函数中：
+
+```python
+def create_app(config_name):
+    app = Flask(__name__)
+    app.config.from_object(config[config_name])
+    CORS(app)
+    config[config_name].init_app(app)
+    db.init_app(app)
+    # 总觉得这里的实现不是很好 有更好的解决方案请告知
+    tables = [‘test’]
+    op = getattr(db.Model.metadata, ‘reflect’)
+    op(bind=db.get_engine(app), only=tables, schema=’other_schema’)
+
+    login_manager.init_app(app)
+    from .hello import hello
+    from .auth import auth
+    app.register_blueprint(hello)
+    app.register_blueprint(auth)
+
+    return app
+
+```
+
+反射定义模型中
+
+```python
+class Test(db.Model):
+    __tablename__ = ‘other_schema.test’
+    
+    # 有时后数据表设计时没有主键，但SQLAlchemy需要有主键，对于这类表我们需要重新指定主键：
+    # 这里有时候需要用 __mapper_args__ 指定这张表的primary_key是哪个
+    __mapper_args__ = {
+    ‘primary_key’: [db.Model.metadata.tables[‘other_schema.test’].c.id]
+    }
+
+```
+
+然后就可以通过orm的方式去操作其他schema的表了，被这个问题折腾了大半天了，希望能帮到有需要的人。
