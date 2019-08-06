@@ -331,3 +331,57 @@ https://cloudconvert.com/md-to-rst
 
 点击[这里](/u/dtid_9e65f14616561408/p/dev-demo/git/branches)前往查看 `new feature` 分支。
 
+## gitbook
+
+本地安装gitbook需要nodejs，目前安装gitbook最方便的方式就是通过npm安装
+
+```bash
+sudo npm install -g gitbook-cli
+sudo npm install -g gitbook
+```
+
+安装完之后，你可以检验下是否安装成功。
+
+```bash
+gitbook -V
+```
+
+安装好 Gitbook 之后，我们就可以创建图书了。
+
+Gitbook 的基本用法非常简单，基本上就只有两步:
+
+1. 使用 gitbook init 初始化书籍目录
+2. 使用 gitbook serve 编译书籍
+
+首先，进入一个目录，例如之前我们创建好的 gitbook，执行初始化命令：
+
+
+
+首先，进入一个目录，例如之前我们创建好的 gitbook，执行初始化命令：
+
+```text
+sudo gitbook init
+```
+
+然后我们的 gitbook 空目录会多出两个文件：
+
+```text
+gitbook/
+├── README.md
+└── SUMMARY.md
+```
+
+README.md 和 SUMMARY.md 是两个必须文件，README.md 是对书籍的简单介绍。SUMMARY.md 是书籍的目录结构。
+
+使用下面的命令来启动
+
+```bash
+gitbook serve
+```
+
+使用下面的命令来构建
+
+```bash
+gitbook build
+```
+
