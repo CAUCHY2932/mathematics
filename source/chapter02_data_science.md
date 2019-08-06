@@ -78,6 +78,16 @@ select column from table_name; --查询
 
 #### and or
 
+
+
+### case when
+
+```sql
+case when record = '' then s else 0 end as xx
+```
+
+
+
 ## 进阶
 
 
@@ -432,10 +442,6 @@ host  all  all 0.0.0.0/0 md5
 ```python
 import numpy as np
 ```
-
-
-
-
 
 
 
