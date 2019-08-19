@@ -117,6 +117,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id9">理科生的悲哀</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requests">requests的参数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id10">输出多就好吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id11">如何理解和避免信息不对称</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id12">影视目录</a></li>
@@ -204,6 +205,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#tomcatapache">tomcat和apache的区别和联系</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id73">覆盖测试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id74">软件测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python">python字符编码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numpy">numpy中的维度、轴、秩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id75">主流价值观</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id76">主流价值观就一定好吗?我们应该追逐吗？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id77">主流价值观有可取之处吗？我们需要摒弃哪些呢？</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
@@ -462,6 +470,16 @@ Review的过程中会需要非常多的沟通，多沟通能拉近团队成员�
 <p>人是一种很奇妙的动物。按照那些自由民主法治国家的状况，你们至少有一半学生会负担不起顶级高校的学费。而我，按照自由民主法治国家的状况，会拿现在大约7-8倍的助教费。所以我最不喜欢老有人跟我讲这讲那的！</p>
 <p>之所以会出现现在这种状况，无非是大家庭式政策理念。</p>
 <p>我拿着全A成绩单，戴上耳机，放一曲God Father walts，感慨万千。</p>
+</div>
+<div class="section" id="requests">
+<h2>requests的参数<a class="headerlink" href="#requests" title="Permalink to this headline">¶</a></h2>
+<p>在通过requests.post()进行POST请求时，传入报文的参数有两个，一个是data，一个是json。</p>
+<p>data与json既可以是str类型，也可以是dict类型。</p>
+<p>区别：</p>
+<p>1、不管json是str还是dict，如果不指定headers中的content-type，默认为application/json</p>
+<p>2、data为dict时，如果不指定content-type，默认为application/x-www-form-urlencoded，相当于普通form表单提交的形式</p>
+<p>3、data为str时，如果不指定content-type，默认为application/json</p>
+<p>4、用data参数提交数据时，request.body的内容则为a=1&amp;b=2的这种形式，用json参数提交数据时，request.body的内容则为’{“a”: 1, “b”: 2}’的这种形式</p>
 </div>
 <div class="section" id="id10">
 <h2>输出多就好吗？<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
@@ -2235,6 +2253,69 @@ u      还有其它一些操作细节上的满足（如业务上需要批量操�
 及恢复能力的测试、安全性测试、强度测试等。</p>
 <p>随着敏捷开发方法等新一代软件工程概念的风靡，软件编码和测试过程多次迭代，测试人员更积极地参与到软
 件生命周期的各个阶段中，使得整个项目团队收取事半功倍的成效。</p>
+</div>
+<div class="section" id="python">
+<h2>python字符编码<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>python3默认编码是Unicode，而python2是ASCII码。Windows环境默认是gbk编码。</p>
+<p>常见编码错误原因：</p>
+<p>​          \1. Python解释器的默认编码</p>
+<p>​          \2. Python源文件文件编码</p>
+<p>​          \3. Terminal使用的编码</p>
+<p>​          \4. 操作系统的语言设置</p>
+<p>​     一、 编码的种类</p>
+<p>​         I、ASCII 占1个字节，只支持英文</p>
+<p>​         II、GB2312 占2个字节，支持6700+汉字</p>
+<p>​         III、GBK GB2312的升级版，支持21000+汉字，中文2个字节。</p>
+<p>​         IV、Unicode 2-4字节 已经收录136690个字符</p>
+<p>​         V、UTF-8： 使用1、2、3、4个字节表示所有字符；优先使用1个字符、无法满足则使增加一个字节，最多4个字节。英文占1个字</p>
+<p>​                节、欧洲语系占2个、东亚占3个，其它及特殊字符占4个。中文3个字节。</p>
+<p>​         VI、UTF-16： 使用2、4个字节表示所有字符；优先使用2个字节，否则使用4个字节表示。</p>
+<p>​    二、 Python3的执行过程</p>
+<p>​        1.解释器找到代码文件，把代码字符串按文件头定义的编码加载到内存，转成unicode</p>
+<p>​        2.把代码字符串按照语法规则进行解释，</p>
+<p>​        3.所有的变量字符都会以unicode编码声明</p>
+<p>​        Py3 自动把文件编码转为unicode，Python2并不会自动的把文件编码转为unicode存在内存里。需要手动转码。</p>
+<p>​    三、手动转码规则</p>
+<p>​        UTF-8 –&gt; decode 解码 –&gt; Unicode</p>
+<p>​        Unicode –&gt; encode 编码 –&gt; GBK / UTF-8 等</p>
+<p>​        使用type可以查看编码形式，unicode是‘unicode’,gbk和utf-8是‘str或bytes’。</p>
+</div>
+<div class="section" id="numpy">
+<h2>numpy中的维度、轴、秩<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h2>
+<p>NumPy的时候，其中最重要的就是学习它的 ndarray 对象，它是多维度的同数据类型的数组。这个和Python自带的列表有较大的区别，列表中的元素类型是可以不相同的，如一个列表中，它可以包含数字、字符、字符串等，而在数组中，它的数据类型是相同的，如都是整型或者浮点型。</p>
+<p>为什么Python中已经有了列表之后，在NumPy中还要引进一个数组对象呢？有以下三点可以作为参考，但在本文中不做具体描述：</p>
+<ol class="simple">
+<li>数组对象可以去掉元素间运算所需的循环，使一维向量更像单个数据</li>
+<li>设置专门的数组对象，经过优化，可以提升这类应用的运算速度</li>
+<li>数组对象采用相同的数据类型，有助于节省运算和存储空间</li>
+</ol>
+<p>NumPy中有几个概念比较绕，对于我来说比较难理解，因此以此文作为记录。它们分别是：维度、轴、秩。</p>
+<p>对于维度的介绍，官网是这么写的“ In NumPy dimensions are called axes”，即维度称为轴。为了更直观的理解，可以将其与现实世界联系起来，比如在平面中即二维的世界中，我们描述一个点的时候，通常使用 x 轴、y 轴，这样就能确定一个点的具体位置了。因此，这里的两个维度，也就跟两个轴对应了起来。如果是立体的三维世界中，我们就会多出一个z轴，以此更加准确的来反映点的位置。所以，我么可以把以上的维度和轴进行等价。</p>
+<p>什么是秩(rank)？它是指轴的数量，或者维度的数量，是一个标量</p>
+<p>在下面的例子中，有一个数组 [1,2,1]， 它的维度是1，也就是有一个轴，这个轴的长度是3，而它的秩也为1。这些信息，都可以通过NumPy提供的数组属性来获得。</p>
+<blockquote>
+<div><p>ndarray.ndim
+the number of axes (dimensions) of the array
+秩，数组轴的数量，或者维度的数量</p>
+<p>ndarray.shape
+the dimensions of the array. This is a tuple of integers indicating the size of the array in each dimension. For a matrix with n rows and m columns, shape will be (n,m). The length of the shape tuple is therefore the number of axes, ndim.
+数组的维度。它的返回值是一个元组，这个元组描述了每个维度中数组的大小。相对于一个矩阵来说，shape表示的就是n行m列。这个元组的长度，等价于轴/维度的个数，即秩的值</p>
+</div></blockquote>
+</div>
+<div class="section" id="id75">
+<h2>主流价值观<a class="headerlink" href="#id75" title="Permalink to this headline">¶</a></h2>
+<p>最近两天想了很多，有关人生的、世界的。黄色、赌博、暴力、恐怖是人类发展的副产品，是糟粕。如何看待这些事物，尽力去避免接触是我接下来需要思考和做的。</p>
+<p>我之前的痛苦无非来自于自制力不够，接触之后却又无法自拔，例如，黄色影像，恐怖艺术，一旦接触，前者会陷入快感，后者会造成心理阴影。而现代社会大多数人都无法免于这些困扰，或多或少都会接触到这些不利于身心健康的事物。我需要做的就是尽快从这种环境中脱离出，修德自躬。</p>
+<div class="section" id="id76">
+<h3>主流价值观就一定好吗?我们应该追逐吗？<a class="headerlink" href="#id76" title="Permalink to this headline">¶</a></h3>
+<p>主流价值观并不一定是好的。例如，大家喜欢的”土味情话”，卖弄，玩梗，卖丑，甚至不惜出卖自己的尊严，这些本身不一定在社会中占大多数，但是俨然成为下一个增长点。</p>
+<p>在快速经济发展的社会进程中，我们可能会迷失自我，成为经济发展中一些公司的收割对象，我们的快感不断被撩拨，一些公司不断制造节日，以求刺激消费，恋人要求对方在节日买纪念品，爱人要求在节日进行大笔消费，事情本身无可厚非，这些活动都有利于感情的升华，但是一旦被消费绑架，就会变质，这背离了我们消费的本质-获得物质或精神上的满足，试想，当你听从网上的言论，逼自己的另一半为自己消费，所带来的影响也许已经超过了你想要的初衷，过度消费的痛苦会覆盖甚至超越你本身的愉悦感。</p>
+<p>“娱乐至死”，”性解放”，”女权主义”，”享乐主义”，”佛系”，”愤青”，”消费主义”，这些内容其实都是特定环境的产物。我们不应该过分追逐。</p>
+</div>
+<div class="section" id="id77">
+<h3>主流价值观有可取之处吗？我们需要摒弃哪些呢？<a class="headerlink" href="#id77" title="Permalink to this headline">¶</a></h3>
+<p>凡事必有可取之处，只不过要看我们所处的环境。如果我们环境糟糕透了，那么确实有必要进行一些升级，例如，你处于人生的最消极阶段，合理的释放压力(赌博激起胜负欲)是好的，但如果你处于正轨，不需要通过这些来释放压力，就属于把一副好牌打烂了。主流价值观反映的是当前社会的大众心理，肯定有可取之处，但是不必过分要求自己和社会主流价值观相同。同时主流价值观也像上面讲的那样，存在一些问题。</p>
+</div>
 </div>
 </div>
 

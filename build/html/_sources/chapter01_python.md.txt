@@ -601,3 +601,15 @@ requirement.py
 ## flask（董伟明）
 
 ## django(胡阳)
+
+
+
+
+
+
+
+## flask项目代码结构的建议
+
+https://lepture.com/en/2018/structure-of-a-flask-project
+
+http://charlesleifer.com/blog/structuring-flask-apps-a-how-to-for-those-coming-from-django/

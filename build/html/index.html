@@ -287,6 +287,7 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#id52">flask（狗书）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#id53">flask（董伟明）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#django">django(胡阳)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#id54">flask项目代码结构的建议</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a><ul>
@@ -305,6 +306,7 @@
 <li class="toctree-l4"><a class="reference internal" href="chapter02_data_science.html#and-or">and or</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#case-when">case when</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter02_data_science.html#id8">进阶</a><ul>
@@ -345,6 +347,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter02_data_science.html#python">利用python进行数据分析</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#numpy">numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#pandas">pandas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#id24">python读取文件</a></li>
 </ul>
 </li>
@@ -683,65 +687,67 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id9">离散数学</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id10">图论</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id11">布尔代数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id12">数论</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id13">命题与逻辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id10">基础：逻辑与证明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id11">基本结构：集合、函数、序列、求和与矩阵</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id12">图论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id13">布尔代数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id14">数论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id15">命题与逻辑</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id14">操作系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id15">进程管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id16">内存管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id17">文件管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id16">操作系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id17">进程管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id18">内存管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id19">文件管理</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#io">io管理</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id18">计算机网络</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id19">计算机网络基础</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id20">物理层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id21">数据链路层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id22">网络层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id23">传输层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id24">应用层</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id20">计算机网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id21">计算机网络基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id22">物理层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id23">数据链路层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id24">网络层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id25">传输层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id26">应用层</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id25">计算机组成原理</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id26">计算机组成原理基础</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id27">存储器管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id28">内存管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id29">io管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id27">计算机组成原理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id28">计算机组成原理基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id29">存储器管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id30">内存管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id31">io管理</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#alu">alu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#cu">cu</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id30">计算机体系结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id31">数据库系统概论</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id32">数据库系统概论</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id33">关系型数据库</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id34">范式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id32">计算机体系结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id33">数据库系统概论</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id34">数据库系统概论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id35">关系型数据库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id36">范式</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id35">编译原理</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id36">编译原理基础</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id37">有限自动机</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id38">字符流到记号流</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id39">记号流到语法树</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id40">语法树到中间代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id37">编译原理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id38">编译原理基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id39">有限自动机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id40">字符流到记号流</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id41">记号流到语法树</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id42">语法树到中间代码</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id41">微机原理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id42">软件工程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id43">数据仓库生命周期工具箱</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id44">电子电路</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id45">基尔霍夫电压定律</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id46">基尔霍夫电流定律</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id47">戴维南定理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id48">放大器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id49">整流器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id43">微机原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id44">软件工程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id45">数据仓库生命周期工具箱</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id46">电子电路</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id47">基尔霍夫电压定律</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id48">基尔霍夫电流定律</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id49">戴维南定理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id50">放大器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter06_cs_base.html#id51">整流器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id50">编码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id51">清华大学课程体系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id52">编码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter06_cs_base.html#id53">清华大学课程体系</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a><ul>
@@ -749,6 +755,9 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id3">渗流力学</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id4">油层物理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id5">大学化学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id6">传热与传质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id7">理论力学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html#id8">大学物理</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter08_big_data.html">大数据</a><ul>
@@ -835,6 +844,7 @@
 <li class="toctree-l3"><a class="reference internal" href="chapter09_other.html#id14">体验一下整个流程</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="chapter09_other.html#gitbook">gitbook</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a><ul>
@@ -867,6 +877,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id9">理科生的悲哀</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#requests">requests的参数</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id10">输出多就好吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id11">如何理解和避免信息不对称</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id12">影视目录</a></li>
@@ -954,6 +965,13 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#tomcatapache">tomcat和apache的区别和联系</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id73">覆盖测试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id74">软件测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#python">python字符编码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#numpy">numpy中的维度、轴、秩</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id75">主流价值观</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id76">主流价值观就一定好吗?我们应该追逐吗？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id77">主流价值观有可取之处吗？我们需要摒弃哪些呢？</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a><ul>
@@ -1040,6 +1058,18 @@
 <li class="toctree-l4"><a class="reference internal" href="chapter12_concept.html#v1">V1</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_concept.html#flask-sqlalchemypostgres">flask-sqlalchemy指定postgres不同模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_concept.html#id40">设计模式六大原则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_concept.html#id41">科学体系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter12_concept.html#gtd">gtd工具</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id42"><strong>第一步，收集，其目标就是清空大脑。</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id43"><strong>第二步，处理，也叫理清阶段，其目的就是清空收集箱。</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id44"><strong>第三步，组织，其关键是建立清单，将收集箱的事务分门别类</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id45"><strong>第四步，回顾，其目标就是保障系统的有效运行。</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id46"><strong>第五步，执行，就是要选择最合适的行动。</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter12_concept.html#id47"><strong>总结：</strong></a></li>
 </ul>
 </li>
 </ul>

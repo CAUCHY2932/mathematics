@@ -110,6 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#and-or">and or</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#case-when">case when</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id8">进阶</a><ul>
@@ -150,6 +151,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#python">利用python进行数据分析</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#numpy">numpy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pandas">pandas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id24">python读取文件</a></li>
 </ul>
 </li>
@@ -378,6 +381,12 @@
 </div>
 <div class="section" id="and-or">
 <h4>and or<a class="headerlink" href="#and-or" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="case-when">
+<h3>case when<a class="headerlink" href="#case-when" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="k">when</span> <span class="n">record</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">then</span> <span class="n">s</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">end</span> <span class="k">as</span> <span class="n">xx</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -654,6 +663,18 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <h2>利用python进行数据分析<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>利用python进行数据分析，包含了基本的数据清洗、聚合、可视化部分的内容，需要多学习几遍</div></blockquote>
+<div class="section" id="numpy">
+<h3>numpy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pandas">
+<h3>pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="id24">
 <h3>python读取文件<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding:utf-8</span>
