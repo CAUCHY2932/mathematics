@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>数据结构 &mdash; 吕阳阳的日志小屋 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.0',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="python" href="chapter01_python.html" />
+    <link rel="prev" title="线性代数" href="AB-线性代数.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 吕阳阳的日志小屋
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Content:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AB-线性代数.html">线性代数</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">数据结构</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1绪论</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1-1数据结构的基本概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1-2算法和算法评价</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2线性表</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2-1线性表定义和基本操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2-2线性表的顺序表示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2-3线性表的链式表示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">3栈和队列</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3-1栈</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">3-2队列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">3-3栈和队列的应用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">3-4特殊矩阵的压缩存储</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">7排序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">7-1排序的基本概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">7-2插入排序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">7-3交换排序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">7-4选择排序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">7-5归并排序和基数排序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">7-6各种内部排序算法的比较及应用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">7-7外部排序</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">6查找</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">6-1查找的基本概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">6-2顺序查找和折半查找</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bb">6-3b树和b+树</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">6-4散列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">6-5字符串模式匹配</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">5图</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">5-1图的基本概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">5-2图的存储及基本操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">5-3图的遍历</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">5-4图的应用</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">4树和二叉树</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id33">4-1树的基本概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">4-2二叉树的概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">4-3二叉树的遍历和线索二叉树</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">4-4树、森林</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">4-5树与二叉树的应用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter05_java.html">java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter06_cs_base.html">计算机科学基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter08_big_data.html">大数据</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter11_chat.html">随便聊聊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">吕阳阳的日志小屋</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>数据结构</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/BB-数据结构.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>数据结构<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1绪论<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>1-1数据结构的基本概念<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1-1-1基本概念和术语<ul>
+<li>数据</li>
+<li>数据元素</li>
+<li>数据对象</li>
+<li>数据类型<ul>
+<li>值的集合</li>
+<li>定义在此集合上一组操作的总称</li>
+<li>分类<ul>
+<li>原子类型</li>
+<li>结构类型</li>
+<li>抽象数据类型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>抽象数据类型<ul>
+<li>一个数学模型以及定义在该模型上的一组操作</li>
+<li>三元组<ul>
+<li>数据对象</li>
+<li>数据关系</li>
+<li>基本操作集</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据结构<ul>
+<li>相互之间存在一种或多种特定关系的数据元素的集合</li>
+<li>三方面的内容<ul>
+<li>逻辑结构</li>
+<li>存储结构</li>
+<li>数据的运算</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1-1-2数据结构的三要素<ul>
+<li>数据的逻辑结构<ul>
+<li>数据元素之间的逻辑关系</li>
+<li>集合<ul>
+<li>同属一个集合</li>
+</ul>
+</li>
+<li>线性结构<ul>
+<li>一对一</li>
+</ul>
+</li>
+<li>树形结构<ul>
+<li>一对多</li>
+</ul>
+</li>
+<li>图状结构或网状结构<ul>
+<li>多对多</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据的存储结构<ul>
+<li>也称物理结构</li>
+<li>顺序存储<ul>
+<li>逻辑相邻，物理也相邻</li>
+</ul>
+</li>
+<li>链式存储<ul>
+<li>不要求逻辑相邻，物理也相邻，每个元素因为存放指针而占用额外的空间，只能实现顺序存储</li>
+</ul>
+</li>
+<li>索引存储<ul>
+<li>在存放元素的信息的同时，建立附加的索引表</li>
+</ul>
+</li>
+<li>散列存储<ul>
+<li>根据元素的关键字直接计算该元素的存储地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>1-2算法和算法评价<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1-2-1算法的基本概念<ul>
+<li>算法<ul>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+<li>输入</li>
+<li>输出</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>1-2-2算法效率的度量<ul>
+<li>时间复杂度<ul>
+<li>最坏时间复杂度<ul>
+<li>常数阶</li>
+<li>线性阶</li>
+<li>平方阶</li>
+</ul>
+</li>
+<li>平均时间复杂度</li>
+<li>最好时间复杂度</li>
+</ul>
+</li>
+<li>空间复杂度<ul>
+<li>算法原地工作<ul>
+<li>即O(1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2线性表<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>2-1线性表定义和基本操作<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2-1-1线性表的定义<ul>
+<li>具有相同数据类型的n个元素的有限序列</li>
+<li>除第一个元素，每个有且只有一个直接前驱</li>
+<li>除最后一个元素，有且仅有一个直接后继</li>
+<li>特点<ul>
+<li>元素个数有限</li>
+<li>元素具有逻辑上的顺序性，在序列中各元素排序有先后顺序</li>
+<li>表中元素都是数据元素，每个元素都是单个元素</li>
+<li>表中元素的数据类型都相同</li>
+<li>元素具有抽象性，仅讨论元素之间的逻辑关系不考虑元素究竟表示什么内容</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2-1-2线性表的基本操作<ul>
+<li>初始化一个表</li>
+<li>求表长</li>
+<li>按值查找</li>
+<li>插入操作</li>
+<li>删除操作</li>
+<li>输出操作</li>
+<li>判空操作</li>
+<li>销毁操作</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>2-2线性表的顺序表示<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2-2-1顺序表的定义<ul>
+<li>线性表的顺序存储</li>
+<li>表中的逻辑顺序和物理顺序相同</li>
+</ul>
+</li>
+<li>2-2-2顺序表上基本操作的实现<ul>
+<li>插入操作</li>
+<li>删除操作</li>
+<li>按值查找</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>2-3线性表的链式表示<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2-3-1单链表的定义<ul>
+<li>线性表的链式存储</li>
+</ul>
+</li>
+<li>2-3-2单链表上基本操作的实现<ul>
+<li>头插法</li>
+<li>尾插法</li>
+<li>按序号查找结点值</li>
+<li>按值查找表结点</li>
+<li>插入结点</li>
+<li>删除结点</li>
+<li>求表长</li>
+</ul>
+</li>
+<li>2-3-3双链表<ul>
+<li>双链表的插入操作</li>
+<li>双链表的删除操作</li>
+</ul>
+</li>
+<li>2-3-4循环链表<ul>
+<li>循环单链表</li>
+<li>循环双链表</li>
+</ul>
+</li>
+<li>2-3-5静态链表<ul>
+<li>借助数组来描述线性表的链式存储结构</li>
+</ul>
+</li>
+<li>2-3-6顺序表和链表的比较<ul>
+<li>存储方式<ul>
+<li>顺序表既可以顺序存储，也可以随机存取</li>
+<li>链表只能从表头顺序存取元素</li>
+</ul>
+</li>
+<li>逻辑和物理结构<ul>
+<li>顺序表逻辑相邻的物理也相邻</li>
+<li>链式存储逻辑相邻物理不一定相邻</li>
+</ul>
+</li>
+<li>查找、插入和删除操作<ul>
+<li>按值查找</li>
+<li>按序号查找</li>
+</ul>
+</li>
+<li>空间分配<ul>
+<li>顺序存储<ul>
+<li>静态存储分配的情况下，一旦存储空间装满就不能扩充，如果再加入新的元素就会内存溢出，需要预先分配足够大的存储空间</li>
+<li>动态存储存储空间可以扩充，但需要移动大量的元素导致操作效率降低，而且若内存没有更大块的连续存储空间将导致分配失败</li>
+</ul>
+</li>
+<li>链式存储<ul>
+<li>链式存储的结点空间只在需要的时候进行分配，只有内存有空间就可以分配，操作灵活、高效</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实际中选取存储结构<ul>
+<li>基于存储的考虑<ul>
+<li>长度或存储规模难以估计时，不宜采用顺序表</li>
+<li>链表存储密度低</li>
+</ul>
+</li>
+<li>基于运算的考虑<ul>
+<li>顺序表按序号访问时间复杂度是o(1)</li>
+<li>链表按序号访问的时间复杂度是o(n)</li>
+<li>顺序表插入，删除操作时，平均移动一半的元素</li>
+<li>在链表中，做插入删除操作时，虽然也要进行比较，但是后者优于前者</li>
+</ul>
+</li>
+<li>基于环境的考虑<ul>
+<li>顺序表容易实现，任何高级语言都有数组类型</li>
+<li>链表的操作时基于指针的，相对来讲，前者实现较为简单</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>3栈和队列<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>3-1栈<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>3-1-1栈的基本概念<ul>
+<li>只允许一端进行插入和删除操作的线性表</li>
+<li>对线性表做了某些限制</li>
+<li>栈顶<ul>
+<li>允许进行插入和删除的那一端</li>
+</ul>
+</li>
+<li>栈底<ul>
+<li>固定的，不允许进行插入和删除的另一端</li>
+</ul>
+</li>
+<li>空栈<ul>
+<li>不含任何元素的空表</li>
+</ul>
+</li>
+<li>每接触到一种新的数据结构，都应该从三个方面入手<ul>
+<li>逻辑结构</li>
+<li>存储结构</li>
+<li>数据的运算</li>
+</ul>
+</li>
+<li>栈的基本操作<ul>
+<li>初始栈</li>
+<li>判断栈空</li>
+<li>进栈</li>
+<li>出栈</li>
+<li>读栈顶元素</li>
+<li>销毁栈</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3-1-2栈的顺序存储结构<ul>
+<li>顺序栈的实现</li>
+<li>栈的基本运算</li>
+<li>共享栈</li>
+</ul>
+</li>
+<li>3-1-3栈的链式存储结构<ul>
+<li>采用链式存储的叫链栈</li>
+<li>通常采用单链表实现，并规定所有操作都是在单链表的表头进行</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>3-2队列<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>3-2-1队列的基本概念<ul>
+<li>队列的定义<ul>
+<li>操作受限的线性表，只允许在表的一端进行插入，在表的另一端进行删除</li>
+<li>入队或进队<ul>
+<li>插入元素</li>
+</ul>
+</li>
+<li>离队或出队<ul>
+<li>删除元素</li>
+</ul>
+</li>
+<li>队头<ul>
+<li>允许删除的一端</li>
+</ul>
+</li>
+<li>队尾<ul>
+<li>允许插入的一端</li>
+</ul>
+</li>
+<li>空队列<ul>
+<li>不含任何元素的空表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列常见的基本操作<ul>
+<li>初始化队列</li>
+<li>判断队空</li>
+<li>入队</li>
+<li>出队</li>
+<li>读队头元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3-2-2队列的顺序存储结构<ul>
+<li>队列的顺序存储</li>
+<li>循环队列</li>
+<li>循环队列的操作</li>
+</ul>
+</li>
+<li>3-2-3队列的链式存储结构<ul>
+<li>队列的链式存储</li>
+<li>链式队列的基本操作</li>
+</ul>
+</li>
+<li>3-2-4双端队列</li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>3-3栈和队列的应用<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>3-3-1栈在括号匹配中的应用</li>
+<li>3-3-2栈在表达式求值中的应用</li>
+<li>3-3-3栈在递归中的应用</li>
+<li>3-3-4队列在层次遍历中的应用</li>
+<li>3-3-5队列在计算机系统中的应用</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>3-4特殊矩阵的压缩存储<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>3-4-1数组的定义</li>
+<li>3-4-2数组的存储结构</li>
+<li>3-4-3矩阵的压缩存储<ul>
+<li>对称矩阵</li>
+<li>三角矩阵</li>
+<li>三对角矩阵</li>
+</ul>
+</li>
+<li>3-4-4稀疏矩阵</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>7排序<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3>7-1排序的基本概念<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id16">
+<h3>7-2插入排序<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id17">
+<h3>7-3交换排序<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id18">
+<h3>7-4选择排序<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id19">
+<h3>7-5归并排序和基数排序<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id20">
+<h3>7-6各种内部排序算法的比较及应用<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id21">
+<h3>7-7外部排序<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>6查找<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h3>6-1查找的基本概念<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id24">
+<h3>6-2顺序查找和折半查找<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bb">
+<h3>6-3b树和b+树<a class="headerlink" href="#bb" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id25">
+<h3>6-4散列表<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id26">
+<h3>6-5字符串模式匹配<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>5图<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id28">
+<h3>5-1图的基本概念<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id29">
+<h3>5-2图的存储及基本操作<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id30">
+<h3>5-3图的遍历<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id31">
+<h3>5-4图的应用<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>4树和二叉树<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id33">
+<h3>4-1树的基本概念<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>4-1-1树的定义</li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h3>4-2二叉树的概念<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id35">
+<h3>4-3二叉树的遍历和线索二叉树<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id36">
+<h3>4-4树、森林<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id37">
+<h3>4-5树与二叉树的应用<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chapter01_python.html" class="btn btn-neutral float-right" title="python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AB-线性代数.html" class="btn btn-neutral float-left" title="线性代数" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019@young
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
