@@ -1381,3 +1381,34 @@ GTD很像是一台全能的机器，功能全面，能覆盖到生活的方方�
 
 所以对于刚刚接触时间管理的朋友，不建议一上来就直接实践GTD系统，不妨先使用番茄工作法找找感觉。随着你对于时间的管理越来越有效，你也越来越追求更高效的生活，这个时候，再去进入到 GTD 的世界，你也会感觉自己的人生越来越高效。
 
+## git开发流程
+
+主分支创立
+
+git clone xxx
+
+建立自己的分支
+
+git check -b mydev
+
+进行开发
+
+。。。
+
+切换到master分支
+
+git checkout master
+
+拉取最新的master代码
+
+git pull
+
+合并master代码到自己的分支
+
+git merge master
+
+或直接在自己的分支下
+
+git pull origin master
+
+推送自己的代码到云端，申请merge request或pull request
