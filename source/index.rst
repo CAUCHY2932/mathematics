@@ -25,6 +25,7 @@
    chapter10_strategy.md
    chapter11_chat.md
    chapter12_concept.md
+   chapter13_manage.md
 
 
 Indices and tables
