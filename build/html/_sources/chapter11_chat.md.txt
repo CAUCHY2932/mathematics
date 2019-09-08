@@ -3005,7 +3005,7 @@ datetime.minute
 datetime.second
 datetime.microsecond
 datetime.tzinfo
- 
+
 datetime.date() # 返回 date 对象
 datetime.time() # 返回 time 对象
 datetime.replace(name=value) # 前面所述各项属性是 read-only 的，需要此方法才可更改
@@ -3014,3 +3014,24 @@ dattime.strftime(format) # 按照 format 进行格式化输出
 
 
 
+## vim行首和行尾添加字符串
+
+每行的行首都添加一个字符串：%s/^/要插入的字符串 
+每行的行尾都添加一个字符串：%s/$/要插入的字符串
+
+解释： 
+% 代表针对被编辑文件的每一行进行后续操作 
+$ 代表一行的结尾处 
+^ 代表一行的开头处
+
+在全部内容的行首添加//号注释
+
+:% s/^/\/\//g
+
+在2~50行首添加//号注释
+
+:2,50 s/^/\/\//g
+
+在2~50行首删除//号
+
+:2,50 s/^\/\///g

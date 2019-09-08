@@ -96,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="AB-线性代数.html">线性代数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BB-数据结构.html">数据结构</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">d数据科学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">环境</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pipenv">pipenv的使用</a></li>
@@ -137,19 +137,20 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#linux">linux命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id10">常用命令</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">系统管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">文件和目录操作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">文本操作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">压缩解压</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">查看当前日历</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">显示或设置时间</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id17">查看进程信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id18">动态显示进程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">终止进程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id20">关机重启</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">查看硬盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">系统管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">文件和目录操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">文本操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">压缩解压</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">查看当前日历</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">显示或设置时间</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">查看进程信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">动态显示进程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">终止进程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">关机重启</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scppscp">scp或pscp传输文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id21">远程命令</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id22">查看有多少行文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">远程命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">查看有多少行文件</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#centos">centos</a><ul>
@@ -160,11 +161,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#repo">repo源</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#centos7-samba">centos7 设置samba</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#centos7">centos7学习资料</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id23">端口操作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id24">centos7开启防火墙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">centos关机命令</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id26">ssh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id27">docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">端口操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">centos7开启防火墙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">centos关机命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">ssh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">docker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wifi">wifi连接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#linux-is-not-in-the-sudoers-file">Linux下 is not in the sudoers file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#centos7openjdk">查找centos7的openjdk</a></li>
@@ -174,47 +175,47 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#nginx">安装nginx</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id28">一、安装编译工具及库文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">一、安装编译工具及库文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pcre">二、首先要安装 PCRE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id29">安装 Nginx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id30">Nginx 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id31">启动 Nginx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id32">访问站点</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id33">Nginx 其他命令</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id34">其他问题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">安装 Nginx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">Nginx 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">启动 Nginx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">访问站点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">Nginx 其他命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">其他问题</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#centosoracle12c">centos安装oracle12c</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id35">准备工作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">准备工作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#xming-windows-linux">Xming —— 从 Windows 系统管理图像化的 Linux 应用程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id36">注意点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">注意点</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#npm">安装npm</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id37">文件最后添加</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id38">保存退出后执行更新命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">文件最后添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">保存退出后执行更新命令</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#tuna">tuna服务</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scala">Scala安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id39">安装之前</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">安装之前</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#idea">安装idea</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#scala-idea">安装Scala-idea插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id40">安装过程</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id41">1.下载</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id42">2.配置环境变量</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id43">3.检验结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">安装过程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id42">1.下载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id43">2.配置环境变量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id44">3.检验结果</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id44">建立教程：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">建立教程：</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id45">docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id46">docker</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#daocloud">daocloud</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id46">常用可选参数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">镜像加速器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id48">docker镜像操作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id49">docker容器操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">常用可选参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">镜像加速器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">docker镜像操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">docker容器操作</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#zsh">zsh</a></li>
@@ -223,15 +224,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#mac">mac配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#iterm2">iterm2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#macnavicat">mac破解navicat</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id50">1.保存公钥和私钥到笔记本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">1.保存公钥和私钥到笔记本</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#navicat">2. 安装navicat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id51">3.替换公钥</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id52">4.断网</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id53">5.输入注册码</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id54">6.手动激活</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id55">7.结合请求码解密</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id56">8.加密</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id57">9.激活</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">3.替换公钥</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">4.断网</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">5.输入注册码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55">6.手动激活</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">7.结合请求码解密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57">8.加密</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id58">9.激活</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#oh-my-zsh">安装oh my zsh(待整理)</a></li>
@@ -249,6 +250,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter11_chat.html">随便聊聊</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_manage.html">管理学定律</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
 </ul>
 
             
@@ -1126,7 +1128,14 @@ usermod
 </div>
 </div>
 <div class="section" id="id11">
-<h3>系统管理<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h3>查看硬盘<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 查看硬盘的信息，并以人性化的方式建立可读性</span>
+df -h 
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>系统管理<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## linux命令-系统管理</span>
 <span class="c1"># 查询端口</span>
 netstat -tulpn <span class="c1">### 查询端口</span>
@@ -1138,8 +1147,8 @@ ps aux <span class="p">|</span> grep xxx
 </pre></div>
 </div>
 </div>
-<div class="section" id="id12">
-<h3>文件和目录操作<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>文件和目录操作<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 文件与目录操作</span>
 cp -r sourcePath targetPath <span class="c1"># 复制文件</span>
 rm -rf xxx <span class="c1"># 删除文件</span>
@@ -1178,8 +1187,8 @@ scp -r /opt/soft/mongodb root@10.10.10.10:/opt/soft/scptest
 </pre></div>
 </div>
 </div>
-<div class="section" id="id13">
-<h3>文本操作<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>文本操作<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">### 重定向命令</span>
 
 ls &gt; test.txt <span class="c1"># 如果不存在，则创建，存在则覆盖其内容</span>
@@ -1213,8 +1222,8 @@ find ./ -size +4k -size -5M 查找在当前目录下大于4K，小于5M的文件
 </pre></div>
 </div>
 </div>
-<div class="section" id="id14">
-<h3>压缩解压<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id15">
+<h3>压缩解压<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 归档管理</span>
 
 tar
@@ -1262,13 +1271,13 @@ which ls
 </pre></div>
 </div>
 </div>
-<div class="section" id="id15">
-<h3>查看当前日历<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h3>查看当前日历<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>cal
 -y 显示整年日历</p>
 </div>
-<div class="section" id="id16">
-<h3>显示或设置时间<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id17">
+<h3>显示或设置时间<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>date
 date [MMDDhhmm[[CC]YY[.ss]]+format
 CC为年前两位yy为年的后两位
@@ -1276,8 +1285,8 @@ CC为年前两位yy为年的后两位
 显示时间格式
 （date ‘+%y,%m,%d,%H,%M,%S’）</p>
 </div>
-<div class="section" id="id17">
-<h3>查看进程信息<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id18">
+<h3>查看进程信息<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>ps process status
 -a 显示终端上的所有进程，包括其他用户的进程
 -u 显示进程的详细状态
@@ -1287,20 +1296,20 @@ CC为年前两位yy为年的后两位
 常用的为
 ps -aux</p>
 </div>
-<div class="section" id="id18">
-<h3>动态显示进程<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id19">
+<h3>动态显示进程<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>top 加上-d可以指定显示信息更新的时间间隔
 执行top命令之后，可以按下按键得到对显示结果进行排序
 M 根据内存使用量来排序</p>
 </div>
-<div class="section" id="id19">
-<h3>终止进程<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id20">
+<h3>终止进程<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>kill
 kill [-signal] pid</p>
 <p>kill -9 pid</p>
 </div>
-<div class="section" id="id20">
-<h3>关机重启<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id21">
+<h3>关机重启<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <p>reboot 重新启动操作系统
 shutdown -r now 重新启动操作系统，shutdown会给别的用户提示
 shutdown -h now 立刻关机，其中now相当于时间为0的状态
@@ -1315,14 +1324,14 @@ init</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id21">
-<h3>远程命令<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id22">
+<h3>远程命令<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -p <span class="m">4645</span> root@192.168.52.12
 </pre></div>
 </div>
 </div>
-<div class="section" id="id22">
-<h3>查看有多少行文件<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id23">
+<h3>查看有多少行文件<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls <span class="p">|</span> nl
 </pre></div>
 </div>
@@ -1622,8 +1631,8 @@ smbpasswd -a samba
 https://wiki.centos.org/zh/FrontPage?action=show&amp;redirect=zh</p>
 <p>https://wiki.centos.org/FrontPage</p>
 </div>
-<div class="section" id="id23">
-<h3>端口操作<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id24">
+<h3>端口操作<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># centos7开启端口</span>
 
 添加端口
@@ -1657,8 +1666,8 @@ systemctl <span class="nb">enable</span> firewalld
 </pre></div>
 </div>
 </div>
-<div class="section" id="id24">
-<h3>centos7开启防火墙<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id25">
+<h3>centos7开启防火墙<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <p>1、firewalld的基本使用
 启动： systemctl start firewalld
 关闭： systemctl stop firewalld
@@ -1696,12 +1705,12 @@ firewall-cmd –zone= public –query-port=80/tcp
 删除
 firewall-cmd –zone= public –remove-port=80/tcp –permanent</p>
 </div>
-<div class="section" id="id25">
-<h3>centos关机命令<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id26">
+<h3>centos关机命令<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <p>systemctl poweroff -i</p>
 </div>
-<div class="section" id="id26">
-<h3>ssh<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id27">
+<h3>ssh<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rpm -qa <span class="p">|</span> grep openssh-server
 systemctl start sshd
 <span class="c1"># ifconfig命令不存在</span>
@@ -1728,8 +1737,8 @@ system disable sshd
 </pre></div>
 </div>
 </div>
-<div class="section" id="id27">
-<h3>docker<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h3>docker<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">4</span>、安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的
 
 $ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -2079,8 +2088,8 @@ javac <span class="m">1</span>.8.0_181
 </div>
 <div class="section" id="nginx">
 <h2>安装nginx<a class="headerlink" href="#nginx" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id28">
-<h3>一、安装编译工具及库文件<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id29">
+<h3>一、安装编译工具及库文件<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 </pre></div>
 </div>
@@ -2111,8 +2120,8 @@ javac <span class="m">1</span>.8.0_181
 </pre></div>
 </div>
 </div>
-<div class="section" id="id29">
-<h3>安装 Nginx<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id30">
+<h3>安装 Nginx<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <p>1、下载 Nginx，下载地址：<a class="reference external" href="http://nginx.org/download/nginx-1.6.2.tar.gz">http://nginx.org/download/nginx-1.6.2.tar.gz</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@bogon</span> <span class="n">src</span><span class="p">]</span><span class="c1"># cd /usr/local/src/</span>
 <span class="p">[</span><span class="n">root</span><span class="nd">@bogon</span> <span class="n">src</span><span class="p">]</span><span class="c1"># wget http://nginx.org/download/nginx-1.6.2.tar.gz</span>
@@ -2138,8 +2147,8 @@ javac <span class="m">1</span>.8.0_181
 </div>
 <p>到此，nginx安装完成。</p>
 </div>
-<div class="section" id="id30">
-<h3>Nginx 配置<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id31">
+<h3>Nginx 配置<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
 <p>创建 Nginx 运行使用的用户 www：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@bogon</span> <span class="n">conf</span><span class="p">]</span><span class="c1"># /usr/sbin/groupadd www </span>
 <span class="p">[</span><span class="n">root</span><span class="nd">@bogon</span> <span class="n">conf</span><span class="p">]</span><span class="c1"># /usr/sbin/useradd -g www www</span>
@@ -2229,8 +2238,8 @@ http
 </pre></div>
 </div>
 </div>
-<div class="section" id="id31">
-<h3>启动 Nginx<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id32">
+<h3>启动 Nginx<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
 <p>Nginx 启动命令如下：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@bogon</span> <span class="n">conf</span><span class="p">]</span><span class="c1"># /usr/local/webserver/nginx/sbin/nginx</span>
 </pre></div>
@@ -2240,12 +2249,12 @@ http
 </pre></div>
 </div>
 </div>
-<div class="section" id="id32">
-<h3>访问站点<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id33">
+<h3>访问站点<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
 <p>从浏览器访问我们配置的站点ip：</p>
 </div>
-<div class="section" id="id33">
-<h3>Nginx 其他命令<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id34">
+<h3>Nginx 其他命令<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
 <p>以下包含了 Nginx 常用的几个命令：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">webserver</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span> <span class="o">-</span><span class="n">s</span> <span class="n">reload</span>            <span class="c1"># 重新载入配置文件</span>
 <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">webserver</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span> <span class="o">-</span><span class="n">s</span> <span class="n">reopen</span>            <span class="c1"># 重启 Nginx</span>
@@ -2253,8 +2262,8 @@ http
 </pre></div>
 </div>
 </div>
-<div class="section" id="id34">
-<h3>其他问题<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id35">
+<h3>其他问题<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
 <p>我们可以通过log文件快速定位错误，常见的错误，有用户权限问题，例如我们通过命令，可以查看启动nginx的用户</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 查看启动进程</span>
 ps -ef <span class="p">|</span> grep nginx
@@ -2274,8 +2283,8 @@ user root<span class="p">;</span>
 <p>参考链接
 https://wiki.centos.org/zh/HowTos/Oracle12onCentos7
 https://docs.centos.org/en-US/docs/</p>
-<div class="section" id="id35">
-<h3>准备工作<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id36">
+<h3>准备工作<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
 <p>提前下载oracle 12c
 r1 版本有两个文件，r2有两个文件</p>
 <ol class="simple">
@@ -2361,7 +2370,7 @@ oracle hard nofile 65536
 [root&#64;centos7 ~]# chmod g+s /u01
 [root&#64;centos7 ~]# chmod g+s /u02
 安装所须组件：</p>
-<p>[root&#64;centos7 ~]# yum install -y binutils.x86_64 compat-libcap1.x86_64 gcc.x86_64 gcc-c++.x86_64 glibc.i686 glibc.x86_64 <br />glibc-devel.i686 glibc-devel.x86_64 ksh compat-libstdc++-33 libaio.i686 libaio.x86_64 libaio-devel.i686 libaio-devel.x86_64 <br />libgcc.i686 libgcc.x86_64 libstdc++.i686 libstdc++.x86_64 libstdc++-devel.i686 libstdc++-devel.x86_64 libXi.i686 libXi.x86_64 <br />libXtst.i686 libXtst.x86_64 make.x86_64 sysstat.x86_64
+<p>[root&#64;centos7 ~]# yum install -y binutils.x86_64 compat-libcap1.x86_64 gcc.x86_64 gcc-c++.x86_64 glibc.i686 glibc.x86_64 glibc-devel.i686 glibc-devel.x86_64 ksh compat-libstdc++-33 libaio.i686 libaio.x86_64 libaio-devel.i686 libaio-devel.x86_64 libgcc.i686 libgcc.x86_64 libstdc++.i686 libstdc++.x86_64 libstdc++-devel.i686 libstdc++-devel.x86_64 libXi.i686 libXi.x86_64 libXtst.i686 libXtst.x86_64 make.x86_64 sysstat.x86_64
 还有安装 X Window System 组件群组。</p>
 <p>[root&#64;centos7 ~]# yum groupinstall -y “X Window System”
 由于 Oracle 的安装采用图像界面，你可通过以下两个简单的方法进行。</p>
@@ -2529,8 +2538,8 @@ http://sourceforge.net/projects/xming/files/latest/download</p>
 3.$sqlplus / as sysdba 以 DBA 身份进入 sqlplus</p>
 <p>4.SQL&gt;SHUTDOWN IMMEDIATE 关闭 db</p>
 </div>
-<div class="section" id="id36">
-<h3>注意点<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id37">
+<h3>注意点<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
 <p>1.在检查先决条件时，选择忽略全部
 2.在安装时需要一台有图形界面的linux
 3.默认登录到root用户更好使用
@@ -2546,16 +2555,16 @@ mv node-v8.1.4-linux-x64 node
 vim /etc/profile
 </pre></div>
 </div>
-<div class="section" id="id37">
-<h3>文件最后添加<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id38">
+<h3>文件最后添加<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#set for nodejs  
 export NODE_HOME=/usr/local/node  
 export PATH=$NODE_HOME/bin:$PATH
 </pre></div>
 </div>
 </div>
-<div class="section" id="id38">
-<h3>保存退出后执行更新命令<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id39">
+<h3>保存退出后执行更新命令<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span>
 </pre></div>
 </div>
@@ -2568,8 +2577,8 @@ export PATH=$NODE_HOME/bin:$PATH
 </div>
 <div class="section" id="scala">
 <h2>Scala安装<a class="headerlink" href="#scala" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id39">
-<h3>安装之前<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id40">
+<h3>安装之前<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <p>首先，保证已经安装了jdk</p>
 </div>
 <div class="section" id="idea">
@@ -2584,10 +2593,10 @@ export PATH=$NODE_HOME/bin:$PATH
 </div>
 <p>或者在idea的插件库里选择安装</p>
 </div>
-<div class="section" id="id40">
-<h3>安装过程<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id41">
-<h4>1.下载<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h4>
+<h3>安装过程<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id42">
+<h4>1.下载<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scala</span><span class="o">-</span><span class="n">lang</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -2606,8 +2615,8 @@ export PATH=$NODE_HOME/bin:$PATH
 </pre></div>
 </div>
 </div>
-<div class="section" id="id42">
-<h4>2.配置环境变量<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id43">
+<h4>2.配置环境变量<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Mac修改 .bash_profile 文件，此文件是mac 当前用户的环境配置文件。
 
 /etc/profile 是当前系统的环境配置文件（Linux，系统可修改这个）
@@ -2628,8 +2637,8 @@ export PATH=$NODE_HOME/bin:$PATH
 </pre></div>
 </div>
 </div>
-<div class="section" id="id43">
-<h4>3.检验结果<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id44">
+<h4>3.检验结果<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>在终端输入scala 命令，进入scala解释器，然后输入1＋2，查看计算结果。
 使用
 
@@ -2639,22 +2648,22 @@ export PATH=$NODE_HOME/bin:$PATH
 </div>
 </div>
 </div>
-<div class="section" id="id44">
-<h3>建立教程：<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id45">
+<h3>建立教程：<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">scala</span><span class="o">-</span><span class="n">lang</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span><span class="o">-</span><span class="n">intellij</span><span class="o">-</span><span class="n">track</span><span class="o">/</span><span class="n">getting</span><span class="o">-</span><span class="n">started</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">scala</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">intellij</span><span class="o">.</span><span class="n">html</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="id45">
-<h2>docker<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id46">
+<h2>docker<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="daocloud">
 <h3>daocloud<a class="headerlink" href="#daocloud" title="Permalink to this headline">¶</a></h3>
 <p>https://hub.daocloud.io/repos?type=featured</p>
 <p>https://www.daocloud.io/mirror</p>
 </div>
-<div class="section" id="id46">
-<h3>常用可选参数<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id47">
+<h3>常用可选参数<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
 <p>常用可选参数说明：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-i <span class="c1"># 表示以“交互模式”运行容器</span>
 -t <span class="c1"># 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span>
@@ -2672,8 +2681,8 @@ docker cp sourcepath containerId:targetpath <span class="c1"># 复制文件</spa
 </pre></div>
 </div>
 </div>
-<div class="section" id="id47">
-<h3>镜像加速器<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id48">
+<h3>镜像加速器<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
 <p>Linux系统目前存在的三种系统启动方式所对应的配置文件目录分别为：</p>
 <ul class="simple">
 <li>SysVinit：/etc/init.d目录；</li>
@@ -2699,8 +2708,8 @@ sudo systemctl restart docker
 </pre></div>
 </div>
 </div>
-<div class="section" id="id48">
-<h3>docker镜像操作<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id49">
+<h3>docker镜像操作<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 我们对镜像操作时，可以使用短id，只需取前3个字符，只要足够区分于别的镜像就可以了。</span>
 docker search xxx <span class="c1"># docker 搜索镜像</span>
 docker pull xxx <span class="c1"># docker 拉取镜像</span>
@@ -2714,8 +2723,8 @@ docker image rm <span class="k">$(</span>docker image ls -q redis<span class="k"
 </pre></div>
 </div>
 </div>
-<div class="section" id="id49">
-<h3>docker容器操作<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id50">
+<h3>docker容器操作<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run xxx <span class="c1"># docker新建并启动</span>
 <span class="c1"># -t 非配一个终端， -i让容器的标准输入并保持打开</span>
 <span class="c1"># -d后台运行</span>
@@ -2815,8 +2824,8 @@ sh -c <span class="s2">&quot;</span><span class="k">$(</span>wget https://raw.gi
 </div>
 <div class="section" id="macnavicat">
 <h3>mac破解navicat<a class="headerlink" href="#macnavicat" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id50">
-<h4>1.保存公钥和私钥到笔记本<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id51">
+<h4>1.保存公钥和私钥到笔记本<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
 <p>—–BEGIN PUBLIC KEY—–
 MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB8vXG0ImYhLHvHhpi5FS3g
 d2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJX
@@ -2857,40 +2866,40 @@ H+aU1Qu1ZYojFM1Gmbe4HeYDOzRsJ5BhNrrV12h27JWkiRJ4F/Q=
 <div class="section" id="navicat">
 <h4>2. 安装navicat<a class="headerlink" href="#navicat" title="Permalink to this headline">¶</a></h4>
 </div>
-<div class="section" id="id51">
-<h4>3.替换公钥<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id52">
+<h4>3.替换公钥<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
 <p>在finder中，右键navicat ,打开目录 /Contents/Resources，编辑rpk文件，用第一步的公钥替换并保存。</p>
 </div>
-<div class="section" id="id52">
-<h4>4.断网<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h4>
-</div>
 <div class="section" id="id53">
-<h4>5.输入注册码<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+<h4>4.断网<a class="headerlink" href="#id53" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id54">
+<h4>5.输入注册码<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
 <p>打开navicat, 根据navicat输入以下序列号：</p>
 <p>中文版64位密钥序列号： NAVH-T4PX-WT8W-QBL5</p>
 <p>英文版64位密钥序列号： NAVG-UJ8Z-EVAP-JAUW</p>
 <p>如果出现，下面的两行文字，和右边的 对号，那么恭喜你，可以继续往下进行了。如果右边是黑色的叉号,那么请从第一步再来一遍。</p>
 </div>
-<div class="section" id="id54">
-<h4>6.手动激活<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id55">
+<h4>6.手动激活<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h4>
 <p>断网之后，需要点击手动激活</p>
 </div>
-<div class="section" id="id55">
-<h4>7.结合请求码解密<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id56">
+<h4>7.结合请求码解密<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
 <p>打开网络，复制请求码，登录这个网址   http://tool.chacuo.net/cryptrsaprikey  ， 填上第一步的私钥，填上请求码，点击RSA私钥解密。
 请注意：如果没出现请求码明文可能是  1：网络问题，请多试几次
 2：请检查第三部rpk文件是否替换成功！</p>
 </div>
-<div class="section" id="id56">
-<h4>8.加密<a class="headerlink" href="#id56" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id57">
+<h4>8.加密<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
 <p>将请求码明文中的 K和DI的值替换到下面对应的地方，</p>
 <p>{“K”:”NAVHT4PXWT8WQBL5”, “N”:”52pojie”, “O”:”52pojie.cn”, “DI”:”ODQ2Yjg2ZDBjMTEzMjhh”, “T”:1516939200}</p>
 <p>再登录  https://unixtime.51240.com/
 调整到现在的时间，并把Unix时间戳替换到上面的T后面
 将替换好的文本，放入第二个框中，点击RSA加密，得到加密后的文本</p>
 </div>
-<div class="section" id="id57">
-<h4>9.激活<a class="headerlink" href="#id57" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id58">
+<h4>9.激活<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h4>
 <p>将上一步加密的文本放置到激活码中，点击激活即可</p>
 </div>
 </div>

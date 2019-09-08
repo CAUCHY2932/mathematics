@@ -96,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="AB-线性代数.html">线性代数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="BB-数据结构.html">数据结构</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">d数据科学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter04_devops.html">环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter05_java.html">java</a></li>
@@ -226,10 +226,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#datetime">datetime</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#vim">vim行首和行尾添加字符串</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_manage.html">管理学定律</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
 </ul>
 
             
@@ -735,7 +737,7 @@ Review的过程中会需要非常多的沟通，多沟通能拉近团队成员�
 有些人在与异性朋友交往中，有心计，有自己的小算盘，这种做法不可取。其实，女同事一般不构成对你事业的威胁，也不损害你前途，既然是交异性的朋友，我认为没有必要耍手碗，使心计，要讲真诚。
 第三条：一切误会要消除，暧昧玩笑坚决不能要。
 如果对方对你产生感情误会，或者因为交往而产生的其他误会，一定要设法消除或者解释。特别是容易引起让人联想的暧昧话，玩笑话尽量少开。</p>
-<p>八项注意如下：<br />第一条：做人做事要坦诚，尊重对方“非份”掉。
+<p>八项注意如下：第一条：做人做事要坦诚，尊重对方“非份”掉。
 异性朋友起始于“缘”而终于“缘”。此话怎讲？相交，相识为缘，古人云：百年修得同船渡，千年修得共枕眠。能在茫茫人海中相见是机缘巧合，相识更是缘，那么相交、相处、相互交流自然应当称为缘。朋友是有缘之人，异性朋友是有缘无分，也不想有“分”的朋友。一旦异性谈缘分，便超出了朋友的范畴。故异性朋友因缘而聚，又因缘而散。
 第二条：男女有别要记牢，把握得当人称道。
 交友的男女双方，只要出于正当的纯洁的友情，就可以堂堂正正地来往。为什么要说堂堂正正，原因很简单，藏着掖着，会引起误会，产生猜疑。那么如何把握交往的 “度”呢？第一，交异性朋友，要注意分寸，注意场合，如果可能多邀几个朋友一起交往。第二，交往要“师出有名”，也就是要有合理的解释，合理的机会。男女毕竟有别，如果有事无事时常在一起，难免日久生情，情不自禁。第三，时间不宜过长，如果男女双方交往，时常深更半夜，这种交往即使正当，也难免引起家人的抱怨，久而久之怨言可能变成怨恨，这样就影响了双方家庭的和睦。
@@ -2071,7 +2073,7 @@ gzip 1.tar———产生1.tar.gz</p>
 <li>Apache和Tomcat是独立的，在通一台服务器上可以集成。</li>
 </ol>
 <ul>
-<li><p class="first">打个比方：Apache是一辆卡车，上面可以装一些东西如html等。但是不能装水，要装水必须要有容器（桶），Tomcat就是一个桶（装像Java这样的水），而这个桶也可以不放在卡车上。<br />Apache只支持静态网页，但像asp,php,cgi,jsp等动态网页就需要Tomcat来处理。</p>
+<li><p class="first">打个比方：Apache是一辆卡车，上面可以装一些东西如html等。但是不能装水，要装水必须要有容器（桶），Tomcat就是一个桶（装像Java这样的水），而这个桶也可以不放在卡车上。Apache只支持静态网页，但像asp,php,cgi,jsp等动态网页就需要Tomcat来处理。</p>
 </li>
 <li><p class="first">Apache和Tomcat整合使用：如果客户端请求的是静态页面，则只需要Apache服务器响应请求；如果客户端请求动态页面，则是Tomcat服务器响应请求；因为jsp是服务器端解释代码的，这样整合就可以减少Tomcat的服务开销 。</p>
 </li>
@@ -2445,6 +2447,21 @@ datetime.replace(name=value) # 前面所述各项属性是 read-only 的，需�
 datetime.timetuple() # 返回time.struct_time 对象
 dattime.strftime(format) # 按照 format 进行格式化输出</p>
 </div>
+</div>
+<div class="section" id="vim">
+<h2>vim行首和行尾添加字符串<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h2>
+<p>每行的行首都添加一个字符串：%s/^/要插入的字符串
+每行的行尾都添加一个字符串：%s/$/要插入的字符串</p>
+<p>解释：
+% 代表针对被编辑文件的每一行进行后续操作
+$ 代表一行的结尾处
+^ 代表一行的开头处</p>
+<p>在全部内容的行首添加//号注释</p>
+<p>:% s/^////g</p>
+<p>在2~50行首添加//号注释</p>
+<p>:2,50 s/^////g</p>
+<p>在2~50行首删除//号</p>
+<p>:2,50 s/^////g</p>
 </div>
 </div>
 

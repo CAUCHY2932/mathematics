@@ -26,7 +26,8 @@
    chapter11_chat.md
    chapter12_concept.md
    chapter13_manage.md
-
+   chapter14_astronomy.md
+   
 
 Indices and tables
 ==================
