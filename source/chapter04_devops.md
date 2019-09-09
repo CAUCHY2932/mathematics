@@ -2876,3 +2876,69 @@ source ~/.zshrc
 
 
 
+
+
+## tomcat配置域名服务器
+
+
+
+最近做了个网站，用的是web'服务器是tomcat，框架式SpringMVC，功能做好后，就准备上线使用了，手上已经有域名以及一台服务器，已经绑定好ip了，剩下的也就是配置
+
+Tomcat了，比较简单，但是自己记录下防止遗忘了，
+
+
+
+首先，访问服务器时默认的是80端口，这个好改，tomcat中的server.xml文件直接修改，这里要说明的是如果一个服务器上有多个tomcat的话，修改端口需要注意的是要修改
+
+三个地方的 
+
+
+
+第一处是 <Server port="8085" shutdown="SHUTDOWN">
+
+
+
+第二处是  <Connector connectionTimeout="20000" port="80" protocol="HTTP/1.1" redirectPort="8443"/>
+
+
+
+第三处是 <Connector port="8099" protocol="AJP/1.3" redirectPort="8443"/>
+
+
+
+修改好端口
+
+在修改两处地方
+
+
+
+第一是  <Engine defaultHost="localhost" name="Catalina">  把defaultHost的值修改成你的域名    <Engine defaultHost="www.test.com" name="Catalina">
+
+
+
+第二是   <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true" xmlNamespaceAware="false" xmlValidation="false">
+
+
+
+                 把name的值修改成你的域名  
+    
+                <Host appBase="webapps" autoDeploy="true" name="www.test.com" unpackWARs="true" xmlNamespaceAware="false" xmlValidation="false">
+
+
+
+最后再加上具体的项目指向
+
+
+
+       在Host下面加上 <Context docBase="testPro" path="" reloadable="true"/></Host>
+    
+      这个testPro就是tomcat中的项目名称
+
+
+
+保存server.xnl文件，重新启动服务，如果你的域名和ip绑定好的话就可以直接用域名访问了  
+
+
+
+如果你不确定域名是否绑上了正确的外网ip，可以直接在dos里面ping  域名   如果显示的是正确的外网ip，那么就没有问题了....
+
