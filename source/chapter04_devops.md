@@ -49,7 +49,25 @@ sudo apt install vim
 sudo apt remove vim
 sudo add-apt-repository --remove ppa:jonathonf/vim
 
+
 ```
+
+### python3起别名
+
+在~/.bashrc中添加一个别名即可python实现python3
+
+
+
+```bash
+sudo vim ~/.bashrc
+
+alias python="python3"
+source ~/.bashrc
+```
+
+
+
+
 
 ### 中科大源
 
