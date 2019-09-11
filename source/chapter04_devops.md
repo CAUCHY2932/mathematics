@@ -23,6 +23,18 @@ unzip -O CP936 xxx.zip
 
 ## ubuntu
 
+
+
+### 用户总结
+
+使用ubuntu时，默认是没有root的，
+
+需要sudo passwd root，之后进行密码设置
+
+su root
+
+切换用户即可
+
 ### 基本操作
 
 ```bash
@@ -62,6 +74,7 @@ sudo add-apt-repository --remove ppa:jonathonf/vim
 sudo vim ~/.bashrc
 
 alias python="python3"
+alias pip="pip3"
 source ~/.bashrc
 ```
 
@@ -113,6 +126,19 @@ sudo mysql -uroot -p # 无需密码正确
 
 GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY "123456";
 ```
+
+### vim配置
+
+```bash
+git clone https://git.oschina.net/eccozhou/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+
+
+
+
+
+
 
 ### 安装docker
 
@@ -607,6 +633,25 @@ github地址：[apache/incubator-superset](https://link.zhihu.com/?target=https%
 我这个版本文件位置没改，但是内容改了，不过这个本来也比较简单，还是照抄其他表的配置就行了
 
 ## python
+
+### 永久修改镜像源
+
+```bash
+cd  ~
+mkdir .pip
+cd .pip && vi pip.conf
+```
+
+
+
+添加内容
+
+```bash
+[global]
+index-url = http://pypi.douban.com/simple
+[install]
+trusted-host=pypi.douban.com
+```
 
 
 
