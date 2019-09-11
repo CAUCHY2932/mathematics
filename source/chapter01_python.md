@@ -613,3 +613,9 @@ requirement.py
 https://lepture.com/en/2018/structure-of-a-flask-project
 
 http://charlesleifer.com/blog/structuring-flask-apps-a-how-to-for-those-coming-from-django/
+
+## flask项目中restful
+
+如果你要用RESTful来实现鉴权，应当使用BasicAuth，或者类似OAuth等Token式的鉴权，进而抛弃session表示。
+
+毕竟RESTful着重强调无状态。

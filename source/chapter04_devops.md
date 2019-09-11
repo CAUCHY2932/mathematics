@@ -3,14 +3,6 @@
 包含linux和一些常用的命令
 
 
-
-## pipenv的使用
-
-
-
-pipenv install --dev --pypi-mirror https://mirrors.aliyun.com/pypi/simple
-
-
 ## encoding
 
 unzip 解压含有中文的目录时乱码
@@ -22,8 +14,6 @@ unzip -O CP936 xxx.zip
 我们可以采取更改编码的方式进行交换
 
 ## ubuntu
-
-
 
 ### 用户总结
 
@@ -45,14 +35,12 @@ sudo ufw enable  # 防火墙开启开机自启
 sudo ufw reload  # 防火墙重启
 # 2.重置密码
 sudo passwd
-
 # 3.软件安装
 # 3.1.chrome
 sudo wget http://www.linuxidc.com/files/repo/google-chrome.list -P /etc/apt/sources.list.d/
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add
 sudo apt update
 sudo apt install google-chrome-stable
-
 # 1.1 安装命令（ppa源）
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
@@ -60,8 +48,6 @@ sudo apt install vim
 # 1.2 卸载命令
 sudo apt remove vim
 sudo add-apt-repository --remove ppa:jonathonf/vim
-
-
 ```
 
 ### python3起别名
@@ -77,10 +63,6 @@ alias python="python3"
 alias pip="pip3"
 source ~/.bashrc
 ```
-
-
-
-
 
 ### 中科大源
 
@@ -109,10 +91,6 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ cosmic-proposed main restricted univ
 sudo apt-get update
 ```
 
-
-
-
-
 ### 安装mysql
 
 > https://blog.csdn.net/weixx3/article/details/80782479
@@ -133,12 +111,6 @@ GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY "123456";
 git clone https://git.oschina.net/eccozhou/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
-
-
-
-
-
-
 
 ### 安装docker
 
@@ -201,6 +173,8 @@ sudo passwd root
 
 ## vim 
 
+### 常用设置
+
 ```bash
 ## edit the vimrc file
 
@@ -220,8 +194,59 @@ set tabstop=4
 set shiftwidth=4
 # 按退格键时可以一次删掉4个空格
 set softtabstop=4
-# 在root用户家目录下的.vimrc中设置，对所有用户生效
 
+```
+
+### 常用操作
+
+
+
+#### 复制
+
+
+
+#### 粘贴
+
+
+
+
+
+
+
+
+
+#### 删除
+
+
+
+
+
+#### vim行首和行尾添加字符串
+
+每行的行首都添加一个字符串：%s/^/要插入的字符串 
+每行的行尾都添加一个字符串：%s/$/要插入的字符串
+
+解释： 
+% 代表针对被编辑文件的每一行进行后续操作 
+$ 代表一行的结尾处 
+^ 代表一行的开头处
+
+在全部内容的行首添加//号注释
+
+:% s/^/\/\//g
+
+在2~50行首添加//号注释
+
+:2,50 s/^/\/\//g
+
+在2~50行首删除//号
+
+:2,50 s/^\/\///g
+
+
+
+```bash
+# 在root用户家目录下的.vimrc中设置，对所有用户生效
 # 如何与外界剪贴板进行交互
 
 # 在按下esc后
@@ -642,8 +667,6 @@ mkdir .pip
 cd .pip && vi pip.conf
 ```
 
-
-
 添加内容
 
 ```bash
@@ -653,11 +676,7 @@ index-url = http://pypi.douban.com/simple
 trusted-host=pypi.douban.com
 ```
 
-
-
 ### 服务器部署常用镜像源
-
-
 
 - 阿里巴巴 https://opsx.alibaba.com/mirror 
 - 清华 https://mirrors.tuna.tsinghua.edu.cn/ 
@@ -667,7 +686,6 @@ trusted-host=pypi.douban.com
 
 ### python运维相关内容
 ```bash
-
 # conda使用
 conda create -n py_env python=python_version # conda创建环境
 conda remove -n py_env --all # conda删除环境
@@ -787,25 +805,22 @@ arguments: --output-format=parseable --disable=R -rn --msg-template="{abspath}:{
 
 - working firectory: $FileDir$
 
-### python安装
 
-- python安装
 
-- - 使用anaconda安装
-  - 使用homebrew
-  - brew       install python3
+## mac mongodb安装
 
-- mongodb安装
-
-- - 使用homebrew
+```bash
+	- 使用homebrew
   - brew       install mongodb
   - 安装之后的验证，输入mongod，即可启动服务，输入mongo进入到mongobd到命令行的界面
   - brew       services start mongodb
   - mongo
+```
 
-- redis安装
+## mac redis安装
 
-- - brew       install redis
+```bash
+	- brew install redis
   - redis-cli
   - set       'a' 'b'
   - get 'a'
@@ -816,36 +831,7 @@ arguments: --output-format=parseable --disable=R -rn --msg-template="{abspath}:{
   - redis-cli
   - brew       services restart redis
   - 可以在配置文件里添加密码
-
-- mysql环境安装
-
-- - brew       install mysql
-
-  - 就会进行安装
-
-  - mysqld
-
-  - - ==>        Pouring mysql-8.0.12.high_sierra.bottle.tar.gz
-    - ==>        Caveats
-    - We've        installed your MySQL database without a root password. To secure it run:
-    - mysql_secure_installation
-    - MySQL        is configured to only allow connections from localhost by default
-    - To        connect run:
-    - mysql        -uroot
-    - To        have launchd start mysql now and restart at login:
-    - brew        services start mysql
-    - Or,        if you don't want/need a background service you can just run:
-    - mysql.server        start
-    - ==>        Summary
-    - 🍺         /usr/local/Cellar/mysql/8.0.12: 255 files, 233.0MB
-    - AppledeMacBook-Pro:~        apple$ß
-    - mysql8.0版本加密方式改变了，所以需要修改设置
-    - ALTER        USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
-    - FLUSH        PRIVILEGES;
-    - alter        user 'root'@localhost        identified with mysql_native_password by '12345678';
-
-
-
+```
 
 
 ## linux命令
@@ -861,7 +847,6 @@ userdel -rf xxx # 删除一个用户
 whoami ## 查看当前用户
 who ## 查看当前登录用户
 exit ## 退出登录账户
-
 
 ## 添加用户账号
 useradd [参数] 新建用户账号
@@ -879,7 +864,6 @@ cat /etc/passwd #查看系统当前用户名
 passwd # 设置用户密码
 # 超级用户可以使用passwd命令为普通用户设置或修改用户口令，用户也可以直接使用该命令来修改自己的口令，而无需再命令后面使用用户名
 sudo passwd user1
-
 
 userdel # 删除用户
 userdel abc #删除abc用户，但不会自动删除用户的主目录
@@ -911,10 +895,6 @@ usermod
 # 查看硬盘的信息，并以人性化的方式建立可读性
 df -h 
 ```
-
-
-
-
 
 ### 系统管理
 
@@ -988,7 +968,6 @@ cat test1.file test2.file > hebing.txt
 cat test1.file test2.file >> hebing.txt
 
 # 文本搜索
-
 grep [-选项] '搜索内容串' 文件名
 -v 显示不包含匹配文件的所有行，求反
 -n 显示匹配行及行号
@@ -1109,10 +1088,7 @@ init
 # 在windows下解压pscp，执行以下命令
 .\pscp.exe root@129.28.189.50://root/git_repos/superset.tar.gz ./
 ./pscp .\finebi-20190415-product-full-bi51.tar.gz root@192.168.144.128:/root/
-
 ```
-
-
 
 ### 远程命令
 
@@ -1124,7 +1100,6 @@ ssh -p 4645 root@192.168.52.12
 
 ```bash
 ls | nl
-
 ```
 
 ## centos
@@ -1143,7 +1118,7 @@ conda activate jupyter
 
 
 
-### 1.2设置pip镜像源
+### 1.2永久设置pip镜像源
 
 ```bash
 # 1.2.1 直接使用pip安装
@@ -1253,174 +1228,6 @@ baseurl=https://mirrors.tuna.tsinghua.edu.cn/mongodb/yum/el$releasever/
 目录下是常用的repo文件
 如sublime-text.repo
 
-### centos7 设置samba
-
-```bash
-
-> https://www.linuxidc.com/Linux/2017-11/148354.htm
-
-### 服务器端下载samba和客户端包
-
-yum -y install samba samba-client
-
-### 客户端需要下载samba-client cifs-utils包
-
-### 服务器端编辑配置文件
-
-配置文件 /etc/samba/smb.conf
-启动和关闭文件 /etc/init.d/smb
-
-### 查看服务启动情况，设置服务开机自动启动
-
-service smb status
-service smb start
-chkconfig  --level 35 smb on
-chkconfig --list smb
-
-### 修改smb服务配置文件
-
-vim /etc/samba/smb.conf
-
-[global]　　　　　　　　　　　　　　　　　　　　//设置samba服务整体环境
-
-workgroup = WORKGROUP　　　　　　　　　　  //设置工作组名称
-server string = Samba Server Version %v                 //服务器说明
-
-[laiGei]　　　　　　　　　　　　　　　　　　   //共享目录的名称
-
-comment = Public stuff　　　　　　　　　　　　   //注释说明　
-path = /usr/local/laige　　　　　　　　   　　　　  //共享目录的路径
-public = yes　　　　　　　　　　　　　　　　　  //是yes/否no公开共享，若为否则进行身份验证(只有当security = share 时此项才起作用)
-writeable = yes　　　　　　　　　　　　　　　　//是yes/否no不以只读方式共享当与read only发生冲突时，无视read only
-browseable = yes　　　　　　　　　　　　　　   //是yes/否no在浏览资源中显示共享目录，若为否则必须指定共享路径才能存取
-guest ok = yes　　　　　　　　　　　　　　　　//是yes/否no公开共享，若为否则进行身份验证(只有当security = share 时此项才起作用)
-
-
-
-
-
- [global]
-     workgroup = SAMBA
-     security = user
-
- passdb backend = tdbsam
-
- printing = cups
- printcap name = cups
- load printers = yes
- cups options = raw
-
-security = user
-说明：设置用户访问Samba Server的验证方式，一共有四种验证方式。
-
-
-share：用户访问Samba Server不需要提供用户名和口令, 安全性能较低。
-user：Samba Server共享目录只能被授权的用户访问,由Samba Server负责检查账号和密码的正确性。账号和密码要在本Samba Server中建立。
-server：依靠其他Windows NT/2000或Samba Server来验证用户的账号和密码,是一种代理验证。此种安全模式下,系统管理员可以把所有的Windows用户和口令集中到一个NT系统上,使用Windows NT进行Samba认证, 远程服务器可以自动认证全部用户和口令,如果认证失败,Samba将使用用户级安全模式作为替代的方式。
-domain：域安全级别,使用主域控制器(PDC)来完成认证。
-
-
-
-passdb backend = tdbsam
-说明：passdb backend就是用户后台的意思。目前有三种后台：smbpasswd、tdbsam和ldapsam。sam应该是security account manager（安全账户管理）的简写。
-
-
-smbpasswd：该方式是使用smb自己的工具smbpasswd来给系统用户（真实
-用户或者虚拟用户）设置一个Samba密码，客户端就用这个密码来访问Samba的资源。smbpasswd文件默认在/etc/samba目录下，不过有时候要手工建立该文件。
-
-tdbsam：该方式则是使用一个数据库文件来建立用户数据库。数据库文件叫passdb.tdb，默认在/etc/samba目录下。passdb.tdb用户数据库可以使用smbpasswd –a来建立Samba用户，不过要建立的Samba用户必须先是系统用户。我们也可以使用pdbedit命令来建立Samba账户。pdbedit命令的参数很多，我们列出几个主要的。
-
-        pdbedit –a username：新建Samba账户。
-        pdbedit –x username：删除Samba账户。
-        pdbedit –L：列出Samba用户列表，读取passdb.tdb数据库文件。
-        pdbedit –Lv：列出Samba用户列表的详细信息。
-        pdbedit –c “[D]” –u username：暂停该Samba用户的账号。
-        pdbedit –c “[]” –u username：恢复该Samba用户的账号。
-
-
-
-
-
-service smb restart
-
-### 新建samba用户，必须是系统中存在的用户
-
-useradd samba
-smbpasswd -a samba
-
-### 注意事项
-
-　　1，防火墙要关闭， # service iptables  stop
-
-　　2，selinux要设置成disabled，路径是/etc/sysconfig/selinux
-
-　　3，注意共享目录的权限设置
-
-　　4，要设置成不需要用户名密码直接访问，需要修改配置文件，将security设置成security = share。
-
- 
-
- 使用smbpasswd添加共享用户的常用方法：
-
-　　　　smbpasswd -a 添加用户（被添加用户必须是系统用户）
-
-　　　　smbpasswd -d 冻结用户 （这个用户不能用了）
-
-　　　　smbpasswd -e 恢复用户 （将冻结的用户解冻）
-
-　　　　smbpasswd -n 将用户密码设置为空 
-
-　　　　smbpasswd -x 删除用户
-
-
-
-
-
-
-
-### 其他
-
-​```bash
-[logger]
-    comment = Logs Directories
-    path = /storage/logger/
-    public = no
-    admin users = logadmin
-    valid users = @logadmin
-    browseable = yes
-    writable = yes
-    create mask = 0777
-    directory mask = 0777
-    force directory mode = 0777
-    force create mode = 0777
-
-[shared]
-
-    # 共享文件目录描述
-​    comment = Shared Directories
-    # 共享文件目录
-​    path = /storage/shared/
-    # 是否允许guest访问
-​    public = no
-    # 指定管理用户
-​    admin users = admin
-    # 可访问的用户组、用户
-​    valid users = @admin
-    # 是否浏览权限
-​    browseable = yes
-    # 是否可写权限
-​    writable = yes
-    # 文件权限设置
-​    create mask = 0777
-​    directory mask = 0777
-​    force directory mode = 0777
-​    force create mode = 0777
-
-
-```
-
-
-
 ### centos7学习资料
 
 centos7学习资料
@@ -1447,13 +1254,10 @@ firewall-cmd --zone=public --add-port=8888/tcp --permanent
 systemctl restart firewalld.service
 iptables -L -n
 
-
-
-
-2、安装firewalld
+# 2、安装firewalld
 root执行 # yum install firewalld firewall-config
  
-3、运行、停止、禁用firewalld
+# 3、运行、停止、禁用firewalld
 启动：# systemctl start  firewalld
 查看状态：# systemctl status firewalld 或者 firewall-cmd --state
 停止：# systemctl disable firewalld
@@ -1709,21 +1513,14 @@ $ cd /etc/alternatives/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/
 ### centos 没有pip
 
 ```bash
-pip在centos也没有，所以网上找来资料，3条语句就搞定啦！
-
-1。查看是否安装依赖包，没安装先安装：
-
+# 1。查看是否安装依赖包，没安装先安装：
 yum install epel-release
 
-2。更新文件库
-
+# 2。更新文件库
 yum -y update
 
-3。安装pip
-
+# 3。安装pip
 yum -y install python-pip
-
-
 ```
 
 
@@ -1740,7 +1537,6 @@ https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/
 安装mysql57
 
 wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
-
 
 安装MySQL源
 
@@ -2138,362 +1934,6 @@ user root;
 ```
 此外，我们server位置设定的命令，是有针对性的，root设置根目录，index设置主页文件，等等。
 
-## centos安装oracle12c
-
-参考链接
-https://wiki.centos.org/zh/HowTos/Oracle12onCentos7
-https://docs.centos.org/en-US/docs/
-
-### 准备工作
-
-提前下载oracle 12c
-r1 版本有两个文件，r2有两个文件
-
-1. 引言
-   本指南介绍如何在 CentOS 7.1（64 位元）上利用快速安装的功能部署 Oracle 数据库 12c（12.1.0.2.0）。
-
-参考系统：
-
-[root@centos7 ~]# hostnamectl
-   Static hostname: centos7.example.com
-         Icon name: computer
-           Chassis: n/a
-        Machine ID: 583b4d69eaea465ea4bb96ac3b891e15
-           Boot ID: 931ed1af622046ebbde071a87844a7d5
-    Virtualization: kvm
-  Operating System: CentOS Linux 7 (Core)
-       CPE OS Name: cpe:/o:centos:centos:7
-            Kernel: Linux 3.10.0-229.11.1.el7.x86_64
-      Architecture: x86_64
-
-2. 先决条件
-   成功安装操作系统后，请确认主机名称并在你的 DNS 上登记它。你也可选择在 /etc/hosts 内加入你的主机名称／IP。
-
-[root@centos7 ~]# cat /etc/hostname
-centos7.example.com
-将 SELinux 维持在 enforcing 模式，并启用防火墙
-
-[root@centos7 ~]# sestatus
-SELinux status:                 enabled
-SELinuxfs mount:                /sys/fs/selinux
-SELinux root directory:         /etc/selinux
-Loaded policy name:             targeted
-Current mode:                   enforcing
-Mode from config file:          enforcing
-Policy MLS status:              enabled
-Policy deny_unknown status:     allowed
-Max kernel policy version:      28
-
-[root@centos7 ~]# firewall-cmd --state
-running
-把 CentOS 系统更新至最新组件
-
-[root@centos7 ~]# yum update -y
-下载 Oracle 数据库 12c 的 Linux x86-64 版本：
-
-http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html
-
-3. 安装步骤
-   为 Oracle 数据库创建所须的操作系统用户及群组。
-
-[root@centos7 ~]# groupadd oinstall
-[root@centos7 ~]# groupadd dba
-[root@centos7 ~]# useradd -g oinstall -G dba oracle
-[root@centos7 ~]# passwd oracle
-在 /etc/sysctl.conf 加入下列内核参数
-
-fs.aio-max-nr = 1048576
-fs.file-max = 6815744
-kernel.shmall = 2097152
-kernel.shmmax = 1987162112
-kernel.shmmni = 4096
-kernel.sem = 250 32000 100 128
-net.ipv4.ip_local_port_range = 9000 65500
-net.core.rmem_default = 262144
-net.core.rmem_max = 4194304
-net.core.wmem_default = 262144
-net.core.wmem_max = 1048586
-检查并运用新的数值。
-
-[root@centos7 ~]# sysctl -p
-[root@centos7 ~]# sysctl -a
-在 /etc/security/limits.conf 为 oracle 用户设置上限
-
-oracle soft nproc 2047
-oracle hard nproc 16384
-oracle soft nofile 1024
-oracle hard nofile 65536
-将 Oracle 数据库软件的 zip 文件（linuxamd64_12102_database_1of2.zip, linuxamd64_12102_database_2of2.zip）解压至 /stage 目录。
-
-[root@centos7 ~]# yum install -y zip unzip
-[root@centos7 ~]# unzip linuxamd64_12102_database_1of2.zip -d /stage/
-[root@centos7 ~]# unzip linuxamd64_12102_database_2of2.zip -d /stage/
-修改　/stage 的权限
-
-[root@centos7 ~]# chown -R oracle:oinstall /stage/
-为 Oracle 软件创建 /u01 目录，及为数据库文件创建 /u02 目录。
-
-[root@centos7 ~]# mkdir /u01
-[root@centos7 ~]# mkdir /u02
-[root@centos7 ~]# chown -R oracle:oinstall /u01
-[root@centos7 ~]# chown -R oracle:oinstall /u02
-[root@centos7 ~]# chmod -R 775 /u01
-[root@centos7 ~]# chmod -R 775 /u02
-[root@centos7 ~]# chmod g+s /u01
-[root@centos7 ~]# chmod g+s /u02
-安装所须组件：
-
-[root@centos7 ~]# yum install -y binutils.x86_64 compat-libcap1.x86_64 gcc.x86_64 gcc-c++.x86_64 glibc.i686 glibc.x86_64 \
-glibc-devel.i686 glibc-devel.x86_64 ksh compat-libstdc++-33 libaio.i686 libaio.x86_64 libaio-devel.i686 libaio-devel.x86_64 \
-libgcc.i686 libgcc.x86_64 libstdc++.i686 libstdc++.x86_64 libstdc++-devel.i686 libstdc++-devel.x86_64 libXi.i686 libXi.x86_64 \
-libXtst.i686 libXtst.x86_64 make.x86_64 sysstat.x86_64
-还有安装 X Window System 组件群组。
-
-[root@centos7 ~]# yum groupinstall -y "X Window System"
-由于 Oracle 的安装采用图像界面，你可通过以下两个简单的方法进行。
-
-方案 1
-
-通过 SSH 从一台图像化 Linux 计算机远程登录。
-
-ssh -X oracle@centos7.example.com
-export LANG="en_US" 
-
-方案 2
-
-利用一台拥有 SSH 客户端（PuTTY）及 X-Windows 终端機仿真器（Xming）的微软 Windows 桌面。
-
-以下文档描述如何在 Windows 系统上安装 Xming。
-
-- Xming —— 微软 Windows 计算机下的 X-Windows 终端機仿真器
-
-请采用上述的方案登录为 oracle 用户，然后执行 Oracle 安装程序：
-
-[oracle@centos7 ~]$ /stage/database/runInstaller
-Starting Oracle Universal Installer...
-
-1. Oracle 安装程序画面
-   第一步 —— 安全性更新
-
-假若你不想接收来自 Oracle 支持部的电邮，请取消勾选该项目并按 Next。
-
-在新打开的窗口按 YES。
-
-第二步 —— 安装选项
-
-选择 Create and configure a database 并按 Next
-
-第三步 —— 系统级别
-
-选择 Desktop Class 进行缺省的简便 Oracle 数据库安装。
-
-第四步 —— 典型安装
-
-在 Typical Install Configuration 画面，设置以下功能。
-
-Oracle base
-
-/u01/app/oracle
-
-Software location
-
-/u01/app/oracle/product/12.1.0/dbhome_1
-
-Database file location
-
-/u02
-
-Global database name
-
-orcl.example.com
-
-另外请设置合适的 Database edition（数据库版本）及 Character set（符集）。请为数据库的管理订立一个安全的口令，最后请取消勾选 Create as Container database 项目。
-
-第五步 —— 创建库存
-
-接纳缺省的 /u01/app/oraInventory 并按 Next。
-
-第六步 —— 检查先决条件
-
-安装程序会自动检查所有必须的操作系统组件及内核设置。
-
-第七步 —— 摘要
-
-这是编辑安装特点的最后机会。请按 Install。
-
-第八步 —— 执行设置脚本
-
-当询问窗口出现时，请登录成为 root 并执行两个脚本：
-/u01/app/oraInventory/orainstRoot.sh
-/u01/app/oracle/product/12.2.0/dbhome_1/root.sh
-
-[root@centos7 ~]# /u01/app/oraInventory/orainstRoot.sh
-Changing permissions of /u01/app/oraInventory.
-Adding read,write permissions for group.
-Removing read,write,execute permissions for world.
-Changing groupname of /u01/app/oraInventory to oinstall.
-The execution of the script is complete.
-
-[root@centos7 ~]# /u01/app/oracle/product/12.1.0/dbhome_1/root.sh
-Performing root user operation.
-The following environment variables are set as:
-    ORACLE_OWNER= oracle
-    ORACLE_HOME=  /u01/app/oracle/product/12.1.0/dbhome_1
-Enter the full pathname of the local bin directory: [/usr/local/bin]: <PRESS ENTER>
-   Copying dbhome to /usr/local/bin ...
-   Copying oraenv to /usr/local/bin ...
-   Copying coraenv to /usr/local/bin ...
-Creating /etc/oratab file...
-Entries will be added to the /etc/oratab file as needed by
-Database Configuration Assistant when a database is created
-Finished running generic part of root script.
-Now product-specific root actions will be performed.
-You can follow the installation in a separated window.
-这两个脚本都必须以 root 的身份来执行。
-
-第九步 —— 安装进度
-
-一个显示安装进度的窗口将会出现。请勿关闭这个窗口。
-
-第十步 —— 顺利完成安装
-
-最后一个画面将会通知你安装已经完成并显示 Oracle 企业级管理员的 URL。
-
-https://localhost:5500/em
-
-请按 OK 来关闭安装程序。
-
-5. 安装后的任务
-   5.1. 防火墙
-   请登录成为 root 并检查已引导的本地
-
-[root@centos7 ~]# firewall-cmd --get-active-zones
-public
-  interfaces: eth0
-打开相关的端口
-
-[root@centos7 ~]# firewall-cmd --zone=public --add-port=1521/tcp --add-port=5500/tcp --add-port=5520/tcp --add-port=3938/tcp \ 
---permanent
-success
-
-[root@centos7 ~]# firewall-cmd --reload
-success
-
-[root@centos7 ~]# firewall-cmd --list-ports
-1521/tcp 3938/tcp 5500/tcp 5520/tcp
-5.2. Oracle 工作环境
-请登录为 oracle 用户并在 /home/oracle/.bash_profile 内加入下列数值
-
-TMPDIR=$TMP; export TMPDIR
-ORACLE_BASE=/u01/app/oracle; export ORACLE_BASE
-ORACLE_HOME=$ORACLE_BASE/product/12.1.0/dbhome_1; export ORACLE_HOME
-ORACLE_SID=orcl; export ORACLE_SID
-PATH=$ORACLE_HOME/bin:$PATH; export PATH
-LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib:/usr/lib64; export LD_LIBRARY_PATH
-CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib; export CLASSPATH
-重新装入 bash_profile 来运用新设置值：
-
-[oracle@centos7 ~]$ . .bash_profile
-5.3. 登录数据库
-最后请登录数据库：
-
-[oracle@centos7 ~]$ sqlplus system@orcl
-... output omitted ...
-Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
-SQL>
-请利用 Oracle 企业级管理员来管理数据库：
-
-https://<主机名称>:5500/em
-
-
-
-### Xming —— 从 Windows 系统管理图像化的 Linux 应用程序
-
-Contents
-
-关于 Xming
-先决条件
-安装
-如何应用 Xming
-
-1. 关于 Xming
-   Xming 是一个在 Microsoft Windows 计算机上运行的开源 X-Windows 终端機仿真器（X 服务器）。Xming 容让 Windows 机器显示在远程 Linux 服务器上执行的图像化 Linux 程序。除了基本安装程序外，本文章亦示范如何利用 PuTTY SSH 客端程序保障 Xming 下的 X-Window 工作阶段。
-2. 先决条件
-   远程的 CentOS 服务器上必须安装了 X Window System 组件群组。
-
-[root@centos7 ~]# yum groupinstall "X Window System" -y 
-X Window 系统采用主从结构。X 服务器通过网络或本地回送界面听候来自 X 客端应用程序的连接。服务器与图像卡、显示屏、键盘、鼠标等硬件沟通。X 客端应用程序在用户空间内运行，它为用户创建一个图像化界面，并将用户的要求递交 X 服务器。
-
-3. 安装
-   Xming 安装程序适用于 Windows 10／8／7／Vista／XP 桌面及 Windows Server 2012／2008／2003。
-
-步骤：
-
-利用下列连结从 Sourceforge 下载最新版的 Xming 安装程序。
-http://sourceforge.net/projects/xming/files/latest/download
-
-待安装程序完全下载至桌面后，连按 Xming 的图示两次来开始安装
-在 Welcome to the Xming Setup Wizard 画面按 Next
-
-接纳 C:\Program Files\Xming 或浏览另一个目录作为安装的目的地。请按 Next 继续* 被问及需要安装的组件时，接纳缺省值并按 Next
-
-在 Select Additional Tasks 画面，选择桌面图示等额外任务并按 Next
-
-下一个画面显示所有安装设置。如果一切正碓无误，请按 Install
-
-在 Completing the Xming Setup Wizard 窗口内按 Finish
-
-你的 Windows 桌面现在已准备好显示远程的 X11 图像化应用程序。
-
-4. 如何应用 Xming
-   顺利完成安装后，你的 Windows 计算机将会出现一个 Xming 图示在桌面。连按它两次便会引导 X11 服务器并让你的计算机成为一台 X 服务器。当 X11 服务器在运作时，一个 X 图示会出现在你的工作列里。
-
-步骤：
-
-连按 Xming 的图示两次来引导 Xming
-打开 PuTTY 的连接设置窗口（引导 Putty）
-在 PuTTY 的设置窗口，选择 Connection --> SSH --> X11
-
-请勾选 Enable X11 forwarding 选项
-
-返回 Session 类型，指定你要连接的主机名称或 IP 地址
-在 Saved Sessions 下指定一个合适的名称并存储连接 —— 或 —— 直接按 Open 来连接至所指定的 CentOS 计算机。
-
-利用 xeyes、xterm 或其它图像化应用程序（xorg-x11-apps）来测试 X11 转接。
-
-[root@centos7 ~]# yum install xeyes -y 
-
-[root@centos7 ~]# xeyes 
-
-
-
-启动
-1.#su - oracle 切换到 oracle 用户且切换到它的环境
-2.$lsnrctl status 查看监听及数据库状态
-3.$lsnrctl start 启动监听
-4.$sqlplus / as sysdba 以 DBA 身份进入 sqlplus
-5.SQL>startup 启动 db
-
- 停止
-1.#su - oracle 切换到 oracle 用户且切换到它的环境
-2.$lsnrctl stop 停止监听
-3.$sqlplus / as sysdba 以 DBA 身份进入 sqlplus
-
-4.SQL>SHUTDOWN IMMEDIATE 关闭 db
-
-
-
-
-
-### 注意点
-
-1.在检查先决条件时，选择忽略全部
-2.在安装时需要一台有图形界面的linux
-3.默认登录到root用户更好使用
-4.注意执行脚本
-5.创建密码注意，大写字母，小写字母，和数字
-
 
 
 ## 安装npm
@@ -2515,14 +1955,12 @@ vim /etc/profile
 #set for nodejs  
 export NODE_HOME=/usr/local/node  
 export PATH=$NODE_HOME/bin:$PATH
-
 ```
 
 ### 保存退出后执行更新命令
 
 ```
 source /etc/profile
-
 ```
 
 ## tuna服务
@@ -2713,35 +2151,20 @@ cat ubuntu.tar | docker import - test/ubuntu:v1.0 # 导入容器
 
 docker container rm xxx # 删除一个容器，添加-f参数，删除一个运行中的容器
 docker container prune # 清理所有处于终止状态的容器
-
 ```
-
-
-
-
 
 ## zsh
 
 ```bash
 ## check you have zsh
-
 cat /etc/shells
-
 # if you have not, I suggest you have a try
-
 ## install the zsh
-
 ### centos install
 sudo yum -y install zsh
-
 ### ubuntu install
-
 sudo apt-get -y install zsh
-
-
 # and you can check you have zsh when you have execute above
-
-
 ## change your default shell to zsh
 
 chsh -s /bin/zsh
@@ -2758,29 +2181,11 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 source ~/.zshrc
 ```
 
-## hexo
-
-
-
-https://hexo.io/zh-cn/
-
-- npm install hexo-cli -g
-- hexo init blog
-- cd blog
-- npm install
-- hexo server
-
 ## jupyter生成目录
-
-
 
 https://www.jianshu.com/p/f314e9868cae
 
 https://blog.csdn.net/weixin_42150990/article/details/81081889
-
-
-
-
 
 ```
 conda install -c conda-forge jupyter_contrib_nbextensions
@@ -2797,10 +2202,6 @@ conda install -c conda-forge jupyter_contrib_nbextensions
 在Notebook上面选项中,多了一个生成目录图标, 如下图中最右边的图标.
 
 jupyter nbconvert --to markdown "3.11-matplotlib 基础.ipynb"
-
-
-
-
 
 ## mac配置
 
@@ -2819,149 +2220,15 @@ command +shift + d 水平分屏
 
 command + w 标签
 
-### mac破解navicat
-
-#### 1.保存公钥和私钥到笔记本
-
------BEGIN PUBLIC KEY-----
-MIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQB8vXG0ImYhLHvHhpi5FS3g
-d2QhxSQiU6dQ04F1OHB0yRRQ3NXF5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJX
-HtQVLXMRms+chomsQCwkDi2jbgUa4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEF
-h0N89FV4yGLyDLr+TLqpRecg9pkPnOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZS
-I69sPD9xZRt+EciXVQfybI/2SYeAdXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd
-+03NU3wvEmLBvGOmNGudocWIF/y3VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/p
-AgMBAAE=
------END PUBLIC KEY-----
-
------BEGIN RSA PRIVATE KEY-----
-MIIEogIBAAKCAQB8vXG0ImYhLHvHhpi5FS3gd2QhxSQiU6dQ04F1OHB0yRRQ3NXF
-5py2NNDw962i4WP1zpUOHh94/mg/KA8KHNJXHtQVLXMRms+chomsQCwkDi2jbgUa
-4jRFN/6N3QejJ42jHasY3MJfALcnHCY3KDEFh0N89FV4yGLyDLr+TLqpRecg9pkP
-nOp++UTSsxz/e0ONlPYrra/DiaBjsleAESZSI69sPD9xZRt+EciXVQfybI/2SYeA
-dXMm1B7tHCcFlOxeUgqYV03VEqiC0jVMwRCd+03NU3wvEmLBvGOmNGudocWIF/y3
-VOqyW1byXFLeZxl7s+Y/SthxOYXzu3mF+2/pAgMBAAECggEAK5qZbYt8wenn1uZg
-6onRwJ5bfUaJjApL+YAFx/ETtm83z9ByVbx4WWT7CNC7fK1nINy20/mJrOTZkgIx
-x6otiNC4+DIsACJqol+RLoo8I9pk77Ucybn65ZteOz7hVZIU+8j6LzW0KDt6yowX
-e75r7G/NEpfibNc3Zz81+oDd2x+bHyGbzc9QcePIVuEzkof6jgpbWrQZU14itx9l
-VxEgj/fbMccvBx8brR/l9ClmDZd9Y6TWsF1rfJpF3+DPeqFkKCiD7PGz3bs4O/Zd
-ZrfV21ZNVusBW49G6bU63gQVKsOf1qGo3efbAW1HVxgTQ/lExVdcMvdenZm+ADKp
-L4/wUQKBgQDOfBjn3OC2IerUFu18EgCS7pSjTSibXw+TeX3D5zwszLC091G2rGlT
-5DihBUhMfesNdpoZynrs4YB6Sz9C3wSGAB8AM/tNvPhtSVtbMHmrdT2DEEKCvLkO
-RNBnt+8aTu2hGRanw9aL1189gzwrmXK5ZuuURfgLrB9ihrvjo4VznQKBgQCapx13
-dEA1MwapBiIa3k8hVBCoGPsEPWqM33RBdUqUsP33f9/PCx00j/akwmjgQNnBlAJo
-Y7LOqPCyiwOkEf40T4IlHdzYntWQQvHhfBwqSgdkTE9tKj43Ddr7JVFRL6yMSbW3
-9qAp5UX/+VzOLGAlfzJ8CBnkXwGrnKPCVbnZvQKBgQCd+iof80jlcCu3GteVrjxM
-LkcAbb8cqG1FWpVTNe4/JFgqDHKzPVPUgG6nG2CGTWxxv4UFKHpGE/11E28SHYjb
-cOpHAH5LqsGy84X2za649JkcVmtclUFMXm/Ietxvl2WNdKF1t4rFMQFIEckOXnd8
-y/Z/Wcz+OTFF82l7L5ehrQKBgFXl9m7v6e3ijpN5LZ5A1jDL0Yicf2fmePUP9DGb
-ZTZbbGR46SXFpY4ZXEQ9GyVbv9dOT1wN7DXvDeoNXpNVzxzdAIt/H7hN2I8NL+4v
-EjHG9n4WCJO4v9+yWWvfWWA/m5Y8JqusV1+N0iiQJ6T4btrE4JSVp1P6FSJtmWOK
-W/T9AoGAcMhPMCL+N+AvWcYt4Y4mhelvDG8e/Jj4U+lwS3g7YmuQuYx7h5tjrS33
-w4o20g/3XudPMJHhA3z+d8b3GaVM3ZtcRM3+Rvk+zSOcGSwn3yDy4NYlv9bdUj/4
-H+aU1Qu1ZYojFM1Gmbe4HeYDOzRsJ5BhNrrV12h27JWkiRJ4F/Q=
------END RSA PRIVATE KEY-----
-
-#### 2. 安装navicat
-
-#### 3.替换公钥
-
-在finder中，右键navicat ,打开目录 /Contents/Resources，编辑rpk文件，用第一步的公钥替换并保存。
-
-#### 4.断网
-
-#### 5.输入注册码
-
-打开navicat, 根据navicat输入以下序列号：
-
-中文版64位密钥序列号： NAVH-T4PX-WT8W-QBL5
-
-英文版64位密钥序列号： NAVG-UJ8Z-EVAP-JAUW
-
-如果出现，下面的两行文字，和右边的 对号，那么恭喜你，可以继续往下进行了。如果右边是黑色的叉号,那么请从第一步再来一遍。
-
-#### 6.手动激活
-
-断网之后，需要点击手动激活
-
-#### 7.结合请求码解密
-
-打开网络，复制请求码，登录这个网址   http://tool.chacuo.net/cryptrsaprikey  ， 填上第一步的私钥，填上请求码，点击RSA私钥解密。
-请注意：如果没出现请求码明文可能是  1：网络问题，请多试几次
-2：请检查第三部rpk文件是否替换成功！
-
-#### 8.加密
-
-将请求码明文中的 K和DI的值替换到下面对应的地方，
-
-{"K":"NAVHT4PXWT8WQBL5", "N":"52pojie", "O":"52pojie.cn", "DI":"ODQ2Yjg2ZDBjMTEzMjhh", "T":1516939200}
-
-再登录  https://unixtime.51240.com/
-调整到现在的时间，并把Unix时间戳替换到上面的T后面
-将替换好的文本，放入第二个框中，点击RSA加密，得到加密后的文本
-
-#### 9.激活
-
-将上一步加密的文本放置到激活码中，点击激活即可
-
-
-
-### 安装oh my zsh(待整理)
-
-```bash
-### check you have zsh
-
-cat /etc/shells
-
-# if you have not, I suggest you have a try
-
-### install the zsh
-
-### centos install
-sudo yum -y install zsh
-
-### ubuntu install
-
-sudo apt-get -y install zsh
-
-
-# and you can check you have zsh when you have execute above
-
-
-## change your default shell to zsh
-
-chsh -s /bin/zsh
-
-## install enhance setting - oh my zsh!
-
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-
-## index back
-
-# if you have install miniconda or conda and so on (like some setting in ~/.bashrc), it can be not work, you should copy this setting to ~/.zshrc, and use the script
-
-source ~/.zshrc
-```
-
-
-
-
-
 ### homebrew
-
-
 
 
 
 ## tomcat配置域名服务器
 
-
-
 最近做了个网站，用的是web'服务器是tomcat，框架式SpringMVC，功能做好后，就准备上线使用了，手上已经有域名以及一台服务器，已经绑定好ip了，剩下的也就是配置
 
 Tomcat了，比较简单，但是自己记录下防止遗忘了，
-
-
 
 首先，访问服务器时默认的是80端口，这个好改，tomcat中的server.xml文件直接修改，这里要说明的是如果一个服务器上有多个tomcat的话，修改端口需要注意的是要修改
 

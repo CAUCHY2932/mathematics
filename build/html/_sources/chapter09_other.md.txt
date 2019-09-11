@@ -275,7 +275,7 @@ https://cloudconvert.com/md-to-rst
 
 ## 理解开发流程
 
-![图片](https://dn-coding-net-production-pp.codehub.cn/2778bdc2-9827-4f10-8abd-da4d71c3ab4e.png)
+![branches](branches.png)
 
 腾讯云开发者平台的开发流程是基于 Git 分支的。通过 Git 分支，多个开发者可以同时进行各自的任务开发，互不干扰。等开发完成再通过我们的合并请求（MR）及其评审机制，将代码合并至主线，不断迭代。
 
@@ -313,17 +313,27 @@ https://cloudconvert.com/md-to-rst
 
 在代码评审时，如果对代码有疑问可以直接评论。
 
-![图片](https://dn-coding-net-production-pp.codehub.cn/bd3fc453-47d4-4784-9603-514a27a6b17a.png)
+![merge_request](merge_request.png)
+
+
 
 如果评审者觉得没有问题，就可以点击“允许合并”（对这个 MR 进行 +1 ）。等所有评审者都允许合并之后，MR 发起者就可以合并分支了。
 
-![图片](https://dn-coding-net-production-pp.codehub.cn/908adeb8-9126-45d8-84e9-a150f7641af7.png)
+
+
+![merge_ack](merge_ack.png)
+
+
 
 ### 版本发布
 
 当完成一个里程碑的所有任务开发之后，我们可以在某个节点将此时的默认分支标记为一个版本，并发布这个版本。
 
-![图片](https://dn-coding-net-production-pp.codehub.cn/cf537bab-0a88-4960-9e91-8afdfc41e4fa.png)
+
+
+![release](release.png)
+
+
 
 ### 体验一下整个流程
 
