@@ -70,6 +70,18 @@ deb https://mirrors.ustc.edu.cn/ubuntu/ cosmic-proposed main restricted universe
 deb-src https://mirrors.ustc.edu.cn/ubuntu/ cosmic-proposed main restricted universe multiverse
 ```
 
+
+
+更换之后，更新源
+
+```bash
+sudo apt-get update
+```
+
+
+
+
+
 ### 安装mysql
 
 > https://blog.csdn.net/weixx3/article/details/80782479
