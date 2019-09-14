@@ -108,6 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_manage.html">管理学定律</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter15_code_review.html">code review</a></li>
 </ul>
 
             
@@ -385,10 +386,12 @@
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#id53">flask（董伟明）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#django">django(胡阳)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#id54">flask项目代码结构的建议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter01_python.html#flaskrestful">flask项目中restful</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="chapter02_data_science.html#id2">数理基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter02_data_science.html#focusbi">focusbi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter02_data_science.html#sql">数据库之sql</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#id3">sql基础语法</a></li>
 </ul>
@@ -428,6 +431,7 @@
 <li class="toctree-l4"><a class="reference internal" href="chapter02_data_science.html#id12">PostgreSQL</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#pg">pg存储过程</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter02_data_science.html#id13">PostgreSQL安装与卸载</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="chapter02_data_science.html#id14">官网安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="chapter02_data_science.html#homebrew">homebrew安装</a></li>
@@ -956,96 +960,90 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter11_chat.html">随便聊聊</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#code-review">code review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id2">一、流程和规则</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id3">二、执行</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id4">三、收获</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id5">四、总结</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id2">语言特性</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id3">不要纠结于工具，语言特性远远比这个重要</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id4">做比较，找异性和共性</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id6">语言特性</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id7">不要纠结于工具，语言特性远远比这个重要</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id8">做比较，找异性和共性</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id9">理科生的悲哀</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id5">理科生的悲哀</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#requests">requests的参数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id10">输出多就好吗？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id11">如何理解和避免信息不对称</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id12">影视目录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id13">互联网职位</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id14">一：技术类职位：</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id15">二：设计类职位：</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id16">三：运营类职位。</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id17">四：市场销售类职位 和运营一样，增长潜力很大。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id6">输出多就好吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id7">如何理解和避免信息不对称</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id8">影视目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id9">互联网职位招聘</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id10">一：技术类职位：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id11">二：设计类职位：</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id12">三：运营类职位。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id13">四：市场销售类职位 和运营一样，增长潜力很大。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id14">数据分析招聘</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id18">关于写作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id19">数据分析招聘</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id20">三大纪律，八项注意</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id15">关于写作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id16">三大纪律，八项注意</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#tree">tree 命令乱码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id21">自私才是人类进步的阶梯</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id22">费曼学习英文版</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id23">面试技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id17">自私才是人类进步的阶梯</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id18">费曼学习英文版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id19">面试技巧</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#sap">怎么在中国杀死SAP</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id24">一、SAP的起步与成长</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id25">二、SAP在中国</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id26">三、SAP是管理软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id27">四、SAP产品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id28">五、SAP技术换代</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id29">六、SAP模式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id30">一、SAP生态在中国的变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id31">二、SAP在中国的客户的变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id32">三、SAP在产品上的中国变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id33">四、SAP在技术上的中国变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id34">五、SAP在模式上的中国变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id20">一、SAP的起步与成长</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id21">二、SAP在中国</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id22">三、SAP是管理软件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id23">四、SAP产品</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id24">五、SAP技术换代</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id25">六、SAP模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id26">一、SAP生态在中国的变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id27">二、SAP在中国的客户的变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id28">三、SAP在产品上的中国变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id29">四、SAP在技术上的中国变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id30">五、SAP在模式上的中国变化</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#https-www-jianshu-com-p-7c4bc58b9283">https://www.jianshu.com/p/7c4bc58b9283</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id35">如何阅读一本书</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id36">需求分析</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id37">腾讯开发岗</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id38">学会提问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id39">智慧茅台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id40">我们逻辑无法理清事情本质时，在思考什么？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id41">金融学</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id42">爬虫思路</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id43">周孝正</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id44">不再犹豫</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id45">工作继续</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id46">接下来</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id47">关于程序和算法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id48">历史影视</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id49">一万小时理论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id50">问题导向法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id51">自控力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id52">费曼学习法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id53">六顶思考帽</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id54">驱动法则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id55">任务驱动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id56">问题驱动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id57">兴趣驱动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id58">需求驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id31">如何阅读一本书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id32">需求分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id33">腾讯开发岗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id34">学会提问</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id35">智慧茅台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id36">我们逻辑无法理清事情本质时，在思考什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id37">金融学</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id38">爬虫思路</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id39">周孝正</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id40">工作所感</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id41">不再犹豫</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id42">工作继续</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id59">墨菲定律</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id60">思维方式</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id61">爬虫技术栈</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id62">静态网页和动态网页的区别</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id63">学会提问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id64">编程学习的感悟</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id65">如何阅读一本书</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id66">辩证逻辑和形式逻辑</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id67">康奈尔笔记法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id43">关于程序和算法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id44">历史影视</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id45">一万小时理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id46">问题导向法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id47">自控力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id48">费曼学习法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id49">六顶思考帽</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id50">驱动法则</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id51">任务驱动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id52">问题驱动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id53">兴趣驱动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id54">需求驱动</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id68">战术勤奋掩饰战略懒惰</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id69">军事天才</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id70">规范部署流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id55">墨菲定律</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id56">思维方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id57">爬虫技术栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id58">静态网页和动态网页的区别</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id59">学会提问</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id60">编程学习的感悟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id61">如何阅读一本书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id62">辩证逻辑和形式逻辑</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id63">康奈尔笔记法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id64">战术勤奋掩饰战略懒惰</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id65">军事天才</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id66">规范部署流程</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#efi">删除efi分区</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#nltk">nltk</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#snooper">snooper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id71">压缩格式的区别</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id67">压缩格式的区别</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#gz">gz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#tgz">tgz</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#tbz">tbz</a></li>
@@ -1054,27 +1052,30 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#jsurl">js访问某个url</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#tomcatapache">tomcat和apache的区别和联系</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id72">覆盖测试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id73">软件测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id68">覆盖测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id69">软件测试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#python">python字符编码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#numpy">numpy中的维度、轴、秩</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id74">主流价值观</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id75">主流价值观就一定好吗?我们应该追逐吗？</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id76">主流价值观有可取之处吗？我们需要摒弃哪些呢？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id70">主流价值观</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id71">主流价值观就一定好吗?我们应该追逐吗？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#id72">主流价值观有可取之处吗？我们需要摒弃哪些呢？</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id77">踢猫效应</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id78">帕累托最优</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id79">蓝绿部署</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id80">十大悖论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id81">16个让你烧脑让你晕的悖论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id73">踢猫效应</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id74">帕累托最优</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id75">蓝绿部署</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id76">十大悖论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id77">16个让你烧脑让你晕的悖论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#curl">使用curl命令</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#datetimetime">datetime和time</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#time">time</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chapter11_chat.html#datetime">datetime</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id82">curl下载图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#id78">curl下载图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#wiki">搭建自己的wiki知识系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#python23">python2到3的迁移</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter11_chat.html#jwt">jwt</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a><ul>
@@ -1590,6 +1591,28 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter15_code_review.html">code review</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="chapter15_code_review.html#code-review1">code review1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id1">一、流程和规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id2">二、执行</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id3">三、收获</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id4">四、总结</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chapter15_code_review.html#code-review2">code review2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter15_code_review.html#codereview">如何进行CodeReview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#review">本地Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id5">远端Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id6">团队协作时的CodeReview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter15_code_review.html#id7">关于CodeReview的一些原则</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="chapter15_code_review.html#id8">架构/设计/常规</a></li>
+<li class="toctree-l4"><a class="reference internal" href="chapter15_code_review.html#id19">代码风格</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>

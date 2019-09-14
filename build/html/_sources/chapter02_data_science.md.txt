@@ -1,6 +1,11 @@
 # 数据科学
 
 ## 数理基础
+
+## focusbi
+
+
+
 ## 数据库之sql
 
 ### sql基础语法
@@ -248,6 +253,17 @@ Decimal，numeric，int等都为sql,db2等数据库的数据类型，Oracle为�
 是PostgreSQL数据库的图形化管理工具。
 
 
+
+### pg存储过程
+
+```sql
+create procedure proc_11() as
+$$
+begin
+    select * from sync_sap.standard_org_pos;
+end
+$$ language plpgsql;
+```
 
 
 
@@ -981,7 +997,9 @@ DataTalk 系列的文章结构一般分为三部分：
 
 ​	要解决这样一个两难问题，首先要迅速而简洁地定义整个企业DW/BI系统的数据架构。在初期的项目群层需求收集过程中，最终生成一个企业数据仓库总线矩阵。矩阵的每一行都对应机构中的一个业务过程，每一列都和一个业务维度相对应。
 
-![数据仓库总线](pages_html/s02_%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD/images/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%80%BB%E7%BA%BF.jpg)
+数据仓库总线
+
+
 
 ​	企业数据仓库总线矩阵是DW/BI系统的一个总体数据架构。矩阵给出了系统全貌的透视图，并不考虑数据库和技术参数，但是合理地识别了易于管理的开发工作。每个业务过程的实现都对整个架构进行了增量扩展。
 

@@ -194,6 +194,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id53">flask（董伟明）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#django">django(胡阳)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id54">flask项目代码结构的建议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flaskrestful">flask项目中restful</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
@@ -209,6 +210,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_manage.html">管理学定律</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter15_code_review.html">code review</a></li>
 </ul>
 
             
@@ -866,6 +868,11 @@ libs 自定义帮助函数库文件夹</p>
 <h2>flask项目代码结构的建议<a class="headerlink" href="#id54" title="Permalink to this headline">¶</a></h2>
 <p>https://lepture.com/en/2018/structure-of-a-flask-project</p>
 <p>http://charlesleifer.com/blog/structuring-flask-apps-a-how-to-for-those-coming-from-django/</p>
+</div>
+<div class="section" id="flaskrestful">
+<h2>flask项目中restful<a class="headerlink" href="#flaskrestful" title="Permalink to this headline">¶</a></h2>
+<p>如果你要用RESTful来实现鉴权，应当使用BasicAuth，或者类似OAuth等Token式的鉴权，进而抛弃session表示。</p>
+<p>毕竟RESTful着重强调无状态。</p>
 </div>
 </div>
 

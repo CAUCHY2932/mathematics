@@ -98,6 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">数据科学</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">数理基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#focusbi">focusbi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sql">数据库之sql</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">sql基础语法</a></li>
 </ul>
@@ -137,6 +138,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#id12">PostgreSQL</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#pg">pg存储过程</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id13">PostgreSQL安装与卸载</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id14">官网安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#homebrew">homebrew安装</a></li>
@@ -246,6 +248,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter13_manage.html">管理学定律</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter14_astronomy.html">天文学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter15_code_review.html">code review</a></li>
 </ul>
 
             
@@ -314,6 +317,9 @@
 <h1>数据科学<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>数理基础<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="focusbi">
+<h2>focusbi<a class="headerlink" href="#focusbi" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="sql">
 <h2>数据库之sql<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h2>
@@ -516,6 +522,17 @@
 <h5>pgAdmin<a class="headerlink" href="#pgadmin" title="Permalink to this headline">¶</a></h5>
 <p>是PostgreSQL数据库的图形化管理工具。</p>
 </div>
+</div>
+</div>
+<div class="section" id="pg">
+<h3>pg存储过程<a class="headerlink" href="#pg" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>create procedure proc_11() as
+$$
+begin
+    select * from sync_sap.standard_org_pos;
+end
+$$ language plpgsql;
+</pre></div>
 </div>
 </div>
 <div class="section" id="id13">
@@ -995,7 +1012,7 @@ pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地
 <div class="section" id="id40">
 <h3>如果一次性创建数据仓库过于困难，需要将整个目标划分为若干独立小块予以实现，那么应该做哪些工作？<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h3>
 <p>​	要解决这样一个两难问题，首先要迅速而简洁地定义整个企业DW/BI系统的数据架构。在初期的项目群层需求收集过程中，最终生成一个企业数据仓库总线矩阵。矩阵的每一行都对应机构中的一个业务过程，每一列都和一个业务维度相对应。</p>
-<p><img alt="pages_html/s02_%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD/images/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%80%BB%E7%BA%BF.jpg" src="pages_html/s02_%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD/images/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E6%80%BB%E7%BA%BF.jpg" />数据仓库总线</p>
+<p>数据仓库总线</p>
 <p>​	企业数据仓库总线矩阵是DW/BI系统的一个总体数据架构。矩阵给出了系统全貌的透视图，并不考虑数据库和技术参数，但是合理地识别了易于管理的开发工作。每个业务过程的实现都对整个架构进行了增量扩展。</p>
 <p>​	通过总线矩阵开发数据架构是一种理性的方法，可以将企业数据仓库设计过程中那些令人生畏的工作分解开来。总线矩阵确立了一个架构框架，指导总体设计，在此基础上可以将整个问题分割为很多便于实现的小块。应该迭代地建立一个集成的企业数据仓库，一个业务过程一个业务过程地进行，并使用一组共享的一致性维度来确保实现系统的综合集成。这些一致性维度在整个企业范围内有统一的解释。最后，整个企业数据仓库就呈现出：一个强大的基于一致性维度的架构将一组业务过程紧密联系到一起就形成了企业数据仓库。</p>
 <p>​	一致性维度是企业数据仓库的总线，通过为DW/BI环境提供一个标准的总线接口，可以将新的业务过程引入数据仓库，该业务过程从总线获得动力，并且和其他已经存在的业务过程和谐共存。</p>

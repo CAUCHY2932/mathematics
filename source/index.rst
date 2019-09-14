@@ -27,6 +27,7 @@
    chapter12_concept.md
    chapter13_manage.md
    chapter14_astronomy.md
+   chapter15_code_review.md
    
 
 Indices and tables
