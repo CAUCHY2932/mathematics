@@ -249,6 +249,17 @@ Decimal，numeric，int等都为sql,db2等数据库的数据类型，Oracle为�
 
 
 
+### pg存储过程
+
+```sql
+create procedure proc_11() as
+$$
+begin
+    select * from sync_sap.standard_org_pos;
+end
+$$ language plpgsql;
+```
+
 
 
 ### PostgreSQL安装与卸载

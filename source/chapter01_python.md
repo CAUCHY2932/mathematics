@@ -619,3 +619,4 @@ http://charlesleifer.com/blog/structuring-flask-apps-a-how-to-for-those-coming-f
 如果你要用RESTful来实现鉴权，应当使用BasicAuth，或者类似OAuth等Token式的鉴权，进而抛弃session表示。
 
 毕竟RESTful着重强调无状态。
+
