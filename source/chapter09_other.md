@@ -341,7 +341,7 @@ https://cloudconvert.com/md-to-rst
 
 点击[这里](/u/dtid_9e65f14616561408/p/dev-demo/git/branches)前往查看 `new feature` 分支。
 
-## gitbook
+## gitbook(不推荐)
 
 本地安装gitbook需要nodejs，目前安装gitbook最方便的方式就是通过npm安装
 

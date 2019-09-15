@@ -54,8 +54,6 @@ sudo add-apt-repository --remove ppa:jonathonf/vim
 
 在~/.bashrc中添加一个别名即可python实现python3
 
-
-
 ```bash
 sudo vim ~/.bashrc
 
