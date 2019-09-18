@@ -2931,3 +2931,37 @@ os os.path都是老旧的用法，而pathlib是更为高级的用法
 | [`os.path.samefile()`](https://docs.python.org/3/library/os.path.html#os.path.samefile) | [`Path.samefile()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.samefile) |
 | [`os.path.splitext()`](https://docs.python.org/3/library/os.path.html#os.path.splitext) | [`PurePath.suffix`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffix) |
 
+## 需要学习的文档
+
+- requests
+
+- flask
+
+- web.py
+
+## git ignore
+
+当我们之前执行过`git add -A`命令之后，所有的文件都会被跟踪，之后加入ignore文件之后发现依然会跟踪更改，这对我们的编程会产生很大影响
+
+### 原因
+
+.idea已经被git跟踪，之后再加入.gitignore后是没有作用的
+
+### 解决办法
+
+清除.idea的git缓存
+
+```bash
+git rm -r --cached .idea
+```
+
+之后在`.gitignore`中添加.idea
+
+## unrelated-histories
+
+```
+git pull origin master --allow-unrelated-histories
+```
+
+
+
