@@ -1,12 +1,6 @@
 # bi
 
-
-
-
-
 ## superset
-
-
 
 
 ### superset执行命令
@@ -21,11 +15,7 @@ docker exec -it bi superset-init # bi替换为id或是容器名，初始化super
 docker exec -it bi superset load_examples # 载入示例数据（可选）
 ```
 
-
-
 ## github docker介绍
-
-
 
 ### Issues
 
@@ -90,10 +80,6 @@ docker exec superset-new superset db upgrade
 # Sync the base permissions
 docker exec superset-new superset init
 ```
-
-
-
-
 
 ##  linux上利用docker安装superset
 

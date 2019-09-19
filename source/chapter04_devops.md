@@ -130,7 +130,6 @@ docker exec -it bi superset load_examples # 载入示例数据（可选）
 
 ```bash
 sudo apt install openssh-server
-
 ```
 
 ### 安装jdk
@@ -138,10 +137,6 @@ sudo apt install openssh-server
 ```bash
 sudo apt install openjdk-8-jdk-headless
 ```
-
-
-
-
 
 ### 更改root密码
 
@@ -169,53 +164,84 @@ sudo passwd root
 
 
 
-## vim 
+## vim
+
+简单即是有效，如无必要，勿增实体。
 
 ### 常用设置
 
 ```bash
-## edit the vimrc file
 
-$ vim ~/.vimrc
-## set the file
+vim ~/.vimrc
+# 另外，Python编程是靠缩进来规定语法的，当你使用vim写python时，要注意tab与空格的区别。一般我们写Python都是以4个空格表缩进标准的，所以在代码中不要把空格与tab混用（两者ASCII码是不同的），要不一直用空格，要不就一直用tab，不然会导致程序报错。推荐把vim的tab变为4个空格，增加编程效率。
 
-set ts=4
 set expandtab
 set autoindent
 set number
-
-# 另外，Python编程是靠缩进来规定语法的，当你使用vim写python时，要注意tab与空格的区别。一般我们写Python都是以4个空格表缩进标准的，所以在代码中不要把空格与tab混用（两者ASCII码是不同的），要不一直用空格，要不就一直用tab，不然会导致程序报错。推荐把vim的tab变为4个空格，增加编程效率。
+set encoding=utf-8
 
 # 设置Tab键的宽度[等同的空格个数]
 set tabstop=4
+
 # 每一次缩进对应的空格数
 set shiftwidth=4
+
 # 按退格键时可以一次删掉4个空格
 set softtabstop=4
 
+set expandtab
+
+# 继承空格
+set autoindent
+
+# mac配置
+set number
+set ts=4
+set expandtab
+set autoindent
+set softtabstop=4
+set shiftwidth=4
+syntax on
 ```
 
 ### 常用操作
 
+#### 打开一个文件
+
+`vim a.py`，如果`a.py`不存在，则会新建，否则会编辑修改
+
+#### 保存
+
+在文件编辑界面，保证英文状态
 
 
 #### 复制
 
+`y`复制一行
 
+`2yy`复制2行，`nyy`复制n行，也可在可视化模式下选中之后进行操作
+
+按下`esc`后，使用`"+y`复制到系统寄存器
 
 #### 粘贴
 
+`p`粘贴
 
-
-
-
-
-
+按下`esc`后，使用`"+p` 粘贴到vim
 
 
 #### 删除
 
+`d`删除一行
 
+`2dd`删除2行，`ndd`删除n行
+
+
+#### 撤销
+
+`u`撤销操作
+
+#### 选择
 
 
 
@@ -245,32 +271,14 @@ $ 代表一行的结尾处
 
 ```bash
 # 在root用户家目录下的.vimrc中设置，对所有用户生效
-# 如何与外界剪贴板进行交互
-
-# 在按下esc后
-"+y 复制到系统寄存器
-"+p 粘贴到vim
 
 # 查看当前寄存器的内容
-
 :reg
 
 # 安装vim
-
 rpm -qa|grep vim
 yum -y install vim*
 
-# 复制
-
-n+yy
-复制n行
-块选择模式，选中然后y复制
-
-# 粘贴
-
-# 删除
-
-n+dd
 # 删除连当前行的n行
 # 可视化选择模式，选中然后按d删除
 
@@ -286,7 +294,6 @@ A
 # 保存和退出
 
 # 撤销
-
 
 # vi/vim 中如何在每行行首或行尾插入指定字符串
 行首 :%s/^/your_word/
@@ -781,18 +788,14 @@ directory： $FileDir $
 ```
 ### mac配置pip
 ```bash
-
-
 ## python mac配置pip
-
 mkdir ~/.pip
-
 vim ~/.pip/pip.conf
+## 粘贴以下内容
 [global]
 index-url=http://mirrors.aliyun.com/pypi/simple/
 [install]
 trusted-host=mirrors.aliyun.com
-
 ```
 
 ### python pylint
@@ -1964,6 +1967,8 @@ source /etc/profile
 ## tuna服务
 
 一键设置清华大学源
+
+会更改brew的配置
 
 https://tuna.moe/oh-my-tuna/
 
