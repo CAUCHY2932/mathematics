@@ -301,75 +301,9 @@ data与json既可以是str类型，也可以是dict类型。
 
 九五至尊           
 
-《东周列国春秋篇》      
-
-《越王勾践》         
-
-《卧薪尝胆》         
-
-《东周列国战国篇》      
-
-《秦始皇》          
-
-《大汉风》          
-
-《汉武大帝》         
-
-《汉光武大帝》        
-
-《三国演义》         
-
-《开创盛世》         
-
-《贞观之治》         
-
-《贞观长歌》         
-
-《武则天》          
-
-《无字碑歌》         
-
-《唐明皇》          
-
-《大宋提刑官》        
-
-《成吉思汗》         
-
-《传奇皇帝朱元璋》      
-
-《朱元璋》          
-
-《大明天子》         
-
 《大明王朝1499》     
 
 《大明王朝1566》     
-
-《江山风雨情》        
-
-《清宫风云》         
-
-《努尔哈赤》         
-
-《少年天子顺治篇》      
-
-《康熙大帝》（1993年版） 
-
-《康熙王朝》         
-
-《雍正皇帝》（刘信义版） 
-
-《雍正王朝》         
-
-《乾隆王朝》         
-
-《嘉庆皇帝》         
-
-《太平天国》         
-
-《走向共和》         
-
-《末代皇帝》        
 
 
 ## 互联网职位招聘
@@ -2867,11 +2801,7 @@ sphinx不够美观，无法完全支持markdown
 
 分布式系统专用，是未来趋势。
 
-
-
 JSON Web Token（JWT）是目前最流行的跨域身份验证解决方案。虫虫今天给大家介绍JWT的原理和用法。
-
-
 
 1.跨域身份验证
 
@@ -2893,3 +2823,71 @@ Internet服务无法与用户身份验证分开。一般过程如下。
 
 例如虫虫举一个实际中常见的单点登陆的需求：站点A和站点B提供同一公司的相关服务。现在要求用户只需要登录其中一个网站，然后它就会自动登录到另一个网站。怎么做？
 
+## python的文件相关操作
+
+os os.path都是老旧的用法，而pathlib是更为高级的用法
+
+| os and os.path                                               | pathlib                                                      |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [`os.path.abspath()`](https://docs.python.org/3/library/os.path.html#os.path.abspath) | [`Path.resolve()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve) |
+| [`os.chmod()`](https://docs.python.org/3/library/os.html#os.chmod) | [`Path.chmod()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.chmod) |
+| [`os.mkdir()`](https://docs.python.org/3/library/os.html#os.mkdir) | [`Path.mkdir()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.mkdir) |
+| [`os.rename()`](https://docs.python.org/3/library/os.html#os.rename) | [`Path.rename()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.rename) |
+| [`os.replace()`](https://docs.python.org/3/library/os.html#os.replace) | [`Path.replace()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.replace) |
+| [`os.rmdir()`](https://docs.python.org/3/library/os.html#os.rmdir) | [`Path.rmdir()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.rmdir) |
+| [`os.remove()`](https://docs.python.org/3/library/os.html#os.remove), [`os.unlink()`](https://docs.python.org/3/library/os.html#os.unlink) | [`Path.unlink()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.unlink) |
+| [`os.getcwd()`](https://docs.python.org/3/library/os.html#os.getcwd) | [`Path.cwd()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.cwd) |
+| [`os.path.exists()`](https://docs.python.org/3/library/os.path.html#os.path.exists) | [`Path.exists()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists) |
+| [`os.path.expanduser()`](https://docs.python.org/3/library/os.path.html#os.path.expanduser) | [`Path.expanduser()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.expanduser) and [`Path.home()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.home) |
+| [`os.path.isdir()`](https://docs.python.org/3/library/os.path.html#os.path.isdir) | [`Path.is_dir()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_dir) |
+| [`os.path.isfile()`](https://docs.python.org/3/library/os.path.html#os.path.isfile) | [`Path.is_file()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_file) |
+| [`os.path.islink()`](https://docs.python.org/3/library/os.path.html#os.path.islink) | [`Path.is_symlink()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_symlink) |
+| [`os.stat()`](https://docs.python.org/3/library/os.html#os.stat) | [`Path.stat()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.stat), [`Path.owner()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.owner), [`Path.group()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.group) |
+| [`os.path.isabs()`](https://docs.python.org/3/library/os.path.html#os.path.isabs) | [`PurePath.is_absolute()`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_absolute) |
+| [`os.path.join()`](https://docs.python.org/3/library/os.path.html#os.path.join) | [`PurePath.joinpath()`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.joinpath) |
+| [`os.path.basename()`](https://docs.python.org/3/library/os.path.html#os.path.basename) | [`PurePath.name`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.name) |
+| [`os.path.dirname()`](https://docs.python.org/3/library/os.path.html#os.path.dirname) | [`PurePath.parent`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parent) |
+| [`os.path.samefile()`](https://docs.python.org/3/library/os.path.html#os.path.samefile) | [`Path.samefile()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.samefile) |
+| [`os.path.splitext()`](https://docs.python.org/3/library/os.path.html#os.path.splitext) | [`PurePath.suffix`](https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffix) |
+
+## 需要学习的文档
+
+- requests
+
+- flask
+
+- web.py
+
+## 先验、后验、超验
+
+人的认识能力，必伴随着种种不同的经验，经验的累积是知识的基石。经验的方式又包括阅读与现实体验，但对于所经验的状态又分为三种：超验、先验、后验。
+
+后验就是必须体验后才知道的，例如这杯水热不热。超验就是超出体验之外的，一般人无法共同体验到以形成普遍共通经验，如神、鬼的存在，梦境。先验是先于经验就能知道的，如逻辑或一般已经验过后的知识常识，如1+1=2，人都会死。但这三种区分并非表示人类的经验活动完全是区别开来的，我们很可能在同一活动中交杂着三种经验方式。而这种特别经验往往会出现在艺术的创作与审美活动中。
+
+面对一篇诗作、音乐、小说、电影、绘画等作品，我们必须先看过听过才知道，而我们对这件作品的感受与联想，却是超验的心灵活动，然而对于一些已具备艺术史与艺术哲学知识的人来说，这个人对于这件作品的认识，有部分已是先验层面的了。
+
+超验活动可说是一种主观真实，即使有不同的人宣称他们个别经验了共同的超验活动，如听到神的声音，但仍然难以由第三人检验他们是否听到了同样的声音，因此超验所宣称的真实，是主观的，信者恒真。
+
+
+
+先验的真理则是藉由经验或逻辑论证所形成建立起来的，但事实上也往往在后来的新发现或知识的进步而改变先验的认知。先验的事物常以貌似真理的情形出现，这是因为人的活动力有限，感官能力有限，还有工具媒介的影响，以及道德伦理的因素，例如社会学家并不能为了了解人的心智发展能力，于是把一个婴儿丢到荒岛去观察；心理学家也不能因为想了解脑细胞与心灵活动的关系，就把人脑剖开测试分析，只是透过种种仪器与取代的方式去测试实验。
+
+而康德的《纯粹理性批判》、《实践理性批判》、《判断力批判》，就是为了从逻辑推论的方式，确立知识的先验原则，为思维的能力划定范畴。因此他的三大批判不是透过后验的科学实验，而是为我们的思维区分与统整出结构与方法。
+
+后验的方式乍看之下最为真实可靠，其实不然。因为人的感官能力是不足的，常会受到遮蔽，受到视觉与听觉的欺骗，假如人的知识一切都要透过后验而来，那么人所知的将会非常的有限，而且往往只能知其然而不知其所以然。
+
+## devops
+
+DevOps（Development和Operations的组合词）是一组过程、方法与系统的统称，用于促进开发（应用程序/软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合。
+
+它是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。
+
+它的出现是由于软件行业日益清晰地认识到：为了按时交付软件产品和服务，开发和运维工作必须紧密合作。
+
+
+
+![img](./devops/devops.png)
+
+开发即是运维，运维即是开发
+
+运营（运维），开发，质保（测试）三者尽力相辅相成，CI/CD，容器化部署等。

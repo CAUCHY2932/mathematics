@@ -93,8 +93,6 @@
               <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AB-线性代数.html">线性代数</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BB-数据结构.html">数据结构</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
@@ -222,6 +220,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#wiki">搭建自己的wiki知识系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python23">python2到3的迁移</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jwt">jwt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id79">python的文件相关操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id80">需要学习的文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id81">先验、后验、超验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#devops">devops</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
@@ -456,41 +458,8 @@
 <p>大时代</p>
 <p>创世纪</p>
 <p>九五至尊</p>
-<p>《东周列国春秋篇》</p>
-<p>《越王勾践》</p>
-<p>《卧薪尝胆》</p>
-<p>《东周列国战国篇》</p>
-<p>《秦始皇》</p>
-<p>《大汉风》</p>
-<p>《汉武大帝》</p>
-<p>《汉光武大帝》</p>
-<p>《三国演义》</p>
-<p>《开创盛世》</p>
-<p>《贞观之治》</p>
-<p>《贞观长歌》</p>
-<p>《武则天》</p>
-<p>《无字碑歌》</p>
-<p>《唐明皇》</p>
-<p>《大宋提刑官》</p>
-<p>《成吉思汗》</p>
-<p>《传奇皇帝朱元璋》</p>
-<p>《朱元璋》</p>
-<p>《大明天子》</p>
 <p>《大明王朝1499》</p>
 <p>《大明王朝1566》</p>
-<p>《江山风雨情》</p>
-<p>《清宫风云》</p>
-<p>《努尔哈赤》</p>
-<p>《少年天子顺治篇》</p>
-<p>《康熙大帝》（1993年版）</p>
-<p>《康熙王朝》</p>
-<p>《雍正皇帝》（刘信义版）</p>
-<p>《雍正王朝》</p>
-<p>《乾隆王朝》</p>
-<p>《嘉庆皇帝》</p>
-<p>《太平天国》</p>
-<p>《走向共和》</p>
-<p>《末代皇帝》</p>
 </div>
 <div class="section" id="id9">
 <h2>互联网职位招聘<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
@@ -2294,6 +2263,59 @@ dattime.strftime(format) # 按照 format 进行格式化输出</p>
 <p><img alt="_images/jwt1.jpg" src="_images/jwt1.jpg" />jwt1</p>
 <p>这种模式最大的问题是，没有分布式架构，无法支持横向扩展。如果使用一个服务器，该模式完全没有问题。但是，如果它是服务器群集或面向服务的跨域体系结构的话，则需要一个统一的session数据库库来保存会话数据实现共享，这样负载均衡下的每个服务器才可以正确的验证用户身份。</p>
 <p>例如虫虫举一个实际中常见的单点登陆的需求：站点A和站点B提供同一公司的相关服务。现在要求用户只需要登录其中一个网站，然后它就会自动登录到另一个网站。怎么做？</p>
+</div>
+<div class="section" id="id79">
+<h2>python的文件相关操作<a class="headerlink" href="#id79" title="Permalink to this headline">¶</a></h2>
+<p>os os.path都是老旧的用法，而pathlib是更为高级的用法</p>
+<p>| os and os.path                                               | pathlib                                                      |
+| :———————————————————– | :———————————————————– |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.abspath"><code class="docutils literal notranslate"><span class="pre">os.path.abspath()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve"><code class="docutils literal notranslate"><span class="pre">Path.resolve()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.chmod"><code class="docutils literal notranslate"><span class="pre">os.chmod()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.chmod"><code class="docutils literal notranslate"><span class="pre">Path.chmod()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.mkdir"><code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.mkdir"><code class="docutils literal notranslate"><span class="pre">Path.mkdir()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.rename"><code class="docutils literal notranslate"><span class="pre">os.rename()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.rename"><code class="docutils literal notranslate"><span class="pre">Path.rename()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.replace"><code class="docutils literal notranslate"><span class="pre">os.replace()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.replace"><code class="docutils literal notranslate"><span class="pre">Path.replace()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.rmdir"><code class="docutils literal notranslate"><span class="pre">os.rmdir()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.rmdir"><code class="docutils literal notranslate"><span class="pre">Path.rmdir()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.remove"><code class="docutils literal notranslate"><span class="pre">os.remove()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/os.html#os.unlink"><code class="docutils literal notranslate"><span class="pre">os.unlink()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.unlink"><code class="docutils literal notranslate"><span class="pre">Path.unlink()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.getcwd"><code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.cwd"><code class="docutils literal notranslate"><span class="pre">Path.cwd()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.exists"><code class="docutils literal notranslate"><span class="pre">os.path.exists()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.exists"><code class="docutils literal notranslate"><span class="pre">Path.exists()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.expanduser"><code class="docutils literal notranslate"><span class="pre">os.path.expanduser()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.expanduser"><code class="docutils literal notranslate"><span class="pre">Path.expanduser()</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.home"><code class="docutils literal notranslate"><span class="pre">Path.home()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.isdir"><code class="docutils literal notranslate"><span class="pre">os.path.isdir()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_dir"><code class="docutils literal notranslate"><span class="pre">Path.is_dir()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.isfile"><code class="docutils literal notranslate"><span class="pre">os.path.isfile()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_file"><code class="docutils literal notranslate"><span class="pre">Path.is_file()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.islink"><code class="docutils literal notranslate"><span class="pre">os.path.islink()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.is_symlink"><code class="docutils literal notranslate"><span class="pre">Path.is_symlink()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.html#os.stat"><code class="docutils literal notranslate"><span class="pre">os.stat()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.stat"><code class="docutils literal notranslate"><span class="pre">Path.stat()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.owner"><code class="docutils literal notranslate"><span class="pre">Path.owner()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.group"><code class="docutils literal notranslate"><span class="pre">Path.group()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.isabs"><code class="docutils literal notranslate"><span class="pre">os.path.isabs()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.is_absolute"><code class="docutils literal notranslate"><span class="pre">PurePath.is_absolute()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.join"><code class="docutils literal notranslate"><span class="pre">os.path.join()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.joinpath"><code class="docutils literal notranslate"><span class="pre">PurePath.joinpath()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.basename"><code class="docutils literal notranslate"><span class="pre">os.path.basename()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.name"><code class="docutils literal notranslate"><span class="pre">PurePath.name</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.dirname"><code class="docutils literal notranslate"><span class="pre">os.path.dirname()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.parent"><code class="docutils literal notranslate"><span class="pre">PurePath.parent</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.samefile"><code class="docutils literal notranslate"><span class="pre">os.path.samefile()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.samefile"><code class="docutils literal notranslate"><span class="pre">Path.samefile()</span></code></a> |
+| <a class="reference external" href="https://docs.python.org/3/library/os.path.html#os.path.splitext"><code class="docutils literal notranslate"><span class="pre">os.path.splitext()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.suffix"><code class="docutils literal notranslate"><span class="pre">PurePath.suffix</span></code></a> |</p>
+</div>
+<div class="section" id="id80">
+<h2>需要学习的文档<a class="headerlink" href="#id80" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>requests</li>
+<li>flask</li>
+<li>web.py</li>
+</ul>
+</div>
+<div class="section" id="id81">
+<h2>先验、后验、超验<a class="headerlink" href="#id81" title="Permalink to this headline">¶</a></h2>
+<p>人的认识能力，必伴随着种种不同的经验，经验的累积是知识的基石。经验的方式又包括阅读与现实体验，但对于所经验的状态又分为三种：超验、先验、后验。</p>
+<p>后验就是必须体验后才知道的，例如这杯水热不热。超验就是超出体验之外的，一般人无法共同体验到以形成普遍共通经验，如神、鬼的存在，梦境。先验是先于经验就能知道的，如逻辑或一般已经验过后的知识常识，如1+1=2，人都会死。但这三种区分并非表示人类的经验活动完全是区别开来的，我们很可能在同一活动中交杂着三种经验方式。而这种特别经验往往会出现在艺术的创作与审美活动中。</p>
+<p>面对一篇诗作、音乐、小说、电影、绘画等作品，我们必须先看过听过才知道，而我们对这件作品的感受与联想，却是超验的心灵活动，然而对于一些已具备艺术史与艺术哲学知识的人来说，这个人对于这件作品的认识，有部分已是先验层面的了。</p>
+<p>超验活动可说是一种主观真实，即使有不同的人宣称他们个别经验了共同的超验活动，如听到神的声音，但仍然难以由第三人检验他们是否听到了同样的声音，因此超验所宣称的真实，是主观的，信者恒真。</p>
+<p>先验的真理则是藉由经验或逻辑论证所形成建立起来的，但事实上也往往在后来的新发现或知识的进步而改变先验的认知。先验的事物常以貌似真理的情形出现，这是因为人的活动力有限，感官能力有限，还有工具媒介的影响，以及道德伦理的因素，例如社会学家并不能为了了解人的心智发展能力，于是把一个婴儿丢到荒岛去观察；心理学家也不能因为想了解脑细胞与心灵活动的关系，就把人脑剖开测试分析，只是透过种种仪器与取代的方式去测试实验。</p>
+<p>而康德的《纯粹理性批判》、《实践理性批判》、《判断力批判》，就是为了从逻辑推论的方式，确立知识的先验原则，为思维的能力划定范畴。因此他的三大批判不是透过后验的科学实验，而是为我们的思维区分与统整出结构与方法。</p>
+<p>后验的方式乍看之下最为真实可靠，其实不然。因为人的感官能力是不足的，常会受到遮蔽，受到视觉与听觉的欺骗，假如人的知识一切都要透过后验而来，那么人所知的将会非常的有限，而且往往只能知其然而不知其所以然。</p>
+</div>
+<div class="section" id="devops">
+<h2>devops<a class="headerlink" href="#devops" title="Permalink to this headline">¶</a></h2>
+<p>DevOps（Development和Operations的组合词）是一组过程、方法与系统的统称，用于促进开发（应用程序/软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合。</p>
+<p>它是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。</p>
+<p>它的出现是由于软件行业日益清晰地认识到：为了按时交付软件产品和服务，开发和运维工作必须紧密合作。</p>
+<p><img alt="_images/devops.png" src="_images/devops.png" />img</p>
+<p>开发即是运维，运维即是开发</p>
+<p>运营（运维），开发，质保（测试）三者尽力相辅相成，CI/CD，容器化部署等。</p>
 </div>
 </div>
 

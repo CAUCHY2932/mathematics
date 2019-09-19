@@ -218,7 +218,7 @@ https://cyent.github.io/markdown-with-mkdocs-material/
 
 ### sphinx
 
-进入工程
+#### 制作静态界面
 
 ```bash
 # 清除生成缓存
@@ -226,11 +226,14 @@ make clean
 # 重新生成
 make html
 ```
+#### 使用sphinx生成电子书
 
+在文件目录下
 
-
-
-
+```bash
+mkdir output_epub
+sphinx-build -b epub ./source ./output_epub
+```
 https://www.jianshu.com/p/728aac51cc53
 
 ### rst语法

@@ -11,8 +11,6 @@
    :caption: Content:
 
    chapter00_preface.md
-   AB-线性代数.md
-   BB-数据结构.md
    chapter01_python.md
    chapter02_data_science.md
    chapter03_bi.md

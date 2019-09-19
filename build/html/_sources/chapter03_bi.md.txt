@@ -81,10 +81,6 @@ docker exec superset-new superset db upgrade
 docker exec superset-new superset init
 ```
 
-
-
-
-
 ##  linux上利用docker安装superset
 
 >https://blog.csdn.net/m0_37805167/article/details/81069644

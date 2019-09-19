@@ -93,8 +93,6 @@
               <p class="caption"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="chapter00_preface.html">写在前面</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AB-线性代数.html">线性代数</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BB-数据结构.html">数据结构</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter01_python.html">python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter02_data_science.html">数据科学</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter03_bi.html">bi</a></li>
@@ -113,13 +111,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#mkdocs-material">MkDocs material</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sphinx">sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphinx">sphinx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">制作静态界面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">使用sphinx生成电子书</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#rst">rst语法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">正式篇</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mdrst">正式篇md转换为rst文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#markdown">markdown</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">编程技巧</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id8">理解开发流程</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id9">代码仓库</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id10">创建分支</a></li>
@@ -129,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#id14">体验一下整个流程</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#gitbook">gitbook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gitbook">gitbook(不推荐)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a></li>
@@ -378,14 +379,24 @@ name: material
 </div>
 <div class="section" id="sphinx">
 <h3>sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h3>
-<p>进入工程</p>
+<div class="section" id="id6">
+<h4>制作静态界面<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 清除生成缓存</span>
 make clean 
 <span class="c1"># 重新生成</span>
 make html
 </pre></div>
 </div>
+</div>
+<div class="section" id="id7">
+<h4>使用sphinx生成电子书<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>在文件目录下</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir output_epub
+sphinx-build -b epub ./source ./output_epub
+</pre></div>
+</div>
 <p>https://www.jianshu.com/p/728aac51cc53</p>
+</div>
 </div>
 <div class="section" id="rst">
 <h3>rst语法<a class="headerlink" href="#rst" title="Permalink to this headline">¶</a></h3>
@@ -395,16 +406,14 @@ make html
 <p>https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</p>
 <p>https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html</p>
 </div>
-<div class="section" id="id6">
-<h3>正式篇<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="mdrst">
+<h3>正式篇md转换为rst文件<a class="headerlink" href="#mdrst" title="Permalink to this headline">¶</a></h3>
 <p>https://cloudconvert.com/md-to-rst</p>
+<p>也可以使用typora来进行转换</p>
 </div>
 <div class="section" id="markdown">
 <h3>markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h3>
 </div>
-</div>
-<div class="section" id="id7">
-<h2>编程技巧<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id8">
 <h2>理解开发流程<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
@@ -455,7 +464,7 @@ make html
 </div>
 </div>
 <div class="section" id="gitbook">
-<h2>gitbook<a class="headerlink" href="#gitbook" title="Permalink to this headline">¶</a></h2>
+<h2>gitbook(不推荐)<a class="headerlink" href="#gitbook" title="Permalink to this headline">¶</a></h2>
 <p>本地安装gitbook需要nodejs，目前安装gitbook最方便的方式就是通过npm安装</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo npm install -g gitbook-cli
 sudo npm install -g gitbook

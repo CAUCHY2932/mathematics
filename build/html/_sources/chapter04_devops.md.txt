@@ -1,6 +1,149 @@
 # 环境
 
-包含linux和一些常用的命令
+> 包含linux和一些常用的命令
+
+## 代码开发规范
+
+### 开发合并规范
+
+首先，在远程建立工程，初始化readme和语言类型（有利于生成`.gitignore`文件）
+
+其次在本地执行`git clone `命令，然后，将代码新建分支，如`dev`，然后在此分支上编写代码。
+
+编写代码完成之后，提交之前，切换到`master`分支，执行`git pull origin master`命令，然后切换到`dev`分支，执行`git merge master`命令，这时可能会出现冲突，我们尝试解决冲突，等待merge成功后，提交到远端的`dev`分支，然后发起`merge request`或是`pull request`，等待远端合并到`master`分支。
+
+以上过程中，每次提交分支之前，我们都需要拉取远端`master`分支的代码，这是为了获取当前的工程的最新代码，我们在本地尝试解决冲突，就可以保证远端的代码始终是最稳定的。
+
+### 提交信息规范
+
+这部分我还没有具体的实践，以后会给出建议。
+
+### 解决代码clone慢的问题
+
+我通过不断探索，发现gitee网站，速度很快，而且可以直接导入github的工程，于是我每次clone新的工程，都是先在gitee上拉取github的代码，然后去gitee上clone，在本地添加github的链接，就可以成功的提交
+
+如果在一个新的电脑clone操作，而且gitee已经拉取过github的代码，记得一定要同步一次github的代码。
+
+### git ignore
+
+当我们之前执行过`git add -A`命令之后，所有的文件都会被跟踪，之后加入ignore文件之后发现依然会跟踪更改，这对我们的编程会产生很大影响
+
+#### 原因
+
+.idea已经被git跟踪，之后再加入.gitignore后是没有作用的
+
+#### 解决办法
+
+清除.idea的git缓存
+
+```bash
+git rm -r --cached .idea
+```
+
+之后在`.gitignore`中添加.idea
+
+### unrelated-histories
+
+```
+git pull origin master --allow-unrelated-histories
+```
+
+
+## git
+
+### 常用操作
+```bash
+
+### 1.git用户配置
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+### 2.ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+### 3.copy to github
+### 4.git clone
+git clone github.com...
+或者
+### 5.git init
+
+mkdir mygit
+cd mygit
+git init
+git remote add origin github.com..
+
+### 6.git跟踪操作
+
+$ git add -A
+
+### 7.git提交操作
+
+$ git commit -m 'descriptions'
+
+### 8.git推送操作
+
+$ git push
+
+### 9.git push usage
+
+- 为了提高克隆效率，我们统一采用新的仓库方式进行代码托管
+  -- 首先在github生成仓库，并克隆到本地，再推送到云端
+  -- 其次，在gitee中同步github，在另一台设备进行克隆
+  --两台机器都使用git remote add origin/mirror xxx进行代码远程分支的管理
+
+git remote add origin gitee.com...
+git remote add mirror github.com...
+git remote -v
+git push origin master/dev
+git push mirror master/dev
+
+## 经常使用的组合
+
+### 1.配置好本地和github、gitee的秘钥
+
+### 2.在github新建一个仓库，初始化，并在gitee导入该仓库
+
+### 3.再进行如下操作
+
+#### git clone git@giteexxx
+
+使用gitee克隆，速度较快
+
+#### git remote add mirror git@githubxxx
+添加远程分支
+
+#### git push origin master
+
+推送到远程分支,gitee
+
+#### git push mirror master
+
+推送到远程分支，github
+
+### git安装后初始化
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+一次提交多个文件
+
+git status 
+git add -A
+git commit -a -m"first commit"
+
+提交到版本库
+
+git push
+
+git add -A  提交所有变化
+git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
+git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
+
+ssh-keygen -t rsa -C "youremail@example.com"
+提交到远程
+
+git push origin master
+```
+
+
 
 
 ## encoding
@@ -53,8 +196,6 @@ sudo add-apt-repository --remove ppa:jonathonf/vim
 ### python3起别名
 
 在~/.bashrc中添加一个别名即可python实现python3
-
-
 
 ```bash
 sudo vim ~/.bashrc
@@ -132,7 +273,6 @@ docker exec -it bi superset load_examples # 载入示例数据（可选）
 
 ```bash
 sudo apt install openssh-server
-
 ```
 
 ### 安装jdk
@@ -140,10 +280,6 @@ sudo apt install openssh-server
 ```bash
 sudo apt install openjdk-8-jdk-headless
 ```
-
-
-
-
 
 ### 更改root密码
 
@@ -171,55 +307,85 @@ sudo passwd root
 
 
 
-## vim 
+## vim
+
+简单即是有效，如无必要，勿增实体。
 
 ### 常用设置
 
 ```bash
-## edit the vimrc file
+vim ~/.vimrc
+# 另外，Python编程是靠缩进来规定语法的，当你使用vim写python时，要注意tab与空格的区别。一般我们写Python都是以4个空格表缩进标准的，所以在代码中不要把空格与tab混用（两者ASCII码是不同的），要不一直用空格，要不就一直用tab，不然会导致程序报错。推荐把vim的tab变为4个空格，增加编程效率。
 
-$ vim ~/.vimrc
-## set the file
-
-set ts=4
 set expandtab
 set autoindent
 set number
-
-# 另外，Python编程是靠缩进来规定语法的，当你使用vim写python时，要注意tab与空格的区别。一般我们写Python都是以4个空格表缩进标准的，所以在代码中不要把空格与tab混用（两者ASCII码是不同的），要不一直用空格，要不就一直用tab，不然会导致程序报错。推荐把vim的tab变为4个空格，增加编程效率。
+set encoding=utf-8
 
 # 设置Tab键的宽度[等同的空格个数]
 set tabstop=4
+
 # 每一次缩进对应的空格数
 set shiftwidth=4
+
 # 按退格键时可以一次删掉4个空格
 set softtabstop=4
 
+set expandtab
+
+# 继承空格
+set autoindent
+
+# mac配置
+set number
+set ts=4
+set expandtab
+set autoindent
+set softtabstop=4
+set shiftwidth=4
+syntax on
 ```
 
 ### 常用操作
 
+#### 打开一个文件
+
+`vim a.py`，如果`a.py`不存在，则会新建，否则会编辑修改
+
+#### 保存
+
+在文件编辑界面，保证英文状态
 
 
 #### 复制
 
+`y`复制一行
 
+`2yy`复制2行，`nyy`复制n行，也可在可视化模式下选中之后进行操作
+
+按下`esc`后，使用`"+y`复制到系统寄存器
 
 #### 粘贴
 
+`p`粘贴
 
-
-
-
-
-
+按下`esc`后，使用`"+p` 粘贴到vim
 
 
 #### 删除
 
+`d`删除一行
+
+`2dd`删除2行，`ndd`删除n行
 
 
+#### 撤销
 
+`u`撤销操作
+
+#### 选择
+
+control+v块选择模式，shift+v是行选择模式，进入选择之后，复制和粘贴操作依然可以进行。
 
 #### vim行首和行尾添加字符串
 
@@ -243,36 +409,16 @@ $ 代表一行的结尾处
 
 :2,50 s/^\/\///g
 
-
-
 ```bash
 # 在root用户家目录下的.vimrc中设置，对所有用户生效
-# 如何与外界剪贴板进行交互
-
-# 在按下esc后
-"+y 复制到系统寄存器
-"+p 粘贴到vim
 
 # 查看当前寄存器的内容
-
 :reg
 
 # 安装vim
-
 rpm -qa|grep vim
 yum -y install vim*
 
-# 复制
-
-n+yy
-复制n行
-块选择模式，选中然后y复制
-
-# 粘贴
-
-# 删除
-
-n+dd
 # 删除连当前行的n行
 # 可视化选择模式，选中然后按d删除
 
@@ -288,7 +434,6 @@ A
 # 保存和退出
 
 # 撤销
-
 
 # vi/vim 中如何在每行行首或行尾插入指定字符串
 行首 :%s/^/your_word/
@@ -547,116 +692,6 @@ TAB替换为空格：
 加!是用于处理非空白字符之后的TAB，即所有的TAB，若不加!，则只处理行首的TAB。
 ```
 
-## git
-
-### 常用操作
-```bash
-
-### 1.git用户配置
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
-### 2.ssh-keygen
-$ cat ~/.ssh/id_rsa.pub
-### 3.copy to github
-### 4.git clone
-git clone github.com...
-或者
-### 5.git init
-
-mkdir mygit
-cd mygit
-git init
-git remote add origin github.com..
-
-### 6.git跟踪操作
-
-$ git add -A
-
-### 7.git提交操作
-
-$ git commit -m 'descriptions'
-
-### 8.git推送操作
-
-$ git push
-
-### 9.git push usage
-
-- 为了提高克隆效率，我们统一采用新的仓库方式进行代码托管
-  -- 首先在github生成仓库，并克隆到本地，再推送到云端
-  -- 其次，在gitee中同步github，在另一台设备进行克隆
-  --两台机器都使用git remote add origin/mirror xxx进行代码远程分支的管理
-
-git remote add origin gitee.com...
-git remote add mirror github.com...
-git remote -v
-git push origin master/dev
-git push mirror master/dev
-
-## 经常使用的组合
-
-### 1.配置好本地和github、gitee的秘钥
-
-### 2.在github新建一个仓库，初始化，并在gitee导入该仓库
-
-### 3.再进行如下操作
-
-#### git clone git@giteexxx
-
-使用gitee克隆，速度较快
-
-#### git remote add mirror git@githubxxx
-添加远程分支
-
-#### git push origin master
-
-推送到远程分支,gitee
-
-#### git push mirror master
-
-推送到远程分支，github
-
-### git安装后初始化
-
-$ git config --global user.name "Your Name"
-$ git config --global user.email "email@example.com"
-
-一次提交多个文件
-
-git status 
-git add -A
-git commit -a -m"first commit"
-
-提交到版本库
-
-git push
-
-git add -A  提交所有变化
-git add -u  提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)
-git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
-
-ssh-keygen -t rsa -C "youremail@example.com"
-提交到远程
-
-git push origin master
-```
-
-### 加速
-
-最近Superset更新的很频繁啊，今天升级成了0.28.1版本，新踩的坑也跟大家分享一下
-
-1.发现pip安装的assets文件目录下居然没有src文件夹了，这个真是惊呆了我搞了好久，后来问了大神才知道要去github上面单独下载...
-
-github地址：[apache/incubator-superset](https://link.zhihu.com/?target=https%3A//github.com/apache/incubator-superset/tree/0.28/superset/assets/src)
-
-快速下载方式：[http://kinolien.github.io/gitzip/](https://link.zhihu.com/?target=http%3A//kinolien.github.io/gitzip/)
-
-2.前端部分的文件夹目录算是大改了，后端的viz.py没变，这里不赘述
-
-2.1、superset\static\assets\src\visualizations\index.js
-
-我这个版本文件位置没改，但是内容改了，不过这个本来也比较简单，还是照抄其他表的配置就行了
-
 ## python
 
 ### 永久修改镜像源
@@ -783,18 +818,14 @@ directory： $FileDir $
 ```
 ### mac配置pip
 ```bash
-
-
 ## python mac配置pip
-
 mkdir ~/.pip
-
 vim ~/.pip/pip.conf
+## 粘贴以下内容
 [global]
 index-url=http://mirrors.aliyun.com/pypi/simple/
 [install]
 trusted-host=mirrors.aliyun.com
-
 ```
 
 ### python pylint
@@ -1967,6 +1998,8 @@ source /etc/profile
 
 一键设置清华大学源
 
+会更改brew的配置
+
 https://tuna.moe/oh-my-tuna/
 
 ## Scala安装
@@ -2061,7 +2094,9 @@ https://hub.daocloud.io/repos?type=featured
 
 https://www.daocloud.io/mirror
 
-
+```bash
+curl -sSL https://get.daocloud.io/docker | sh
+```
 
 ### 常用可选参数
 
@@ -2236,7 +2271,7 @@ Tomcat了，比较简单，但是自己记录下防止遗忘了，
 
 
 
-第一处是 <Server port="8085" shutdown="SHUTDOWN">
+第一处是 <Server port="8085" shutdown="SHUTDOWN">[]()
 
 
 
