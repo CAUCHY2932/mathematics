@@ -526,12 +526,6 @@ runoob@runoob:~$ docker start wizardly_chandrasekhar
 
 ## 官方docker superset命令
 
-
-
-
-
-
-
 ## docker安装
 
 ## 搜索镜像
@@ -760,8 +754,6 @@ git reset --hard 7a7c12be4cede48dcc8349ad90f0209a9a201ef3
 
 ## 二次开发
 
-
-
 superset\assets> npm install echarts
 
 pscp.ext -r xx:xx  ./
@@ -772,8 +764,6 @@ pscp.ext -r xx:xx  ./
 docker pull redash/redash
 
 https://redash.io/help/open-source/dev-guide/docker
-
-
 
 https://hub.docker.com/r/redash/redash
 
@@ -833,8 +823,6 @@ services:
       - server:redash
 restart: always
 ```
-
-
 
 ## 二、docker-compose安装
 
@@ -913,10 +901,6 @@ services:
      - server:redash
    restart: always
 ```
-
-
-
-
 
 ## docker 安装metabase
 
