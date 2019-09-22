@@ -20,9 +20,11 @@
 
 ### 解决代码clone慢的问题
 
-我通过不断探索，发现gitee网站，速度很快，而且可以直接导入github的工程，于是我每次clone新的工程，都是先在gitee上拉取github的代码，然后去gitee上clone，在本地添加github的链接，就可以成功的提交
+我通过不断探索，发现gitee网站，速度很快，而且可以直接导入github的工程，于是我每次clone新的工程，都是先在gitee上拉取github的代码，然后去gitee上clone，在本地添加github的链接，就可以成功的提交。
 
 如果在一个新的电脑clone操作，而且gitee已经拉取过github的代码，记得一定要同步一次github的代码。
+
+同时，我们为了只推送到github上，可以使用`git remote add mirror xxx.github.git`，添加github的链接，然后删除gitee的链接`git remote remove origin`，再更改github的链接为`origin`， `git remote rename mirror origin`，最后使用`git push origin master`就可以推动代码。
 
 ### git ignore
 
@@ -48,6 +50,37 @@ git rm -r --cached .idea
 git pull origin master --allow-unrelated-histories
 ```
 
+### git开发流程
+
+主分支创立
+
+git clone xxx
+
+建立自己的分支
+
+git check -b mydev
+
+进行开发
+
+。。。
+
+切换到master分支
+
+git checkout master
+
+拉取最新的master代码
+
+git pull
+
+合并master代码到自己的分支
+
+git merge master
+
+或直接在自己的分支下
+
+git pull origin master
+
+推送自己的代码到云端，申请merge request或pull request
 
 ## git
 
@@ -725,6 +758,7 @@ trusted-host=pypi.tuna.tsinghua.edu.cn
 ```bash
 # conda使用
 conda create -n py_env python=python_version # conda创建环境
+conda create -n py36 python=3.6
 conda remove -n py_env --all # conda删除环境
 conda install # conda安装第三方包
 conda env list # conda查看当前的虚拟环境

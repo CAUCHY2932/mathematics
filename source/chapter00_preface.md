@@ -16,8 +16,6 @@
 
 [github链接](https://github.com/CAUCHY2932/mathematics)
 
-
-
 ## 目标
 
 - 成为python大佬
@@ -80,6 +78,11 @@ You are very much ON TIME, and in your TIME ZONE.
 
 sphinx
 
+推荐使用后者，可以制作电子书，适合电子设备分发
+
 ### 作者
 cauchy2932
 
+## 联系方式
+
+haochen2932@foxmail.com
