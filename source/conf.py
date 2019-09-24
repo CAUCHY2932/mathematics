@@ -16,7 +16,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 from recommonmark.parser import CommonMarkParser
-import sphinx_bootstrap_theme
+# import sphinx_bootstrap_theme
 # -- Project information -----------------------------------------------------
 
 project = '吕阳阳的日志小屋'
@@ -203,5 +203,4 @@ todo_include_todos = True
 source_parsers = {
     '.md': CommonMarkParser,
     '.MD': CommonMarkParser,
-
 }
