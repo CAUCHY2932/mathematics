@@ -185,7 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chapter06_cs_base.html">计算机科学基础</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter07_offshore_oil_and_gas.html">海洋油气工程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter08_big_data.html">大数据</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">其他</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter09_other.html">工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter10_strategy.html">哲学与谋略</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter11_chat.html">随便聊聊</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter12_concept.html">概念</a></li>
@@ -243,7 +243,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/chapter03_bi.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/chapter03_bi.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -263,12 +263,12 @@
 <div class="section" id="id1">
 <h3>superset执行命令<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>This project is unofficial and not related to Superset or Apache.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker search superset <span class="c1"># docker 查找镜像</span>
-docker pull amancevice/superset <span class="c1"># 拉取镜像</span>
-docker images <span class="c1"># 查看镜像</span>
-docker run -d -p <span class="m">8087</span>:8088 -v /Users/young/super:/home/superset amancevice/superset <span class="c1"># -v指定本地目录，冒号后面为容器内自动创建的目录</span>
-docker <span class="nb">exec</span> -it bi superset-init <span class="c1"># bi替换为id或是容器名，初始化superset</span>
-docker <span class="nb">exec</span> -it bi superset load_examples <span class="c1"># 载入示例数据（可选）</span>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">search</span> <span class="n">superset</span> <span class="c1"># docker 查找镜像</span>
+<span class="n">docker</span> <span class="n">pull</span> <span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span> <span class="c1"># 拉取镜像</span>
+<span class="n">docker</span> <span class="n">images</span> <span class="c1"># 查看镜像</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8087</span><span class="p">:</span><span class="mi">8088</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">young</span><span class="o">/</span><span class="nb">super</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">superset</span> <span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span> <span class="c1"># -v指定本地目录，冒号后面为容器内自动创建的目录</span>
+<span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">bi</span> <span class="n">superset</span><span class="o">-</span><span class="n">init</span> <span class="c1"># bi替换为id或是容器名，初始化superset</span>
+<span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">bi</span> <span class="n">superset</span> <span class="n">load_examples</span> <span class="c1"># 载入示例数据（可选）</span>
 </pre></div>
 </div>
 </div>
@@ -277,54 +277,87 @@ docker <span class="nb">exec</span> -it bi superset load_examples <span class="c
 <h2>github docker介绍<a class="headerlink" href="#github-docker" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="issues">
 <h3>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h3>
-<p>Please <strong>only</strong> file issues in this project that are related to Docker and <strong>do</strong> include the Docker commands or compose configuration of your setup when filing issues (be sure to hide any secrets/passwords before submitting).</p>
-<p>File issues/bugs with Superset at the <a class="reference external" href="https://github.com/apache/incubator-superset/issues">source</a>.</p>
-<p>Please <strong>do not</strong> files issues like “Please include <code class="docutils literal notranslate"><span class="pre">&lt;some-python-pip&gt;</span></code> in the Dockerfile,” open a <a class="reference external" href="https://github.com/amancevice/superset/pulls">pull request</a> for updates/enhancements.</p>
+<p>Please <strong>only</strong> file issues in this project that are related to Docker
+and <strong>do</strong> include the Docker commands or compose configuration of your
+setup when filing issues (be sure to hide any secrets/passwords before
+submitting).</p>
+<p>File issues/bugs with Superset at the
+<a class="reference external" href="https://github.com/apache/incubator-superset/issues">source</a>.</p>
+<p>Please <strong>do not</strong> files issues like “Please include
+<code class="docutils literal notranslate"><span class="pre">&lt;some-python-pip&gt;</span></code> in the Dockerfile,” open a <a class="reference external" href="https://github.com/amancevice/superset/pulls">pull
+request</a> for
+updates/enhancements.</p>
 </div>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory to view examples of how to configure Superset with MySQL, PostgreSQL, or SQLite.</p>
+<p>Navigate to the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory to view examples of how to
+configure Superset with MySQL, PostgreSQL, or SQLite.</p>
 </div>
 <div class="section" id="versions">
 <h3>Versions<a class="headerlink" href="#versions" title="Permalink to this headline">¶</a></h3>
-<p>This repo is tagged in parallel with superset. Pulling <code class="docutils literal notranslate"><span class="pre">amancevice/superset:0.18.5</span></code> will fetch the image of this repository running superset version <code class="docutils literal notranslate"><span class="pre">0.18.5</span></code>. It is possible that the <code class="docutils literal notranslate"><span class="pre">latest</span></code> tag includes new features/support libraries but will usually be in sync with the latest semantic version.</p>
+<p>This repo is tagged in parallel with superset. Pulling
+<code class="docutils literal notranslate"><span class="pre">amancevice/superset:0.18.5</span></code> will fetch the image of this repository
+running superset version <code class="docutils literal notranslate"><span class="pre">0.18.5</span></code>. It is possible that the <code class="docutils literal notranslate"><span class="pre">latest</span></code>
+tag includes new features/support libraries but will usually be in sync
+with the latest semantic version.</p>
 </div>
 <div class="section" id="configuration">
 <h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
-<p>Follow the <a class="reference external" href="https://superset.incubator.apache.org/installation.html#configuration">instructions</a> provided by Apache Superset for writing your own <code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code>. Place this file in a local directory and mount this directory to <code class="docutils literal notranslate"><span class="pre">/etc/superset</span></code> inside the container. This location is included in the image’s <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>. Mounting this file to a different location is possible, but it will need to be in the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>.</p>
-<p>View the contents of the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory to see some simple <code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code> samples.</p>
+<p>Follow the
+<a class="reference external" href="https://superset.incubator.apache.org/installation.html#configuration">instructions</a>
+provided by Apache Superset for writing your own <code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code>.
+Place this file in a local directory and mount this directory to
+<code class="docutils literal notranslate"><span class="pre">/etc/superset</span></code> inside the container. This location is included in the
+image’s <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>. Mounting this file to a different location is
+possible, but it will need to be in the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>.</p>
+<p>View the contents of the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory to see some simple
+<code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code> samples.</p>
 </div>
 <div class="section" id="volumes">
 <h3>Volumes<a class="headerlink" href="#volumes" title="Permalink to this headline">¶</a></h3>
-<p>The image defines two data volumes: one for mounting configuration into the container, and one for data (logs, SQLite DBs, &amp;c).</p>
-<p>The configuration volume is located alternatively at <code class="docutils literal notranslate"><span class="pre">/etc/superset</span></code> or <code class="docutils literal notranslate"><span class="pre">/home/superset</span></code>; either is acceptable. Both of these directories are included in the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> of the image. Mount any configuration (specifically the <code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code> file) here to have it read by the app on startup.</p>
-<p>The data volume is located at <code class="docutils literal notranslate"><span class="pre">/var/lib/superset</span></code> and it is where you would mount your SQLite file (if you are using that as your backend), or a volume to collect any logs that are routed there. This location is used as the value of the <code class="docutils literal notranslate"><span class="pre">SUPERSET_HOME</span></code> environmental variable.</p>
+<p>The image defines two data volumes: one for mounting configuration into
+the container, and one for data (logs, SQLite DBs, &amp;c).</p>
+<p>The configuration volume is located alternatively at <code class="docutils literal notranslate"><span class="pre">/etc/superset</span></code>
+or <code class="docutils literal notranslate"><span class="pre">/home/superset</span></code>; either is acceptable. Both of these directories
+are included in the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> of the image. Mount any configuration
+(specifically the <code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code> file) here to have it read by
+the app on startup.</p>
+<p>The data volume is located at <code class="docutils literal notranslate"><span class="pre">/var/lib/superset</span></code> and it is where you
+would mount your SQLite file (if you are using that as your backend), or
+a volume to collect any logs that are routed there. This location is
+used as the value of the <code class="docutils literal notranslate"><span class="pre">SUPERSET_HOME</span></code> environmental variable.</p>
 </div>
 <div class="section" id="database-initialization">
 <h3>Database Initialization<a class="headerlink" href="#database-initialization" title="Permalink to this headline">¶</a></h3>
-<p>After starting the Superset server, initialize the database with an admin user and Superset tables using the <code class="docutils literal notranslate"><span class="pre">superset-init</span></code> helper script:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --detach --name superset <span class="o">[</span>options<span class="o">]</span> amancevice/superset
-docker <span class="nb">exec</span> -it superset superset-init
+<p>After starting the Superset server, initialize the database with an
+admin user and Superset tables using the <code class="docutils literal notranslate"><span class="pre">superset-init</span></code> helper
+script:</p>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">detach</span> <span class="o">--</span><span class="n">name</span> <span class="n">superset</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span>
+<span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="n">superset</span><span class="o">-</span><span class="n">init</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="upgrading">
 <h3>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h3>
-<p>Upgrading to a newer version of superset can be accomplished by re-pulling <code class="docutils literal notranslate"><span class="pre">amancevice/superset</span></code>at a specified superset version or <code class="docutils literal notranslate"><span class="pre">latest</span></code> (see above for more on this). Remove the old container and re-deploy, making sure to use the correct environmental configuration. Finally, ensure the superset database is migrated up to the head:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pull desired version</span>
-docker pull amancevice/superset
+<p>Upgrading to a newer version of superset can be accomplished by
+re-pulling <code class="docutils literal notranslate"><span class="pre">amancevice/superset</span></code>at a specified superset version or
+<code class="docutils literal notranslate"><span class="pre">latest</span></code> (see above for more on this). Remove the old container and
+re-deploy, making sure to use the correct environmental configuration.
+Finally, ensure the superset database is migrated up to the head:</p>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pull desired version</span>
+<span class="n">docker</span> <span class="n">pull</span> <span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span>
 
 <span class="c1"># Remove the current container</span>
-docker rm -f superset-old
+<span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">superset</span><span class="o">-</span><span class="n">old</span>
 
 <span class="c1"># Deploy a new container ...</span>
-docker run --detach --name superset-new <span class="o">[</span>options<span class="o">]</span> amancevice/superset
+<span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">detach</span> <span class="o">--</span><span class="n">name</span> <span class="n">superset</span><span class="o">-</span><span class="n">new</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span>
 
 <span class="c1"># Upgrade the DB</span>
-docker <span class="nb">exec</span> superset-new superset db upgrade
+<span class="n">docker</span> <span class="n">exec</span> <span class="n">superset</span><span class="o">-</span><span class="n">new</span> <span class="n">superset</span> <span class="n">db</span> <span class="n">upgrade</span>
 
 <span class="c1"># Sync the base permissions</span>
-docker <span class="nb">exec</span> superset-new superset init
+<span class="n">docker</span> <span class="n">exec</span> <span class="n">superset</span><span class="o">-</span><span class="n">new</span> <span class="n">superset</span> <span class="n">init</span>
 </pre></div>
 </div>
 </div>
@@ -332,89 +365,86 @@ docker <span class="nb">exec</span> superset-new superset init
 <div class="section" id="linuxdockersuperset">
 <h2>linux上利用docker安装superset<a class="headerlink" href="#linuxdockersuperset" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>https://blog.csdn.net/m0_37805167/article/details/81069644</div></blockquote>
+<div><a class="reference external" href="https://blog.csdn.net/m0_37805167/article/details/81069644">https://blog.csdn.net/m0_37805167/article/details/81069644</a></div></blockquote>
 <div class="section" id="id2">
 <h3>拉取<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>1.docker search superset</p>
 <p>2.docker pull amancevice/superset</p>
-<p>docker images  查看镜像</p>
+<p>docker images 查看镜像</p>
 </div>
 <div class="section" id="id3">
 <h3>superset的使用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p><strong>创建本地目录</strong>（让容器中的superset挂载本地机的配置文件）</p>
 <p><strong>开启docker容器内的superset应用，开启的同时进行端口映射，并挂载宿主机的数据</strong></p>
-<p>docker ps  查<strong>看开启的应用</strong></p>
-<p><strong>设定superset的用户名和密码</strong>
-docker exec -it 容器ID  fabmanager create-admin –app superset</p>
-<p><strong>初始化数据库</strong>
-docker exec -it 容器ID superset db upgrade</p>
-<p><strong>创建默认角色和许可</strong>
-docker exec -it 容器ID superset init</p>
-<p><strong>启动服务</strong>
-docker exec -it  容器ID superset runserver</p>
+<p>docker ps 查<strong>看开启的应用</strong></p>
+<p><strong>设定superset的用户名和密码</strong> docker exec -it 容器ID fabmanager
+create-admin –app superset</p>
+<p><strong>初始化数据库</strong> docker exec -it 容器ID superset db upgrade</p>
+<p><strong>创建默认角色和许可</strong> docker exec -it 容器ID superset init</p>
+<p><strong>启动服务</strong> docker exec -it 容器ID superset runserver</p>
 </div>
 </div>
 <div class="section" id="dockersuperset">
 <h2>Docker容器中搭建superset<a class="headerlink" href="#dockersuperset" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>https://blog.51cto.com/1</p>
+<div><p><a class="reference external" href="https://blog.51cto.com/1">https://blog.51cto.com/1</a></p>
 <p>4033037/2329635</p>
 </div></blockquote>
 <div class="section" id="id4">
 <h3>1.创建本地映射文件夹。<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">opt</span>\<span class="n">docker</span>\<span class="n">superset</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">opt</span>\<span class="n">docker</span>\<span class="n">superset</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3>2.创建superset容器<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -d -p 8087:8088 -v /opt/docker/superset:/home/superset amancevice/superset
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>docker run -d -p 8087:8088 -v /opt/docker/superset:/home/superset amancevice/superset
 将主机的8087端口映射到容器的8088端口，同时将主机的/opt/docker/superset目录映射到容器的/home/superset目录。
 </pre></div>
 </div>
 </div>
 <div class="section" id="id6">
 <h3>3.配置用户名和密码。<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">fabmanager</span> <span class="n">create</span><span class="o">-</span><span class="n">admin</span> <span class="o">--</span><span class="n">app</span> <span class="n">superset</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">fabmanager</span> <span class="n">create</span><span class="o">-</span><span class="n">admin</span> <span class="o">--</span><span class="n">app</span> <span class="n">superset</span>
 </pre></div>
 </div>
 <p>备注：420为容器ID前三位。</p>
 </div>
 <div class="section" id="id7">
 <h3>4.初始化数据库<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">db</span> <span class="n">upgrade</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">db</span> <span class="n">upgrade</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id8">
 <h3>5.初始化superset<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">init</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">init</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id9">
 <h3>6.开启superset服务<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">runserver</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="mi">420</span> <span class="n">superset</span> <span class="n">runserver</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id10">
 <h3>7.访问superset<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>在本地浏览器地址栏输入下面的地址即可访问superset。8087为创建容器时映射的主机端口。</p>
-<p>http://localhost:8087</p>
+<p><a class="reference external" href="http://localhost:8087">http://localhost:8087</a></p>
 </div>
 </div>
 <div class="section" id="superset-docker">
 <h2>superset docker部署<a class="headerlink" href="#superset-docker" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>https://mp.weixin.qq.com/s?__biz=MzUyNzk4MjA5NQ==&amp;mid=2247483743&amp;idx=1&amp;sn=9ccec34faf307aab2868faca6a3fdabc&amp;chksm=fa760a3fcd018329f618320f7e4f51e01c82e739ed02817df377c7f76c39c6a07bf8f8049be8&amp;token=1986779450&amp;lang=zh_CN#rd</div></blockquote>
-<blockquote>
-<div>https://www.cnblogs.com/vickey-wu/p/10205031.html</div></blockquote>
+<div><p><a class="reference external" href="https://mp.weixin.qq.com/s">https://mp.weixin.qq.com/s</a>?<em>_biz=MzUyNzk4MjA5NQ==&amp;mid=2247483743&amp;idx=1&amp;sn=9ccec34faf307aab2868faca6a3fdabc&amp;chksm=fa760a3fcd018329f618320f7e4f51e01c82e739ed02817df377c7f76c39c6a07bf8f8049be8&amp;token=1986779450&amp;lang=zh</em>CN#rd</p>
+<p><a class="reference external" href="https://www.cnblogs.com/vickey-wu/p/10205031.html">https://www.cnblogs.com/vickey-wu/p/10205031.html</a></p>
+</div></blockquote>
 <div class="section" id="id11">
 <h3>一、使用自己的数据库<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id12">
 <h4>1. 拉取项目<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">创建目录用于存放项目</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">创建目录用于存放项目</span>
 <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">superset</span>
 <span class="n">cd</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">superset</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">amancevice</span><span class="o">/</span><span class="n">superset</span><span class="o">.</span><span class="n">git</span>
@@ -425,7 +455,7 @@ docker exec -it  容器ID superset runserver</p>
 <h4>2. 配置数据库等<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div>这里默认你已创建了你自己的空数据库和具有读写该数据库权限的用户，到下面初始化时会自动在你的数据库创建表结构用于导入你的数据。如果没有可以使用项目自带的demo数据库</div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">进入项目目录</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">进入项目目录</span>
 <span class="n">cd</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">superset</span><span class="o">/</span><span class="n">superset</span>
 <span class="n">按照官网文档填写配置信息</span>
 </pre></div>
@@ -433,7 +463,7 @@ docker exec -it  容器ID superset runserver</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">superset_config.py</span></code><a class="reference external" href="https://superset.incubator.apache.org/installation.html#configuration">link</a></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROW_LIMIT</span> <span class="o">=</span> <span class="mi">5000</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ROW_LIMIT</span> <span class="o">=</span> <span class="mi">5000</span>
 
 <span class="n">SUPERSET_WEBSERVER_PORT</span> <span class="o">=</span> <span class="mi">8088</span>
 
@@ -458,13 +488,14 @@ docker exec -it  容器ID superset runserver</p>
 <h4>3. 启动容器<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><p>注意：</p>
-<ol class="simple">
-<li>-v 挂载配置文件必须挂载到容器的/etc/superset/superset_config.py或者/home/superset/superset_config.py，因为容器里面的环境变量是这两个，挂载到其他路径初始化数据库会不生效。</li>
-<li>SECRET_KEY必须与superset_config.py的设置一致</li>
+<ol class="arabic simple">
+<li>-v
+挂载配置文件必须挂载到容器的/etc/superset/superset<em>config.py或者/home/superset/superset</em>config.py，因为容器里面的环境变量是这两个，挂载到其他路径初始化数据库会不生效。</li>
+<li>SECRET<em>KEY必须与superset</em>config.py的设置一致</li>
 <li>填写你自己数据库连接信息</li>
 </ol>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">superset_name</span> \
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">superset_name</span> \
     <span class="o">--</span><span class="n">env</span> <span class="n">SECRET_KEY</span><span class="o">=</span><span class="s2">&quot;set_your_own_key&quot;</span> \
     <span class="o">--</span><span class="n">env</span> <span class="n">SQLALCHEMY_DATABASE_URI</span><span class="o">=</span><span class="s2">&quot;mysql://user:pass@host:port/db&quot;</span> \
     <span class="o">-</span><span class="n">p</span> <span class="mi">8089</span><span class="p">:</span><span class="mi">8088</span> \
@@ -474,7 +505,7 @@ docker exec -it  容器ID superset runserver</p>
 </div>
 <div class="section" id="id15">
 <h4>4. 初始化容器<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>进入superset-init文件目录
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>进入superset-init文件目录
 cd /mnt/superset/superset/superset
 初始化
 docker exec -it superset_name superset-init
@@ -490,14 +521,14 @@ repeat passwd: mypassword
 </div>
 <div class="section" id="id16">
 <h4>5.前端访问<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ip</span><span class="p">:</span><span class="mi">8088</span><span class="o">/</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ip</span><span class="p">:</span><span class="mi">8088</span><span class="o">/</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="demo">
 <h3>二、使用项目demo数据库<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>启动容器（假设我们创建了/mnt/superset）
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>启动容器（假设我们创建了/mnt/superset）
 cd /mnt/superset/
 git clone https://github.com/amancevice/superset.git
 cd superset
@@ -511,7 +542,7 @@ http://ip:8088/
 <div class="section" id="id17">
 <h3>三、参考链接<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/amancevice/superset/blob/master/README">项目教程链接</a></li>
+<li><a class="reference external" href="https://github.com/amancevice/superset/blob/master/README.md">项目教程链接</a></li>
 <li><a class="reference external" href="https://superset.incubator.apache.org/installation.html#configuration">配置文件链接</a></li>
 <li><a class="reference external" href="https://devhub.io/repos/amancevice-superset">他人教程链接</a></li>
 </ul>
@@ -519,9 +550,9 @@ http://ip:8088/
 </div>
 <div class="section" id="superset-python">
 <h2>superset python环境配置<a class="headerlink" href="#superset-python" title="Permalink to this headline">¶</a></h2>
-<p>pip install -i https://pypi.doubanio.com./simple superset</p>
+<p>pip install -i <a class="reference external" href="https://pypi.doubanio.com./simple">https://pypi.doubanio.com./simple</a> superset</p>
 <p>容易失败</p>
-<p>https://www.jianshu.com/p/5bbff5a83dd1</p>
+<p><a class="reference external" href="https://www.jianshu.com/p/5bbff5a83dd1">https://www.jianshu.com/p/5bbff5a83dd1</a></p>
 </div>
 <div class="section" id="docker">
 <h2>安装docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
@@ -542,26 +573,33 @@ http://ip:8088/
 </div>
 <div class="section" id="id21">
 <h2>进入命令行<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
-<p>然后我们使用docker ps查看到该容器信息，接下来就使用docker attach进入该容器</p>
-<ol class="simple">
-<li>$ sudo docker attach 44fc0f0582d9</li>
-</ol>
+<p>然后我们使用docker ps查看到该容器信息，接下来就使用docker
+attach进入该容器</p>
+<ol class="arabic">
+<li><p class="first">$ sudo docker attach 44fc0f0582d9</p>
 <blockquote>
-<div>https://www.jianshu.com/p/e1d3e25abcba</div></blockquote>
-<p>您可以使用attach命令在docker容器中获取bash shell访问。但是您的docker容器必须以/ bin / bash启动。 使用以下语法来获取docker容器的shell访问。$ sudo docker attach &lt;CONTAINER ID/NAME&gt;</p>
+<div><p><a class="reference external" href="https://www.jianshu.com/p/e1d3e25abcba">https://www.jianshu.com/p/e1d3e25abcba</a></p>
+</div></blockquote>
+</li>
+</ol>
+<p>您可以使用attach命令在docker容器中获取bash
+shell访问。但是您的docker容器必须以/ bin / bash启动。
+使用以下语法来获取docker容器的shell访问。$ sudo docker attach &lt;CONTAINER
+ID/NAME&gt;</p>
 </div>
 <div class="section" id="docker-exec">
 <h2>docker exec<a class="headerlink" href="#docker-exec" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>docker exec -it {docker_id/name} /bin/bash：进入后台运行的容器的交互模式</li>
+<li>docker exec -it {docker_id/name}
+/bin/bash：进入后台运行的容器的交互模式</li>
 </ul>
 </div>
 <div class="section" id="docker-root">
 <h2>docker root用户进入命令行界面<a class="headerlink" href="#docker-root" title="Permalink to this headline">¶</a></h2>
-<p>exec -it –user root <container id> /bin/bash</p>
+<p>exec -it –user root /bin/bash</p>
 <p>apt-get update</p>
 <p>apt-get isntall vim</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -u <span class="m">0</span> -it superset /bin/bash
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">u</span> <span class="mi">0</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
 </pre></div>
 </div>
 <p>0号用户就是root用户, 剩下来的就简单了</p>
@@ -579,7 +617,7 @@ http://ip:8088/
 <p>查找版本</p>
 <p>确定执行路径的包的路径</p>
 <p>/usr/local/lib/python3.6/site-packages/superset</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>➜  ~ docker search superset
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>➜  ~ docker search superset
 NAME                               DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
 amancevice/superset                [0.26.3] Superset on Debian+Python3             129                                     [OK]
 tylerfowler/superset               An extendable Docker image for Airbnb&#39;s Supe…   3
@@ -610,10 +648,10 @@ Admin User admin created.
 </pre></div>
 </div>
 <p>作者：adeng2016</p>
-<p>链接：https://www.jianshu.com/p/e1d3e25abcba</p>
+<p>链接：<a class="reference external" href="https://www.jianshu.com/p/e1d3e25abcba">https://www.jianshu.com/p/e1d3e25abcba</a></p>
 <p>来源：简书</p>
 <p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------------------------</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------------------------</span>
 <span class="c1"># Superset specific config</span>
 <span class="c1">#---------------------------------------------------------</span>
 <span class="n">ROW_LIMIT</span> <span class="o">=</span> <span class="mi">5000</span>
@@ -648,14 +686,16 @@ Admin User admin created.
 <p><code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code>注意在容器启动前就设置好，值好像跟某些元数据有关系，笔者在第一次启动后修改重启容器，遇到数据源无法查看的问题。</p>
 <p><code class="docutils literal notranslate"><span class="pre">MAPBOX_API_KEY</span></code>是支持地图类报表的服务提供商<a class="reference external" href="https://www.mapbox.com/">mapbox</a>的密钥，注册一个account后可得，如下图：</p>
 <p>样例数据</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="n">superset</span> <span class="n">load_examples</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="n">superset</span> <span class="n">load_examples</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id24">
 <h2>启动命令<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
-<p>sudo docker run -d -p 8087:8088 -v /opt/docker/superset:/home/superset amancevice/superset</p>
-<p>sudo docker run –detach –name bi -d -p 8087:8088 -v /opt/docker/superset:/home/superset amancevice/superset</p>
+<p>sudo docker run -d -p 8087:8088 -v /opt/docker/superset:/home/superset
+amancevice/superset</p>
+<p>sudo docker run –detach –name bi -d -p 8087:8088 -v
+/opt/docker/superset:/home/superset amancevice/superset</p>
 </div>
 <div class="section" id="id25">
 <h2>查看启动的镜像<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
@@ -676,7 +716,7 @@ Admin User admin created.
 </div>
 <div class="section" id="id29">
 <h2>浏览器访问<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
-<p>http://ip:8088/</p>
+<p><a class="reference external" href="http://ip:8088/">http://ip:8088/</a></p>
 </div>
 <div class="section" id="id30">
 <h2>停止容器<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
@@ -689,24 +729,23 @@ Admin User admin created.
 <div class="section" id="id32">
 <h2>查看docker日志<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
 <p>docker logs xx</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python superset db upgrade
-python superset load_examples
-python superset init
-python superset runserver
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">superset</span> <span class="n">db</span> <span class="n">upgrade</span>
+<span class="n">python</span> <span class="n">superset</span> <span class="n">load_examples</span>
+<span class="n">python</span> <span class="n">superset</span> <span class="n">init</span>
+<span class="n">python</span> <span class="n">superset</span> <span class="n">runserver</span>
 </pre></div>
 </div>
-<p><strong>创建默认角色和许可</strong>
-docker exec -it 容器ID superset init</p>
+<p><strong>创建默认角色和许可</strong> docker exec -it 容器ID superset init</p>
 </div>
 <div class="section" id="id33">
 <h2>创建用户时出错<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="n">superset</span><span class="o">-</span><span class="n">init</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">superset</span> <span class="n">superset</span><span class="o">-</span><span class="n">init</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id34">
 <h2>移除应用容器<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
 <span class="n">sudo</span> <span class="n">docker</span> <span class="n">rm</span> <span class="mi">3</span><span class="n">b9</span>
 </pre></div>
 </div>
@@ -717,7 +756,7 @@ docker exec -it 容器ID superset init</p>
 <div class="section" id="web">
 <h2>重启WEB应用容器<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
 <p>已经停止的容器，我们可以使用命令 docker start 来启动。</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>runoob@runoob:~$ docker start wizardly_chandrasekhar
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span>runoob@runoob:~$ docker start wizardly_chandrasekhar
 </pre></div>
 </div>
 </div>
@@ -739,95 +778,95 @@ docker exec -it 容器ID superset init</p>
 <p>账号密码</p>
 <p>初始样例</p>
 <p>我使用docker进行安装, 本以为很简单, 中间还是遇到一些坑.</p>
-<p>首先安装docker
-创建相关目录</p>
-<p>mkdir /dockerfs/superset/conf -p
-mkdir /dockerfs/superset/data -p</p>
+<p>首先安装docker 创建相关目录</p>
+<p>mkdir /dockerfs/superset/conf -p mkdir /dockerfs/superset/data -p</p>
 <p>创建容器</p>
-<p>docker run -p 8088:8088 -v /dockerfs/superset/conf:/etc/superset -v mkdir /dockerfs/superset/data:/data  –name superset -d amancevice/superset:0.18.5</p>
+<p>docker run -p 8088:8088 -v /dockerfs/superset/conf:/etc/superset -v
+mkdir /dockerfs/superset/data:/data –name superset -d
+amancevice/superset:0.18.5</p>
 <p>使用配置文件</p>
 <p>vi /dockerfs/superset/conf/superset_config.py</p>
 <p>输入内容</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------------------------</span>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------------------------</span>
 <span class="c1">## Superset specific config</span>
 
 <span class="c1">#---------------------------------------------------------</span>
-<span class="nv">ROW_LIMIT</span> <span class="o">=</span> <span class="m">5000</span>
-<span class="nv">SUPERSET_WORKERS</span> <span class="o">=</span> <span class="m">4</span>
+<span class="n">ROW_LIMIT</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">SUPERSET_WORKERS</span> <span class="o">=</span> <span class="mi">4</span>
 
-<span class="nv">SUPERSET_WEBSERVER_PORT</span> <span class="o">=</span> <span class="m">8088</span>
+<span class="n">SUPERSET_WEBSERVER_PORT</span> <span class="o">=</span> <span class="mi">8088</span>
 
 <span class="c1">### Flask App Builder configuration</span>
 
 <span class="c1"># Your App secret key</span>
-<span class="nv">SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;\2\1thisismyscretkey\1\2\e\y\y\h&#39;</span>
+<span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\2\1</span><span class="s1">thisismyscretkey</span><span class="se">\1\2</span><span class="s1">\e\y\y\h&#39;</span>
 
 <span class="c1"># The SQLAlchemy connection string to your database backend</span>
 <span class="c1"># This connection defines the path to the database that stores your</span>
 <span class="c1"># superset metadata (slices, connections, tables, dashboards, ...).</span>
 <span class="c1"># Note that the connection information to connect to the datasources</span>
 <span class="c1"># you want to explore are managed directly in the web UI</span>
-<span class="nv">SQLALCHEMY_DATABASE_URI</span> <span class="o">=</span> <span class="s1">&#39;sqlite:////data/superset.db&#39;</span>
+<span class="n">SQLALCHEMY_DATABASE_URI</span> <span class="o">=</span> <span class="s1">&#39;sqlite:////data/superset.db&#39;</span>
 
 <span class="c1"># Flask-WTF flag for CSRF</span>
-<span class="nv">WTF_CSRF_ENABLED</span> <span class="o">=</span> True
+<span class="n">WTF_CSRF_ENABLED</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="c1"># Set this API key to enable Mapbox visualizations</span>
-<span class="nv">MAPBOX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">MAPBOX_API_KEY</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
-<p>问题就出现在sqlite的路径上, sqlite默认存储在sqlite:////home/superset/.superset/superset.db, 我这里为了以后升级, 所以切换了存储路径, 这里有两种做法</p>
+<p>问题就出现在sqlite的路径上,
+sqlite默认存储在sqlite:////home/superset/.superset/superset.db,
+我这里为了以后升级, 所以切换了存储路径, 这里有两种做法</p>
 <p>直接将/home/superset/.superset/路径映射出来
 将/home/superset/.superset/superset.db文件拷贝到/data目录</p>
-<p>我这里选择的是第二种, 坑也在这, 使用
-docker exec -it superset /bin/bash
+<p>我这里选择的是第二种, 坑也在这, 使用 docker exec -it superset /bin/bash
 cp /home/superset/.superset/superset.db /data</p>
-<p>失败, 发现没有权限, ls了一下才发现当前用户是非root用户, 而/data目录是root权限.
-经过一番查找, 发现可以使用以下命令用root账号登陆容器
-docker exec -u 0 -it superset /bin/bash</p>
-<p>0号用户就是root用户, 剩下来的就简单了
-mv /home/superset/.superset/superset.db /data</p>
+<p>失败, 发现没有权限, ls了一下才发现当前用户是非root用户,
+而/data目录是root权限. 经过一番查找,
+发现可以使用以下命令用root账号登陆容器 docker exec -u 0 -it superset
+/bin/bash</p>
+<p>0号用户就是root用户, 剩下来的就简单了 mv
+/home/superset/.superset/superset.db /data</p>
 <p>退出容器, 重启容器, 然后进行用户初始化</p>
-<p>docker restart superset
-docker exec -it superset superset-init</p>
-<p>作者：一根弦的风筝
-链接：https://www.jianshu.com/p/a6fe79d0b1b3
+<p>docker restart superset docker exec -it superset superset-init</p>
+<p>作者：一根弦的风筝 链接：<a class="reference external" href="https://www.jianshu.com/p/a6fe79d0b1b3">https://www.jianshu.com/p/a6fe79d0b1b3</a>
 来源：简书
 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
 </div>
 <div class="section" id="ubuntu-16-04-docker">
 <h2><strong>Ubuntu 16.04 安装 Docker</strong><a class="headerlink" href="#ubuntu-16-04-docker" title="Permalink to this headline">¶</a></h2>
 <p>1.选择国内的云服务商，这里选择阿里云为例</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">acs</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">mirror</span><span class="o">.</span><span class="n">oss</span><span class="o">-</span><span class="n">cn</span><span class="o">-</span><span class="n">hangzhou</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">engine</span><span class="o">/</span><span class="n">internet</span> <span class="o">|</span> <span class="n">sh</span> <span class="o">-</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">sSL</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">acs</span><span class="o">-</span><span class="n">public</span><span class="o">-</span><span class="n">mirror</span><span class="o">.</span><span class="n">oss</span><span class="o">-</span><span class="n">cn</span><span class="o">-</span><span class="n">hangzhou</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">engine</span><span class="o">/</span><span class="n">internet</span> <span class="o">|</span> <span class="n">sh</span> <span class="o">-</span>
 </pre></div>
 </div>
 <p>2.安装所需要的包</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 </pre></div>
 </div>
 <p>3.添加使用 HTTPS 传输的软件包以及 CA 证书</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> <span class="n">ca</span><span class="o">-</span><span class="n">certificates</span>
 </pre></div>
 </div>
 <p>4.添加GPG密钥</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span><span class="o">//</span><span class="n">p80</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span><span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">keys</span> <span class="mf">58118E89</span><span class="n">F3A912897C070ADBF76221572C52609D</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">adv</span> <span class="o">--</span><span class="n">keyserver</span> <span class="n">hkp</span><span class="p">:</span><span class="o">//</span><span class="n">p80</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">sks</span><span class="o">-</span><span class="n">keyservers</span><span class="o">.</span><span class="n">net</span><span class="p">:</span><span class="mi">80</span> <span class="o">--</span><span class="n">recv</span><span class="o">-</span><span class="n">keys</span> <span class="mf">58118E89</span><span class="n">F3A912897C070ADBF76221572C52609D</span>
 </pre></div>
 </div>
 <p>5.添加软件源</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;deb https://apt.dockerproject.org/repo ubuntu-xenial main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">list</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;deb https://apt.dockerproject.org/repo ubuntu-xenial main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">docker</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <p>6.添加成功后更新软件包缓存</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 </pre></div>
 </div>
 <p>7.安装docker</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">engine</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">engine</span>
 </pre></div>
 </div>
 <p>8.启动 docker</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span>
 <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">docker</span>
 </pre></div>
 </div>
@@ -835,119 +874,120 @@ docker exec -it superset superset-init</p>
 <div class="section" id="ubuntu-18-04-docker-ce">
 <h2><strong>Ubuntu 18.04 安装 Docker-ce</strong><a class="headerlink" href="#ubuntu-18-04-docker-ce" title="Permalink to this headline">¶</a></h2>
 <p>1.更换国内软件源，推荐中国科技大学的源，稳定速度快（可选）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">bak</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">bak</span>
 <span class="n">sudo</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/archive.ubuntu.com/mirrors.ustc.edu.cn/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 </pre></div>
 </div>
 <p>2.安装需要的包</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> <span class="n">ca</span><span class="o">-</span><span class="n">certificates</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span> <span class="n">curl</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">apt</span><span class="o">-</span><span class="n">transport</span><span class="o">-</span><span class="n">https</span> <span class="n">ca</span><span class="o">-</span><span class="n">certificates</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span> <span class="n">curl</span>
 </pre></div>
 </div>
-<p>3.添加 GPG 密钥，并添加 Docker-ce 软件源，这里还是以中国科技大学的 Docker-ce 源为例</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
+<p>3.添加 GPG 密钥，并添加 Docker-ce 软件源，这里还是以中国科技大学的
+Docker-ce 源为例</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="o">.</span><span class="n">ustc</span><span class="o">.</span><span class="n">edu</span><span class="o">.</span><span class="n">cn</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="n">ce</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">gpg</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">key</span> <span class="n">add</span> <span class="o">-</span>
 <span class="n">sudo</span> <span class="n">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="s2">&quot;deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu </span><span class="se">\</span>
 <span class="s2">$(lsb_release -cs) stable&quot;</span>
 </pre></div>
 </div>
 <p>4.添加成功后更新软件包缓存</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
 </pre></div>
 </div>
 <p>5.安装 Docker-ce</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span>
 </pre></div>
 </div>
 <p>6.设置开机自启动并启动 Docker-ce（安装成功后默认已设置并启动，可忽略）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span>
 <span class="n">sudo</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">docker</span>
 </pre></div>
 </div>
 <p>7.测试运行</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
 </pre></div>
 </div>
 <p>8.添加当前用户到 docker 用户组，可以不用 sudo 运行 docker（可选）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo groupadd docker
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>sudo groupadd docker
 sudo usermod -aG docker $USER
 </pre></div>
 </div>
 <p>9.测试添加用户组（可选）</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">hello</span><span class="o">-</span><span class="n">world</span>
 </pre></div>
 </div>
-<p>https://blog.csdn.net/dzhmjl3/article/details/87877662</p>
+<p><a class="reference external" href="https://blog.csdn.net/dzhmjl3/article/details/87877662">https://blog.csdn.net/dzhmjl3/article/details/87877662</a></p>
 </div>
 <div class="section" id="id40">
 <h2>27版本<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
-<p>https://github.com/apache/incubator-superset/commit/7a7c12be4cede48dcc8349ad90f0209a9a201ef3</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard 7a7c12be4cede48dcc8349ad90f0209a9a201ef3
+<p><a class="reference external" href="https://github.com/apache/incubator-superset/commit/7a7c12be4cede48dcc8349ad90f0209a9a201ef3">https://github.com/apache/incubator-superset/commit/7a7c12be4cede48dcc8349ad90f0209a9a201ef3</a></p>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="mi">7</span><span class="n">a7c12be4cede48dcc8349ad90f0209a9a201ef3</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id41">
 <h2>二次开发<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
 <p>superset\assets&gt; npm install echarts</p>
-<p>pscp.ext -r xx:xx  ./</p>
+<p>pscp.ext -r xx:xx ./</p>
 </div>
 <div class="section" id="redash">
 <h2>redash<a class="headerlink" href="#redash" title="Permalink to this headline">¶</a></h2>
 <p>docker pull redash/redash</p>
-<p>https://redash.io/help/open-source/dev-guide/docker</p>
-<p>https://hub.docker.com/r/redash/redash</p>
-<p>https://www.cnblogs.com/rongfengliang/p/9901464.html</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&#39;2&#39;</span>
-<span class="l l-Scalar l-Scalar-Plain">x-redash-service</span><span class="p p-Indicator">:</span> <span class="nl">&amp;redash-service</span>
-  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redash/redash:7.0.0.b18042</span>
-  <span class="l l-Scalar l-Scalar-Plain">depends_on</span><span class="p p-Indicator">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
-  <span class="l l-Scalar l-Scalar-Plain">env_file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/redash/env</span>
-  <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-<span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">server</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;</span><span class="p p-Indicator">:</span> <span class="nv">*redash-service</span>
-    <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">server</span>
-    <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="s">&quot;5000:5000&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">REDASH_WEB_WORKERS</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-  <span class="l l-Scalar l-Scalar-Plain">scheduler</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;</span><span class="p p-Indicator">:</span> <span class="nv">*redash-service</span>
-    <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">scheduler</span>
-    <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">QUEUES</span><span class="p p-Indicator">:</span> <span class="s">&quot;celery&quot;</span>
-      <span class="l l-Scalar l-Scalar-Plain">WORKERS_COUNT</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="l l-Scalar l-Scalar-Plain">scheduled_worker</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;</span><span class="p p-Indicator">:</span> <span class="nv">*redash-service</span>
-    <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">worker</span>
-    <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">QUEUES</span><span class="p p-Indicator">:</span> <span class="s">&quot;scheduled_queries,schemas&quot;</span>
-      <span class="l l-Scalar l-Scalar-Plain">WORKERS_COUNT</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-  <span class="l l-Scalar l-Scalar-Plain">adhoc_worker</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">&lt;&lt;</span><span class="p p-Indicator">:</span> <span class="nv">*redash-service</span>
-    <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">worker</span>
-    <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">QUEUES</span><span class="p p-Indicator">:</span> <span class="s">&quot;queries&quot;</span>
-      <span class="l l-Scalar l-Scalar-Plain">WORKERS_COUNT</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-  <span class="l l-Scalar l-Scalar-Plain">redis</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redis:5.0-alpine</span>
-    <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-  <span class="l l-Scalar l-Scalar-Plain">postgres</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres:9.5-alpine</span>
-    <span class="l l-Scalar l-Scalar-Plain">env_file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/opt/redash/env</span>
-    <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/opt/redash/postgres-data:/var/lib/postgresql/data</span>
-    <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
-  <span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redash/nginx:latest</span>
-    <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
-    <span class="l l-Scalar l-Scalar-Plain">depends_on</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">server</span>
-    <span class="l l-Scalar l-Scalar-Plain">links</span><span class="p p-Indicator">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">server:redash</span>
-<span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
+<p><a class="reference external" href="https://redash.io/help/open-source/dev-guide/docker">https://redash.io/help/open-source/dev-guide/docker</a></p>
+<p><a class="reference external" href="https://hub.docker.com/r/redash/redash">https://hub.docker.com/r/redash/redash</a></p>
+<p><a class="reference external" href="https://www.cnblogs.com/rongfengliang/p/9901464.html">https://www.cnblogs.com/rongfengliang/p/9901464.html</a></p>
+<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span>
+<span class="n">x</span><span class="o">-</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span>
+  <span class="n">image</span><span class="p">:</span> <span class="n">redash</span><span class="o">/</span><span class="n">redash</span><span class="p">:</span><span class="mf">7.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">b18042</span>
+  <span class="n">depends_on</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">postgres</span>
+    <span class="o">-</span> <span class="n">redis</span>
+  <span class="n">env_file</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">redash</span><span class="o">/</span><span class="n">env</span>
+  <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+<span class="n">services</span><span class="p">:</span>
+  <span class="n">server</span><span class="p">:</span>
+    <span class="o">&lt;&lt;</span><span class="p">:</span> <span class="o">*</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span>
+    <span class="n">command</span><span class="p">:</span> <span class="n">server</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s2">&quot;5000:5000&quot;</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">REDASH_WEB_WORKERS</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="n">scheduler</span><span class="p">:</span>
+    <span class="o">&lt;&lt;</span><span class="p">:</span> <span class="o">*</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span>
+    <span class="n">command</span><span class="p">:</span> <span class="n">scheduler</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">QUEUES</span><span class="p">:</span> <span class="s2">&quot;celery&quot;</span>
+      <span class="n">WORKERS_COUNT</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">scheduled_worker</span><span class="p">:</span>
+    <span class="o">&lt;&lt;</span><span class="p">:</span> <span class="o">*</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span>
+    <span class="n">command</span><span class="p">:</span> <span class="n">worker</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">QUEUES</span><span class="p">:</span> <span class="s2">&quot;scheduled_queries,schemas&quot;</span>
+      <span class="n">WORKERS_COUNT</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">adhoc_worker</span><span class="p">:</span>
+    <span class="o">&lt;&lt;</span><span class="p">:</span> <span class="o">*</span><span class="n">redash</span><span class="o">-</span><span class="n">service</span>
+    <span class="n">command</span><span class="p">:</span> <span class="n">worker</span>
+    <span class="n">environment</span><span class="p">:</span>
+      <span class="n">QUEUES</span><span class="p">:</span> <span class="s2">&quot;queries&quot;</span>
+      <span class="n">WORKERS_COUNT</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="n">redis</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">redis</span><span class="p">:</span><span class="mf">5.0</span><span class="o">-</span><span class="n">alpine</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+  <span class="n">postgres</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">postgres</span><span class="p">:</span><span class="mf">9.5</span><span class="o">-</span><span class="n">alpine</span>
+    <span class="n">env_file</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">redash</span><span class="o">/</span><span class="n">env</span>
+    <span class="n">volumes</span><span class="p">:</span>
+      <span class="o">-</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">redash</span><span class="o">/</span><span class="n">postgres</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">postgresql</span><span class="o">/</span><span class="n">data</span>
+    <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+  <span class="n">nginx</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">redash</span><span class="o">/</span><span class="n">nginx</span><span class="p">:</span><span class="n">latest</span>
+    <span class="n">ports</span><span class="p">:</span>
+      <span class="o">-</span> <span class="s2">&quot;80:80&quot;</span>
+    <span class="n">depends_on</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">server</span>
+    <span class="n">links</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">server</span><span class="p">:</span><span class="n">redash</span>
+<span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
 </pre></div>
 </div>
 </div>
@@ -955,82 +995,82 @@ sudo usermod -aG docker $USER
 <h2>二、docker-compose安装<a class="headerlink" href="#docker-compose" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id42">
 <h3>1，下载docker-compose<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 </pre></div>
 </div>
 </div>
 <div class="section" id="id43">
 <h3>2，授权<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo chmod +x /usr/local/bin/docker-compose
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo chmod +x /usr/local/bin/docker-compose
 </pre></div>
 </div>
 </div>
 <div class="section" id="id44">
 <h3>3，查看版本信息<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
 显示出版本信息，即安装成功。
 </pre></div>
 </div>
-<p>https://ywnz.com/linuxysjk/4254.html</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is an example configuration for Docker Compose. Make sure to atleast update</span>
+<p><a class="reference external" href="https://ywnz.com/linuxysjk/4254.html">https://ywnz.com/linuxysjk/4254.html</a></p>
+<div class="code yaml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is an example configuration for Docker Compose. Make sure to atleast update</span>
 <span class="c1"># the cookie secret &amp; postgres database password.</span>
 <span class="c1">#</span>
 <span class="c1"># Some other recommendations:</span>
 <span class="c1"># 1. To persist Postgres data, assign it a volume host location.</span>
 <span class="c1"># 2. Split the worker service to adhoc workers and scheduled queries workers.</span>
-<span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&#39;2&#39;</span>
-<span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
- <span class="l l-Scalar l-Scalar-Plain">server</span><span class="p p-Indicator">:</span>
-   <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redash/redash:latest</span>
-   <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">server</span>
-   <span class="l l-Scalar l-Scalar-Plain">depends_on</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">postgres</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">redis</span>
-   <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="s">&quot;5000:5000&quot;</span>
-   <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-     <span class="l l-Scalar l-Scalar-Plain">PYTHONUNBUFFERED</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_LOG_LEVEL</span><span class="p p-Indicator">:</span> <span class="s">&quot;INFO&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_REDIS_URL</span><span class="p p-Indicator">:</span> <span class="s">&quot;redis://redis:6379/0&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_DATABASE_URL</span><span class="p p-Indicator">:</span> <span class="s">&quot;postgresql://postgres@postgres/postgres&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_COOKIE_SECRET</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">veryverysecret</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_WEB_WORKERS</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-   <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
- <span class="l l-Scalar l-Scalar-Plain">worker</span><span class="p p-Indicator">:</span>
-   <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redash/redash:latest</span>
-   <span class="l l-Scalar l-Scalar-Plain">command</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">scheduler</span>
-   <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
-     <span class="l l-Scalar l-Scalar-Plain">PYTHONUNBUFFERED</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_LOG_LEVEL</span><span class="p p-Indicator">:</span> <span class="s">&quot;INFO&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_REDIS_URL</span><span class="p p-Indicator">:</span> <span class="s">&quot;redis://redis:6379/0&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">REDASH_DATABASE_URL</span><span class="p p-Indicator">:</span> <span class="s">&quot;postgresql://postgres@postgres/postgres&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">QUEUES</span><span class="p p-Indicator">:</span> <span class="s">&quot;queries,scheduled_queries,celery&quot;</span>
-     <span class="l l-Scalar l-Scalar-Plain">WORKERS_COUNT</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
-   <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
- <span class="l l-Scalar l-Scalar-Plain">redis</span><span class="p p-Indicator">:</span>
-   <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redis:3.0-alpine</span>
-   <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
- <span class="l l-Scalar l-Scalar-Plain">postgres</span><span class="p p-Indicator">:</span>
-   <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">postgres:9.5.6-alpine</span>
+<span class="n">version</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span>
+<span class="n">services</span><span class="p">:</span>
+ <span class="n">server</span><span class="p">:</span>
+   <span class="n">image</span><span class="p">:</span> <span class="n">redash</span><span class="o">/</span><span class="n">redash</span><span class="p">:</span><span class="n">latest</span>
+   <span class="n">command</span><span class="p">:</span> <span class="n">server</span>
+   <span class="n">depends_on</span><span class="p">:</span>
+     <span class="o">-</span> <span class="n">postgres</span>
+     <span class="o">-</span> <span class="n">redis</span>
+   <span class="n">ports</span><span class="p">:</span>
+     <span class="o">-</span> <span class="s2">&quot;5000:5000&quot;</span>
+   <span class="n">environment</span><span class="p">:</span>
+     <span class="n">PYTHONUNBUFFERED</span><span class="p">:</span> <span class="mi">0</span>
+     <span class="n">REDASH_LOG_LEVEL</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+     <span class="n">REDASH_REDIS_URL</span><span class="p">:</span> <span class="s2">&quot;redis://redis:6379/0&quot;</span>
+     <span class="n">REDASH_DATABASE_URL</span><span class="p">:</span> <span class="s2">&quot;postgresql://postgres@postgres/postgres&quot;</span>
+     <span class="n">REDASH_COOKIE_SECRET</span><span class="p">:</span> <span class="n">veryverysecret</span>
+     <span class="n">REDASH_WEB_WORKERS</span><span class="p">:</span> <span class="mi">4</span>
+   <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+ <span class="n">worker</span><span class="p">:</span>
+   <span class="n">image</span><span class="p">:</span> <span class="n">redash</span><span class="o">/</span><span class="n">redash</span><span class="p">:</span><span class="n">latest</span>
+   <span class="n">command</span><span class="p">:</span> <span class="n">scheduler</span>
+   <span class="n">environment</span><span class="p">:</span>
+     <span class="n">PYTHONUNBUFFERED</span><span class="p">:</span> <span class="mi">0</span>
+     <span class="n">REDASH_LOG_LEVEL</span><span class="p">:</span> <span class="s2">&quot;INFO&quot;</span>
+     <span class="n">REDASH_REDIS_URL</span><span class="p">:</span> <span class="s2">&quot;redis://redis:6379/0&quot;</span>
+     <span class="n">REDASH_DATABASE_URL</span><span class="p">:</span> <span class="s2">&quot;postgresql://postgres@postgres/postgres&quot;</span>
+     <span class="n">QUEUES</span><span class="p">:</span> <span class="s2">&quot;queries,scheduled_queries,celery&quot;</span>
+     <span class="n">WORKERS_COUNT</span><span class="p">:</span> <span class="mi">2</span>
+   <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+ <span class="n">redis</span><span class="p">:</span>
+   <span class="n">image</span><span class="p">:</span> <span class="n">redis</span><span class="p">:</span><span class="mf">3.0</span><span class="o">-</span><span class="n">alpine</span>
+   <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+ <span class="n">postgres</span><span class="p">:</span>
+   <span class="n">image</span><span class="p">:</span> <span class="n">postgres</span><span class="p">:</span><span class="mf">9.5</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">alpine</span>
    <span class="c1"># volumes:</span>
    <span class="c1">#   - /opt/postgres-data:/var/lib/postgresql/data</span>
-   <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
- <span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="p p-Indicator">:</span>
-   <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">redash/nginx:latest</span>
-   <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="s">&quot;80:80&quot;</span>
-   <span class="l l-Scalar l-Scalar-Plain">depends_on</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">server</span>
-   <span class="l l-Scalar l-Scalar-Plain">links</span><span class="p p-Indicator">:</span>
-     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">server:redash</span>
-   <span class="l l-Scalar l-Scalar-Plain">restart</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">always</span>
+   <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
+ <span class="n">nginx</span><span class="p">:</span>
+   <span class="n">image</span><span class="p">:</span> <span class="n">redash</span><span class="o">/</span><span class="n">nginx</span><span class="p">:</span><span class="n">latest</span>
+   <span class="n">ports</span><span class="p">:</span>
+     <span class="o">-</span> <span class="s2">&quot;80:80&quot;</span>
+   <span class="n">depends_on</span><span class="p">:</span>
+     <span class="o">-</span> <span class="n">server</span>
+   <span class="n">links</span><span class="p">:</span>
+     <span class="o">-</span> <span class="n">server</span><span class="p">:</span><span class="n">redash</span>
+   <span class="n">restart</span><span class="p">:</span> <span class="n">always</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="docker-metabase">
 <h2>docker 安装metabase<a class="headerlink" href="#docker-metabase" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -d -p <span class="m">3000</span>:3000 --name metabase metabase/metabase
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3000</span><span class="p">:</span><span class="mi">3000</span> <span class="o">--</span><span class="n">name</span> <span class="n">metabase</span> <span class="n">metabase</span><span class="o">/</span><span class="n">metabase</span>
 </pre></div>
 </div>
 </div>
