@@ -286,7 +286,7 @@ git clone https://git.oschina.net/eccozhou/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
 
-### 安装docker
+### 安装docker并配置superset
 
 ```bash
 # 配置镜像站
@@ -300,6 +300,8 @@ docker run -d -p 8087:8088 -v /opt/docker/superset:/home/superset amancevice/sup
 sudo docker container ls
 docker exec -it bi superset-init # bi替换为id或是容器名，初始化superset
 docker exec -it bi superset load_examples # 载入示例数据（可选）
+# 密码1234，建议，其他默认，如admin， user
+# 访问网址127.0.0.1:8087即可
 ```
 
 ### 安装ssh
@@ -337,8 +339,6 @@ sudo passwd root
 解决方案：首先输入hostname，得到本机当前的互联网名称（大概跟windows下的计算机名称差不多）。然后使用su或sudo打开/etc/hosts，添加一行：
 
 127.0.0.1<TAB>计算机名<TAB>计算机名.localdomain
-
-
 
 ## vim
 
@@ -2140,10 +2140,13 @@ docker ps -a # docker 列举容器
 docker stop container id # docker 关闭容器
 docker start container id # docker 启动容器
 docker cp sourcepath containerId:targetpath # 复制文件
-
+docker iamge ls -a # 列举镜像
+docker container ls -a # 列举容器
 ```
 
 ### 镜像加速器
+
+可以查看daocloud的设置方法
 
 Linux系统目前存在的三种系统启动方式所对应的配置文件目录分别为：
 
@@ -2345,3 +2348,6 @@ Tomcat了，比较简单，但是自己记录下防止遗忘了，
 
 如果你不确定域名是否绑上了正确的外网ip，可以直接在dos里面ping  域名   如果显示的是正确的外网ip，那么就没有问题了....
 
+## terminal
+
+这是一款官方出品的终端工具，作为我们命令行管理的利器，他可以无缝衔接`posershell`
