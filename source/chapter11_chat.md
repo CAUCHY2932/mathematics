@@ -12,7 +12,31 @@
 实际上，语言特性的重要性远远小于数据结构和算法。但是我不应该忽略的是，语言特性本身是和数据结构以及算法结合产生的，后者的抽象层次较高，一味的学习高层次的知识不符合我们的认知规律。
 对于学习多种语言时，最好的途径应该是做比较。共性大多是高层次的，例如对某个数据结构的实现是大致相同的，异性是低层次的，例如对具体的语法和语义，不同语言采用不同的符号实现。这就表明，同样的逻辑，实现不同，在共性中深化数据结构的认识
 
+## 语法教材
 
+English grammar in use
+
+初级，中级，高级几个版本。
+
+## python打包程序
+
+推荐PyInstaller项目[www.pyinstaller.org](https://link.zhihu.com/?target=http%3A//www.pyinstaller.org/)
+
+ 
+
+> 安装方法：
+> 先跑pip install pywin32再跑pip install pyinstaller即可
+
+
+可用一句命令打包：pyinstaller -F -w -i manage.ico app.py
+
+ 
+
+> -F：打包为单文件
+> -w：Windows程序，不显示命令行窗口
+> -i：是程序图标
+>
+> app.py是你要打包的py文件
 
 ## 理科生的悲哀
 
@@ -2980,4 +3004,8 @@ MS SQL*SERVER数据库monitor，默认的端口号为1434/tcp 1434/udp
 上海交通大学常用端口：
 
 http://cert.sjtu.edu.cn/doc/linux/ch-ports.html
+
+## git学习网站
+
+<https://oschina.gitee.io/learn-git-branching/>
 
