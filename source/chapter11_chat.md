@@ -3009,3 +3009,9 @@ http://cert.sjtu.edu.cn/doc/linux/ch-ports.html
 
 <https://oschina.gitee.io/learn-git-branching/>
 
+## 彼得原理
+
+
+
+## 帕金森原理
+
