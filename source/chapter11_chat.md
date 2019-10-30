@@ -1,5 +1,24 @@
 # 随便聊聊
 
+## 不要熬夜
+
+今天看了bilibili的视频，感触很深。
+
+## mac安装ffmpeg
+
+```bash
+brew install ffmpeg
+FFmpeg -i video.m4s -i audio.m4s -codec copy senorita.mp4
+```
+
+## 身体保护和大脑保护
+
+## 戴建业讲唐朝
+
+## 如无必要，勿增实体
+
+
+
 ## 构建python环境
 
 ```bash
